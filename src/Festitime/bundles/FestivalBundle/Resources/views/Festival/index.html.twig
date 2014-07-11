@@ -23,13 +23,12 @@
             </h1>
             <div ng-app="festival">
                 <div ng-controller="searchBarController">
-                    <input type="search" ng-model="search" placeholder="Search...">
+                    <input type="search" ng-model="search" placeholder="Rechercher ...">
                     <ul>
                         <li ng-repeat="festival in festivals | filter:search">
                             {[{ festival.name }]}
                         </li>
                     </ul>
-                        <p>Tips: Try searching for <code>ann</code> or <code>lol</code></p>
                 </div>
         </div>
 
