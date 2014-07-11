@@ -1,0 +1,8 @@
+Festitime\bundles\FestivalBundle\Document\Festival:
+    fields:
+        id:
+            id: true
+        name:
+            type: string
+        description:
+            type: string
