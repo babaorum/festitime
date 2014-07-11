@@ -1,3 +1,15 @@
+<?php
+
+	if(!empty($_POST['email']))
+	{
+		$fp = fopen('users.csv', 'w');
+	    fputcsv($fp, array($_POST['email']));
+
+		fclose($fp);
+	}
+
+?>
+
 <!DOCTYPE HTML>
 <!--
 	Ex Machina by TEMPLATED
@@ -210,8 +222,10 @@
 		<div class="row container2">
 			<div id="footer">
 				<h5>Restez informé !</h5>
-        		<input id="email" name="email" type="email" placeholder="Saisissez votre email" required style="width:330px";>
-        		<input class="btn" type="button" value="Envoyer" equired style="width:150px";>
+				<form action="index.php" method="POST">
+					<input id="email" name="email" type="email" placeholder="Saisissez votre email" required style="width:330px";>
+					<input class="btn" type="submit" value="Envoyer" equired style="width:150px";>
+				</form>
 			</div>
 		</div>
 	<!-- /Footer -->
