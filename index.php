@@ -2,7 +2,7 @@
 
 	if(!empty($_POST['email']))
 	{
-		$fp = fopen('users.csv', 'w');
+		$fp = fopen('users.csv', 'a');
 	    fputcsv($fp, array($_POST['email']));
 
 		fclose($fp);
