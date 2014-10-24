@@ -31,7 +31,8 @@ that's what you really need:
 
   //give php.ini the extension of mongo
   $ sudo nano /etc/php5/cli/php.ini
-
+  $ sudo nano /etc/php5/apache2/php.ini
+  
   //paste this line at the end of the file
   extension=mongo.so
 
