@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Festitime</title>
+        <script type="text/javascript" src="./assets/js/bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="./assets/js/modules/festival.module.js"></script>
+    </head>
+    <body>
+        <form action="app_dev.php/festivals/new" method="POST">
+            <div>
+                Créer un nouveau festival :
+                <br>
+                Nom : <input type="text" name="festival[name]">
+                <br>
+                Description : <input type="text" name="festival[description]">
+                <br>
+                <input type="submit" name="submit" value="Envoyer">
+            </div>
+        </form>
+
+            <h1>
+                Trouver votre festival
+            </h1>
+            <div ng-app="festival">
+                <div ng-controller="searchBarController">
+                    <input type="search" ng-model="search" placeholder="Rechercher ...">
+                    <ul>
+                        <li ng-repeat="festival in festivals | filter:search">
+                            {[{ festival.name }]}
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+    </body>
+</html>

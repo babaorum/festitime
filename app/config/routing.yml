@@ -1,0 +1,4 @@
+festitime_festival:
+    resource: "@FestitimeFestivalBundle/Resources/config/routing.yml"
+    prefix:   /
+
