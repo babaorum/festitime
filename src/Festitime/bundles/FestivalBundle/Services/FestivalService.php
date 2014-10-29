@@ -40,7 +40,7 @@ class FestivalService
 	}
 
 	public function getFestivals()
-	{ini_set('xdebug.var_display_max_depth', 10);
+	{
 		$R_festival = $this->mongoManager->getRepository('FestitimeFestivalBundle:Festival');
 		$festivals = $R_festival->findAll();
 		return $festivals;
