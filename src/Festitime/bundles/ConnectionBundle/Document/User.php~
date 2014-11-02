@@ -1,0 +1,10 @@
+<?php
+
+namespace Festitime\bundles\ConnectionBundle\Document;
+
+class User
+{
+	protected $pseudo;
+
+	protected $password;
+}

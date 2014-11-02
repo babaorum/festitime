@@ -1,0 +1,7 @@
+parameters:
+#    festitime_connection.example.class: Festitime\bundles\ConnectionBundle\Example
+
+services:
+#    festitime_connection.example:
+#        class: %festitime_connection.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -20,7 +20,7 @@ class FestivalController extends Controller
     	
         if ($response instanceof Festival)
         {
-            $this->get('session')->getFlashBag()->add('success', 'Le festival a bien été créer');
+            $this->get('session')->getFlashBag()->add('success', 'Le festival a bien été créé');
         }
         else
         {
