@@ -19,7 +19,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new Festitime\bundles\FestivalBundle\FestitimeFestivalBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
-            new Festitime\bundles\ConnectionBundle\FestitimeConnectionBundle(),
+            new Festitime\bundles\UserBundle\FestitimeUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

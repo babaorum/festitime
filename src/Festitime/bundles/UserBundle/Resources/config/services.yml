@@ -1,0 +1,7 @@
+parameters:
+#    festitime_user.example.class: Festitime\bundles\UserBundle\Example
+
+services:
+#    festitime_user.example:
+#        class: %festitime_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

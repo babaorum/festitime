@@ -1,5 +1,5 @@
-festitime_connection:
-    resource: "@FestitimeConnectionBundle/Resources/config/routing.yml"
+festitime_user:
+    resource: "@FestitimeUserBundle/Resources/config/routing.yml"
     prefix:   /
 
 festitime_festival:
