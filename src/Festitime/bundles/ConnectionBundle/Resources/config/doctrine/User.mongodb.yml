@@ -1,8 +1,0 @@
-Festitime\bundles\ConnectionBundle\Document\User:
-    fields:
-        id:
-            id: true
-        pseudo:
-            type: string
-        password:
-            type: string

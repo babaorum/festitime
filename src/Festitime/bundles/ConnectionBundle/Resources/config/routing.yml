@@ -1,3 +1,0 @@
-festitime_connection_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: FestitimeConnectionBundle:Default:index }
