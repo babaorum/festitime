@@ -1,3 +1,3 @@
 festitime_user_homepage:
     pattern:  /hello/{name}
-    defaults: { _controller: FestitimeUserBundle:Default:index }
+    defaults: { _controller: FestitimeUserBundle:User:index }
