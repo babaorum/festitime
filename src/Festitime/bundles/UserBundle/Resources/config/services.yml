@@ -1,7 +1,8 @@
 parameters:
-#    festitime_user.example.class: Festitime\bundles\UserBundle\Example
+    festitime.user_service.class: Festitime\bundles\UserBundle\Services\UserService
 
 services:
-#    festitime_user.example:
-#        class: %festitime_user.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    festitime.user_service:
+        class: %festitime.user_service.class%
+        arguments: [@request_stack, @doctrine_mongodb]
+

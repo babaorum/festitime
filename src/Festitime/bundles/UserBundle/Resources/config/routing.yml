@@ -1,3 +1,9 @@
 festitime_user_homepage:
-    pattern:  /hello/{name}
+    pattern: /users
     defaults: { _controller: FestitimeUserBundle:User:index }
+
+postUser:
+    path: /users/new
+    defaults: { _controller: FestitimeUserBundle:User:postUser }
+    requirements:
+        _method: POST
