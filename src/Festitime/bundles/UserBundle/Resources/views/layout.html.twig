@@ -5,6 +5,28 @@
         <script type="text/javascript" src="./assets/js/bower_components/angular/angular.min.js"></script>
 </head>
 <body>
+	<div>
+		{% set flashErrors = app.session.flashbag.get("error") %}
+        {% if (flashErrors is not empty) %}
+        <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            {% for flashError in flashErrors %}
+            {{ flashError.message }}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% set flashSuccess = app.session.flashbag.get("success") %}
+        {% if (flashSuccess is not empty) %}
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            {% for sucesss in flashSuccess %}
+            {{ sucesss.message }}
+            {% endfor %}
+        </div>
+        {% endif %}
+	</div>
+
     {% block body %}
     {% endblock %}
 </body>

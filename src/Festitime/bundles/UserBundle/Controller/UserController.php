@@ -26,7 +26,7 @@ class UserController extends Controller
                 return $this->redirect($this->generateUrl('index'));
             }
         }
-
+$this->get('session')->getFlashBag()->add('success', array('message' => 'Vous n\'etes pas connecté'));
         $formConnect = $userService->getConnectForm();
         return $this->render('FestitimeUserBundle:User:index.html.twig', array('formConnect' => $formConnect->createView()));
     }
