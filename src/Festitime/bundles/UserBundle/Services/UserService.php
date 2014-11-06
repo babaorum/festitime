@@ -62,7 +62,7 @@ class UserService
         if(!empty($query['submit']))
         {
             $user = $R_user->findOneBy(array('pseudo' => $query['connect']['pseudo']));
-            if(!is_null($user) && $user->getPseudo() === $query['connect']['password'])
+            if(!is_null($user) && $user->getPassword() === $query['connect']['password'])
             {
                 return $user;
             }
