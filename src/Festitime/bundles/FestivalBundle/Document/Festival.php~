@@ -1,0 +1,10 @@
+<?php
+
+namespace Festitime\bundles\FestivalBundle\Document;
+
+class Festival
+{
+	protected $name;
+	
+	protected $description;
+}

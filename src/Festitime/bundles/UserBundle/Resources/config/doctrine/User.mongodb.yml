@@ -1,0 +1,8 @@
+Festitime\bundles\UserBundle\Document\User:
+    fields:
+        id:
+            id: true
+        pseudo:
+            type: string
+        password:
+            type: string

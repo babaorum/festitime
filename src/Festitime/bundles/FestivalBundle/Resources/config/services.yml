@@ -1,0 +1,7 @@
+parameters:
+    festitime.festival_service.class: Festitime\bundles\FestivalBundle\Services\FestivalService
+
+services:
+    festitime.festival_service:
+        class: %festitime.festival_service.class%
+        arguments: [@request_stack, @doctrine_mongodb]

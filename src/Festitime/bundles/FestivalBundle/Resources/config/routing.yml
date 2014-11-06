@@ -1,0 +1,15 @@
+index:
+    path: /
+    defaults: { _controller: FestitimeFestivalBundle:Festival:index }
+
+postFestival:
+    path: /festivals/new
+    defaults: { _controller: FestitimeFestivalBundle:Festival:postFestival }
+    requirements:
+        _method: POST
+
+getFestivals:
+    path: /festivals
+    defaults: { _controller: FestitimeFestivalBundle:Festival:getFestivals }
+    requirements:
+        _method: POST

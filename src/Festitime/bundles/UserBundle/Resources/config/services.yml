@@ -1,0 +1,10 @@
+parameters:
+    festitime.user_service.class: Festitime\bundles\UserBundle\Services\UserService
+    form.connect.class: Festitime\bundles\UserBundle\Form\Type\ConnectType
+services:
+    festitime.user_service:
+        class: %festitime.user_service.class%
+        arguments: [@request_stack, @doctrine_mongodb, @form.factory, @form.connect]
+
+    form.connect:
+        class: %form.connect.class%

@@ -1,0 +1,8 @@
+festitime_user:
+    resource: "@FestitimeUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+festitime_festival:
+    resource: "@FestitimeFestivalBundle/Resources/config/routing.yml"
+    prefix:   /
+

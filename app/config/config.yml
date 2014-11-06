@@ -56,6 +56,17 @@ doctrine:
         auto_generate_proxy_classes: %kernel.debug%
         auto_mapping: true
 
+# Doctrine Configuration for MongoDB
+doctrine_mongodb:
+    connections:
+        default:
+            server: mongodb://localhost:27017
+            options: {}
+    default_database: festitime
+    document_managers:
+        default:
+            auto_mapping: true
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: %mailer_transport%
@@ -63,3 +74,11 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
+
+services:
+    kernel.listener.authentification_listener:
+        class: Festitime\Listeners\AuthentificationListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest}
+        arguments: [@router, %login_route%, %register_route%]
+

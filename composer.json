@@ -21,7 +21,8 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "propel/propel-bundle": "1.4.*",
         "jms/serializer-bundle": "0.12.0",
-        "friendsofsymfony/elastica-bundle": "3.0.*@dev"
+        "doctrine/mongodb-odm": "1.0.*@dev",
+        "doctrine/mongodb-odm-bundle": "3.0.*@dev"
     },
     "scripts": {
         "post-install-cmd": [
