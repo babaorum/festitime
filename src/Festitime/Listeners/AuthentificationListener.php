@@ -26,7 +26,7 @@ class AuthentificationListener
         $session = $request->getSession();
         $user_id = $session->get('user_id');
 
-        if ((empty($user_id) || !isset($user_id)) && $currentRoute != $this->loginRoute && $currentRoute != $this->registerRoute)
+        if (empty($user_id) && $currentRoute != $this->loginRoute && $currentRoute != $this->registerRoute)
         {
             $event->setResponse($this->redirectOnLoginPage());
         }
