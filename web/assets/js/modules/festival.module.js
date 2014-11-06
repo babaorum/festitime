@@ -87,7 +87,7 @@
  
                     var request = $http({
                         method: "post",
-                        url: "app_dev.php/festivals"
+                        url: "/festivals"
                     });
  
                     return( request.then( handleSuccess, handleError ) );

@@ -2,11 +2,11 @@
 <html>
     <head>
         <title>Festitime</title>
-        <script type="text/javascript" src="./assets/js/bower_components/angular/angular.js"></script>
-        <script type="text/javascript" src="./assets/js/modules/festival.module.js"></script>
+        <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="/assets/js/modules/festival.module.js"></script>
     </head>
     <body>
-        <form action="app_dev.php/festivals/new" method="POST">
+        <form action="{{ path('postFestival') }}" method="POST">
             <div>
                 Créer un nouveau festival :
                 <br>

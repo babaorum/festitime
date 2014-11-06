@@ -1,0 +1,19 @@
+login:
+    pattern: /login
+    defaults: { _controller: FestitimeUserBundle:User:login }
+
+logout:
+    pattern: /logout
+    defaults: { _controller: FestitimeUserBundle:User:logout }
+
+postUser:
+    path: /users/new
+    defaults: { _controller: FestitimeUserBundle:User:postUser }
+    requirements:
+        _method: POST
+
+postUserConnect:
+    path: /users/connect
+    defaults: { _controller: FestitimeUserBundle:User:postUserConnect }
+    requirements:
+        _method: POST

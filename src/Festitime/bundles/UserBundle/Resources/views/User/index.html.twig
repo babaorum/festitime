@@ -1,0 +1,28 @@
+{% extends 'FestitimeUserBundle::layout.html.twig' %}
+
+    {% block title %}Festitime{% endblock %}
+
+
+    {% block body %}
+        <div>
+            <form action="{{ path('postUser') }}" method="POST">
+                Créer vous un compte :
+                <br>
+                Pseudo : <input type="text" name="user[pseudo]">
+                <br>
+                Mot de passe : <input type="password" name="user[password]">
+                <br>
+                <input type="submit" name="submit" value="Envoyer">
+            
+            </form>
+        </div>
+        <div>
+            <form action="{{ path('login') }}" method="POST">
+                {{ form_row(formConnect.pseudo) }}
+                <br>
+                {{ form_row(formConnect.password) }}
+                <br>
+                <input type="submit" name="submit" value="submit">
+            </form>
+        </div>
+    {% endblock %}

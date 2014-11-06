@@ -13,3 +13,6 @@ parameters:
 
     locale:            fr
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    login_route: login
+    register_route: postUser
