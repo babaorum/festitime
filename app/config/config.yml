@@ -74,3 +74,11 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
+
+services:
+    kernel.listener.authentification_listener:
+        class: Festitime\Listeners\AuthentificationListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest}
+        arguments: [@router, %login_route%, %register_route%]
+

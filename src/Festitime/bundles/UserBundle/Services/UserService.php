@@ -8,11 +8,22 @@ class UserService
 {
     protected $request;
     protected $mongoManager;
+    protected $form;
+    protected $formConnect;
 
-    public function __construct($request, $doctrineMongodb)
+    public function getUsers()
+    {
+        $R_user = $this->mongoManager->getRepository('FestitimeUserBundle:User');
+        $users = $R_user->findAll();
+        return $users;
+    }
+
+    public function __construct($request, $doctrineMongodb, $form, $formConnect)
     {
         $this->request = $request;
         $this->mongoManager = $doctrineMongodb->getManager();
+        $this->form = $form;
+        $this->formConnect = $formConnect;
     }
 
     public function postUser()
@@ -35,11 +46,27 @@ class UserService
         }
         return null;
     }
-
-    /*public function getUsers()
+    public function getConnectForm()
     {
-        $R_user = $this->mongoManager->getRepository('FestitimeUserBundle:User');
-        $users = $R_user->findAll();
-        return $users;
-    }*/
+        $user = new User();
+        $form = $this->form->create($this->formConnect, $user);
+        return $form;
+    }
+
+    public function connectUser()
+    {
+        $R_user = $this->mongoManager->getRepository('FestitimeUserBundle:User');   
+        $request = $this->request->getCurrentRequest();
+        $query = $request->request->all();
+
+        if(!empty($query['submit']))
+        {
+            $user = $R_user->findOneBy(array('pseudo' => $query['connect']['pseudo']));
+            if(!is_null($user) && $user->getPseudo() === $query['connect']['password'])
+            {
+                return $user;
+            }
+        }
+        return false;
+    }
 }

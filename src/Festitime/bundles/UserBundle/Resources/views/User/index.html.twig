@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Inscription - Festitime</title>
-        <script type="text/javascript" src="./assets/js/bower_components/angular/angular.js"></script>
-        <script type="text/javascript" src="./assets/js/modules/festival.module.js"></script>
-    </head>
-    <body>
-        <form action="users/new" method="POST">
-            <div>
+{% extends 'FestitimeUserBundle::layout.html.twig' %}
+
+    {% block title %}Festitime{% endblock %}
+
+
+    {% block body %}
+        <div>
+            <form action="{{ path('postUser') }}" method="POST">
                 Créer vous un compte :
                 <br>
                 Pseudo : <input type="text" name="user[pseudo]">
@@ -15,7 +13,16 @@
                 Mot de passe : <input type="password" name="user[password]">
                 <br>
                 <input type="submit" name="submit" value="Envoyer">
-            </div>
-        </form>
-    </body>
-</html>
+            
+            </form>
+        </div>
+        <div>
+            <form action="{{ path('login') }}" method="POST">
+                {{ form_row(formConnect.pseudo) }}
+                <br>
+                {{ form_row(formConnect.password) }}
+                <br>
+                <input type="submit" name="submit" value="submit">
+            </form>
+        </div>
+    {% endblock %}

@@ -1,7 +1,3 @@
-festitime_festival_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: FestitimeFestivalBundle:Default:index }
-
 index:
     path: /
     defaults: { _controller: FestitimeFestivalBundle:Festival:index }

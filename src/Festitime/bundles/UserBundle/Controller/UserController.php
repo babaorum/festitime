@@ -4,12 +4,45 @@ namespace Festitime\bundles\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Festitime\bundles\UserBundle\Document\User;
+use Symfony\Component\HttpFoundation\Response;
 
 class UserController extends Controller
 {
-    public function indexAction()
+    public function loginAction()
     {
-        return $this->render('FestitimeUserBundle:User:index.html.twig', array());
+        $session = $this->container->get('session');
+        $userService = $this->container->get('festitime.user_service');
+        $query = $this->container->get('request_stack')->getCurrentRequest()->request->all();
+
+        if(!empty($query['connect']['pseudo']))
+        {
+            $response = $userService->connectUser();
+            
+            if($response instanceof User)
+            {
+                $session->set('user_id', $response->getId());
+                $session->set('user_pseudo', $response->getPseudo());
+                
+                return $this->redirect($this->generateUrl('index'));
+            }
+        }
+
+        $formConnect = $userService->getConnectForm();
+        return $this->render('FestitimeUserBundle:User:index.html.twig', array('formConnect' => $formConnect->createView()));
+    }
+    
+    /**
+    *   @author Romain Grelet
+    *   logout action
+    */
+    public function logoutAction()
+    {
+        $session = $this->container->get('session');
+        if ($session->has('user_id'))
+        {
+            $session->invalidate();
+            return $this->redirect($this->generateUrl('login'));
+        }
     }
 
     public function postUserAction()
@@ -29,21 +62,14 @@ class UserController extends Controller
         return $this->redirect($this->generateUrl('index'));
     }
 
-    /*public function getUsersAction()
+    public function getUsersAction()
     {
-        $response = array();
-        $userService = $this->container->get('festitime.user_service');
-        $users = $userService->getUsers();
-        
-        foreach($users as $user)
-        {
-            if ($user instanceof User)
-            {
-                $response[] = $user->toArray();
-            }
-        }
         $serializer = $this->get('jms_serializer');
-        $response = new Response($serializer->serialize($response, "json"));
+        $userService = $this->container->get('festitime.user_service');
+        
+        $users = $userService->getUsers();
+        $response = new Response($serializer->serialize($users, "json"));
+        
         return $response;
-    }*/
+    }
 }
