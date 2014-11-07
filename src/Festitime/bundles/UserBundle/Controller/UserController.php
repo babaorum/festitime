@@ -26,7 +26,6 @@ class UserController extends Controller
                 return $this->redirect($this->generateUrl('index'));
             }
         }
-$this->get('session')->getFlashBag()->add('success', array('message' => 'Vous n\'etes pas connecté'));
         $formConnect = $userService->getConnectForm();
         return $this->render('FestitimeUserBundle:User:index.html.twig', array('formConnect' => $formConnect->createView()));
     }
@@ -52,14 +51,14 @@ $this->get('session')->getFlashBag()->add('success', array('message' => 'Vous n\
         
         if ($response instanceof User)
         {
-            //$this->get('session')->getFlashBag()->add('success', 'L\'utilisateur a bien été créé');
-            die(var_dump($response));
+            $this->get('session')->getFlashBag()->add('success', array('message' => 'Votre compte a bien été enregistré'));
         }
         else
         {
-            $this->get('session')->getFlashBag()->add('error', 'Le pseudo et le mot de passe de l\'utilisateur doivent être remplis');
+            $this->get('session')->getFlashBag()->add('error', array('message' => 'Le pseudo et le mot de passe de l\'utilisateur doivent être remplis'));
         }
-        return $this->redirect($this->generateUrl('index'));
+        
+        return $this->forward('FestitimeUserBundle:User:login');
     }
 
     public function getUsersAction()
