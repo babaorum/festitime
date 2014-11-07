@@ -6,6 +6,6 @@
     "jquery": "*",
     "angular": "*",
     "bootstrap": "*",
-    "underscore"
+    "underscore": "*"
   }
 }
