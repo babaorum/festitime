@@ -8,9 +8,27 @@
             <form action="{{ path('postUser') }}" method="POST">
                 Créer vous un compte :
                 <br>
-                Pseudo : <input type="text" name="user[pseudo]">
+                {{ form_row(formRegister.pseudo) }}
                 <br>
-                Mot de passe : <input type="password" name="user[password]">
+                {{ form_row(formRegister.email) }}
+                <br>
+                {{ form_row(formRegister.password) }}
+                <br>
+                {{ form_row(formRegister.birthdate) }}
+                <br>
+                {{ form_row(formRegister.gender) }}
+                <br>
+                {{ form_row(formRegister.firstname) }}
+                <br>
+                {{ form_row(formRegister.name) }}
+                <br>
+                {{ form_row(formRegister.address) }}
+                <br>
+                {{ form_row(formRegister.city) }}
+                <br>
+                {{ form_row(formRegister.zipcode) }}
+                <br>
+                {{ form_row(formRegister.country) }}
                 <br>
                 <input type="submit" name="submit" value="Envoyer">
             

@@ -10,6 +10,7 @@ class UserService
     protected $mongoManager;
     protected $form;
     protected $formConnect;
+    protected $formRegister;
 
     public function getUsers()
     {
@@ -18,12 +19,13 @@ class UserService
         return $users;
     }
 
-    public function __construct($request, $doctrineMongodb, $form, $formConnect)
+    public function __construct($request, $doctrineMongodb, $form, $formConnect, $formRegister)
     {
         $this->request = $request;
         $this->mongoManager = $doctrineMongodb->getManager();
         $this->form = $form;
         $this->formConnect = $formConnect;
+        $this->formRegister = $formRegister;
     }
 
     public function postUser()
@@ -46,10 +48,18 @@ class UserService
         }
         return null;
     }
+
     public function getConnectForm()
     {
         $user = new User();
         $form = $this->form->create($this->formConnect, $user);
+        return $form;
+    }
+
+    public function getRegisterForm()
+    {
+        $user = new User();
+        $form = $this->form->create($this->formRegister, $user);
         return $form;
     }
 
