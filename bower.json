@@ -5,6 +5,7 @@
   "dependencies": {
     "jquery": "*",
     "angular": "*",
-    "bootstrap": "*"
+    "bootstrap": "*",
+    "underscore": "*"
   }
 }

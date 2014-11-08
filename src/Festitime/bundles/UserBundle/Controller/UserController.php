@@ -63,7 +63,8 @@ class UserController extends Controller
         {
             $this->get('session')->getFlashBag()->add('error', array('message' => 'Le formulaire comporte des erreurs'));
         }
-        return $this->redirect($this->generateUrl('index'));
+        
+        return $this->forward('FestitimeUserBundle:User:login');
     }
 
     public function getUsersAction()
