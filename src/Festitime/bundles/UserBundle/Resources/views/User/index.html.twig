@@ -6,13 +6,19 @@
     {% block body %}
         <div>
             <form action="{{ path('postUser') }}" method="POST">
-                Créer vous un compte :
+                Créez vous un compte :
+                <br>
+                {{ form_errors(formRegister) }}
                 <br>
                 {{ form_row(formRegister.pseudo) }}
                 <br>
-                {{ form_row(formRegister.email) }}
+                {{ form_row(formRegister.email.first) }}
                 <br>
-                {{ form_row(formRegister.password) }}
+                {{ form_row(formRegister.email.second) }}
+                <br>
+                {{ form_row(formRegister.password.first) }}
+                <br>
+                {{ form_row(formRegister.password.second) }}
                 <br>
                 {{ form_row(formRegister.birthdate) }}
                 <br>

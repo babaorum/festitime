@@ -19,24 +19,38 @@ class RegisterType extends AbstractType
             'label' => 'Pseudonyme',
         ));
         //email
-        $builder->add('email', 'email', array(
+        $builder->add('email', 'repeated', array(
+            'type' => 'email',
+            'options' => array('required' => true),
+            'first_options'  => array('label' => 'Email'),
+            'second_options' => array('label' => 'Confirmation de l\'email'),
+        ));
+        /*$builder->add('email', 'email', array(
             'required' => true,
             'label' => 'Adresse mail',
         ));
         //confirmation email
-        /*$builder->add('confirmEmail', 'email', array(
+        $builder->add('confirmEmail', 'email', array(
             'required' => true,
             'label' => 'Confirmation de l\'adresse mail',
+            'mapped' => false,
         ));*/
         //mot de passe
-        $builder->add('password', 'password', array(
+        $builder->add('password', 'repeated', array(
+            'type' => 'password',
+            'options' => array('required' => true),
+            'first_options'  => array('label' => 'Mot de passe'),
+            'second_options' => array('label' => 'Confirmation du mot de passe'),
+        ));
+        /*$builder->add('password', 'password', array(
             'required' => true,
             'label' => 'Mot de passe',
         ));
         //confirmation mot de passe
-        /*$builder->add('confirmPassword', 'password', array(
+        $builder->add('confirmPassword', 'password', array(
             'required' => true,
             'label' => 'Confirmation du mot de passe',
+            'mapped' => false,
         ));*/
         //naissance
         $builder->add('birthdate', 'birthday', array(

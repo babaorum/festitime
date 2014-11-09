@@ -1,0 +1,45 @@
+Festitime\bundles\UserBundle\Document\User:
+    properties:
+        pseudo:
+            - NotBlank: ~
+        email:
+            - NotBlank: ~
+            - Email:
+                checkHost: true
+                message: Votre email doit être valide.
+        password:
+            - NotBlank: ~
+            - Length:
+                min: 8
+                message: Votre mot de passe doit faire au moins 8 caractères.
+        birthdate:
+            - NotBlank: ~
+        gender:
+            - NotBlank: ~
+            - Choice:
+                choices: [m, f]
+                message: Vous devez choisir un genre.
+        firstname:
+            - NotBlank: ~
+            - Regex:
+                pattern: "/\d/"
+                match:   false
+                message: Votre prénom ne peut pas contenir de chiffre.
+        name:
+            - NotBlank: ~
+            - Regex:
+                pattern: "/\d/"
+                match:   false
+                message: Votre nom ne peut pas contenir de chiffre.
+        address:
+            - NotBlank: ~
+        city:
+            - NotBlank: ~
+            - Regex:
+                pattern: "/\d/"
+                match:   false
+                message: Votre ville ne peut pas contenir de chiffre.
+        zipcode:
+            - NotBlank: ~
+        country:
+            - NotBlank: ~

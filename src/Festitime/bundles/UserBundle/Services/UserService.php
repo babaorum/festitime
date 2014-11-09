@@ -32,9 +32,16 @@ class UserService
     {
         $request = $this->request->getCurrentRequest();
         $query = $request->request->all();
+        die(var_dump($query));
         if (!empty($query['submit']))
         {
-            $user = new User();
+            //$query non-object
+            if ($query->isValid()) {
+                // fait quelque chose comme sauvegarder la tâche dans la bdd
+
+                return $this->redirect($this->generateUrl('task_success'));
+            }
+            /*$user = new User();
             if(!empty($query['user']['pseudo']) && !empty($query['user']['password']))
             {
                 $user->setPseudo($query['user']['pseudo']);
@@ -44,7 +51,7 @@ class UserService
                 $this->mongoManager->flush();
                 
                 return $user;
-            }
+            }*/
         }
         return null;
     }
