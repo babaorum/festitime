@@ -22,36 +22,19 @@ class RegisterType extends AbstractType
         $builder->add('email', 'repeated', array(
             'type' => 'email',
             'options' => array('required' => true),
+            'invalid_message' => 'Veuillez renseigner une adresse email valide.',
             'first_options'  => array('label' => 'Email'),
             'second_options' => array('label' => 'Confirmation de l\'email'),
         ));
-        /*$builder->add('email', 'email', array(
-            'required' => true,
-            'label' => 'Adresse mail',
-        ));
-        //confirmation email
-        $builder->add('confirmEmail', 'email', array(
-            'required' => true,
-            'label' => 'Confirmation de l\'adresse mail',
-            'mapped' => false,
-        ));*/
         //mot de passe
         $builder->add('password', 'repeated', array(
             'type' => 'password',
             'options' => array('required' => true),
+            'invalid_message' => 'Veuillez renseigner deux fois un mot de passe de %num% caactères.',
+            'invalid_message_parameters' => array('%num%' => 8),
             'first_options'  => array('label' => 'Mot de passe'),
             'second_options' => array('label' => 'Confirmation du mot de passe'),
         ));
-        /*$builder->add('password', 'password', array(
-            'required' => true,
-            'label' => 'Mot de passe',
-        ));
-        //confirmation mot de passe
-        $builder->add('confirmPassword', 'password', array(
-            'required' => true,
-            'label' => 'Confirmation du mot de passe',
-            'mapped' => false,
-        ));*/
         //naissance
         $builder->add('birthdate', 'birthday', array(
             'input' => 'timestamp',
@@ -106,7 +89,8 @@ class RegisterType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Festitime\bundles\UserBundle\Document\User'
+            'data_class' => 'Festitime\bundles\UserBundle\Document\User',
+            'csrf_protection' => false
         ));
     }
 

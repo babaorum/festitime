@@ -50,7 +50,7 @@ class UserController extends Controller
         }
     }
 
-    public function registerAction()
+    public function postUserAction()
     {
         $userService = $this->container->get('festitime.user_service');
         $response = $userService->postUser();

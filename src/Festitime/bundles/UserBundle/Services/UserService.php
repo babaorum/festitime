@@ -11,6 +11,17 @@ class UserService
     protected $form;
     protected $formConnect;
     protected $formRegister;
+    protected $formTool;
+
+    public function __construct($request, $doctrineMongodb, $form, $formConnect, $formRegister, $formTool)
+    {
+        $this->request = $request;
+        $this->mongoManager = $doctrineMongodb->getManager();
+        $this->form = $form;
+        $this->formConnect = $formConnect;
+        $this->formRegister = $formRegister;
+        $this->formTool = $formTool;
+    }
 
     public function getUsers()
     {
@@ -19,41 +30,23 @@ class UserService
         return $users;
     }
 
-    public function __construct($request, $doctrineMongodb, $form, $formConnect, $formRegister)
-    {
-        $this->request = $request;
-        $this->mongoManager = $doctrineMongodb->getManager();
-        $this->form = $form;
-        $this->formConnect = $formConnect;
-        $this->formRegister = $formRegister;
-    }
-
     public function postUser()
     {
         $request = $this->request->getCurrentRequest();
-        $query = $request->request->all();
-        die(var_dump($query));
-        if (!empty($query['submit']))
-        {
-            //$query non-object
-            if ($query->isValid()) {
-                // fait quelque chose comme sauvegarder la tâche dans la bdd
 
-                return $this->redirect($this->generateUrl('task_success'));
-            }
-            /*$user = new User();
-            if(!empty($query['user']['pseudo']) && !empty($query['user']['password']))
-            {
-                $user->setPseudo($query['user']['pseudo']);
-                $user->setPassword($query['user']['password']);
+        $user = new User();
+        $form = $this->form->create($this->formRegister, $user);
+        $form->handleRequest($request);
 
-                $this->mongoManager->persist($user);
-                $this->mongoManager->flush();
+        if ($form->isValid()) {
+            
+            $this->mongoManager->persist($user);
+            $this->mongoManager->flush();
                 
-                return $user;
-            }*/
+            return $user;
         }
-        return null;
+        //die(var_dump($this->formTool->getAllFormErrors($form)));
+        return $this->formTool->getAllFormErrors($form);
     }
 
     public function getConnectForm()

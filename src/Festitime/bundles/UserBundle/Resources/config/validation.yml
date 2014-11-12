@@ -1,45 +1,63 @@
 Festitime\bundles\UserBundle\Document\User:
     properties:
         pseudo:
-            - NotBlank: ~
+            - NotBlank:
+                message: Vous devez renseigner votre pseudonyme.
         email:
-            - NotBlank: ~
+            - NotBlank:
+                message: Vous devez renseigner votre email.
             - Email:
                 checkHost: true
                 message: Votre email doit être valide.
         password:
-            - NotBlank: ~
+            - NotBlank:
+                message: Vous devez renseigner votre mot de passe.
             - Length:
                 min: 8
-                message: Votre mot de passe doit faire au moins 8 caractères.
+                minMessage: Votre mot de passe doit faire au moins 8 caractères.
         birthdate:
-            - NotBlank: ~
+            - NotBlank:
+                message: Vous devez renseigner votre date de naissance.
         gender:
-            - NotBlank: ~
+            - NotBlank:
+                message: Vous devez renseigner votre genre.
             - Choice:
                 choices: [m, f]
                 message: Vous devez choisir un genre.
         firstname:
-            - NotBlank: ~
+            - NotBlank:
+                message: Vous devez renseigner votre prénom.
             - Regex:
                 pattern: "/\d/"
                 match:   false
                 message: Votre prénom ne peut pas contenir de chiffre.
         name:
-            - NotBlank: ~
+            - NotBlank:
+                message: Vous devez renseigner votre nom.
             - Regex:
                 pattern: "/\d/"
                 match:   false
                 message: Votre nom ne peut pas contenir de chiffre.
         address:
-            - NotBlank: ~
+            - NotBlank:
+                message: Vous devez renseigner votre adresse.
         city:
-            - NotBlank: ~
+            - NotBlank:
+                message: Vous devez renseigner votre ville.
             - Regex:
                 pattern: "/\d/"
                 match:   false
                 message: Votre ville ne peut pas contenir de chiffre.
         zipcode:
-            - NotBlank: ~
+            - NotBlank:
+                message: Vous devez renseigner votre code postal.
+            - Regex:
+                pattern: "/\d/"
+                message: Votre code postal ne peut contenir que des chiffres.
+            - Length:
+                min: 5
+                max: 5
+                exactMessage: Votre code postal doit être composé de 5 chiffres.
         country:
-            - NotBlank: ~
+            - NotBlank:
+                message: Vous devez renseigner votre pays.
