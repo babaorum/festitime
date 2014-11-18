@@ -2,38 +2,80 @@
 
 namespace Festitime\bundles\UserBundle\Document;
 
+/**
+ * Festitime\bundles\UserBundle\Document\User
+ */
 class User
 {
-	protected $pseudo;
-
-    protected $email;
-
-	protected $password;
-
-    protected $birthdate;
-
-    protected $gender;
-
-    protected $firstname;
-
-    protected $name;
-
-    protected $address;
-
-    protected $city;
-
-    protected $zipcode;
-
-    protected $country;
-
-    protected $created_date;
-
-    protected $updated_date;
-
     /**
      * @var MongoId $id
      */
     protected $id;
+
+    /**
+     * @var string $pseudo
+     */
+    protected $pseudo;
+
+    /**
+     * @var string $email
+     */
+    protected $email;
+
+    /**
+     * @var string $password
+     */
+    protected $password;
+
+    /**
+     * @var timestamp $birthdate
+     */
+    protected $birthdate;
+
+    /**
+     * @var boolean $gender
+     */
+    protected $gender;
+
+    /**
+     * @var string $firstname
+     */
+    protected $firstname;
+
+    /**
+     * @var string $name
+     */
+    protected $name;
+
+    /**
+     * @var string $address
+     */
+    protected $address;
+
+    /**
+     * @var string $city
+     */
+    protected $city;
+
+    /**
+     * @var string $zipcode
+     */
+    protected $zipcode;
+
+    /**
+     * @var string $country
+     */
+    protected $country;
+
+    /**
+     * @var timestamp $created_at
+     */
+    protected $created_at;
+
+    /**
+     * @var timestamp $updated_at
+     */
+    protected $updated_at;
 
 
     /**
@@ -115,7 +157,7 @@ class User
     /**
      * Set birthdate
      *
-     * @param date $birthdate
+     * @param timestamp $birthdate
      * @return self
      */
     public function setBirthdate($birthdate)
@@ -127,7 +169,7 @@ class User
     /**
      * Get birthdate
      *
-     * @return date $birthdate
+     * @return timestamp $birthdate
      */
     public function getBirthdate()
     {
@@ -289,46 +331,46 @@ class User
     }
 
     /**
-     * Set createdDate
+     * Set createdAt
      *
-     * @param timestamp $createdDate
+     * @param timestamp $createdAt
      * @return self
      */
-    public function setCreatedDate($createdDate)
+    public function setCreatedAt($createdAt)
     {
-        $this->created_date = $createdDate;
+        $this->created_at = $createdAt;
         return $this;
     }
 
     /**
-     * Get createdDate
+     * Get createdAt
      *
-     * @return timestamp $createdDate
+     * @return timestamp $createdAt
      */
-    public function getCreatedDate()
+    public function getCreatedAt()
     {
-        return $this->created_date;
+        return $this->created_at;
     }
 
     /**
-     * Set updatedDate
+     * Set updatedAt
      *
-     * @param timestamp $updatedDate
+     * @param timestamp $updatedAt
      * @return self
      */
-    public function setUpdatedDate($updatedDate)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->updated_date = $updatedDate;
+        $this->updated_at = $updatedAt;
         return $this;
     }
 
     /**
-     * Get updatedDate
+     * Get updatedAt
      *
-     * @return timestamp $updatedDate
+     * @return timestamp $updatedAt
      */
-    public function getUpdatedDate()
+    public function getUpdatedAt()
     {
-        return $this->updated_date;
+        return $this->updated_at;
     }
 }

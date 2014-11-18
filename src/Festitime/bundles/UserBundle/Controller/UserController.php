@@ -54,7 +54,7 @@ class UserController extends Controller
     {
         $userService = $this->container->get('festitime.user_service');
         $response = $userService->postUser();
-        
+
         if ($response instanceof User)
         {
             $this->get('session')->getFlashBag()->add('success', array('message' => 'Votre compte a bien été créé'));
@@ -63,7 +63,7 @@ class UserController extends Controller
         {
             $this->get('session')->getFlashBag()->add('error', array('message' => 'Le formulaire comporte des erreurs'));
         }
-        
+
         return $this->forward('FestitimeUserBundle:User:login');
     }
 
@@ -74,7 +74,7 @@ class UserController extends Controller
         
         $users = $userService->getUsers();
         $response = new Response($serializer->serialize($users, "json"));
-        
+
         return $response;
     }
 }

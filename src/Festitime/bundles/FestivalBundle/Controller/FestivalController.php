@@ -15,9 +15,9 @@ class FestivalController extends Controller
 
     public function postFestivalAction()
     {
-    	$festivalService = $this->container->get('festitime.festival_service');
-    	$response = $festivalService->postFestival();
-    	
+        $festivalService = $this->container->get('festitime.festival_service');
+        $response = $festivalService->postFestival();
+        
         if ($response instanceof Festival)
         {
             $this->get('session')->getFlashBag()->add('success', 'Le festival a bien été créé');

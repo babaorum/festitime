@@ -24,7 +24,7 @@ Festitime\bundles\UserBundle\Document\User:
             type: string
         country:
             type: string
-        created_date:
+        created_at:
             type: timestamp
-        updated_date:
+        updated_at:
             type: timestamp
