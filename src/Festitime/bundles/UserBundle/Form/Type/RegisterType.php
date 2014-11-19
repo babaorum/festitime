@@ -13,12 +13,10 @@ class RegisterType extends AbstractType
     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        //pseudo
         $builder->add('pseudo', 'text', array(
             'required' => true,
             'label' => 'Pseudonyme',
         ));
-        //email
         $builder->add('email', 'repeated', array(
             'type' => 'email',
             'options' => array('required' => true),
@@ -26,7 +24,6 @@ class RegisterType extends AbstractType
             'first_options'  => array('label' => 'Email'),
             'second_options' => array('label' => 'Confirmation de l\'email'),
         ));
-        //mot de passe
         $builder->add('password', 'repeated', array(
             'type' => 'password',
             'options' => array('required' => true),
@@ -35,7 +32,6 @@ class RegisterType extends AbstractType
             'first_options'  => array('label' => 'Mot de passe'),
             'second_options' => array('label' => 'Confirmation du mot de passe'),
         ));
-        //naissance
         $builder->add('birthdate', 'birthday', array(
             'input' => 'timestamp',
             'widget' => 'choice',
@@ -43,24 +39,20 @@ class RegisterType extends AbstractType
             'required' => true,
             'label' => 'Date de naissance',
         ));
-        //sexe
         $builder->add('gender', 'choice', array(
             'choices' => array('m' => 'Masculin', 'f' => 'Féminin'),
             'expanded' => true,
             'required' => true,
             'label' => 'Sexe',
         ));
-        //prenom
         $builder->add('firstname', 'text', array(
             'required' => true,
             'label' => 'Prénom',
         ));
-        //nom
         $builder->add('name', 'text', array(
             'required' => true,
             'label' => 'Nom de famille',
         ));
-        //adresse
         $builder->add('address', 'text', array(
             'required' => true,
             'label' => 'Adresse postale',
@@ -70,12 +62,10 @@ class RegisterType extends AbstractType
             'required' => true,
             'label' => 'Ville',
         ));
-        //code postal
         $builder->add('zipcode', 'text', array(
             'required' => true,
             'label' => 'Code postal',
         ));
-        //pays
         $builder->add('country', 'country', array(
             'preferred_choices' => array('FR'),
             'required' => true,
