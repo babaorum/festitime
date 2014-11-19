@@ -1,0 +1,16 @@
+<?php
+
+namespace Festitime\bundles\FestivalBundle\Document;
+
+class Festival
+{
+    public function toArray()
+    {
+        return array(
+            'id' => $this->id,
+            'name' => $this->name,
+            'description' => $this->description
+        );
+    }
+
+}

@@ -9,7 +9,7 @@ Festitime\bundles\UserBundle\Document\User:
         password:
             type: string
         birthdate:
-            type: timestamp
+            type: date
         gender:
             type: boolean
         firstname:
@@ -25,6 +25,6 @@ Festitime\bundles\UserBundle\Document\User:
         country:
             type: string
         created_at:
-            type: timestamp
+            type: date
         updated_at:
-            type: timestamp
+            type: date

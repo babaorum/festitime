@@ -7,6 +7,15 @@ namespace Festitime\bundles\UserBundle\Document;
  */
 class User
 {
+    public function toArray()
+    {
+        return array(
+            'id' => $this->id,
+            'name' => $this->name,
+            'description' => $this->description
+        );
+    }
+
     /**
      * @var MongoId $id
      */
@@ -28,7 +37,7 @@ class User
     protected $password;
 
     /**
-     * @var timestamp $birthdate
+     * @var date $birthdate
      */
     protected $birthdate;
 
@@ -68,12 +77,12 @@ class User
     protected $country;
 
     /**
-     * @var timestamp $created_at
+     * @var date $created_at
      */
     protected $created_at;
 
     /**
-     * @var timestamp $updated_at
+     * @var date $updated_at
      */
     protected $updated_at;
 
@@ -157,7 +166,7 @@ class User
     /**
      * Set birthdate
      *
-     * @param timestamp $birthdate
+     * @param date $birthdate
      * @return self
      */
     public function setBirthdate($birthdate)
@@ -169,7 +178,7 @@ class User
     /**
      * Get birthdate
      *
-     * @return timestamp $birthdate
+     * @return date $birthdate
      */
     public function getBirthdate()
     {
@@ -333,7 +342,7 @@ class User
     /**
      * Set createdAt
      *
-     * @param timestamp $createdAt
+     * @param date $createdAt
      * @return self
      */
     public function setCreatedAt($createdAt)
@@ -345,7 +354,7 @@ class User
     /**
      * Get createdAt
      *
-     * @return timestamp $createdAt
+     * @return date $createdAt
      */
     public function getCreatedAt()
     {
@@ -355,7 +364,7 @@ class User
     /**
      * Set updatedAt
      *
-     * @param timestamp $updatedAt
+     * @param date $updatedAt
      * @return self
      */
     public function setUpdatedAt($updatedAt)
@@ -367,7 +376,7 @@ class User
     /**
      * Get updatedAt
      *
-     * @return timestamp $updatedAt
+     * @return date $updatedAt
      */
     public function getUpdatedAt()
     {
