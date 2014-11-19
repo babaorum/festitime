@@ -1,0 +1,11 @@
+{
+  "name": "festitime",
+  "version": "1.0.0",
+  "directory": "web/assets/js/bower_components/",
+  "dependencies": {
+    "jquery": "*",
+    "angular": "*",
+    "bootstrap": "*",
+    "underscore": "*"
+  }
+}

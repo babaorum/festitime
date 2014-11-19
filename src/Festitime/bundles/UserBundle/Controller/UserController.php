@@ -26,9 +26,14 @@ class UserController extends Controller
                 return $this->redirect($this->generateUrl('index'));
             }
         }
-
+        $this->get('session')->getFlashBag()->add('success', array('message' => 'Vous n\'etes pas connecté'));
         $formConnect = $userService->getConnectForm();
-        return $this->render('FestitimeUserBundle:User:index.html.twig', array('formConnect' => $formConnect->createView()));
+        $formRegister = $userService->getRegisterForm();
+        return $this->render('FestitimeUserBundle:User:index.html.twig', 
+            array(  'formConnect' => $formConnect->createView(), 
+                    'formRegister' => $formRegister->createView() 
+            )
+        );
     }
     
     /**
@@ -49,17 +54,17 @@ class UserController extends Controller
     {
         $userService = $this->container->get('festitime.user_service');
         $response = $userService->postUser();
-        
+
         if ($response instanceof User)
         {
-            //$this->get('session')->getFlashBag()->add('success', 'L\'utilisateur a bien été créé');
-            die(var_dump($response));
+            $this->get('session')->getFlashBag()->add('success', array('message' => 'Votre compte a bien été créé'));
         }
         else
         {
-            $this->get('session')->getFlashBag()->add('error', 'Le pseudo et le mot de passe de l\'utilisateur doivent être remplis');
+            $this->get('session')->getFlashBag()->add('error', array('message' => 'Le formulaire comporte des erreurs'));
         }
-        return $this->redirect($this->generateUrl('index'));
+
+        return $this->forward('FestitimeUserBundle:User:login');
     }
 
     public function getUsersAction()
@@ -69,7 +74,7 @@ class UserController extends Controller
         
         $users = $userService->getUsers();
         $response = new Response($serializer->serialize($users, "json"));
-        
+
         return $response;
     }
 }

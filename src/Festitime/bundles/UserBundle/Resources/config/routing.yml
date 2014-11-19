@@ -7,7 +7,7 @@ logout:
     defaults: { _controller: FestitimeUserBundle:User:logout }
 
 postUser:
-    path: /users/new
+    path: /users/register
     defaults: { _controller: FestitimeUserBundle:User:postUser }
     requirements:
         _method: POST

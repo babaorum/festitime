@@ -10,6 +10,18 @@ class UserService
     protected $mongoManager;
     protected $form;
     protected $formConnect;
+    protected $formRegister;
+    protected $formTool;
+
+    public function __construct($request, $doctrineMongodb, $form, $formConnect, $formRegister, $formTool)
+    {
+        $this->request = $request;
+        $this->mongoManager = $doctrineMongodb->getManager();
+        $this->form = $form;
+        $this->formConnect = $formConnect;
+        $this->formRegister = $formRegister;
+        $this->formTool = $formTool;
+    }
 
     public function getUsers()
     {
@@ -18,38 +30,36 @@ class UserService
         return $users;
     }
 
-    public function __construct($request, $doctrineMongodb, $form, $formConnect)
-    {
-        $this->request = $request;
-        $this->mongoManager = $doctrineMongodb->getManager();
-        $this->form = $form;
-        $this->formConnect = $formConnect;
-    }
-
     public function postUser()
     {
         $request = $this->request->getCurrentRequest();
-        $query = $request->request->all();
-        if (!empty($query['submit']))
-        {
-            $user = new User();
-            if(!empty($query['user']['pseudo']) && !empty($query['user']['password']))
-            {
-                $user->setPseudo($query['user']['pseudo']);
-                $user->setPassword($query['user']['password']);
 
-                $this->mongoManager->persist($user);
-                $this->mongoManager->flush();
+        $user = new User();
+        $form = $this->form->create($this->formRegister, $user);
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            
+            $this->mongoManager->persist($user);
+            $this->mongoManager->flush();
                 
-                return $user;
-            }
+            return $user;
         }
-        return null;
+        //die(var_dump($this->formTool->getAllFormErrors($form)));
+        return $this->formTool->getAllFormErrors($form);
     }
+
     public function getConnectForm()
     {
         $user = new User();
         $form = $this->form->create($this->formConnect, $user);
+        return $form;
+    }
+
+    public function getRegisterForm()
+    {
+        $user = new User();
+        $form = $this->form->create($this->formRegister, $user);
         return $form;
     }
 

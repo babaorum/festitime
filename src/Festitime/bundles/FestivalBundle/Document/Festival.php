@@ -4,10 +4,6 @@ namespace Festitime\bundles\FestivalBundle\Document;
 
 class Festival
 {
-	protected $name;
-	
-	protected $description;
-    
     public function toArray()
     {
         return array(
@@ -21,6 +17,16 @@ class Festival
      * @var MongoId $id
      */
     protected $id;
+
+    /**
+     * @var string $name
+     */
+    protected $name;
+
+    /**
+     * @var string $description
+     */
+    protected $description;
 
 
     /**
