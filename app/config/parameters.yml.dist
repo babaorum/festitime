@@ -15,4 +15,4 @@ parameters:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
     login_route: login
-    register_route: postUser
+    connected_route: []

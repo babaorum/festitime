@@ -9,26 +9,39 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 class AuthentificationListener
 {
     protected $router;
-    protected $session;
+    protected $loginRoute;
+    protected $connectedRoute;
 
-    public function __construct($router, $loginRoute, $registerRoute)
+    public function __construct($router, $loginRoute, $connectedRoute)
     {
         $this->router = $router;
         $this->loginRoute = $loginRoute;
-        $this->registerRoute = $registerRoute;
+        $this->connectedRoute = $connectedRoute;
     }
 
     public function onKernelRequest(GetResponseEvent $event)
     {
+        $redirect = false;
         $request = $event->getRequest();
         $currentRoute = $request->attributes->get('_route');
 
         $session = $request->getSession();
         $user_id = $session->get('user_id');
-
-        if (empty($user_id) && $currentRoute != $this->loginRoute && $currentRoute != $this->registerRoute)
+        
+        if (empty($user_id))
         {
-            $event->setResponse($this->redirectOnLoginPage());
+            foreach ($this->connectedRoute as $route)
+            {
+                if($currentRoute === $route)
+                {
+                    $redirect = true;
+                    break;
+                }
+            }
+            if($redirect)
+            {
+                $event->setResponse($this->redirectOnLoginPage());
+            }
         }
     }
 
