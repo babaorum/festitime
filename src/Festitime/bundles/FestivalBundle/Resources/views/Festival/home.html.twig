@@ -37,7 +37,7 @@
 				<div class="title">
 					Trier par dates
 				</div>
-				<img class="status close" width="20px" height="23px" alt="arrow" src="/assets/images/arrow-bottom.svg"/>
+				<img class="status open" width="20px" height="23px" alt="arrow" src="/assets/images/arrow-up.svg"/>
 			</div>
 			<div class="content">
 				bla bla bla bla bla bla bla bla bla
@@ -52,7 +52,7 @@
 				<div class="title">
 					Trier par genres
 				</div>
-				<img width="20px" height="23px" class="status close" alt="arrow" src="/assets/images/arrow-bottom.svg"/>
+				<img width="20px" height="23px" class="status open" alt="arrow" src="/assets/images/arrow-up.svg"/>
 			</div>
 			<div class="content">
 				<span class="active">Tout voir</span>
@@ -72,7 +72,7 @@
 				<div class="title">
 					Trier par r&#233;gions
 				</div>
-				<img width="20px" height="23px" class="status close" alt="arrow" src="/assets/images/arrow-bottom.svg"/>
+				<img width="20px" height="23px" class="status open" alt="arrow" src="/assets/images/arrow-up.svg"/>
 			</div>
 			<div class="content">
 				<span class="active">Tous les pays</span>
@@ -150,20 +150,16 @@
 	<script type="text/javascript">
 		$('.sidebar.item .header .status').click(function(e){
 			if($(this).hasClass('close')){
+				$(this).closest('.sidebar.item').children('.content').slideDown(200);				
 				$(this).attr("src", "/assets/images/arrow-up.svg");
-				$(this).addClass("open");
 				$(this).removeClass("close");
-				$(this).parent(".sidebar.item").find('.content').animate({
-					height: "toggle"
-				}, 2000);
+				$(this).addClass("open");
 			}
 			else if($(this).hasClass('open')){
+				$(this).closest('.sidebar.item').children('.content').slideUp(200);
 				$(this).attr("src", "/assets/images/arrow-bottom.svg");
-				$(this).addClass("close");
 				$(this).removeClass("open");
-				$(this).parent(".sidebar.item").find('.content').animate({
-					height: "toggle"
-				}, 2000);
+				$(this).addClass("close");
 			}
 		});
 	</script>
