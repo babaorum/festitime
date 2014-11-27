@@ -203,7 +203,7 @@ header
 
 #search-bar
 {
-	background: url(images/search-dark.png) no-repeat 325px 10px #262626;
+	background: url(/assets/images/search-dark.png) no-repeat 325px 10px #262626;
 	float: left;
     border: 0 none;
     font: 14px 'Open Sans', sans-serif;
@@ -236,7 +236,7 @@ header
 	margin-bottom: 5px;
 	float: left;
 	height: 250px;
-	background: url(images/lesVieillesCharrues.jpg) no-repeat;
+	background: url(/assets/images/lesVieillesCharrues.jpg) no-repeat;
 	color: #ffffff;
     font: 12px 'Open Sans', sans-serif;
     position: relative;
