@@ -30,6 +30,7 @@ class FestivalService
                 {
                     $festival->setDescription($query['festival']['description']);
                 }
+                $festival->setType(array('pop', 'rock'));
                 $this->mongoManager->persist($festival);
                 $this->mongoManager->flush();
                 

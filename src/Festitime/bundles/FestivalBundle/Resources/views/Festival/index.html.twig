@@ -24,6 +24,10 @@
             <div ng-app="festival">
                 <div ng-controller="searchBarController">
                     <input type="search" ng-model="search" placeholder="Rechercher ...">
+                    <br>
+                    <input type="checkbox" ng-click="includeType('pop')">&nbsp;Pop
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" ng-click="includeType('rock')">&nbsp;Rock
                     <ul>
                         <li ng-repeat="festival in festivals | filter:search">
                             {[{ festival.name }]}

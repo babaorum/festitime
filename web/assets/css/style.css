@@ -1,0 +1,298 @@
+header
+{
+	z-index: 10;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 75px;
+	background-color: #303030;
+}
+
+#sidebar
+{
+	z-index: 5;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 350px;
+	background-color: #EEEEEE;
+	padding-top: 175px;
+}
+
+.sidebar.item
+{
+	margin: 0 5%;
+	margin-bottom: 25px;
+	width: 90%;
+	background-color: #FFFFFF;
+	border: 1px solid #E6E6E6;
+}
+
+.sidebar.item .header
+{
+	width: 100%;
+	padding: 5px 0;
+	height: 47px;
+	border-bottom: 1px solid #E6E6E6;
+}
+
+.sidebar.item .icon
+{
+	float: left;
+	width: 20px;
+	height: 23px;
+	margin: 13px 0 13px 16px;
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+    fill: #E03763;
+}
+
+.sidebar.item .icon.agenda
+{
+	background-image: url("/assets/images/calendar.svg");
+}
+.sidebar.item .icon.music
+{
+	background-image: url("/assets/images/music.svg");
+}
+.sidebar.item .icon.location
+{
+	background-image: url("/assets/images/location.svg");
+}
+
+.sidebar.item .title
+{
+	float: left;
+	width: 75%;
+	font-family: Oswald;
+	font-size: 25px;
+	text-align: center;
+	padding: 5px 0;
+}
+
+.sidebar.item .status
+{
+	cursor: pointer;
+	float: left;
+	width: 20px;
+	height: 23px;
+	margin: 13px 16px 13px 0;
+}
+
+.sidebar.item .content
+{
+	padding: 15px;
+}
+
+.sidebar.item .content span
+{
+	margin: 3px;
+	padding: 5px 10px;
+	background-color: #303030;
+	display: inline-block;
+	color: #ffffff;
+    font: 12px 'Open Sans', sans-serif;
+}
+
+.sidebar.item .content span.active
+{
+	background-color: #C92A55;
+}
+
+#banner-box
+{
+	float: left;
+	width: 350px;
+	height: 100%;
+}
+
+#flag
+{
+	text-align: center;
+    display: block;
+    width: 110px;
+    height: 110px;
+    background: #ffffff;
+    margin: auto;
+}
+
+#flag:after
+{
+	content: "";
+    display: block;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-width: 10px 55px 35px 55px;
+    border-style: solid;
+    border-color: #ffffff #ffffff transparent #ffffff;
+}
+
+#menu
+{
+	float: left;
+	padding-left: 15px;
+	height: 100%;
+}
+
+#menu .link
+{
+	float: left;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #C8C8C8;
+	display: block;
+	height: 100%;
+}
+
+#menu .link span
+{
+	display: block;
+	height: 75px;
+	line-height: 75px;
+	padding: 0 10px;
+}
+
+#menu .link span:hover
+{
+	background-color: #262626;
+	color: #C92A55;
+	box-sizing: border-box;
+	border-bottom: 3px solid #C92A55;
+}
+
+
+#menu .link span.active
+{
+	background-color: #262626;
+	color: #C92A55;
+	box-sizing: border-box;
+	border-bottom: 3px solid #C92A55;
+}
+
+#connect
+{
+	font-family: 'Open Sans', sans-serif;
+	color: #C8C8C8;
+	display: block;
+	height: 100%;
+	text-decoration: none;
+	float: right;
+	padding-right: 15px;
+}
+
+#connect span
+{
+	display: block;
+	height: 75px;
+	line-height: 75px;
+	padding: 0 10px;
+}
+
+#search
+{
+	float: left;
+	margin-top: 20px;
+	margin-left: 15px;
+}
+
+#search-bar
+{
+	background: url(images/search-dark.png) no-repeat 325px 10px #262626;
+	float: left;
+    border: 0 none;
+    font: 14px 'Open Sans', sans-serif;
+    color: #777;
+    width: 350px;
+    padding: 6px 15px 6px 25px;
+    border-radius: 2px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+#main
+{
+	background-color: #F7F7F7;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-top: 75px;
+	margin-left: 350px;
+	padding-top: 25px;
+	padding-left: 15px;
+}
+
+#main .block
+{
+	width: 24%;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	float: left;
+	height: 250px;
+	background: url(images/lesVieillesCharrues.jpg) no-repeat;
+	color: #ffffff;
+    font: 12px 'Open Sans', sans-serif;
+    position: relative;
+}
+
+#main .block .festival
+{
+	width: 100%;
+	position: absolute;
+	bottom: 15;
+	height: 25%;
+}
+
+#main .block .festival .name
+{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#main .block .festival .info
+{
+	height: 80%;
+	background: rgba(40, 40, 40, 0.5);
+	padding-left: 1%;
+}
+
+#main .block .festival .info .left-info
+{
+	float: left;
+}
+
+#main .block .festival .info .price span
+{
+	font-size: 9px;
+	font-weight: normal;
+}
+
+#main .block .festival .info .price
+{
+	float: right;
+	background: #C92A55;
+	font-size: 20px;
+	font-weight: bold;
+	height: 100%;
+	width: 19%;
+	text-align: right;
+	line-height: 100%;
+	padding-right: 3px;
+}
+
+#main .block .info
+{
+
+}
+
+.clear
+{
+	clear: both;
+}

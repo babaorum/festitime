@@ -2,6 +2,11 @@
 
 namespace Festitime\bundles\FestivalBundle\Document;
 
+
+
+/**
+ * Festitime\bundles\FestivalBundle\Document\Festival
+ */
 class Festival
 {
     public function toArray()

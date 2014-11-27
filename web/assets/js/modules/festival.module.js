@@ -10,6 +10,10 @@
  
                 // I contain the list of festivals to be rendered.
                 $scope.festivals = [];
+                $scope.types = [];                
+                $scope.includeType = function (type) {
+                    var i =
+                };
  
                 loadRemoteData();
  
@@ -36,6 +40,7 @@
                     ;
  
                 }
+
  
             }
         );

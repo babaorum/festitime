@@ -13,6 +13,11 @@ class FestivalController extends Controller
         return $this->render('FestitimeFestivalBundle:Festival:index.html.twig', array());
     }
 
+    public function homeAction()
+    {
+        return $this->render('FestitimeFestivalBundle:Festival:home.html.twig', array());
+    }
+
     public function postFestivalAction()
     {
         $festivalService = $this->container->get('festitime.festival_service');

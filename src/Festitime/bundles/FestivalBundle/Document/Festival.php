@@ -2,6 +2,11 @@
 
 namespace Festitime\bundles\FestivalBundle\Document;
 
+
+
+/**
+ * Festitime\bundles\FestivalBundle\Document\Festival
+ */
 class Festival
 {
     public function toArray()
@@ -9,7 +14,8 @@ class Festival
         return array(
             'id' => $this->id,
             'name' => $this->name,
-            'description' => $this->description
+            'description' => $this->description,
+            'type' => $this->type
         );
     }
 
@@ -27,6 +33,11 @@ class Festival
      * @var string $description
      */
     protected $description;
+
+    /**
+     * @var collection $type
+     */
+    protected $type;
 
 
     /**
@@ -81,5 +92,27 @@ class Festival
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set type
+     *
+     * @param collection $type
+     * @return self
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return collection $type
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }

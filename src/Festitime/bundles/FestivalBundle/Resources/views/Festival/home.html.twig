@@ -1,0 +1,172 @@
+<html>
+<head>
+	<title>Accueil - Festitime</title>
+	<script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header>
+		<div id="banner-box">
+			<div id="flag">
+				<img id="logo" width="110px" src="/assets/images/logo.png"/>
+			</div>
+		</div>
+		<div id="menu">
+			<a href="#" class="link">
+				<span class="active">Les Festivals</span>
+			</a>
+			<a href="#" class="link">
+				<span>Besoin d'aide ?</span>
+			</a>
+			<form id="search" method="get" action="/search" >
+				<input id="search-bar" type="text" size="40" placeholder="Recherchez un festival, un artiste,etc." />
+			</form>
+			<span class="clear"></span>
+		</div>
+		<a href="#" id="connect">
+			<span>Se connecter</span>
+		</a>
+		<span class="clear"></span>
+	</header>
+	<div id="sidebar">
+		<div class="sidebar item">
+			<div class="header">
+				<div class="icon agenda"></div>
+				<div class="title">
+					Trier par dates
+				</div>
+				<img class="status close" width="20px" height="23px" alt="arrow" src="/assets/images/arrow-bottom.svg"/>
+			</div>
+			<div class="content">
+				bla bla bla bla bla bla bla bla bla
+				bla bla bla bla bla bla bla bla bla
+				bla bla bla bla bla bla bla bla bla
+				bla bla bla bla bla bla bla bla bla
+			</div>
+		</div>
+		<div class="sidebar item">
+			<div class="header">
+				<div class="icon music"></div>
+				<div class="title">
+					Trier par genres
+				</div>
+				<img width="20px" height="23px" class="status close" alt="arrow" src="/assets/images/arrow-bottom.svg"/>
+			</div>
+			<div class="content">
+				<span class="active">Tout voir</span>
+				<span>&#201;lectro</span>
+				<span>Rock</span>
+				<span>Pop</span>
+				<span>Hip Hop / Rap</span>
+				<span>Reggae / Ragga</span>
+				<span>Jazz</span>
+				<span>Dark / Metal</span>
+				<span>Punk</span>
+			</div>
+		</div>
+		<div class="sidebar item">
+			<div class="header">
+				<div class="icon location"></div>
+				<div class="title">
+					Trier par r&#233;gions
+				</div>
+				<img width="20px" height="23px" class="status close" alt="arrow" src="/assets/images/arrow-bottom.svg"/>
+			</div>
+			<div class="content">
+				<span class="active">Tous les pays</span>
+				<span>France</span>
+				<span>Espagne</span>
+				<span>Angleterre</span>
+				<span>Allemagne</span>
+				<span>Belgique</span>
+			</div>
+		</div>
+	</div>
+	<div id="main">
+		<div class="block">
+			<div class="festival">
+			<div class="name">Les Vieilles Charrues</div>
+				<div class="info">
+					<div class="left-info">
+						<div class="date">16 - 19 juillet 2015</div>
+						<div class="location">Carhaix-Plouguer, France</div>
+					</div>
+					<div class="price"><span>A partir de </span>34&#128;</div>
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="festival">			
+				<div class="name">Les Vieilles Charrues</div>	
+				<div class="info">
+					<div class="left-info">
+						<div class="date">16 - 19 juillet 2015</div>
+						<div class="location">Carhaix-Plouguer, France</div>
+					</div>
+					<div class="price"><span>A partir de </span>34&#128;</div>
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="festival">			
+				<div class="name">Les Vieilles Charrues</div>	
+				<div class="info">
+					<div class="left-info">
+						<div class="date">16 - 19 juillet 2015</div>
+						<div class="location">Carhaix-Plouguer, France</div>
+					</div>
+					<div class="price"><span>A partir de </span>34&#128;</div>
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="festival">			
+				<div class="name">Les Vieilles Charrues</div>	
+				<div class="info">
+					<div class="left-info">
+						<div class="date">16 - 19 juillet 2015</div>
+						<div class="location">Carhaix-Plouguer, France</div>
+					</div>
+					<div class="price"><span>A partir de </span>34&#128;</div>
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="festival">			
+				<div class="name">Les Vieilles Charrues</div>	
+				<div class="info">
+					<div class="left-info">
+						<div class="date">16 - 19 juillet 2015</div>
+						<div class="location">Carhaix-Plouguer, France</div>
+					</div>
+					<div class="price"><span>A partir de </span>34&#128;</div>
+				</div>
+			</div>
+		</div>
+		<span class="clear"></span>
+	</div>
+	<script type="text/javascript">
+		$('.sidebar.item .header .status').click(function(e){
+			console.log($(this));
+			if($(this).hasClass('close')){
+				$(this).attr("src", "/assets/images/arrow-up.svg");
+				$(this).addClass("open");
+				$(this).removeClass("close");
+				$(this).parent(".sidebar.item").find('.content').animate({
+					height: "toggle"
+				}, 2000);
+			}
+			else if($(this).hasClass('open')){
+				$(this).attr("src", "/assets/images/arrow-bottom.svg");
+				$(this).addClass("close");
+				$(this).removeClass("open");
+				$(this).parent(".sidebar.item").find('.content').animate({
+					height: "toggle"
+				}, 2000);
+			}
+		});
+	</script>
+</body>
+</html>
