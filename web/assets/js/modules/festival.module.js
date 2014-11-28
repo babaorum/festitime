@@ -4,16 +4,41 @@
             }
         );
         // I control the main demo.
-        app.controller(
-            "searchBarController",
-            function( $scope, festivalService ) {
+        app.controller("searchBarController", ['$scope', 'festivalService', function( $scope, festivalService ) {
  
                 // I contain the list of festivals to be rendered.
                 $scope.festivals = [];
                 $scope.types = [];                
-                $scope.includeType = function (type) {
-                    var i =
+                
+                function includeType(type){
+                    var i = $scope.types.indexOf(type);
+                    if (i > -1) {
+                        $scope.types.splice(i, 1);
+                    } else {
+                        $scope.types.push(type);
+                    }
+                    console.log($scope.types);
                 };
+                $scope.includeType = includeType; 
+
+                $scope.typeFilter = function(festival){
+                    if($scope.types.length > 0) {
+                        var match = false;
+                        for (var i in festival.type) {
+                            console.log(festival.type[i]);
+                            console.log($scope.types);
+                            if($scope.types.indexOf(festival.type[i]) > -1)
+                            {
+                                console.log('yes');
+                                match = true;
+                            }
+                        }
+                        if(!match)
+                            return;
+                    }
+
+                    return festival;
+                }
  
                 loadRemoteData();
  
@@ -42,7 +67,7 @@
                 }
 
  
-            }
+            }]
         );
  
  

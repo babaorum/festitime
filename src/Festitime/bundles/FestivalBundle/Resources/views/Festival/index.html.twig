@@ -29,7 +29,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="checkbox" ng-click="includeType('rock')">&nbsp;Rock
                     <ul>
-                        <li ng-repeat="festival in festivals | filter:search">
+                        <li ng-repeat="festival in festivals | filter:search | filter:typeFilter">
                             {[{ festival.name }]}
                         </li>
                     </ul>
