@@ -33,11 +33,11 @@
 	<div id="sidebar">
 		<div class="sidebar item">
 			<div class="header">
-				<div class="icon agenda"></div>
+				<img width="20px" height="23px" class="svg" alt="calendar" src="/assets/images/calendar.svg"/>
 				<div class="title">
 					Trier par dates
 				</div>
-				<img class="status open" width="20px" height="23px" alt="arrow" src="/assets/images/arrow-up.svg"/>
+				<img width="20px" height="23px" class="status open" alt="arrow" src="/assets/images/arrow-up.svg"/>
 			</div>
 			<div class="content">
 				bla bla bla bla bla bla bla bla bla
@@ -48,7 +48,7 @@
 		</div>
 		<div class="sidebar item">
 			<div class="header">
-				<div class="icon music"></div>
+				<img width="20px" height="23px" class="svg" alt="music" src="/assets/images/music.svg"/>
 				<div class="title">
 					Trier par genres
 				</div>
@@ -92,9 +92,9 @@
 		</div>
 		<div class="sidebar item">
 			<div class="header">
-				<div class="icon location"></div>
+				<img width="20px" height="23px" class="svg" alt="location" src="/assets/images/location.svg"/>
 				<div class="title">
-					Trier par r&#233;gions
+					Trier par pays
 				</div>
 				<img width="20px" height="23px" class="status open" alt="arrow" src="/assets/images/arrow-up.svg"/>
 			</div>
@@ -109,6 +109,7 @@
 	</div>
 	<div id="main">
 		<div class="block" ng-repeat="festival in festivals | filter:search | filter:typeFilter">
+			<img src="/assets/images/lesVieillesCharrues.jpg" alt="image festival">
 			<div class="festival">
 				<div class="name">{[{ festival.name }]}</div>
 				<div class="info">
