@@ -106,7 +106,7 @@
     </div>
     <div id="main">
         <div class="block" ng-repeat="festival in festivals | filter:search | filter:typeFilter">
-            <img src="/assets/images/lesVieillesCharrues.jpg" alt="image festival">
+            <img src="{[{ festival.img }]}" alt="image festival">
             <div class="festival">
                 <div class="name">{[{ festival.name }]}</div>
                 <div class="info">
