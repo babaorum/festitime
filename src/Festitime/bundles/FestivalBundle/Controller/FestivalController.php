@@ -51,4 +51,11 @@ class FestivalController extends Controller
         $response = new Response($serializer->serialize($response, "json"));
         return $response;
     }
+
+    public function deleteFestivalAction($id)
+    {
+        $festivalService = $this->container->get('festitime.festival_service');
+        $response = $festivalService->deleteFestival($id);
+        return new Response('', "json");
+    }
 }

@@ -15,7 +15,14 @@ class Festival
             'id' => $this->id,
             'name' => $this->name,
             'description' => $this->description,
-            'type' => $this->type
+            'type' => $this->type,
+            'img' => $this->img,
+            'start_date' => $this->start_date,
+            'end_date' => $this->end_date,
+            'city' => $this->city,
+            'region' => $this->region,
+            'country' => $this->country,
+            'price' => $this->price
         );
     }
 
@@ -38,6 +45,41 @@ class Festival
      * @var collection $type
      */
     protected $type;
+
+    /**
+     * @var string $img
+     */
+    protected $img;
+
+    /**
+     * @var date $start_date
+     */
+    protected $start_date;
+
+    /**
+     * @var date $end_date
+     */
+    protected $end_date;
+
+    /**
+     * @var string $city
+     */
+    protected $city;
+
+    /**
+     * @var string $region
+     */
+    protected $region;
+
+    /**
+     * @var string $country
+     */
+    protected $country;
+
+    /**
+     * @var int $price
+     */
+    protected $price;
 
 
     /**
@@ -114,5 +156,159 @@ class Festival
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * Set img
+     *
+     * @param string $img
+     * @return self
+     */
+    public function setImg($img)
+    {
+        $this->img = $img;
+        return $this;
+    }
+
+    /**
+     * Get img
+     *
+     * @return string $img
+     */
+    public function getImg()
+    {
+        return $this->img;
+    }
+
+    /**
+     * Set startDate
+     *
+     * @param date $startDate
+     * @return self
+     */
+    public function setStartDate($startDate)
+    {
+        $this->start_date = $startDate;
+        return $this;
+    }
+
+    /**
+     * Get startDate
+     *
+     * @return date $startDate
+     */
+    public function getStartDate()
+    {
+        return $this->start_date;
+    }
+
+    /**
+     * Set endDate
+     *
+     * @param date $endDate
+     * @return self
+     */
+    public function setEndDate($endDate)
+    {
+        $this->end_date = $endDate;
+        return $this;
+    }
+
+    /**
+     * Get endDate
+     *
+     * @return date $endDate
+     */
+    public function getEndDate()
+    {
+        return $this->end_date;
+    }
+
+    /**
+     * Set city
+     *
+     * @param string $city
+     * @return self
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return string $city
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Set region
+     *
+     * @param string $region
+     * @return self
+     */
+    public function setRegion($region)
+    {
+        $this->region = $region;
+        return $this;
+    }
+
+    /**
+     * Get region
+     *
+     * @return string $region
+     */
+    public function getRegion()
+    {
+        return $this->region;
+    }
+
+    /**
+     * Set country
+     *
+     * @param string $country
+     * @return self
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+        return $this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return string $country
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * Set price
+     *
+     * @param int $price
+     * @return self
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return int $price
+     */
+    public function getPrice()
+    {
+        return $this->price;
     }
 }

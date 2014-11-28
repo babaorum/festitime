@@ -214,16 +214,13 @@ header
 
 #main
 {
+	float: left;
 	background-color: #F7F7F7;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin-top: 75px;
-	margin-left: 350px;
+	margin-top: 67px;
+	margin-left: 342px;
 	padding-top: 25px;
 	padding-left: 15px;
+	width: calc(100% - 350px);
 }
 
 #main .block

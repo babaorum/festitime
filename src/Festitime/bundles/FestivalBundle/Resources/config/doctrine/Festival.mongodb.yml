@@ -8,3 +8,17 @@ Festitime\bundles\FestivalBundle\Document\Festival:
             type: string
         type:
             type: collection
+        img:
+            type: string
+        start_date:
+            type: date
+        end_date:
+            type: date
+        city:
+            type: string
+        region:
+            type: string
+        country:
+            type: string
+        price:
+            type: int

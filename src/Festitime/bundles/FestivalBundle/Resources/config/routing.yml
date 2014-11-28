@@ -17,3 +17,9 @@ getFestivals:
     defaults: { _controller: FestitimeFestivalBundle:Festival:getFestivals }
     #requirements:
     #    _method: POST
+
+deleteFestival:
+    path: /festivals/{id}
+    defaults: { _controller: FestitimeFestivalBundle:Festival:deleteFestival }
+    requirements:
+        _method: DELETE
