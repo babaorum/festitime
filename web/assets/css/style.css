@@ -279,10 +279,10 @@ header
 	font-size: 20px;
 	font-weight: bold;
 	height: 100%;
-	width: 19%;
+	width: 15%;
 	text-align: right;
 	line-height: 100%;
-	padding-right: 3px;
+	padding-right: 5px;
 }
 
 #main .block .info
