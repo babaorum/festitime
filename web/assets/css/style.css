@@ -86,8 +86,9 @@ header
 	padding: 15px;
 }
 
-.sidebar.item .content span
+.sidebar.item .content .tag
 {
+	cursor: pointer;
 	margin: 3px;
 	padding: 5px 10px;
 	background-color: #303030;
@@ -96,9 +97,14 @@ header
     font: 12px 'Open Sans', sans-serif;
 }
 
-.sidebar.item .content span.active
+.sidebar.item .content .tag.active
 {
 	background-color: #C92A55;
+}
+
+.tag input
+{
+	display: none;
 }
 
 #banner-box
@@ -194,13 +200,6 @@ header
 	padding: 0 10px;
 }
 
-#search
-{
-	float: left;
-	margin-top: 20px;
-	margin-left: 15px;
-}
-
 #search-bar
 {
 	background: url(/assets/images/search-dark.png) no-repeat 325px 10px #262626;
@@ -212,7 +211,9 @@ header
     padding: 6px 30px 6px 10px;
     border-radius: 2px;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+	margin-top: 20px;
+	margin-left: 15px; inset;
 }
 
 #main

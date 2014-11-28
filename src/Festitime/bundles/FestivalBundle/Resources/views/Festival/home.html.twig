@@ -2,11 +2,13 @@
 <head>
 	<title>Accueil - Festitime</title>
 	<script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="/assets/js/modules/festival.module.js"></script>
 	<link rel="stylesheet" href="/assets/css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body ng-app="festival" ng-controller="searchBarController">
 	<header>
 		<div id="banner-box">
 			<div id="flag">
@@ -20,9 +22,7 @@
 			<a href="#" class="link">
 				<span>Besoin d'aide ?</span>
 			</a>
-			<form id="search" method="get" action="/search" >
-				<input id="search-bar" type="text" size="40" placeholder="Recherchez un festival, un artiste,etc." />
-			</form>
+			<input id="search-bar" type="text" size="40" placeholder="Recherchez un festival, un artiste, etc." ng-model="search"/>
 			<span class="clear"></span>
 		</div>
 		<a href="#" id="connect">
@@ -55,15 +55,39 @@
 				<img width="20px" height="23px" class="status open" alt="arrow" src="/assets/images/arrow-up.svg"/>
 			</div>
 			<div class="content">
-				<span class="active">Tout voir</span>
-				<span>&#201;lectro</span>
-				<span>Rock</span>
-				<span>Pop</span>
-				<span>Hip Hop / Rap</span>
-				<span>Reggae / Ragga</span>
-				<span>Jazz</span>
-				<span>Dark / Metal</span>
-				<span>Punk</span>
+				<span class="tag">&#201;lectro
+					<input type="checkbox" ng-click="includeType('electro')">
+				</span>
+				<span class="tag">Rock
+					<input type="checkbox" ng-click="includeType('rock')">
+				</span>
+				<span class="tag">Pop
+					<input type="checkbox" ng-click="includeType('pop')">
+				</span>
+				<span class="tag">Hip Hop
+					<input type="checkbox" ng-click="includeType('hip hop')">
+				</span>
+				<span class="tag">Rap
+					<input type="checkbox" ng-click="includeType('rap')">
+				</span>
+				<span class="tag">Reggae
+					<input type="checkbox" ng-click="includeType('reggae')">
+				</span>
+				<span class="tag">Ragga
+					<input type="checkbox" ng-click="includeType('ragga')">
+				</span>
+				<span class="tag">Jazz
+					<input type="checkbox" ng-click="includeType('jazz')">
+				</span>
+				<span class="tag">Dark
+					<input type="checkbox" ng-click="includeType('dark')">
+				</span>
+				<span class="tag">Metal
+					<input type="checkbox" ng-click="includeType('metal')">
+				</span>
+				<span class="tag">Punk
+					<input type="checkbox" ng-click="includeType('punk')">
+				</span>
 			</div>
 		</div>
 		<div class="sidebar item">
@@ -75,67 +99,18 @@
 				<img width="20px" height="23px" class="status open" alt="arrow" src="/assets/images/arrow-up.svg"/>
 			</div>
 			<div class="content">
-				<span class="active">Tous les pays</span>
-				<span>France</span>
-				<span>Espagne</span>
-				<span>Angleterre</span>
-				<span>Allemagne</span>
-				<span>Belgique</span>
+				<span class="tag">France</span>
+				<span class="tag">Espagne</span>
+				<span class="tag">Angleterre</span>
+				<span class="tag">Allemagne</span>
+				<span class="tag">Belgique</span>
 			</div>
 		</div>
 	</div>
 	<div id="main">
-		<div class="block">
+		<div class="block" ng-repeat="festival in festivals | filter:search | filter:typeFilter">
 			<div class="festival">
-			<div class="name">Les Vieilles Charrues</div>
-				<div class="info">
-					<div class="left-info">
-						<div class="date">16 - 19 juillet 2015</div>
-						<div class="location">Carhaix-Plouguer, France</div>
-					</div>
-					<div class="price"><span>A partir de </span>34&#128;</div>
-				</div>
-			</div>
-		</div>
-		<div class="block">
-			<div class="festival">			
-				<div class="name">Les Vieilles Charrues</div>	
-				<div class="info">
-					<div class="left-info">
-						<div class="date">16 - 19 juillet 2015</div>
-						<div class="location">Carhaix-Plouguer, France</div>
-					</div>
-					<div class="price"><span>A partir de </span>34&#128;</div>
-				</div>
-			</div>
-		</div>
-		<div class="block">
-			<div class="festival">			
-				<div class="name">Les Vieilles Charrues</div>	
-				<div class="info">
-					<div class="left-info">
-						<div class="date">16 - 19 juillet 2015</div>
-						<div class="location">Carhaix-Plouguer, France</div>
-					</div>
-					<div class="price"><span>A partir de </span>34&#128;</div>
-				</div>
-			</div>
-		</div>
-		<div class="block">
-			<div class="festival">			
-				<div class="name">Les Vieilles Charrues</div>	
-				<div class="info">
-					<div class="left-info">
-						<div class="date">16 - 19 juillet 2015</div>
-						<div class="location">Carhaix-Plouguer, France</div>
-					</div>
-					<div class="price"><span>A partir de </span>34&#128;</div>
-				</div>
-			</div>
-		</div>
-		<div class="block">
-			<div class="festival">			
-				<div class="name">Les Vieilles Charrues</div>	
+				<div class="name">{[{ festival.name }]}</div>
 				<div class="info">
 					<div class="left-info">
 						<div class="date">16 - 19 juillet 2015</div>
@@ -148,6 +123,18 @@
 		<span class="clear"></span>
 	</div>
 	<script type="text/javascript">
+		$('.sidebar.item .content .tag').click(function(e){
+			if($(this).children('input').is(':checked'))
+			{
+				$(this).addClass("active");
+			}
+			else
+			{
+				$(this).removeClass("active");
+			}
+			$(this).children('input').trigger("click");
+		});
+
 		$('.sidebar.item .header .status').click(function(e){
 			if($(this).hasClass('close')){
 				$(this).closest('.sidebar.item').children('.content').slideDown(200);				

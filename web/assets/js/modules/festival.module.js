@@ -17,7 +17,6 @@
                     } else {
                         $scope.types.push(type);
                     }
-                    console.log($scope.types);
                 };
                 $scope.includeType = includeType; 
 
@@ -25,11 +24,8 @@
                     if($scope.types.length > 0) {
                         var match = false;
                         for (var i in festival.type) {
-                            console.log(festival.type[i]);
-                            console.log($scope.types);
                             if($scope.types.indexOf(festival.type[i]) > -1)
                             {
-                                console.log('yes');
                                 match = true;
                             }
                         }
