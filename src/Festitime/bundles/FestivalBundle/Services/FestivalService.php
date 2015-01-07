@@ -78,6 +78,15 @@ class FestivalService
         return $festivals;
     }
 
+    public function putFestival($id)
+    {
+        $R_festival = $this->mongoManager->getRepository('FestitimeFestivalBundle:Festival');
+        $festival = $R_festival->find($id);
+        $festival->setImg('http://www.concertandco.com/crit2/Trans-Musicales-2007web.jpg');
+        $this->mongoManager->persist($festival);
+        $this->mongoManager->flush();
+    }
+
     public function deleteFestival($id)
     {
         $R_festival = $this->mongoManager->getRepository('FestitimeFestivalBundle:Festival');

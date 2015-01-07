@@ -105,7 +105,7 @@
         </div>
     </div>
     <div id="main">
-        <div class="block" ng-repeat="festival in festivals | filter:search | filter:typeFilter">
+        <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in festivals | filter:search | filter:typeFilter">
             <img src="{[{ festival.img }]}" alt="image festival">
             <div class="festival">
                 <div class="name">{[{ festival.name }]}</div>

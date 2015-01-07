@@ -45,7 +45,7 @@ class UserService
                 
             return $user;
         }
-        //die(var_dump($this->formTool->getAllFormErrors($form)));
+        
         return $this->formTool->getAllFormErrors($form);
     }
 

@@ -23,3 +23,9 @@ deleteFestival:
     defaults: { _controller: FestitimeFestivalBundle:Festival:deleteFestival }
     requirements:
         _method: DELETE
+
+putFestival:
+    path: /festivals/{id}
+    defaults: { _controller: FestitimeFestivalBundle:Festival:putFestival }
+    requirements:
+        _method: PUT
