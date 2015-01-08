@@ -17,3 +17,7 @@ postUserConnect:
     defaults: { _controller: FestitimeUserBundle:User:postUserConnect }
     requirements:
         _method: POST
+
+users:
+    type: rest
+    resource: Festitime\Bundles\UserBundle\Controller\UserApiController

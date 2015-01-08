@@ -12,20 +12,12 @@ postFestival:
     requirements:
         _method: POST
 
-getFestivals:
-    path: /festivals
-    defaults: { _controller: FestitimeFestivalBundle:Festival:getFestivals }
-    #requirements:
-    #    _method: POST
-
-deleteFestival:
-    path: /festivals/{id}
-    defaults: { _controller: FestitimeFestivalBundle:Festival:deleteFestival }
-    requirements:
-        _method: DELETE
-
 putFestival:
     path: /festivals/{id}
     defaults: { _controller: FestitimeFestivalBundle:Festival:putFestival }
     requirements:
         _method: PUT
+
+festivals:
+    type: rest
+    resource: Festitime\Bundles\FestivalBundle\Controller\FestivalApiController

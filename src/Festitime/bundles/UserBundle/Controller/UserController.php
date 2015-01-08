@@ -4,7 +4,6 @@ namespace Festitime\bundles\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Festitime\bundles\UserBundle\Document\User;
-use Symfony\Component\HttpFoundation\Response;
 
 class UserController extends Controller
 {
@@ -65,16 +64,5 @@ class UserController extends Controller
         }
 
         return $this->forward('FestitimeUserBundle:User:login');
-    }
-
-    public function getUsersAction()
-    {
-        $serializer = $this->get('jms_serializer');
-        $userService = $this->container->get('festitime.user_service');
-        
-        $users = $userService->getUsers();
-        $response = new Response($serializer->serialize($users, "json"));
-
-        return $response;
     }
 }
