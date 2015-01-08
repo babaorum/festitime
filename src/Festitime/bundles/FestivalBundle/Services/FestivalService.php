@@ -71,6 +71,12 @@ class FestivalService
         return null;
     }
 
+    public function getFestival($id)
+    {
+        $festival = $this->mongoManager->find('FestitimeFestivalBundle:Festival', $id);
+        return $festival;
+    }
+
     public function getFestivals()
     {
         $R_festival = $this->mongoManager->getRepository('FestitimeFestivalBundle:Festival');

@@ -7,6 +7,19 @@ use Festitime\bundles\FestivalBundle\Document\Festival;
 
 class FestivalApiController extends FOSRestController
 {
+    public function getFestivalAction($id)
+    {
+        $festivalService = $this->get('festitime.festival_service');
+        $festival = $festivalService->getFestival($id);
+
+        if($festival instanceof Festival)
+        {
+            return $this->view($festival, 200);
+        }
+
+        return $this->view(null, 204);
+    }
+
     public function getFestivalsAction()
     {
         $festivalService = $this->container->get('festitime.festival_service');

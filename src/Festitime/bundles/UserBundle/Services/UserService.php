@@ -23,6 +23,12 @@ class UserService
         $this->formTool = $formTool;
     }
 
+    public function getUser($id)
+    {
+        $user = $this->mongoManager->find('FestitimeUserBundle:User', $id);
+        return $user;
+    }
+
     public function getUsers()
     {
         $R_user = $this->mongoManager->getRepository('FestitimeUserBundle:User');
