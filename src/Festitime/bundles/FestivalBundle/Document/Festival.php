@@ -9,23 +9,6 @@ namespace Festitime\bundles\FestivalBundle\Document;
  */
 class Festival
 {
-    public function toArray()
-    {
-        return array(
-            'id' => $this->id,
-            'name' => $this->name,
-            'description' => $this->description,
-            'type' => $this->type,
-            'img' => $this->img,
-            'start_date' => $this->start_date,
-            'end_date' => $this->end_date,
-            'city' => $this->city,
-            'region' => $this->region,
-            'country' => $this->country,
-            'price' => $this->price
-        );
-    }
-
     /**
      * @var MongoId $id
      */

@@ -7,15 +7,6 @@ namespace Festitime\bundles\UserBundle\Document;
  */
 class User
 {
-    public function toArray()
-    {
-        return array(
-            'id' => $this->id,
-            'name' => $this->name,
-            'description' => $this->description
-        );
-    }
-
     /**
      * @var MongoId $id
      */
