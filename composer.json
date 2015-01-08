@@ -22,7 +22,8 @@
         "propel/propel-bundle": "1.4.*",
         "jms/serializer-bundle": "0.12.0",
         "doctrine/mongodb-odm": "1.0.*@dev",
-        "doctrine/mongodb-odm-bundle": "3.0.*@dev"
+        "doctrine/mongodb-odm-bundle": "3.0.*@dev",
+        "friendsofsymfony/rest-bundle": "~1.4"
     },
     "scripts": {
         "post-install-cmd": [

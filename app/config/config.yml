@@ -75,6 +75,17 @@ swiftmailer:
     password:  %mailer_password%
     spool:     { type: memory }
 
+#FOS_REST Configuration
+fos_rest:
+   routing_loader:
+       default_format: json
+   view:
+       view_response_listener: force
+       formats:
+           json: true
+           html: true
+   format_listener: false
+
 services:
     kernel.listener.authentification_listener:
         class: Festitime\Listeners\AuthentificationListener
