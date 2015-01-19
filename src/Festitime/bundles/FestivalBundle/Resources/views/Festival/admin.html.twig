@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Festitime</title>
+        <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="/assets/js/modules/festival.module.js"></script>
+    </head>
+    <body>
+        <form action="{{ path('postFestival') }}" method="POST">
+            <div>
+                Créer un nouveau festival :
+                <br>
+                Nom : <input type="text" name="festival[name]">
+                <br>
+                Description : <input type="text" name="festival[description]">
+                <br>
+                Types: 
+                <select name="festival[types][]" multiple>
+                    <option value="jazz">Jazz</option>
+                    <option value="electro">Electro</option>
+                    <option value="rock">Rock</option>
+                    <option value="pop">Pop</option>
+                    <option value="hip hop">Hip Hop</option>
+                    <option value="rap">Rap</option>
+                    <option value="reggae">Reggae</option>
+                    <option value="ragga">Ragga</option>
+                    <option value="dark">Dark</option>
+                    <option value="metal">Metal</option>
+                    <option value="punk">Punk</option>
+                </select>
+                <br>
+                Image : <input type="text" name="festival[img]">
+                <br>
+                Date de début : <input type="date" name="festival[start_date]">
+                <br>
+                Date de fin : <input type="date" name="festival[end_date]">
+                <br>
+                Ville : <input type="text" name="festival[city]">
+                <br>
+                Région : <input type="text" name="festival[region]">
+                <br>
+                Pays : <input type="text" name="festival[country]">
+                <br>
+                Prix : <input type="number" name="festival[price]">
+                <br>
+                <input type="submit" name="submit" value="Envoyer">
+            </div>
+        </form>
+
+            <h1>
+                Trouver votre festival
+            </h1>
+            <div ng-app="festival">
+                <div ng-controller="searchBarController">
+                    <input type="search" ng-model="search" placeholder="Rechercher ...">
+                    <br>
+                    <input type="checkbox" ng-click="includeType('pop')">&nbsp;Pop
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" ng-click="includeType('rock')">&nbsp;Rock
+                    <ul>
+                        <li ng-repeat="festival in festivals | filter:search | filter:typeFilter">
+                            {[{ festival.name }]}
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+    </body>
+</html>

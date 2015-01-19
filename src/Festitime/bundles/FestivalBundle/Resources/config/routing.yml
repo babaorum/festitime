@@ -1,22 +1,16 @@
 home:
     path: /
-    defaults: { _controller: FestitimeFestivalBundle:Festival:home }
-
-index:
-    path: /home
     defaults: { _controller: FestitimeFestivalBundle:Festival:index }
+
+adminFestivals:
+    path: /festivals/admin
+    defaults: { _controller: FestitimeFestivalBundle:Festival:admin }
 
 postFestival:
     path: /festivals/new
     defaults: { _controller: FestitimeFestivalBundle:Festival:postFestival }
     requirements:
         _method: POST
-
-putFestival:
-    path: /festivals/{id}
-    defaults: { _controller: FestitimeFestivalBundle:Festival:putFestival }
-    requirements:
-        _method: PUT
 
 festivals:
     type: rest

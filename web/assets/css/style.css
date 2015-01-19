@@ -264,6 +264,12 @@ header
     overflow: hidden;
 }
 
+#main .block img
+{
+	height: 100%;
+	width: 100%;
+}
+
 #main .block .festival
 {
 	width: 100%;

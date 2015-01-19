@@ -112,7 +112,7 @@
                 function getFestivals() {
  
                     var request = $http({
-                        method: "post",
+                        method: "get",
                         url: "/festivals"
                     });
  

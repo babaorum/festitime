@@ -1,69 +1,152 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title>Festitime</title>
-        <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
-        <script type="text/javascript" src="/assets/js/modules/festival.module.js"></script>
-    </head>
-    <body>
-        <form action="{{ path('postFestival') }}" method="POST">
-            <div>
-                Créer un nouveau festival :
-                <br>
-                Nom : <input type="text" name="festival[name]">
-                <br>
-                Description : <input type="text" name="festival[description]">
-                <br>
-                Types: 
-                <select name="festival[types][]" multiple>
-                    <option value="jazz">Jazz</option>
-                    <option value="electro">Electro</option>
-                    <option value="rock">Rock</option>
-                    <option value="pop">Pop</option>
-                    <option value="hip hop">Hip Hop</option>
-                    <option value="rap">Rap</option>
-                    <option value="reggae">Reggae</option>
-                    <option value="ragga">Ragga</option>
-                    <option value="dark">Dark</option>
-                    <option value="metal">Metal</option>
-                    <option value="punk">Punk</option>
-                </select>
-                <br>
-                Image : <input type="text" name="festival[img]">
-                <br>
-                Date de début : <input type="date" name="festival[start_date]">
-                <br>
-                Date de fin : <input type="date" name="festival[end_date]">
-                <br>
-                Ville : <input type="text" name="festival[city]">
-                <br>
-                Région : <input type="text" name="festival[region]">
-                <br>
-                Pays : <input type="text" name="festival[country]">
-                <br>
-                Prix : <input type="number" name="festival[price]">
-                <br>
-                <input type="submit" name="submit" value="Envoyer">
+<head>
+    <title>Accueil - Festitime</title>
+    <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="/assets/js/modules/festival.module.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body ng-app="festival" ng-controller="searchBarController">
+    <header>
+        <div id="banner-box">
+            <div id="flag">
+                <img id="logo" width="110px" src="/assets/images/logo.png"/>
             </div>
-        </form>
-
-            <h1>
-                Trouver votre festival
-            </h1>
-            <div ng-app="festival">
-                <div ng-controller="searchBarController">
-                    <input type="search" ng-model="search" placeholder="Rechercher ...">
-                    <br>
-                    <input type="checkbox" ng-click="includeType('pop')">&nbsp;Pop
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="checkbox" ng-click="includeType('rock')">&nbsp;Rock
-                    <ul>
-                        <li ng-repeat="festival in festivals | filter:search | filter:typeFilter">
-                            {[{ festival.name }]}
-                        </li>
-                    </ul>
-                </div>
         </div>
+        <div id="menu">
+            <a href="#" class="link">
+                <span class="active">Les Festivals</span>
+            </a>
+            <a href="#" class="link">
+                <span>Besoin d'aide ?</span>
+            </a>
+            <input id="search-bar" type="text" size="40" placeholder="Recherchez un festival, un artiste, etc." ng-model="search"/>
+            <span class="clear"></span>
+        </div>
+        <a href="#" id="connect">
+            <span>Se connecter</span>
+        </a>
+        <span class="clear"></span>
+    </header>
+    <div id="sidebar">
+        <div class="sidebar item">
+            <div class="header">
+                <div class="icon agenda"></div>
+                <div class="title">
+                    Trier par dates
+                </div>
+                <img class="status open" width="20px" height="23px" alt="arrow" src="/assets/images/arrow-up.svg"/>
+            </div>
+            <div class="content">
+                Ins&eacute;rer ici un calendrier
+            </div>
+        </div>
+        <div class="sidebar item">
+            <div class="header">
+                <div class="icon music"></div>
+                <div class="title">
+                    Trier par genres
+                </div>
+                <img width="20px" height="23px" class="status open" alt="arrow" src="/assets/images/arrow-up.svg"/>
+            </div>
+            <div class="content">
+                <span class="tag">&#201;lectro
+                    <input type="checkbox" ng-click="includeType('electro')">
+                </span>
+                <span class="tag">Rock
+                    <input type="checkbox" ng-click="includeType('rock')">
+                </span>
+                <span class="tag">Pop
+                    <input type="checkbox" ng-click="includeType('pop')">
+                </span>
+                <span class="tag">Hip Hop
+                    <input type="checkbox" ng-click="includeType('hip hop')">
+                </span>
+                <span class="tag">Rap
+                    <input type="checkbox" ng-click="includeType('rap')">
+                </span>
+                <span class="tag">Reggae
+                    <input type="checkbox" ng-click="includeType('reggae')">
+                </span>
+                <span class="tag">Ragga
+                    <input type="checkbox" ng-click="includeType('ragga')">
+                </span>
+                <span class="tag">Jazz
+                    <input type="checkbox" ng-click="includeType('jazz')">
+                </span>
+                <span class="tag">Dark
+                    <input type="checkbox" ng-click="includeType('dark')">
+                </span>
+                <span class="tag">Metal
+                    <input type="checkbox" ng-click="includeType('metal')">
+                </span>
+                <span class="tag">Punk
+                    <input type="checkbox" ng-click="includeType('punk')">
+                </span>
+            </div>
+        </div>
+        <div class="sidebar item">
+            <div class="header">
+                <div class="icon location"></div>
+                <div class="title">
+                    Trier par Pays
+                </div>
+                <img width="20px" height="23px" class="status open" alt="arrow" src="/assets/images/arrow-up.svg"/>
+            </div>
+            <div class="content">
+                <span class="tag">France</span>
+                <span class="tag">Espagne</span>
+                <span class="tag">Angleterre</span>
+                <span class="tag">Allemagne</span>
+                <span class="tag">Belgique</span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in festivals | filter:search | filter:typeFilter">
+            <img src="{[{ festival.img }]}" alt="image festival">
+            <div class="festival">
+                <div class="name">{[{ festival.name }]}</div>
+                <div class="info">
+                    <div class="left-info">
+                        <div class="date">{[{ festival.start_date | date : "dd" }]} - {[{ festival.end_date | date : "dd MMMM yyyy" }]}</div>
+                        <div class="location">{[{ festival.city+", "+festival.country }]}</div>
+                    </div>
+                    <div class="price"><span>A partir de </span>{[{ festival.price }]}&#128;</div>
+                </div>
+            </div>
+        </div>
+        <span class="clear"></span>
+    </div>
+    <script type="text/javascript">
+        $('.sidebar.item .content .tag').click(function(e){
+            if($(this).children('input').is(':checked'))
+            {
+                $(this).addClass("active");
+            }
+            else
+            {
+                $(this).removeClass("active");
+            }
+            $(this).children('input').trigger("click");
+        });
 
-    </body>
+        $('.sidebar.item .header .status').click(function(e){
+            if($(this).hasClass('close')){
+                $(this).closest('.sidebar.item').children('.content').slideDown(200);                
+                $(this).attr("src", "/assets/images/arrow-up.svg");
+                $(this).removeClass("close");
+                $(this).addClass("open");
+            }
+            else if($(this).hasClass('open')){
+                $(this).closest('.sidebar.item').children('.content').slideUp(200);
+                $(this).attr("src", "/assets/images/arrow-bottom.svg");
+                $(this).removeClass("open");
+                $(this).addClass("close");
+            }
+        });
+    </script>
+</body>
 </html>

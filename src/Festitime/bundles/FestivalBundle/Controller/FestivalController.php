@@ -12,15 +12,9 @@ class FestivalController extends Controller
         return $this->render('FestitimeFestivalBundle:Festival:index.html.twig', array());
     }
 
-    public function homeAction()
+    public function adminAction()
     {
-        return $this->render('FestitimeFestivalBundle:Festival:home.html.twig', array());
-    }
-    public function putFestivalAction($id)
-    {
-        $festivalService = $this->container->get('festitime.festival_service');
-        $festivalService->putFestival($id);
-        die('ok');
+        return $this->render('FestitimeFestivalBundle:Festival:admin.html.twig', array());
     }
 
     public function postFestivalAction()
@@ -36,6 +30,6 @@ class FestivalController extends Controller
         {
             $this->get('session')->getFlashBag()->add('error', 'Le nom du festival festival doit être rempli');
         }
-        return $this->redirect($this->generateUrl('index'));
+        return $this->redirect($this->generateUrl('home'));
     }
 }

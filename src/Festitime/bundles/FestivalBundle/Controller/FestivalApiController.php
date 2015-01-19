@@ -28,6 +28,13 @@ class FestivalApiController extends FOSRestController
         return $this->view($festivals, 200);
     }
 
+    public function putFestivalAction($id)
+    {
+        $festivalService = $this->container->get('festitime.festival_service');
+        $festivalService->putFestival($id);
+        die('ok');
+    }
+
     public function deleteFestivalAction($id)
     {
         $festivalService = $this->container->get('festitime.festival_service');
