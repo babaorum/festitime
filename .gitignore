@@ -1,11 +1,13 @@
-/web/bundles/
-/web/assets/js/bower_components/*
 /app/bootstrap.php.cache
 /app/cache/*
 /app/config/parameters.yml
 /app/logs/*
-/build/
-/vendor/
 /bin/
+/build/
 /composer.phar
 /composer.lock
+/node_modules
+/vendor/
+/web/bundles/
+/web/assets/js/bower_components/*
+/web/assets/dist/*
