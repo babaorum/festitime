@@ -1,171 +1,151 @@
-Symfony Standard Edition
-========================
+FESTITIME
+=========
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony2
-application that you can use as the skeleton for your new applications.
+[TOC]
 
-This document contains information on how to download, install, and start
-using Symfony. For a more detailed explanation, see the [Installation][1]
-chapter of the Symfony Documentation.
+------------
+Components :
+------------
 
-1) Installing the Standard Edition
-----------------------------------
+#### Symfony2
 
-When it comes to installing the Symfony Standard Edition, you have the
-following options.
+  We are using Symfony2 with FOSRestBundle for the API side.
+   
+#### MongoDB
 
-### Use Composer (*recommended*)
+  We are using MongoDB with DoctrineMongoDBBundle
 
-As Symfony uses [Composer][2] to manage its dependencies, the recommended way
-to create a new project is to use it.
+#### Angular.js
 
-If you don't have Composer yet, download it following the instructions on
-http://getcomposer.org/ or just run the following command:
+  We are using Angular.js for the front side intelligence, rendering and filters.
 
-    curl -s http://getcomposer.org/installer | php
+#### Grunt
 
-Then, use the `create-project` command to generate a new Symfony application:
+  We are using Grunt for compiling LESS files.
 
-    php composer.phar create-project symfony/framework-standard-edition path/to/install
+#### LESS
 
-Composer will install Symfony and all its dependencies under the
-`path/to/install` directory.
+  We are using LESS for the stylesheets.
 
-### Download an Archive File
+#### PhpUnit
 
-To quickly test Symfony, you can also download an [archive][3] of the Standard
-Edition and unpack it somewhere under your web server root directory.
+  We are using PhpUnit for unit testing.
 
-If you downloaded an archive "without vendors", you also need to install all
-the necessary dependencies. Download composer (see above) and run the
-following command:
+---------
+Install :
+---------
 
-    php composer.phar install
+#### Composer
+  
+To start you need to install the composer dependencies :
 
-2) Checking your System Configuration
--------------------------------------
+  $ composer install
 
-Before starting coding, make sure that your local system is properly
-configured for Symfony.
+#### NPM
 
-Execute the `check.php` script from the command line:
+You also need to install the npm dependencies :
 
-    php app/check.php
+  $ npm install
 
-The script returns a status code of `0` if all mandatory requirements are met,
-`1` otherwise.
+#### Grunt
+You will need Grunt, so if you don't already have grunt-cli install, run the following command :
 
-Access the `config.php` script from a browser:
+  $ npm install -g grunt-cli
 
-    http://localhost/path/to/symfony/app/web/config.php
+#### Bower
+you will also need bower dependencies:
 
-If you get any warnings or recommendations, fix them before moving on.
+  $ bower install
 
-3) Browsing the Demo Application
---------------------------------
+#### VHOST
+#####basic configuration :
+First run the following command : 
+  
+  $ sudo nano /etc/apache2/sites-available/festitime.dev
 
-Congratulations! You're now ready to use Symfony.
+It will open an editor in your terminal, put the following content inside and save it :
 
-From the `config.php` page, click the "Bypass configuration and go to the
-Welcome page" link to load up your first Symfony page.
+  <VirtualHost *:80>
+            ServerAdmin webmaster@localhost
+            ServerName festitime.dev
+            ServerAlias www.festitime.dev
 
-You can also use a web-based configurator by clicking on the "Configure your
-Symfony Application online" link of the `config.php` page.
+            DocumentRoot /var/www/festitime/web
+            <Directory /var/www/festitime/web>
+                    Options Indexes FollowSymLinks MultiViews
+                    AllowOverride All
+                    Order allow,deny
+                    allow from all
+            </Directory>
 
-To see a real-live Symfony page in action, access the following page:
+            ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
 
-    web/app_dev.php/demo/hello/Fabien
+            ErrorLog ${APACHE_LOG_DIR}/error.log
 
-4) Getting started with Symfony
--------------------------------
+            # Possible values include: debug, info, notice, warn, error, crit,
+            # alert, emerg.
+            LogLevel warn
 
-This distribution is meant to be the starting point for your Symfony
-applications, but it also contains some sample code that you can learn from
-and play with.
+            CustomLog ${APACHE_LOG_DIR}/access.log combined
+    </VirtualHost>
 
-A great way to start learning Symfony is via the [Quick Tour][4], which will
-take you through all the basic features of Symfony2.
+Once the file saved run the following commands : 
 
-Once you're feeling good, you can move onto reading the official
-[Symfony2 book][5].
+  $ sudo a2ensite festitime.dev 
+  $ sudo service apache2 reload
 
-A default bundle, `AcmeDemoBundle`, shows you Symfony2 in action. After
-playing with it, you can remove it by following these steps:
+You need to register the host (if you're using vagrant you will also need to put it in windows hosts) :
 
-  * delete the `src/Acme` directory;
+  $ sudo nano /etc/hosts
 
-  * remove the routing entry referencing AcmeDemoBundle in `app/config/routing_dev.yml`;
+Put it the following content : 
+  
+  127.0.0.1       festitime.dev 
 
-  * remove the AcmeDemoBundle from the registered bundles in `app/AppKernel.php`;
+#### MongoDB
+##### Basic Install
 
-  * remove the `web/bundles/acmedemo` directory;
+You need to add this apt-key
+  
+  $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+  $ echo 'deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 
-  * remove the `security.providers`, `security.firewalls.login` and
-    `security.firewalls.secured_area` entries in the `security.yml` file or
-    tweak the security configuration to fit your needs.
+Then update and upgrade apt-get :
 
-What's inside?
----------------
+  $ sudo apt-get update
+  $ sudo apt-get upgrade
 
-The Symfony Standard Edition is configured with the following defaults:
+Now you can install MongoDB : 
 
-  * Twig is the only configured template engine;
+  $ sudo apt-get install mongodb-org
+  $ sudo /etc/init.d/mongod restart
 
-  * Doctrine ORM/DBAL is configured;
+Now we are gonna install MongoDB PHP extension :
 
-  * Swiftmailer is configured;
+  $ sudo pecl install mongo
+  $ echo "extension=mongo.so" >> /etc/php5/cli/php.ini
+  $ echo "extension=mongo.so" >> /etc/php5/cgi/php.ini
+  $ echo "extension=mongo.so" >> /etc/php5/apache2/php.ini
+  $ sudo /etc/init.d/mongod restart
 
-  * Annotations for everything are enabled.
+##### Install festitime DB :
 
-It comes pre-configured with the following bundles:
+  $ mongo
+  $ show dbs
+  $ use festitime
+  $ exit
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+-----
+USAGE
+-----
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+#### Grunt
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+Grunt is here to compile less and javascript files.
+You're supposed to run 
+  
+  $ grunt watch 
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+You have to run it in a second terminal, because it will watch you're files during you modify it. And when you make a change in a less or javascript file, grunt will compile it again.
 
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
-
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
-
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
-
-  * [**AsseticBundle**][12] - Adds support for Assetic, an asset processing
-    library
-
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
-
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
-
-  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
-    capabilities
-
-  * **AcmeDemoBundle** (in dev/test env) - A demo bundle with some example
-    code
-
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
-
-[1]:  http://symfony.com/doc/2.3/book/installation.html
-[2]:  http://getcomposer.org/
-[3]:  http://symfony.com/download
-[4]:  http://symfony.com/doc/2.3/quick_tour/the_big_picture.html
-[5]:  http://symfony.com/doc/2.3/index.html
-[6]:  http://symfony.com/doc/2.3/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  http://symfony.com/doc/2.3/book/doctrine.html
-[8]:  http://symfony.com/doc/2.3/book/templating.html
-[9]:  http://symfony.com/doc/2.3/book/security.html
-[10]: http://symfony.com/doc/2.3/cookbook/email.html
-[11]: http://symfony.com/doc/2.3/cookbook/logging/monolog.html
-[12]: http://symfony.com/doc/2.3/cookbook/assetic/asset_management.html
-[13]: http://symfony.com/doc/2.3/bundles/SensioGeneratorBundle/index.html
+------------
