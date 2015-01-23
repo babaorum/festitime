@@ -1,15 +1,7 @@
 module.exports = function (grunt) {
-    /**
-     * Déclaration, configuration des tâches,
-     * l'ordre de déclaration n'a aucune importance
-     */
+    
     grunt.initConfig({
 
-        /**
-         * Configuration du plugin less
-         * 2 sous tâches sont déclarées. 'less:dist' qui va compiler les fichiers less dans src/less/
-         * dans le fichier 'dist/css/styles.css'. 'test:dist' qui va juste compiler le fichier file1.less
-         */
         less: {
             dist: {
                 src: ['./web/assets/less/*'],
@@ -22,23 +14,20 @@ module.exports = function (grunt) {
             }
         },
 
-        /**
-         * Configuration du plugin concat
-         * une seule tâche qui va concatener tous les fichiers situés dans 'src/js/'
-         * dans un seul fichier 'dist/js/built.js'
-         */
+        cssmin: {
+            dist: {
+                src: ['./web/assets/dist/css/styles.css'],
+                dest: './web/assets/dist/css/styles.min.css'
+            }
+        },
+
         concat: {
             dist: {
-                src: ['./web/assets/js/*'],
+                src: ['./web/assets/js/app/**'],
                 dest: './web/assets/dist/js/built.js'
             },
         },
 
-        /**
-         * Configuration du plugin uglify
-         * une seule tâche qui va minimifier le fichier built.js
-         * généré par la tâche précédente
-         */
         uglify: {
             dist: {
                 src: ['./web/assets/dist/js/built.js'],
@@ -46,11 +35,6 @@ module.exports = function (grunt) {
             }
         },
 
-        /**
-         * Configuration du plugin watch
-         * une seule tâche, qui va scruter le répertoire src
-         * et si un fichier est modifié, va lancer la tâche 'default'
-         */
         watch: {
             files: ['./web/assets/**'],
             tasks: ['default'],
@@ -58,30 +42,33 @@ module.exports = function (grunt) {
     });
 
     /**
-     * Chargement des plugins Grunt
+     * loading Grunt plugins
      */
 
-    // plugin du préprocesseur less
+    // plugin less preprocessor
     grunt.loadNpmTasks('grunt-contrib-less');
 
-    // plugin pour concatener des fichiers
+    // plugin for minify css files
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+
+    // plugin for concat files
     grunt.loadNpmTasks('grunt-contrib-concat');
 
-    // plugin pour minimifier les fichiers JS
+    // plugin for minify js files
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    // plugin pour scruter les changements dans vos fichiers et lancer des tâches
+    // plugin for watching for change and play tasks
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     /**
-     * Déclaration des tâches "groupées"
-     * la tâche par default (en tapant juste 'grunt') lancera les tâches 'less:dist' 'concat' et 'uglify'
-     * 'grunt watch-src' lancera les tâches 'default' puis 'watch' (l'ordre de déclaration est ici important)
+     * Declaration of grouped tasks
+     * the default task (when just tiping 'grunt') will load tasks 'less:dist', 'cssmin', 'concat' and 'uglify'
+     * 'grunt watch-src' will load task 'default' then 'watch' (the declaration order is important)
      * 
-     * le lancement de la tâche 'watch-src' ne vous rendra pas la main, mais grunt restera actif
-     * pour scruter vos fichiers
+     * task 'watch-src' will not stop, but grunt will stay active
+     * to see any possible change
      */
-    grunt.registerTask('default', ['less:dist', 'concat', 'uglify']);
+    grunt.registerTask('default', ['less:dist', 'cssmin', 'concat', 'uglify']);
     grunt.registerTask('watch-src', ['default', 'watch']);
 
 };
