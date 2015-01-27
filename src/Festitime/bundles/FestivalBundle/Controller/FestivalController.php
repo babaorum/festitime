@@ -7,6 +7,11 @@ use Festitime\bundles\FestivalBundle\Document\Festival;
 
 class FestivalController extends Controller
 {
+    public function newHomeAction()
+    {
+        return $this->render('FestitimeFestivalBundle:Festival:home.html.twig', array());
+    }
+
     public function indexAction()
     {
         return $this->render('FestitimeFestivalBundle:Festival:index.html.twig', array());

@@ -20,4 +20,4 @@ postUserConnect:
 
 users:
     type: rest
-    resource: Festitime\Bundles\UserBundle\Controller\UserApiController
+    resource: Festitime\bundles\UserBundle\Controller\UserApiController

@@ -14,5 +14,7 @@ parameters:
     locale:            fr
     secret:            ThisTokenIsNotSoSecretChangeIt
 
+    enebling_profiler_toolbar: false
+
     login_route: login
     connected_route: []

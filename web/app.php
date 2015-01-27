@@ -2,6 +2,13 @@
 
 use Symfony\Component\ClassLoader\ApcClassLoader;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Debug\Debug;
+
+$env = getenv('FESTITIME_ENV');
+if ($env === false) {
+	$env = 'prod';
+}
+$debug = ($env == 'prod') ? false : true;
 
 $loader = require_once __DIR__.'/../app/bootstrap.php.cache';
 
@@ -16,7 +23,11 @@ $loader->register(true);
 require_once __DIR__.'/../app/AppKernel.php';
 //require_once __DIR__.'/../app/AppCache.php';
 
-$kernel = new AppKernel('prod', false);
+if ($debug) {
+    Debug::enable();
+}
+
+$kernel = new AppKernel($env, $debug);
 $kernel->loadClassCache();
 //$kernel = new AppCache($kernel);
 Request::enableHttpMethodParameterOverride();

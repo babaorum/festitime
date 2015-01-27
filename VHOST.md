@@ -4,6 +4,7 @@ VHOST :
 
 
     <VirtualHost *:80>
+                SetEnv FESTITIME_ENV dev
                 ServerAdmin webmaster@localhost
                 ServerName festitime.dev
                 ServerAlias www.festitime.dev

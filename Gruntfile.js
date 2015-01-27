@@ -35,6 +35,13 @@ module.exports = function (grunt) {
             }
         },
 
+        'sf2-cache-clear': {
+            options: {},
+            clear_all: {
+                cmd: 'cache:clear'
+            }
+        },
+
         watch: {
             files: ['./web/assets/**'],
             tasks: ['default'],
@@ -57,6 +64,9 @@ module.exports = function (grunt) {
     // plugin for minify js files
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
+    // plugin for using symfony2 console's commands
+    grunt.loadNpmTasks('grunt-symfony2');
+
     // plugin for watching for change and play tasks
     grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -68,7 +78,7 @@ module.exports = function (grunt) {
      * task 'watch-src' will not stop, but grunt will stay active
      * to see any possible change
      */
-    grunt.registerTask('default', ['less:dist', 'cssmin', 'concat', 'uglify']);
+    grunt.registerTask('default', ['less:dist', 'cssmin', 'concat', 'uglify', 'sf2-cache-clear:clear_all']);
     grunt.registerTask('watch-src', ['default', 'watch']);
 
 };

@@ -1,3 +1,7 @@
+newHoome:
+    path: /home
+    defaults: { _controller: FestitimeFestivalBundle:Festival:newHome }
+
 home:
     path: /
     defaults: { _controller: FestitimeFestivalBundle:Festival:index }
@@ -14,4 +18,4 @@ postFestival:
 
 festivals:
     type: rest
-    resource: Festitime\Bundles\FestivalBundle\Controller\FestivalApiController
+    resource: Festitime\bundles\FestivalBundle\Controller\FestivalApiController
