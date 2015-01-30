@@ -48,6 +48,22 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.registerTask('blueprint2json', 'Generate js version of apiary file.', function () {
+        var done = this.async();
+        var parser = require('protagonist');
+        var content = grunt.file.read('API.md');
+
+        parser.parse(content, function (error, result) {
+            if (error) {
+                console.log(error);
+                return;
+            }
+            var json = JSON.stringify(result.ast);
+            grunt.file.write('web/assets/blueprint/blueprint.json', json);
+        done();
+        });
+    });
+
     /**
      * loading Grunt plugins
      */
