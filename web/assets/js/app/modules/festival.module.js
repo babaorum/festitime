@@ -72,9 +72,7 @@
  
  
         // I act a repository for the remote festival collection.
-        app.service(
-            "festivalService",
-            function( $http, $q ) {
+        app.service("festivalService", [ '$http', '$q', function($http, $q) {
  
                 // Return public API.
                 return({
@@ -176,5 +174,5 @@
  
                 }
  
-            }
+            }]
         );
