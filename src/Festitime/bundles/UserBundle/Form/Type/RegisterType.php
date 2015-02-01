@@ -57,7 +57,6 @@ class RegisterType extends AbstractType
             'required' => true,
             'label' => 'Adresse postale',
         ));
-        //ville
         $builder->add('city', 'text', array(
             'required' => true,
             'label' => 'Ville',
