@@ -7,15 +7,28 @@ We really think Festival is a particular type of buisness and that really specif
 
 ------------
 
-* [Components](#components)
+* [Components](#components-)
     - [Symfony2](#symfony2)
     - [MongoDB](#mongodb)
     - [Angular.JS](#angularjs)
     - [Grunt](#grunt)
     - [LESS](#less)
     - [API Blueprint](#api-blueprint)
-* [Install](#install)
+* [Install](#install-)
     - [Composer](#composer)
+    - [NPM](#npm)
+        + [API Blueprint - Protagnist](#api-blueprint---protagonist)
+        + [Install Dependencies](#install-dependencies)
+    - [Grunt](#grunt-1)
+    - [Bower](#bower)
+    - [VHOST](#vhost)
+        + [basic configuration](#basic-configuration-)
+        + [Environment configuration](#environment-configuration-)
+    - [MongoDB](#mongodb-1)
+        + [Basic Install](#basic-install)
+        + [Install festitime DB](#install-festitime-db-)
+* [Usage](#usage)
+    - [Grunt](#grunt-2)
 
 ------------
 Components :
@@ -185,7 +198,7 @@ Now we are gonna install MongoDB PHP extension :
     $ exit
 
 -----
-USAGE
+Usage
 -----
 
 #### Grunt
