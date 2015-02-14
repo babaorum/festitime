@@ -79,7 +79,7 @@ class RegisterType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Festitime\bundles\UserBundle\Document\User',
+            'data_class' => 'Festitime\DatabaseBundle\Document\User',
             'csrf_protection' => false
         ));
     }

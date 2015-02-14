@@ -2,7 +2,7 @@
 
 namespace Festitime\bundles\FestivalBundle\Services;
 
-use Festitime\bundles\FestivalBundle\Document\Festival;
+use Festitime\DatabaseBundle\Document\Festival;
 
 class FestivalService
 {
@@ -73,20 +73,20 @@ class FestivalService
 
     public function getFestival($id)
     {
-        $festival = $this->mongoManager->find('FestitimeFestivalBundle:Festival', $id);
+        $festival = $this->mongoManager->find('FestitimeDatabaseBundle:Festival', $id);
         return $festival;
     }
 
     public function getFestivals()
     {
-        $R_festival = $this->mongoManager->getRepository('FestitimeFestivalBundle:Festival');
+        $R_festival = $this->mongoManager->getRepository('FestitimeDatabaseBundle:Festival');
         $festivals = $R_festival->findAll();
         return $festivals;
     }
 
     public function putFestival($id)
     {
-        $R_festival = $this->mongoManager->getRepository('FestitimeFestivalBundle:Festival');
+        $R_festival = $this->mongoManager->getRepository('FestitimeDatabaseBundle:Festival');
         $festival = $R_festival->find($id);
         $festival->setImg('http://www.concertandco.com/crit2/Trans-Musicales-2007web.jpg');
         $this->mongoManager->persist($festival);
@@ -95,7 +95,7 @@ class FestivalService
 
     public function deleteFestival($id)
     {
-        $R_festival = $this->mongoManager->getRepository('FestitimeFestivalBundle:Festival');
+        $R_festival = $this->mongoManager->getRepository('FestitimeDatabaseBundle:Festival');
         $festival = $R_festival->find($id);
         if(!is_null($festival))
         {

@@ -2,7 +2,7 @@
 
 namespace Festitime\bundles\UserBundle\Services;
 
-use Festitime\bundles\UserBundle\Document\User;
+use Festitime\DatabaseBundle\Document\User;
 
 class UserService
 {
@@ -25,13 +25,13 @@ class UserService
 
     public function getUser($id)
     {
-        $user = $this->mongoManager->find('FestitimeUserBundle:User', $id);
+        $user = $this->mongoManager->find('FestitimeDatabaseBundle:User', $id);
         return $user;
     }
 
     public function getUsers()
     {
-        $R_user = $this->mongoManager->getRepository('FestitimeUserBundle:User');
+        $R_user = $this->mongoManager->getRepository('FestitimeDatabaseBundle:User');
         $users = $R_user->findAll();
         return $users;
     }
@@ -71,7 +71,7 @@ class UserService
 
     public function connectUser()
     {
-        $R_user = $this->mongoManager->getRepository('FestitimeUserBundle:User');   
+        $R_user = $this->mongoManager->getRepository('FestitimeDatabaseBundle:User');   
         $request = $this->request->getCurrentRequest();
         $query = $request->request->all();
 
