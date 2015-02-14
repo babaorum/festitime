@@ -7,15 +7,15 @@ We really think Festival is a particular type of buisness and that really specif
 
 ------------
 
-* [Components](#Components)
-    - [Symfony2](#Symfony2)
-    - [MongoDB](#MongoDB)
-    - [Angular.JS](#Angular.JS)
-    - [Grunt](#Grunt)
-    - [LESS](#LESS)
-    - [API Blueprint](#API Blueprint)
-* [Install](#Install)
-    - [Composer](#Composer)
+* [Components](#components)
+    - [Symfony2](#symfony2)
+    - [MongoDB](#mongodb)
+    - [Angular.JS](#angularjs)
+    - [Grunt](#grunt)
+    - [LESS](#less)
+    - [API Blueprint](#api-blueprint)
+* [Install](#install)
+    - [Composer](#composer)
 
 ------------
 Components :
