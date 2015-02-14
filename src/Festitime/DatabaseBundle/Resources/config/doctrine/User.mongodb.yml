@@ -1,0 +1,30 @@
+Festitime\DatabaseBundle\Document\User:
+    fields:
+        id:
+            id: true
+        pseudo:
+            type: string
+        email:
+            type: string
+        password:
+            type: string
+        birthdate:
+            type: date
+        gender:
+            type: boolean
+        firstname:
+            type: string
+        name:
+            type: string
+        address:
+            type: string
+        city:
+            type: string
+        zipcode:
+            type: string
+        country:
+            type: string
+        created_at:
+            type: date
+        updated_at:
+            type: date

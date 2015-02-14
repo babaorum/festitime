@@ -1,0 +1,31 @@
+Festitime\DatabaseBundle\Document\Festival:
+    type: document
+    fields:
+        id:
+            id: true
+        name:
+            type: string
+        description:
+            type: string
+        type:
+            type: collection
+        img:
+            type: string
+        start_date:
+            gedmo:
+                timestampable:
+                on: create
+            type: date
+        end_date:
+            type: date
+            gedmo:
+                timestampable:
+                on: change
+        city:
+            type: string
+        region:
+            type: string
+        country:
+            type: string
+        price:
+            type: int
