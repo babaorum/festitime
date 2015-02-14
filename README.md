@@ -6,32 +6,45 @@ The particularity of this website is to be specific to Festivals.
 We really think Festival is a particular type of buisness and that really specific features can be developed for it.
 
 ------------
+
+* [Components](#Components)
+    - [Symfony2](#Symfony2)
+    - [MongoDB](#MongoDB)
+    - [Angular.JS](#Angular.JS)
+    - [Grunt](#Grunt)
+    - [LESS](#LESS)
+    - [API Blueprint](#API Blueprint)
+* [Install](#Install)
+    - [Composer](#Composer)
+
+------------
 Components :
 ------------
 
 #### Symfony2
 
-    We are using Symfony2 with FOSRestBundle for the API side.
-   
+>We are using Symfony2 with FOSRestBundle for the API side
+
 #### MongoDB
 
-    We are using MongoDB with DoctrineMongoDBBundle
+>We are using MongoDB with DoctrineMongoDBBundle
 
-#### Angular.js
+#### Angular.JS
 
-    We are using Angular.js for the front side intelligence, rendering and filters.
+>We are using Angular.JS for the front side intelligence, rendering and filters
 
 #### Grunt
 
-    We are using Grunt for compiling LESS files.
+>We are using Grunt for compiling LESS files.
 
 #### LESS
 
-    We are using LESS for the stylesheets.
+>We are using LESS for the stylesheets.
 
 #### API Blueprint
 
-    We are using Api Blueprint for generating documentation about our API and in for the continuous amelioration of the project.
+>We are using Api Blueprint for generating documentation about our API
+and for the continuous amelioration of the project.
 
 ---------
 Install :
@@ -198,3 +211,4 @@ Grunt also provide a task for building the API.md file (blueprint document)
 This will parse **API.md** and create a **blueprint.json** file in */web/assets/blueprint*
 
 ------------
+
