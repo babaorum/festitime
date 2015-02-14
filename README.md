@@ -34,27 +34,27 @@ We really think Festival is a particular type of buisness and that really specif
 Components :
 ------------
 
-#### Symfony2
+### Symfony2
 
 >We are using Symfony2 with FOSRestBundle for the API side
 
-#### MongoDB
+### MongoDB
 
 >We are using MongoDB with DoctrineMongoDBBundle
 
-#### Angular.JS
+### Angular.JS
 
 >We are using Angular.JS for the front side intelligence, rendering and filters
 
-#### Grunt
+### Grunt
 
 >We are using Grunt for compiling LESS files.
 
-#### LESS
+### LESS
 
 >We are using LESS for the stylesheets.
 
-#### API Blueprint
+### API Blueprint
 
 >We are using Api Blueprint for generating documentation about our API
 and for the continuous amelioration of the project.
@@ -63,15 +63,15 @@ and for the continuous amelioration of the project.
 Install :
 ---------
 
-#### Composer
+### Composer
   
 To start you need to install the composer dependencies :
 
     $ composer install
 
-#### NPM
+### NPM
 
-##### API Blueprint - Protagonist
+#### API Blueprint - Protagonist
 
 Before install of basic npm dependencies you need to have **ruby** and **g++** install for the install of protagonist.
 **Protagonist** is the Node.js wrapper for Snow Crash library (which is the **API Blueprint Parser**)
@@ -85,18 +85,18 @@ So, if one of the previous package is missing run the following command :
 
     $ sudo aptitude install rubygems
 
-##### Install Dependencies
+#### Install Dependencies
 
 You also need to install the npm dependencies :
 
     $ npm install
 
-#### Grunt
+### Grunt
 You will need Grunt, so if you don't already have grunt-cli install, run the following command :
 
     $ npm install -g grunt-cli
 
-#### Bower
+### Bower
 you will also need bower dependencies:
 
     $ bower install
@@ -105,8 +105,8 @@ If bower isn't already installed you need to run :
 
     $ npm install -g bower
 
-#### VHOST
-#####basic configuration :
+### VHOST
+####basic configuration :
 First run the following command : 
   
     $ sudo nano /etc/apache2/sites-available/festitime.dev
@@ -152,7 +152,7 @@ Put it the following content :
     127.0.0.1       festitime.dev 
 
 
-#####Environment configuration :
+####Environment configuration :
 
 You also need to add the aliases for piloting the environment :
 first run the command
@@ -164,8 +164,8 @@ then go at the end of the file and put it the following lines :
     alias ftdev='sudo sed -i "s/FESTITIME_ENV prod/FESTITIME_ENV dev/g" /etc/apache2/sites-available/festitime.dev && sudo service apache2 restart'
     alias ftprod='sudo sed -i "s/FESTITIME_ENV dev/FESTITIME_ENV prod/g" /etc/apache2/sites-available/festitime.dev && sudo service apache2 restart'
 
-#### MongoDB
-##### Basic Install
+### MongoDB
+#### Basic Install
 
 You need to add this apt-key
   
@@ -190,7 +190,7 @@ Now we are gonna install MongoDB PHP extension :
     $ echo "extension=mongo.so" >> /etc/php5/apache2/php.ini
     $ sudo /etc/init.d/mongod restart
 
-##### Install festitime DB :
+#### Install festitime DB :
 
     $ mongo
     $ show dbs
@@ -201,7 +201,7 @@ Now we are gonna install MongoDB PHP extension :
 Usage
 -----
 
-#### Grunt
+### Grunt
 
 Grunt is here to compile less and javascript files.
 You're supposed to run 
