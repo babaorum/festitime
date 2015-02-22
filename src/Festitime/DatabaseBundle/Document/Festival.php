@@ -2,11 +2,19 @@
 
 namespace Festitime\DatabaseBundle\Document;
 
+use Festitime\DatabaseBundle\Traits\SerializerTrait;
+
 /**
  * Festitime\bundles\UserBundle\Document\Festival
  */
 class Festival
 {
+    /**
+     * Use SerializerTrait to have access 
+     * to generic methods toArray() & toJSON()
+     */
+    use SerializerTrait;
+
     /**
      * @var MongoId $id
      */
