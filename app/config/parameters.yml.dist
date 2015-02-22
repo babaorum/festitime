@@ -18,3 +18,9 @@ parameters:
 
     login_route: login
     connected_route: []
+
+    #google oauth2 ids
+    google_client_id: 869948320670-t0hvbl5eq8a4md9mj3bllbbp3hh0jgve.apps.googleusercontent.com
+    google_client_secret: qeeqagbokFSY-d7AVdOAcXNy
+    google_developer_key: 869948320670-t0hvbl5eq8a4md9mj3bllbbp3hh0jgve.apps.googleusercontent.com
+    google_redirect_uri: http://festitime.dev:8080/login/google

@@ -16,12 +16,13 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new Festitime\bundles\FestivalBundle\FestitimeFestivalBundle(),
-            new Festitime\bundles\UserBundle\FestitimeUserBundle(),
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
+            new HappyR\Google\ApiBundle\HappyRGoogleApiBundle(),
             new Festitime\DatabaseBundle\FestitimeDatabaseBundle(),
+            new Festitime\bundles\FestivalBundle\FestitimeFestivalBundle(),
+            new Festitime\bundles\UserBundle\FestitimeUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
