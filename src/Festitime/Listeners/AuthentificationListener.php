@@ -11,12 +11,16 @@ class AuthentificationListener
     protected $router;
     protected $loginRoute;
     protected $connectedRoute;
+    protected $twig;
+    protected $googleClient;
 
-    public function __construct($router, $loginRoute, $connectedRoute)
+    public function __construct($router, $loginRoute, $connectedRoute, $twig,$googleOAuthProvider)
     {
         $this->router = $router;
         $this->loginRoute = $loginRoute;
         $this->connectedRoute = $connectedRoute;
+        $this->googleClient = $googleOAuthProvider->getGoogleClient();
+        $this->twig = $twig;
     }
 
     public function onKernelRequest(GetResponseEvent $event)
@@ -30,6 +34,11 @@ class AuthentificationListener
         
         if (empty($user_id))
         {
+            $this->googleClient->setScopes(array('email', 'profile'));
+            $this->googleClient->setApprovalPrompt('auto');
+            $googleAuthUrl = $this->googleClient->createAuthUrl();
+            $this->twig->addGlobal('googleAuthUrl', $googleAuthUrl);
+
             foreach ($this->connectedRoute as $route)
             {
                 if($currentRoute === $route)

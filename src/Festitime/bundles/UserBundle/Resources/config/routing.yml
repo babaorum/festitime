@@ -1,6 +1,13 @@
+login_oauth:
+    pattern: /login/{provider}
+    defaults: { _controller: FestitimeUserBundle:User:loginOauth }
+
 login:
     pattern: /login
     defaults: { _controller: FestitimeUserBundle:User:login }
+
+#google_login:
+#    pattern: /login/google
 
 logout:
     pattern: /logout

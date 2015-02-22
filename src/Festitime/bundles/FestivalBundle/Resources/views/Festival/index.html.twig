@@ -10,6 +10,7 @@
 </head>
 <body ng-app="festival" ng-controller="searchBarController">
     <header>
+        {% set user = app.session.get('user') %}
         <div id="banner-box">
             <div id="flag">
                 <img id="logo" width="110px" src="/assets/images/logo.png"/>
@@ -26,6 +27,9 @@
             <span class="clear"></span>
         </div>
         <a href="#" id="connect">
+            {% if user.firstname is defined %}
+                {{ user.firstname | capitalize }} {{ user.name | upper  }}
+            {% endif %}
             <span>Se connecter</span>
         </a>
         <span class="clear"></span>
