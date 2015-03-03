@@ -24,6 +24,8 @@ Festitime\DatabaseBundle\Document\User:
             type: string
         country:
             type: string
+        picture:
+            type: string
         created_at:
             type: date
         updated_at:

@@ -23,7 +23,8 @@
         "jms/serializer-bundle": "0.12.0",
         "doctrine/mongodb-odm": "1.0.*@dev",
         "doctrine/mongodb-odm-bundle": "3.0.*@dev",
-        "friendsofsymfony/rest-bundle": "~1.4"
+        "friendsofsymfony/rest-bundle": "~1.4",
+        "happyr/google-api-bundle": "~2.1"
     },
     "scripts": {
         "post-install-cmd": [

@@ -3,10 +3,19 @@ parameters:
     festitime.form_service.class: Festitime\bundles\UserBundle\Services\FormService
     form.connect.class: Festitime\bundles\UserBundle\Form\Type\ConnectType
     form.register.class: Festitime\bundles\UserBundle\Form\Type\RegisterType
+    festitime.google_oauth_provider: Festitime\bundles\UserBundle\Services\OAuth2\GoogleService
+
 services:
     festitime.user_service:
         class: %festitime.user_service.class%
-        arguments: [@request_stack, @doctrine_mongodb, @form.factory, @form.connect, @form.register, @festitime.form_service]
+        arguments: 
+            - @request_stack
+            - @doctrine_mongodb
+            - @form.factory
+            - @form.connect
+            - @form.register
+            - @festitime.form_service
+            - @festitime.google_oauth_provider
 
     festitime.form_service:
         class: %festitime.form_service.class%
@@ -16,3 +25,7 @@ services:
 
     form.register:
         class: %form.register.class%
+
+    festitime.google_oauth_provider:
+        class: %festitime.google_oauth_provider%
+        arguments: [@google.oauth_provider]
