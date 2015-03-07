@@ -8,7 +8,7 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
-<body ng-app="festival" ng-controller="searchBarController">
+<body ng-app="Frontoffice" ng-controller="searchBarController">
     <header>
         {% set user = app.session.get('user') %}
         <div id="banner-box">
@@ -110,7 +110,7 @@
     </div>
     <div id="main">
         <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in festivals | filter:search | filter:typeFilter">
-            <img src="{[{ festival.img }]}" alt="image festival">
+            <img ng-src="{[{ festival.img }]}" alt="image festival">
             <div class="festival">
                 <div class="name">{[{ festival.name }]}</div>
                 <div class="info">
