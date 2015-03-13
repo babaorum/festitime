@@ -1,5 +1,6 @@
 Festitime\DatabaseBundle\Document\FestivalArtists:
     type: document
+    repositoryClass: Festitime\DatabaseBundle\Repository\FestivalArtistsRepository
     referenceOne:
         festival:
             targetDocument: Festitime\DatabaseBundle\Document\Festival
