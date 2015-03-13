@@ -1,0 +1,10 @@
+Festitime\DatabaseBundle\Document\FestivalArtists:
+    type: document
+    referenceOne:
+        festival:
+            targetDocument: Festitime\DatabaseBundle\Document\Festival
+        artist:
+            targetDocument: Festitime\DatabaseBundle\Document\Artist
+    fields:
+        id:
+            id: true

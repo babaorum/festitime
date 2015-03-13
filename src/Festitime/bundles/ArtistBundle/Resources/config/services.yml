@@ -1,0 +1,7 @@
+parameters:
+    festitime.artist_service.class: Festitime\bundles\ArtistBundle\Services\ArtistService
+
+services:
+    festitime.artist_service:
+        class: %festitime.artist_service.class%
+        arguments: [@request_stack, @doctrine_mongodb]

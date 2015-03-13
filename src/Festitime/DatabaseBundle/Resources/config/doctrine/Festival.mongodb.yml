@@ -1,5 +1,8 @@
 Festitime\DatabaseBundle\Document\Festival:
     type: document
+    referenceMany:
+        festival_artists:
+            targetDocument: Festitime\DatabaseBundle\Document\FestivalArtists
     fields:
         id:
             id: true
