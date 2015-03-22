@@ -72,8 +72,7 @@ header
 {
 	float: left;
 	width: 75%;
-	font-family: Oswald;
-	font-size: 25px;
+	font: 25px @font-oswald;
 	text-align: center;
 	padding: 5px 0;
 	color: #C92A55;
@@ -221,18 +220,38 @@ header #search-bar
 	background-size: 100%;
 	height: 100%;
 }
-#search #search-bar
+#search-content
 {
+	padding: 25%;
+	width: 50%;
+	text-align: center;
+}
+#search-bar
+{
+	display: block;
 	background: url(/assets/images/glass.png) no-repeat 10px fade(#F8F8F8, 70%);
     background-size: 40px;
     border: 0 none;
     font: 40px @font-oswald bold;
     color: #282828;
-    padding: 10px 1% 10px 5%;
+    padding: 10px 1% 10px 10%;
+    margin: 5% 0;
     border-radius: 2px;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
-	margin: 25%;
-	width: 50%;
+    width: 100%;
+
+}
+#search-content .button
+{
+	display: inline;
+	font: 20px @font-oswald;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	border: solid 2px #FFFFFF;
+	text-decoration: none;
+	padding: 1%; 
+	text-align: center;
+	text-shadow: 2px 2px 3px #000000;
 }
 
 #main
