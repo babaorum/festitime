@@ -1,0 +1,9 @@
+artists:
+    labels:
+        pseudo:      "Pseudonyme"
+        firstname:   "Prénom"
+        lastname:    "Nom de famille"
+        description: "Description"
+        type:        "Genre de musique"
+        picture:     "Photo principale"
+        pictures:    "Autres photos"

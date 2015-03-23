@@ -1,7 +1,16 @@
 parameters:
     festitime.artist_service.class: Festitime\bundles\ArtistBundle\Services\ArtistService
+    festitime.artist_form.class:    Festitime\bundles\ArtistBundle\Form\Type\ArtistType
 
 services:
     festitime.artist_service:
         class: %festitime.artist_service.class%
-        arguments: [@request_stack, @doctrine_mongodb]
+        arguments: 
+            - @request_stack
+            - @doctrine_mongodb
+            - @form.factory
+            - @festitime.artist_form
+            - @festitime.form_service
+
+    festitime.artist_form:
+        class: %festitime.artist_form.class%

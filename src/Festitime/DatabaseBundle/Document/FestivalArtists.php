@@ -7,7 +7,7 @@ use Festitime\DatabaseBundle\Traits\SerializerTrait;
 /**
  * Festitime\bundles\UserBundle\Document\Artist
  */
-class Artist
+class FestivalArtists
 {
     /**
      * Use SerializerTrait to have access 

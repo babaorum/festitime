@@ -3,7 +3,7 @@
 namespace Festitime\bundles\ArtistBundle\Controller;
 
 use FOS\RestBundle\Controller\FOSRestController;
-//use Festitime\DatabaseBundle\Document\Artist;
+use Festitime\DatabaseBundle\Document\Artist;
 
 class ArtistApiController extends FOSRestController
 {
@@ -23,17 +23,24 @@ class ArtistApiController extends FOSRestController
     public function getArtistsAction()
     {
         $artistService = $this->container->get('festitime.artist_service');
-        die(var_dump($artistService->mongoManager));
         $artists = $artistService->getArtists();
         
         return $this->view($artists, 200);
     }
 
+    public function postArtistAction()
+    {
+        $artistService = $this->container->get('festitime.artist_service');
+        $artist = $artistService->postArtist();
+
+        return $artist;
+    }
+
     public function putArtistAction($id)
     {
         $artistService = $this->container->get('festitime.artist_service');
-        $artistService->putArtist($id);
-        die('ok');
+        $artist = $artistService->putArtist($id);
+        return $artist;
     }
 
     public function deleteArtistAction($id)
