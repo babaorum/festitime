@@ -10,14 +10,14 @@ use Festitime\DatabaseBundle\Traits\SerializerTrait;
 class Festival
 {
     /**
-     * Use SerializerTrait to have access 
+     * Use SerializerTrait to have access
      * to generic methods toArray() & toJSON()
      */
     use SerializerTrait;
 
     public function __construct()
     {
-        $this->festival_artists = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->artists = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -26,9 +26,9 @@ class Festival
     protected $id;
 
     /**
-     * @var Festitime\DatabaseBundle\Document\FestivalArtists
+     * @var Festitime\DatabaseBundle\Document\Artist
      */
-    protected $festival_artists = array();
+    protected $artists = array();
 
     /**
      * @var string $name
@@ -309,34 +309,34 @@ class Festival
     {
         return $this->price;
     }
-    
+
     /**
-     * Add festivalArtist
+     * Add artist
      *
-     * @param Festitime\DatabaseBundle\Document\FestivalArtists $festivalArtist
+     * @param Festitime\DatabaseBundle\Document\Artist $artist
      */
-    public function addFestivalArtist(\Festitime\DatabaseBundle\Document\FestivalArtists $festivalArtist)
+    public function addArtist(\Festitime\DatabaseBundle\Document\Artist $artist)
     {
-        $this->festival_artists[] = $festivalArtist;
+        $this->artists[] = $artist;
     }
 
     /**
-     * Remove festivalArtist
+     * Remove artist
      *
-     * @param Festitime\DatabaseBundle\Document\FestivalArtists $festivalArtist
+     * @param Festitime\DatabaseBundle\Document\Artist $artist
      */
-    public function removeFestivalArtist(\Festitime\DatabaseBundle\Document\FestivalArtists $festivalArtist)
+    public function removeArtist(\Festitime\DatabaseBundle\Document\Artist $artist)
     {
-        $this->festival_artists->removeElement($festivalArtist);
+        $this->artists->removeElement($artist);
     }
 
     /**
-     * Get festivalArtists
+     * Get artists
      *
-     * @return Doctrine\Common\Collections\Collection $festivalArtists
+     * @return Doctrine\Common\Collections\Collection $artists
      */
-    public function getFestivalArtists()
+    public function getArtists()
     {
-        return $this->festival_artists;
+        return $this->artists;
     }
 }

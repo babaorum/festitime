@@ -3,16 +3,19 @@
 namespace Festitime\bundles\FestivalBundle\Services;
 
 use Festitime\DatabaseBundle\Document\Festival;
+use Festitime\DatabaseBundle\Document\Artist;
 
 class FestivalService
 {
     protected $request;
     protected $mongoManager;
+    protected $artistService;
 
-    public function __construct($request, $doctrineMongodb)
+    public function __construct($request, $doctrineMongodb, $artistService)
     {
         $this->request = $request;
         $this->mongoManager = $doctrineMongodb->getManager();
+        $this->artistService = $artistService;
     }
 
     public function postFestival()
@@ -25,7 +28,7 @@ class FestivalService
             if(!empty($query['festival']['name']))
             {
                 $festival->setName($query['festival']['name']);
-                
+
                 if(!empty($query['festival']['description']))
                 {
                     $festival->setDescription($query['festival']['description']);
@@ -64,7 +67,7 @@ class FestivalService
                 }
                 $this->mongoManager->persist($festival);
                 $this->mongoManager->flush();
-                
+
                 return $festival;
             }
         }
@@ -102,5 +105,33 @@ class FestivalService
             $this->mongoManager->remove($festival);
             $this->mongoManager->flush();
         }
+    }
+
+    /**
+     * Link all given artists to the festival referenced by $id
+     *
+     * @param  string $id
+     * @param  array  $idArtists
+     *
+     * @return Festival|false
+     */
+    public function linkFestivalArtists($id, array $idArtists)
+    {
+        $festival = $this->getFestival($id);
+        if ($festival instanceof Festival) {
+            foreach ($idArtists as $idArtist) {
+                $artist = $this->artistService->getArtist($idArtist);
+                if($artist instanceof Artist) {
+                    $festival->addArtist($artist);
+                    $artist->addFestival($festival);
+                    $this->mongoManager->persist($artist);
+                }
+            }
+            $this->mongoManager->persist($festival);
+            $this->mongoManager->flush();
+            return $festival;
+        }
+
+        return false;
     }
 }

@@ -10,15 +10,25 @@ use Festitime\DatabaseBundle\Traits\SerializerTrait;
 class Artist
 {
     /**
-     * Use SerializerTrait to have access 
+     * Use SerializerTrait to have access
      * to generic methods toArray() & toJSON()
      */
     use SerializerTrait;
+
+    public function __construct()
+    {
+        $this->festivals = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * @var MongoId $id
      */
     protected $id;
+
+    /**
+     * @var Festitime\DatabaseBundle\Document\Festival
+     */
+    protected $festivals = array();
 
     /**
      * @var string $pseudo
@@ -55,16 +65,6 @@ class Artist
      */
     protected $pictures;
 
-    /**
-     * @var Festitime\DatabaseBundle\Document\FestivalArtists
-     */
-    protected $festival_artists = array();
-
-    public function __construct()
-    {
-        $this->festival_artists = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-    
     /**
      * Get id
      *
@@ -230,32 +230,32 @@ class Artist
     }
 
     /**
-     * Add festivalArtist
+     * Add festival
      *
-     * @param Festitime\DatabaseBundle\Document\FestivalArtists $festivalArtist
+     * @param Festitime\DatabaseBundle\Document\Festival $festival
      */
-    public function addFestivalArtist(\Festitime\DatabaseBundle\Document\FestivalArtists $festivalArtist)
+    public function addFestival(\Festitime\DatabaseBundle\Document\Festival $festival)
     {
-        $this->festival_artists[] = $festivalArtist;
+        $this->festivals[] = $festival;
     }
 
     /**
-     * Remove festivalArtist
+     * Remove festival
      *
-     * @param Festitime\DatabaseBundle\Document\FestivalArtists $festivalArtist
+     * @param Festitime\DatabaseBundle\Document\Festival $festival
      */
-    public function removeFestivalArtist(\Festitime\DatabaseBundle\Document\FestivalArtists $festivalArtist)
+    public function removeFestival(\Festitime\DatabaseBundle\Document\Festival $festival)
     {
-        $this->festival_artists->removeElement($festivalArtist);
+        $this->festivals->removeElement($festival);
     }
 
     /**
-     * Get festivalArtists
+     * Get festivals
      *
-     * @return Doctrine\Common\Collections\Collection $festivalArtists
+     * @return Doctrine\Common\Collections\Collection $festivals
      */
-    public function getFestivalArtists()
+    public function getFestivals()
     {
-        return $this->festival_artists;
+        return $this->festivals;
     }
 }

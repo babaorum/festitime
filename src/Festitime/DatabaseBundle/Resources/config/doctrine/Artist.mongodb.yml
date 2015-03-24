@@ -2,8 +2,8 @@ Festitime\DatabaseBundle\Document\Artist:
     type: document
     repositoryClass: Festitime\DatabaseBundle\Repository\ArtistRepository
     referenceMany:
-        festival_artists:
-            targetDocument: Festitime\DatabaseBundle\Document\FestivalArtists
+        festivals:
+            targetDocument: Festitime\DatabaseBundle\Document\Festival
     fields:
         id:
             id: true
