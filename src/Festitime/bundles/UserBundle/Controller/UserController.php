@@ -4,7 +4,7 @@ namespace Festitime\bundles\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Festitime\bundles\UserBundle\Document\User;
+use Festitime\DatabaseBundle\Document\User;
 
 class UserController extends Controller
 {

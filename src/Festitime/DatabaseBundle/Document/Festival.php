@@ -15,10 +15,20 @@ class Festival
      */
     use SerializerTrait;
 
+    public function __construct()
+    {
+        $this->festival_artists = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
     /**
      * @var MongoId $id
      */
     protected $id;
+
+    /**
+     * @var Festitime\DatabaseBundle\Document\FestivalArtists
+     */
+    protected $festival_artists = array();
 
     /**
      * @var string $name
@@ -69,7 +79,6 @@ class Festival
      * @var int $price
      */
     protected $price;
-
 
     /**
      * Get id
@@ -299,5 +308,35 @@ class Festival
     public function getPrice()
     {
         return $this->price;
+    }
+    
+    /**
+     * Add festivalArtist
+     *
+     * @param Festitime\DatabaseBundle\Document\FestivalArtists $festivalArtist
+     */
+    public function addFestivalArtist(\Festitime\DatabaseBundle\Document\FestivalArtists $festivalArtist)
+    {
+        $this->festival_artists[] = $festivalArtist;
+    }
+
+    /**
+     * Remove festivalArtist
+     *
+     * @param Festitime\DatabaseBundle\Document\FestivalArtists $festivalArtist
+     */
+    public function removeFestivalArtist(\Festitime\DatabaseBundle\Document\FestivalArtists $festivalArtist)
+    {
+        $this->festival_artists->removeElement($festivalArtist);
+    }
+
+    /**
+     * Get festivalArtists
+     *
+     * @return Doctrine\Common\Collections\Collection $festivalArtists
+     */
+    public function getFestivalArtists()
+    {
+        return $this->festival_artists;
     }
 }

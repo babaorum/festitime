@@ -3,7 +3,7 @@
 namespace Festitime\bundles\FestivalBundle\Controller;
 
 use FOS\RestBundle\Controller\FOSRestController;
-use Festitime\bundles\FestivalBundle\Document\Festival;
+use Festitime\DatabaseBundle\Document\Festival;
 
 class FestivalApiController extends FOSRestController
 {

@@ -1,0 +1,23 @@
+Festitime\DatabaseBundle\Document\Artist:
+    type: document
+    repositoryClass: Festitime\DatabaseBundle\Repository\ArtistRepository
+    referenceMany:
+        festival_artists:
+            targetDocument: Festitime\DatabaseBundle\Document\FestivalArtists
+    fields:
+        id:
+            id: true
+        pseudo:
+            type: string
+        firstname:
+            type: string
+        lastname:
+            type: string
+        description:
+            type: string
+        type:
+            type: collection
+        picture:
+            type: string
+        pictures:
+            type: collection
