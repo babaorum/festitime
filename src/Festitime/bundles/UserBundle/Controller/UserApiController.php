@@ -3,7 +3,7 @@
 namespace Festitime\bundles\UserBundle\Controller;
 
 use FOS\RestBundle\Controller\FOSRestController;
-use Festitime\bundles\UserBundle\Document\User;
+use Festitime\DatabaseBundle\Document\User;
 
 class UserApiController extends FOSRestController
 {

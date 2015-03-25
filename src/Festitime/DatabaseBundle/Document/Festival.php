@@ -10,15 +10,25 @@ use Festitime\DatabaseBundle\Traits\SerializerTrait;
 class Festival
 {
     /**
-     * Use SerializerTrait to have access 
+     * Use SerializerTrait to have access
      * to generic methods toArray() & toJSON()
      */
     use SerializerTrait;
+
+    public function __construct()
+    {
+        $this->artists = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * @var MongoId $id
      */
     protected $id;
+
+    /**
+     * @var Festitime\DatabaseBundle\Document\Artist
+     */
+    protected $artists = array();
 
     /**
      * @var string $name
@@ -69,7 +79,6 @@ class Festival
      * @var int $price
      */
     protected $price;
-
 
     /**
      * Get id
@@ -299,5 +308,35 @@ class Festival
     public function getPrice()
     {
         return $this->price;
+    }
+
+    /**
+     * Add artist
+     *
+     * @param Festitime\DatabaseBundle\Document\Artist $artist
+     */
+    public function addArtist(\Festitime\DatabaseBundle\Document\Artist $artist)
+    {
+        $this->artists[] = $artist;
+    }
+
+    /**
+     * Remove artist
+     *
+     * @param Festitime\DatabaseBundle\Document\Artist $artist
+     */
+    public function removeArtist(\Festitime\DatabaseBundle\Document\Artist $artist)
+    {
+        $this->artists->removeElement($artist);
+    }
+
+    /**
+     * Get artists
+     *
+     * @return Doctrine\Common\Collections\Collection $artists
+     */
+    public function getArtists()
+    {
+        return $this->artists;
     }
 }

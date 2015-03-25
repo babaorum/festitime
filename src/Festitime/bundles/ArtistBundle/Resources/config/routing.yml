@@ -1,0 +1,3 @@
+artists:
+    type: rest
+    resource: Festitime\bundles\ArtistBundle\Controller\ArtistApiController

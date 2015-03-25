@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new Festitime\DatabaseBundle\FestitimeDatabaseBundle(),
             new Festitime\bundles\FestivalBundle\FestitimeFestivalBundle(),
             new Festitime\bundles\UserBundle\FestitimeUserBundle(),
+            new Festitime\bundles\ArtistBundle\FestitimeArtistBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

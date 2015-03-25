@@ -75,18 +75,24 @@ swiftmailer:
     password:  %mailer_password%
     spool:     { type: memory }
 
-#FOS_REST Configuration
-fos_rest:
-   routing_loader:
-       default_format: json
-   view:
-       view_response_listener: force
-       formats:
-           json: true
-           html: true
-   format_listener: false
+# SensioFrameworkExtraBundle Configuration
+sensio_framework_extra:
+    request: { converters: true }
 
-#Google OAuth2 Configuration
+# FOS_REST Configuration
+fos_rest:
+    body_converter:
+        enabled: true
+    routing_loader:
+        default_format: json
+    view:
+        view_response_listener: force
+        formats:
+            json: true
+            html: true
+    format_listener: false
+
+# Google OAuth2 Configuration
 happy_r_google_api:
     application_name: MySite
     oauth2_client_id: %google_client_id%

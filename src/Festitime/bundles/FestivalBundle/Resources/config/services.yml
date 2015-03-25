@@ -4,4 +4,4 @@ parameters:
 services:
     festitime.festival_service:
         class: %festitime.festival_service.class%
-        arguments: [@request_stack, @doctrine_mongodb]
+        arguments: [@request_stack, @doctrine_mongodb, @festitime.artist_service]

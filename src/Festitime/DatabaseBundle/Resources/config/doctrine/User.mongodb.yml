@@ -1,4 +1,6 @@
 Festitime\DatabaseBundle\Document\User:
+    type: document
+    repositoryClass: Festitime\DatabaseBundle\Repository\UserRepository
     fields:
         id:
             id: true

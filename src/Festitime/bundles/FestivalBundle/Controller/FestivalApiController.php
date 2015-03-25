@@ -2,8 +2,9 @@
 
 namespace Festitime\bundles\FestivalBundle\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
 use FOS\RestBundle\Controller\FOSRestController;
-use Festitime\bundles\FestivalBundle\Document\Festival;
+use Festitime\DatabaseBundle\Document\Festival;
 
 class FestivalApiController extends FOSRestController
 {
@@ -12,8 +13,7 @@ class FestivalApiController extends FOSRestController
         $festivalService = $this->get('festitime.festival_service');
         $festival = $festivalService->getFestival($id);
 
-        if($festival instanceof Festival)
-        {
+        if ($festival instanceof Festival) {
             return $this->view($festival, 200);
         }
 
@@ -24,8 +24,15 @@ class FestivalApiController extends FOSRestController
     {
         $festivalService = $this->container->get('festitime.festival_service');
         $festivals = $festivalService->getFestivals();
-        
+
         return $this->view($festivals, 200);
+    }
+
+    public function getFestivalsRandomPicturesAction($count = 20)
+    {
+        $festivalService = $this->container->get('festitime.festival_service');
+        $pictures = $festivalService->getFestivalsRandomPictures($count);
+        return $this->view($pictures, 200);
     }
 
     public function putFestivalAction($id)
@@ -39,7 +46,22 @@ class FestivalApiController extends FOSRestController
     {
         $festivalService = $this->container->get('festitime.festival_service');
         $response = $festivalService->deleteFestival($id);
-        
+
         return $this->view(null, 204);
+    }
+
+    public function putFestivalArtistsAction($id, Request $request)
+    {
+        $idArtists = $request->request->get('artists');
+        if (!empty($idArtists) && is_array($idArtists)) {
+            $festivalService = $this->container->get('festitime.festival_service');
+            $festival = $festivalService->linkFestivalArtists($id, $idArtists);
+
+            if ($festival instanceof Festival) {
+                return $this->view($festival, 201);
+            }
+        }
+
+        return $this->view('a parameter is missing or missused', 422);
     }
 }
