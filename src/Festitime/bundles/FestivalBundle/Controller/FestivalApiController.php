@@ -5,6 +5,7 @@ namespace Festitime\bundles\FestivalBundle\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use FOS\RestBundle\Controller\FOSRestController;
 use Festitime\DatabaseBundle\Document\Festival;
+
 class FestivalApiController extends FOSRestController
 {
     public function getFestivalAction($id)
@@ -12,8 +13,7 @@ class FestivalApiController extends FOSRestController
         $festivalService = $this->get('festitime.festival_service');
         $festival = $festivalService->getFestival($id);
 
-        if($festival instanceof Festival)
-        {
+        if ($festival instanceof Festival) {
             return $this->view($festival, 200);
         }
 
@@ -26,6 +26,13 @@ class FestivalApiController extends FOSRestController
         $festivals = $festivalService->getFestivals();
 
         return $this->view($festivals, 200);
+    }
+
+    public function getFestivalsRandomPicturesAction($count = 20)
+    {
+        $festivalService = $this->container->get('festitime.festival_service');
+        $pictures = $festivalService->getFestivalsRandomPictures($count);
+        return $this->view($pictures, 200);
     }
 
     public function putFestivalAction($id)
