@@ -1,0 +1,7 @@
+parameters:
+#    festitime_database.example.class: Festitime\DatabaseBundle\Example
+
+services:
+#    festitime_database.example:
+#        class: %festitime_database.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

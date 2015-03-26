@@ -1,0 +1,18 @@
+model: Festitime\DatabaseBundle\Document\Artist
+save_in_reverse: false
+persistence: mongodb
+fixtures:
+    saez:
+        pseudo: saez
+        firstname: damien
+        lastname: saez
+        description: un exelent artiste un peu différents des autres
+        type:
+            - electro
+            - rock
+            - pop
+        picture: "http://www.saez.mu/jemarchenu/mondino/SAEZ-Mondino4.jpg"
+        pictures:
+            - "http://www.laboiteamusiqueinde.com/wp-content/uploads/2013/03/saez5461.jpg"
+            - "http://www.desinvolt.fr/wp-content/uploads/arton375.jpg"
+            - "https://i1.ytimg.com/vi/WtFO6GCg8Xo/hqdefault.jpg"

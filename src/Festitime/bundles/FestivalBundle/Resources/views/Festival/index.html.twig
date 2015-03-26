@@ -8,8 +8,9 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
-<body ng-app="festival" ng-controller="searchBarController">
+<body ng-app="Frontoffice" ng-controller="searchBarController as searchBarCtrl">
     <header>
+        {% set user = app.session.get('user') %}
         <div id="banner-box">
             <div id="flag">
                 <img id="logo" width="110px" src="/assets/images/logo.png"/>
@@ -26,6 +27,9 @@
             <span class="clear"></span>
         </div>
         <a href="#" id="connect">
+            {% if user.firstname is defined %}
+                {{ user.firstname | capitalize }} {{ user.name | upper  }}
+            {% endif %}
             <span>Se connecter</span>
         </a>
         <span class="clear"></span>
@@ -53,37 +57,37 @@
             </div>
             <div class="content">
                 <span class="tag">&#201;lectro
-                    <input type="checkbox" ng-click="includeType('electro')">
+                    <input type="checkbox" ng-click="searchBarCtrl.includeType('electro')">
                 </span>
                 <span class="tag">Rock
-                    <input type="checkbox" ng-click="includeType('rock')">
+                    <input type="checkbox" ng-click="searchBarCtrl.includeType('rock')">
                 </span>
                 <span class="tag">Pop
-                    <input type="checkbox" ng-click="includeType('pop')">
+                    <input type="checkbox" ng-click="searchBarCtrl.includeType('pop')">
                 </span>
                 <span class="tag">Hip Hop
-                    <input type="checkbox" ng-click="includeType('hip hop')">
+                    <input type="checkbox" ng-click="searchBarCtrl.includeType('hip hop')">
                 </span>
                 <span class="tag">Rap
-                    <input type="checkbox" ng-click="includeType('rap')">
+                    <input type="checkbox" ng-click="searchBarCtrl.includeType('rap')">
                 </span>
                 <span class="tag">Reggae
-                    <input type="checkbox" ng-click="includeType('reggae')">
+                    <input type="checkbox" ng-click="searchBarCtrl.includeType('reggae')">
                 </span>
                 <span class="tag">Ragga
-                    <input type="checkbox" ng-click="includeType('ragga')">
+                    <input type="checkbox" ng-click="searchBarCtrl.includeType('ragga')">
                 </span>
                 <span class="tag">Jazz
-                    <input type="checkbox" ng-click="includeType('jazz')">
+                    <input type="checkbox" ng-click="searchBarCtrl.includeType('jazz')">
                 </span>
                 <span class="tag">Dark
-                    <input type="checkbox" ng-click="includeType('dark')">
+                    <input type="checkbox" ng-click="searchBarCtrl.includeType('dark')">
                 </span>
                 <span class="tag">Metal
-                    <input type="checkbox" ng-click="includeType('metal')">
+                    <input type="checkbox" ng-click="searchBarCtrl.includeType('metal')">
                 </span>
                 <span class="tag">Punk
-                    <input type="checkbox" ng-click="includeType('punk')">
+                    <input type="checkbox" ng-click="searchBarCtrl.includeType('punk')">
                 </span>
             </div>
         </div>
@@ -105,8 +109,8 @@
         </div>
     </div>
     <div id="main">
-        <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in festivals | filter:search | filter:typeFilter">
-            <img src="{[{ festival.img }]}" alt="image festival">
+        <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in searchBarCtrl.festivals | filter:search | filter:typeFilter">
+            <img ng-src="{[{ festival.img }]}" alt="image festival">
             <div class="festival">
                 <div class="name">{[{ festival.name }]}</div>
                 <div class="info">
@@ -135,7 +139,7 @@
 
         $('.sidebar.item .header .status').click(function(e){
             if($(this).hasClass('close')){
-                $(this).closest('.sidebar.item').children('.content').slideDown(200);                
+                $(this).closest('.sidebar.item').children('.content').slideDown(200);
                 $(this).attr("src", "/assets/images/arrow-up.svg");
                 $(this).removeClass("close");
                 $(this).addClass("open");

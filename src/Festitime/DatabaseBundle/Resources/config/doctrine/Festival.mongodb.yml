@@ -1,4 +1,9 @@
-Festitime\bundles\FestivalBundle\Document\Festival:
+Festitime\DatabaseBundle\Document\Festival:
+    type: document
+    repositoryClass: Festitime\DatabaseBundle\Repository\FestivalRepository
+    referenceMany:
+        artists:
+            targetDocument: Festitime\DatabaseBundle\Document\Artist
     fields:
         id:
             id: true
@@ -11,9 +16,15 @@ Festitime\bundles\FestivalBundle\Document\Festival:
         img:
             type: string
         start_date:
+            gedmo:
+                timestampable:
+                on: create
             type: date
         end_date:
             type: date
+            gedmo:
+                timestampable:
+                on: change
         city:
             type: string
         region:

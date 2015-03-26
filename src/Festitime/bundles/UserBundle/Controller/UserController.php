@@ -3,7 +3,8 @@
 namespace Festitime\bundles\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Festitime\bundles\UserBundle\Document\User;
+use Symfony\Component\HttpFoundation\Request;
+use Festitime\DatabaseBundle\Document\User;
 
 class UserController extends Controller
 {
@@ -34,11 +35,63 @@ class UserController extends Controller
             )
         );
     }
+
+    /**
+     * @author Romain Grelet
+     * 
+     * login with OAuth2
+     * @param  string $provider
+     */
+    public function loginOauthAction($provider, Request $request)
+    {
+        $session = $this->container->get('session');
+        $homeUrl = $this->generateUrl('home');
+
+        if ($session->has('accessToken') && $session->has('user'))
+        {
+            return $this->redirect($homeUrl);
+        }
+
+        if ($provider == 'google')
+        {
+            $this->client = $this->get('google.oauth_provider')->getGoogleClient();
+            $this->client->setScopes(array('email', 'profile'));
+            $this->client->setApprovalPrompt('auto');
+            $code = $request->query->get('code');
+            if ($code)
+            {
+                $this->client->authenticate($code);
+                if ($this->client->getAccessToken())
+                {
+                    $userService = $this->container->get('festitime.user_service');
+                    $this->client->setAccessToken($this->client->getAccessToken());
+
+                    // get user infos
+                    $this->oauth2 = $this->get('festitime.google_oauth_provider');
+                    $userData = $this->oauth2->getUserInfos();
+
+                    $user = $userService->getUserBy(array('email' => $userData['email']));
+
+                    if(is_null($user))
+                    {
+                        $user = $userService->postUserFromOAuth($userData);
+                    }
+
+                    $session->set('accessToken', $this->client->getAccessToken());
+                    $session->set('user', $user->toArray());
+                    
+                    return $this->redirect($homeUrl);
+                }
+            }
+        }
+        
+        return $this->redirect($homeUrl);
+    }
     
     /**
-    *   @author Romain Grelet
-    *   logout action
-    */
+     * @author Romain Grelet
+     * logout action
+     */
     public function logoutAction()
     {
         $session = $this->container->get('session');
@@ -46,6 +99,10 @@ class UserController extends Controller
         {
             $session->invalidate();
             return $this->redirect($this->generateUrl('login'));
+        }
+        if($session->has('user')) {
+            $session->invalidate();
+            return $this->redirect($this->generateUrl('home'));
         }
     }
 

@@ -3,7 +3,7 @@
 namespace Festitime\bundles\FestivalBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Festitime\bundles\FestivalBundle\Document\Festival;
+use Festitime\DatabaseBundle\Document\Festival;
 
 class FestivalController extends Controller
 {

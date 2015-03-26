@@ -16,17 +16,22 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new Festitime\bundles\FestivalBundle\FestitimeFestivalBundle(),
-            new Festitime\bundles\UserBundle\FestitimeUserBundle(),
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
+            new HappyR\Google\ApiBundle\HappyRGoogleApiBundle(),
+            new Festitime\DatabaseBundle\FestitimeDatabaseBundle(),
+            new Festitime\bundles\FestivalBundle\FestitimeFestivalBundle(),
+            new Festitime\bundles\UserBundle\FestitimeUserBundle(),
+            new Festitime\bundles\ArtistBundle\FestitimeArtistBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+            $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
+            $bundles[] = new Khepin\YamlFixturesBundle\KhepinYamlFixturesBundle();
         }
 
         return $bundles;

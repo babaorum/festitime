@@ -23,9 +23,9 @@ module.exports = function (grunt) {
 
         concat: {
             dist: {
-                src: ['./web/assets/js/app/**'],
+                src: ['./web/assets/js/app/*/*/module.js', './web/assets/js/app/**'],
                 dest: './web/assets/dist/js/built.js'
-            },
+            }
         },
 
         ngAnnotate: {

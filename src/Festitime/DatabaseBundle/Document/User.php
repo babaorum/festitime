@@ -1,12 +1,20 @@
 <?php
 
-namespace Festitime\bundles\UserBundle\Document;
+namespace Festitime\DatabaseBundle\Document;
+
+use Festitime\DatabaseBundle\Traits\SerializerTrait;
 
 /**
  * Festitime\bundles\UserBundle\Document\User
  */
 class User
 {
+    /**
+     * Use SerializerTrait to have access 
+     * to generic methods toArray() & toJSON()
+     */
+    use SerializerTrait;
+
     /**
      * @var MongoId $id
      */
@@ -66,6 +74,11 @@ class User
      * @var string $country
      */
     protected $country;
+
+    /**
+     * @var string $picture
+     */
+    protected $picture;
 
     /**
      * @var date $created_at
@@ -328,6 +341,28 @@ class User
     public function getCountry()
     {
         return $this->country;
+    }
+
+    /**
+     * Set picture
+     *
+     * @param string $picture
+     * @return self
+     */
+    public function setPicture($picture)
+    {
+        $this->picture = $picture;
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return string $picture
+     */
+    public function getPicture()
+    {
+        return $this->picture;
     }
 
     /**

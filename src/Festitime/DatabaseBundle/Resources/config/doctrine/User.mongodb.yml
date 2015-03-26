@@ -1,4 +1,6 @@
-Festitime\bundles\UserBundle\Document\User:
+Festitime\DatabaseBundle\Document\User:
+    type: document
+    repositoryClass: Festitime\DatabaseBundle\Repository\UserRepository
     fields:
         id:
             id: true
@@ -23,6 +25,8 @@ Festitime\bundles\UserBundle\Document\User:
         zipcode:
             type: string
         country:
+            type: string
+        picture:
             type: string
         created_at:
             type: date

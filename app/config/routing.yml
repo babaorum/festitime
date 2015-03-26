@@ -1,3 +1,11 @@
+festitime_artist:
+    resource: "@FestitimeArtistBundle/Resources/config/routing.yml"
+    prefix:   /
+
+festitime_database:
+    resource: "@FestitimeDatabaseBundle/Resources/config/routing.yml"
+    prefix:   /
+
 festitime_user:
     resource: "@FestitimeUserBundle/Resources/config/routing.yml"
     prefix:   /

@@ -75,21 +75,38 @@ swiftmailer:
     password:  %mailer_password%
     spool:     { type: memory }
 
-#FOS_REST Configuration
+# SensioFrameworkExtraBundle Configuration
+sensio_framework_extra:
+    request: { converters: true }
+
+# FOS_REST Configuration
 fos_rest:
-   routing_loader:
-       default_format: json
-   view:
-       view_response_listener: force
-       formats:
-           json: true
-           html: true
-   format_listener: false
+    body_converter:
+        enabled: true
+    routing_loader:
+        default_format: json
+    view:
+        view_response_listener: force
+        formats:
+            json: true
+            html: true
+    format_listener: false
+
+# Google OAuth2 Configuration
+happy_r_google_api:
+    application_name: MySite
+    oauth2_client_id: %google_client_id%
+    oauth2_client_secret: %google_client_secret%
+    oauth2_redirect_uri: %google_redirect_uri%
+    developer_key: %google_developer_key%
+    site_name: mysite.com
 
 services:
     kernel.listener.authentification_listener:
         class: Festitime\Listeners\AuthentificationListener
         tags:
             - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest}
-        arguments: [@router, %login_route%, %connected_route%]
-
+        arguments: [@router, %login_route%, %connected_route%, @twig, @google.oauth_provider]
+    google.oauth_provider:
+        class: HappyR\Google\ApiBundle\Services\GoogleClient
+        arguments: [%happy_r_google_api%]
