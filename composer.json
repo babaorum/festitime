@@ -24,7 +24,9 @@
         "doctrine/mongodb-odm": "1.0.*@dev",
         "doctrine/mongodb-odm-bundle": "3.0.*@dev",
         "friendsofsymfony/rest-bundle": "~1.4",
-        "happyr/google-api-bundle": "~2.1"
+        "happyr/google-api-bundle": "~2.1",
+        "doctrine/doctrine-fixtures-bundle": "~2.2",
+        "khepin/yaml-fixtures-bundle": "~1.0"
     },
     "scripts": {
         "post-install-cmd": [
