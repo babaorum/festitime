@@ -1,18 +1,10 @@
 (function () {
     "use strict";
-    
+
     function searchBarController($scope, festivalRestService) {
 
-        $scope.festivals = [];
-        this.types = [];                
-        
-        //load festivals
-        festivalRestService.getFestivals()
-            .then(function(festivals) {
-                    $scope.festivals = festivals;
-                    console.log(festivals);
-                }
-            );
+        this.festivals = [];
+        this.types = [];
 
         this.includeType = function(type) {
             var i = this.types.indexOf(type);
@@ -39,6 +31,12 @@
             return festival;
         }.bind(this);
 
+
+        //load festivals
+        festivalRestService.getFestivals()
+            .then(function(festivals) {
+                this.festivals = festivals;
+            }.bind(this));
     }
 
     angular.module('Frontoffice').controller(
