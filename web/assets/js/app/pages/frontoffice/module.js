@@ -1,11 +1,14 @@
 (function () {
-	"use strict";
+    "use strict";
 
-	angular.module(
-		"Frontoffice",
-		["Rest"] 
-	).config(function($interpolateProvider){
-	        $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
-	});
+    angular.module(
+        "Frontoffice",
+        [
+            "Rest",
+            "timer"
+        ]
+    ).config(function($interpolateProvider){
+            $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
+    });
 
 })();

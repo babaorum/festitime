@@ -3,8 +3,10 @@
 
     function searchBarController($scope, festivalRestService) {
 
-        this.festivals = [];
-        this.types = [];
+        this.festivals          = [];
+        this.types              = [];
+        this.countdownElements  = 3;
+        this.countdownFestivals = [];
 
         this.includeType = function(type) {
             var i = this.types.indexOf(type);
@@ -31,11 +33,24 @@
             return festival;
         }.bind(this);
 
+        this.getCountdownFromDate = function(date) {
+            var now  = new Date();
+            var date = new Date(date);
+            return (date-0);
+        };
 
         //load festivals
         festivalRestService.getFestivals()
             .then(function(festivals) {
-                this.festivals = festivals;
+                var i = 0;
+                festivals.forEach(function(festival) {
+                    if(festival.start_date && i < this.countdownElements) {
+                        festival.countdown = this.getCountdownFromDate(festival.start_date);
+                        this.countdownFestivals.push(festival);
+                        i++;
+                    }
+                    this.festivals.push(festival);
+                }.bind(this));
             }.bind(this));
     }
 
