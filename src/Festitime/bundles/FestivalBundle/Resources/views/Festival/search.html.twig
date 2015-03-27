@@ -34,7 +34,7 @@
             <a href="#" class="link">
                 <span>Les artistes</span>
             </a>
-            <!-- <input id="search-bar" type="text" size="10" ng-model="search"/> -->
+            <input id="search-bar" type="text" size="10" ng-model="search"/>
             <span class="clear"></span>
         </div>
             <a href="#" id="connect">
@@ -67,37 +67,37 @@
                 <img width="20px" height="23px" class="status open" alt="arrow" src="/assets/images/arrow-up.svg"/>
             </div>
             <div class="content">
-                <span class="tag">&#201;lectro
+                <span class="tag tag-electro">&#201;lectro
                     <input type="checkbox" ng-click="searchBarCtrl.includeType('electro')">
                 </span>
-                <span class="tag">Rock
+                <span class="tag tag-rock">Rock
                     <input type="checkbox" ng-click="searchBarCtrl.includeType('rock')">
                 </span>
-                <span class="tag">Pop
+                <span class="tag tag-pop">Pop
                     <input type="checkbox" ng-click="searchBarCtrl.includeType('pop')">
                 </span>
-                <span class="tag">Hip Hop
+                <span class="tag tag-hip">Hip Hop
                     <input type="checkbox" ng-click="searchBarCtrl.includeType('hip hop')">
                 </span>
-                <span class="tag">Rap
+                <span class="tag tag-rap">Rap
                     <input type="checkbox" ng-click="searchBarCtrl.includeType('rap')">
                 </span>
-                <span class="tag">Reggae
+                <span class="tag tag-reggae">Reggae
                     <input type="checkbox" ng-click="searchBarCtrl.includeType('reggae')">
                 </span>
-                <span class="tag">Ragga
+                <span class="tag tag-ragga">Ragga
                     <input type="checkbox" ng-click="searchBarCtrl.includeType('ragga')">
                 </span>
-                <span class="tag">Jazz
+                <span class="tag tag-jazz">Jazz
                     <input type="checkbox" ng-click="searchBarCtrl.includeType('jazz')">
                 </span>
-                <span class="tag">Dark
+                <span class="tag tag-dark">Dark
                     <input type="checkbox" ng-click="searchBarCtrl.includeType('dark')">
                 </span>
-                <span class="tag">Metal
+                <span class="tag tag-metal">Metal
                     <input type="checkbox" ng-click="searchBarCtrl.includeType('metal')">
                 </span>
-                <span class="tag">Punk
+                <span class="tag tag-punk">Punk
                     <input type="checkbox" ng-click="searchBarCtrl.includeType('punk')">
                 </span>
             </div>
@@ -120,7 +120,7 @@
         </div>
     </div>
     <div id="main">
-        <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in searchBarCtrl.festivals | filter:search | filter:typeFilter">
+        <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in searchBarCtrl.festivals | filter:search | filter:searchBarCtrl.typeFilter">
             <img ng-src="{[{ festival.img }]}" alt="image festival">
             <div class="festival">
                 <div class="name">{[{ festival.name }]}</div>
@@ -130,16 +130,6 @@
                         <div class="location">{[{ festival.city+", "+festival.country }]}</div>
                     </div>
                     <div class="price"><span>A partir de </span>{[{ festival.price }]}&#128;</div>
-                </div>
-            </div>
-        </div>
-        <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in searchBarCtrl.countdownFestivals">
-            <img ng-src="{[{ festival.img }]}" alt="image festival">
-            <div class="festival">
-                <div class="name">
-                    {[{ festival.name }]}
-                    <br>
-                    <timer end-time="festival.countdown">{[{days}]} days, {[{hours}]} hours, {[{minutes}]} minutes, {[{seconds}]} seconds.</timer>
                 </div>
             </div>
         </div>
@@ -173,5 +163,18 @@
             }
         });
     </script>
+    {% if searchedType is defined %}
+    <script type="text/javascript">
+        {% if searchedType != 'hip hop'%}
+(function() {
+            $('.sidebar.item .content .tag.tag-{{searchedType}}').each(function(item) {
+                item.addClass("active");
+                item.children('input').trigger("click");
+            });
+})();
+        {% else %}
+        {% endif %}
+    </script>
+    {% endif %}
 </body>
 </html>

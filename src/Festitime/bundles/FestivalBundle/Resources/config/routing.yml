@@ -6,6 +6,18 @@ home:
     path: /
     defaults: { _controller: FestitimeFestivalBundle:Festival:index }
 
+search:
+    path: /search
+    defaults: { _controller: FestitimeFestivalBundle:Festival:search }
+
+searchBySlug:
+    path: /search/{slug}
+    defaults: { _controller: FestitimeFestivalBundle:Festival:searchBySlug }
+
+searchByType:
+    path: /search/type/{type}
+    defaults: { _controller: FestitimeFestivalBundle:Festival:searchByType }
+
 adminFestivals:
     path: /festivals/admin
     defaults: { _controller: FestitimeFestivalBundle:Festival:admin }
