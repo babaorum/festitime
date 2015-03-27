@@ -146,7 +146,7 @@ header
     width: 110px;
     height: 110px;
     background: #ffffff;
-    margin: 0 10%;
+    margin: 0 5%;
     float: left;
 }
 
@@ -283,10 +283,8 @@ header #search-bar
     background: #F8F8F8;
     transform: skewY(-5deg);
     transform-origin: top left;
-    border-style: solid;
-    border-width: 7px 0px;
-    height: 800px;
-    text-align: center
+    text-align: center;
+    height: 600px;
 }
 #how h1
 {
@@ -311,8 +309,17 @@ header #search-bar
 {
     width: 30%;
     margin: 1.6%;
-    background-color: blue;
     float: left;
+    font: 16px @font-oswald;
+}
+#how #how-content .step h2
+{
+    text-transform: uppercase;
+}
+#how #how-content .step p
+{
+    font-size: 14px;
+    color: #3F3F3F;
 }
 
 #countdown
@@ -504,8 +511,121 @@ timer span.time p
 
 }
 
+#festivals
+{
+    background: url("/assets/images/festival.jpg");
+    background-size: 100%;
+    margin-top: -10%;
+    padding-top: 10%;
+    text-align: center;
+    padding-bottom: 5%;
+}
+#festivals h1
+{
+    display: inline-block;
+    font: 24px @font-oswald;
+    color: #F3F3F3;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: skewY(-5deg);
+    border-style: solid;
+    border-color: #F3F3F3;
+    border-width: 4px 0px;
+    margin: 0 3% 3%;
+}
+#festivals #festival-content
+{
+    width: 70%;
+    margin: auto;
+}
+
+#festivals #festival-content #festival-group .block
+{
+    width: 30%;
+    margin: 1% 1.6%;
+    float: left;
+    height: 250px;
+    color: #ffffff;
+    font: 12px @font-oswald;
+    position: relative;
+    overflow: hidden;
+}
+
+#festivals #festival-content #festival-group .block img
+{
+    height: 100%;
+    width: 100%;
+}
+#festivals #festival-content #festival-group .block .festival
+{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 30%;
+    background: #F8F8F8;
+    color: #8F8F8F;
+}
+#festivals #festival-content #festival-group .block .festival .info
+{
+    padding-left: 1%;
+}
+
+#festivals #festival-content #festival-group .block .festival .info .left-info
+{
+    float: left;
+    text-align: left;
+    width: 70%
+}
+
+#festivals #festival-content #festival-group .block .festival .info .left-info img
+{
+    height: 10px;
+    width: auto;
+    margin-right: 1%;
+}
+
+#festivals #festival-content #festival-group .block .festival .info .left-info .name
+{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1%;
+}
+
+#festivals #festival-content #festival-group .block .festival .info .price
+{
+    float: right;
+    background: #F0F0F0;
+    font-size: 20px;
+    font-weight: bold;
+    width: 20%;
+    line-height: 100%;
+    margin: 2.5%;
+    padding: 2.5%;
+    box-shadow: 0px 0px 2px #888888;
+}
+
+#festivals #festival-content #festival-group .block .festival .info .price span
+{
+    font-size: 9px;
+    font-weight: normal;
+}
+
+#festival-content .button
+{
+    display: block;
+    font: 20px @font-oswald;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: solid 2px #FFFFFF;
+    text-decoration: none;
+    padding: 1%;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000000;
+    width: 100%;
+    clear: both;
+}
+
 .clear
 {
     clear: both;
 }
-

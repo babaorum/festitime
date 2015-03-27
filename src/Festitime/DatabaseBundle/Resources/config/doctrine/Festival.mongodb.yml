@@ -15,6 +15,8 @@ Festitime\DatabaseBundle\Document\Festival:
             type: collection
         img:
             type: string
+        pictures:
+            type: collection
         start_date:
             gedmo:
                 timestampable:

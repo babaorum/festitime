@@ -26,9 +26,10 @@ class FestivalController extends Controller
     {
         $festivalService = $this->container->get('festitime.festival_service');
         $response = $festivalService->postFestival();
-        
+
         if ($response instanceof Festival)
         {
+            die(var_dump($response));
             $this->get('session')->getFlashBag()->add('success', 'Le festival a bien été créé');
         }
         else
