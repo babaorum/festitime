@@ -3,6 +3,7 @@
 namespace Festitime\bundles\FestivalBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Festitime\DatabaseBundle\Document\Festival;
 
 class FestivalController extends Controller
@@ -20,6 +21,23 @@ class FestivalController extends Controller
     public function adminAction()
     {
         return $this->render('FestitimeFestivalBundle:Festival:admin.html.twig', array());
+    }
+
+    public function searchAction($slug)
+    {
+        die(var_dump($slug));
+        die(var_dump($request->request->all()));
+        return $this->render('FestitimeFestivalBundle:Festival:search.html.twig', array());
+    }
+
+    public function searchByTypeAction($type)
+    {
+        return $this->render(
+            'FestitimeFestivalBundle:Festival:search.html.twig',
+            array(
+                'searchedType' => $type
+            )
+        );
     }
 
     public function postFestivalAction()
