@@ -53,11 +53,11 @@
             </div>
         </div>
         <div id="how">
-            <h1>Comment ça marche ?</h1>
+            <h2>Comment ça marche ?</h2>
             <div id="how-content">
                 <div id="step1" class="step">
                     <img src="/assets/images/ticket.png">
-                    <h2>Choisis ton festival !</h2>
+                    <h3>Choisis ton festival !</h3>
                     <p>
                         Des achats simples et sécurisés, c'est ce que nous voulons avant tout.
                          Avec nous, réservez en quelques clics et avec le moins d'étapes possibles.
@@ -66,7 +66,7 @@
                 </div>
                 <div id="step2" class="step">
                     <img src="/assets/images/voiture.png">
-                    <h2>Comment y aller ?</h2>
+                    <h3>Comment y aller ?</h3>
                     <p>
                         Vous ne savez pas comment venir et n'avez pas envie de chercher pendant des heures ?
                          Pas de problème !
@@ -75,7 +75,7 @@
                 </div>
                 <div id="step3" class="step">
                     <img src="/assets/images/hotel.png">
-                    <h2>Où dormir ?</h2>
+                    <h3>Où dormir ?</h3>
                     <p>
                         Des achats simples et sécurisés, c'est ce que nous voulons avant tout.
                          Avec nous, réservez en quelques clics et avec le moins d'étapes possibles.
@@ -85,7 +85,7 @@
             </div>
         </div>
         <div id="festivals">
-            <h1>Vos plus beaux festivals</h1>
+            <h2>Vos plus beaux festivals</h2>
             <div id="festival-content">
                 <div id="festival-group">
                     <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in searchBarCtrl.festivals | filter:search | filter:typeFilter">
@@ -106,7 +106,20 @@
                 <a href="#" class="button">Voir tous les festivals</a>
             </div>
         </div>
-        <div id="artists"></div>
+        <div id="artists">
+            <h2>découvrez nos artistes !</h2>
+            <div id="artists-content">
+                <div class="artist">
+                    <img src="/assets/images/Lorde.jpg" alt="picture artist">
+                    <div class="artist-info">
+                        <div class="info-right"><span>2</span> Festivals</div>
+                        <h3>Lorde</h3>
+                        <p>Ella Marija Lani Yelich-O'Connor (né le 7 Novembre 1996), connue sous son nom de scène Lorde, est un chanteur et auteur-compositeur Nouvelle-Zélande. Né à Takapuna et a grandi à Devonport, Auckland, elle se intéresse à exécuter comme un enfant. En début de son adolescence, elle a signé avec Universal Music Group et a ensuite été jumelé avec l'auteur-compositeur et producteur Joel Little, qui a co-écrit et produit la plupart des œuvres de Lorde. Sa première version majeure, L'Amour du Club EP, a été libéré commercialement dans Mars 2013. Le projet tracé au numéro deux sur les records cartes nationales d'Australie et de Nouvelle-Zélande.</p>
+                        <a href="#" class="button">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="countdown" ng-show="searchBarCtrl.countdownFestivals[0] !== undefined">
             <div class="elem" ng-repeat="countdownFestival in searchBarCtrl.countdownFestivals">
                 <div class="title">
@@ -114,8 +127,7 @@
                     {[{countdownFestival.name}]}
                     <span class="place">
                         <!-- it is hard to change svg color -->
-                        <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     width="37.76px" height="51.61px" viewBox="0 0 37.76 51.61" enable-background="new 0 0 37.76 51.61" xml:space="preserve">
+                        <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="37.76px" height="51.61px" viewBox="0 0 37.76 51.61" enable-background="new 0 0 37.76 51.61" xml:space="preserve">
                             <path fill="#800000018000000180000001" d="M18.88,0C8.45,0,0,8.45,0,18.88c0,1.38,0.15,2.73,0.43,4.02c0.05,0.24,0.1,0.47,0.16,0.7
                                 c2.63,10.81,18.29,28.01,18.29,28.01c9.37-10.47,14.08-18.26,16.45-23.46c0-0.01,0-0.021,0.01-0.03c1.47-3.25,2.03-5.48,2.24-6.7
                                 c0.02-0.12,0.03-0.17,0.03-0.18c0.04-0.31,0.069-0.63,0.09-0.95c0.04-0.46,0.06-0.94,0.06-1.41C37.76,8.45,29.31,0,18.88,0
@@ -172,7 +184,7 @@
                 </div>
             </div>
             <div class="column">
-                <div class="block first" style="margin-top: 75px; margin-bottom: 67px;">
+                <div class="block first">
                     <h3>rechercher</h3>
                     <input id="search-bar-footer" type="text" ng-model="search" placeholder="Rechercher"/>
                 </div>

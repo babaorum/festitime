@@ -310,7 +310,7 @@ header #search-bar
     text-align: center;
     height: 600px;
 }
-#how h1
+#how h2
 {
     display: inline-block;
     font: 24px @font-oswald;
@@ -336,7 +336,7 @@ header #search-bar
     float: left;
     font: 16px @font-oswald;
 }
-#how #how-content .step h2
+#how #how-content .step h3
 {
     text-transform: uppercase;
 }
@@ -353,7 +353,9 @@ header #search-bar
     transform-origin: top left;
     text-align: center;
     height: 600px;
+    margin-top: -2%;
 }
+
 
 #countdown
 {
@@ -559,7 +561,7 @@ timer span.time p
     text-align: center;
     padding-bottom: 10%;
 }
-#festivals h1
+#festivals h2
 {
     display: inline-block;
     font: 24px @font-oswald;
@@ -669,9 +671,79 @@ timer span.time p
     transform: skewY(-5deg);
     transform-origin: top left;
     text-align: center;
-    margin-top: 5%; 
-    height: 600px;
+    font: 24px @font-oswald;
+    height: auto;
+    padding-bottom: 5%;
 }
+#artists h2
+{
+    display: inline-block;
+    color: #3F3F3F;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border-style: solid;
+    border-color: #3F3F3F;
+    border-width: 4px 0px;
+    margin: 3%;
+}
+#artists-content
+{
+    transform: skewY(5deg);
+    width: 70%;
+    margin: auto;
+}
+.artist
+{
+    height: auto;
+    overflow: hidden;
+    text-align: left;
+}
+.artist img
+{
+    width: 25%;
+    height: auto;
+    float: left;
+}
+.artist-info
+{
+    width: 73%;
+    float: right;
+}
+.artist-info h3
+{
+    margin-bottom: 1%;
+    margin-top: 0;
+    font-size: 16px;
+}
+.artist-info p
+{
+    font-size: 14px;
+    text-align: justify;
+}
+.artist-info .info-right
+{
+    float: right;
+    display: inline-block;
+}
+.artist-info .info-right span
+{
+    font-weight: bold;
+}
+.artist-info .button
+{
+    display: inline;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #080808;
+    border: solid 2px #080808;
+    text-decoration: none;
+    padding: 1%;
+    text-align: center;
+    float: right;
+    text-shadow: 2px 2px 3px #AAAAAA;
+}
+
 footer
 {
     background-color: #212121;
@@ -696,7 +768,7 @@ footer .contener .block
 footer .contener .column
 {
     float: left;
-    margin: 0 (@width*0.7*0.1/6);
+    margin: 1.6%;
     width: 30%;
 }
 
