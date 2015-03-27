@@ -107,7 +107,7 @@ class FestivalService
     {
         $R_festival = $this->mongoManager->getRepository('FestitimeDatabaseBundle:Festival');
         $festival = $R_festival->find($id);
-        $festival->setImg('http://www.concertandco.com/crit2/Trans-Musicales-2007web.jpg');
+        $festival->setImg('http://www.cuisinez-facile.fr/wp-content/uploads/2012/11/comment-decongeler-viande-rapidement-astuces.jpg');
         $this->mongoManager->persist($festival);
         $this->mongoManager->flush();
     }

@@ -9,7 +9,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body ng-app="Frontoffice" ng-controller="searchBarController">
-	<header>
+    <header>
         {% set user = app.session.get('user') %}
         <div id="flag">
             <img id="logo" width="110px" src="/assets/images/logo.png"/>
@@ -39,26 +39,71 @@
         <span class="clear"></span>
     </header>
     <content>
-    	<div id="search">
+        <div id="search">
             <div id="search-content">
                 <input id="search-bar" type="text" ng-model="search"/>
                 <a href="#" class="button">Voir tous les festivals</a>
             </div>
         </div>
-    	<div id="how">
-
+        <div id="how">
             <h1>Comment ça marche ?</h1>
             <div id="how-content">
-                <div id="step1" class="step">1</div>
-                <div id="step2" class="step">2</div>
-                <div id="step3" class="step">3</div>
+                <div id="step1" class="step">
+                    <img src="/assets/images/ticket.png">
+                    <h2>Choisis ton festival !</h2>
+                    <p>
+                        Des achats simples et sécurisés, c'est ce que nous voulons avant tout.
+                         Avec nous, réservez en quelques clics et avec le moins d'éapes possibles.
+                         Tout simplement.
+                    </p>
+                </div>
+                <div id="step2" class="step">
+                    <img src="/assets/images/voiture.png">
+                    <h2>Comment y aller ?</h2>
+                    <p>
+                        Vous ne savez pas comment venir et n'avez pas envie de chercher pendant des heures ?
+                         Pas de problème !
+                         Nous vous indiquons pour chaque festival l'accès le plus proche et nous organisons la réservation pour vous.
+                    </p>
+                </div>
+                <div id="step3" class="step">
+                    <img src="/assets/images/hotel.png">
+                    <h2>Où dormir ?</h2>
+                    <p>
+                        Des achats simples et sécurisés, c'est ce que nous voulons avant tout.
+                         Avec nous, réservez en quelques clics et avec le moins d'étapes possibles.
+                         Tout simplement.
+                    </p>
+                </div>
             </div>
         </div>
-    	<div id="festivals"></div>
-    	<div id="artists"></div>
-    	<div id="countdown"></div>
-    	<div id="photos"></div>
-    	<div id="newsletter"></div>
+                <span class="clear"></span>
+        <div id="festivals">
+            <h1>Vos plus beaux festivals</h1>
+            <div id="festival-content">
+                <div id="festival-group">
+                    <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in festivals | filter:search | filter:typeFilter">
+                        <img ng-src="{[{ festival.img }]}" alt="image festival">
+                        <div class="festival">
+                            <div class="info">
+                                <div class="left-info">
+                                    <div class="name">{[{ festival.name }]}</div>
+                                    <div class="date"><img src="/assets/images/temps.png" alt="time icon">{[{ festival.start_date | date : "dd" }]} - {[{ festival.end_date | date : "dd MMMM yyyy" }]}</div>
+                                    <div class="location"><img src="/assets/images/lieu.png" alt="location icon">{[{ festival.city+", "+festival.country }]}</div>
+                                </div>
+                                <div class="price"><span>A partir de </span>{[{ festival.price }]}&#128;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="clear"></span>
+                <a href="#" class="button">Voir tous les festivals</a>
+            </div>
+        </div>
+        <div id="artists"></div>
+        <div id="countdown"></div>
+        <div id="photos"></div>
+        <div id="newsletter"></div>
     </content>
     <footer></footer>
 </body>
