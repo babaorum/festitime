@@ -1,18 +1,16 @@
 (function () {
     "use strict";
-    
+
     function searchBarController($scope, festivalRestService) {
 
-        $scope.festivals = [];
-        this.types = [];                
-        
-        //load festivals
-        festivalRestService.getFestivals()
-            .then(function(festivals) {
-                    $scope.festivals = festivals;
-                    console.log(festivals);
-                }
-            );
+        this.festivals          = [];
+        this.types              = [];
+        this.countdownFestivals = [];
+        this.randomPictures     = [];
+
+        this.range = function(n) {
+            return new Array(n);
+        };
 
         this.includeType = function(type) {
             var i = this.types.indexOf(type);
@@ -39,6 +37,28 @@
             return festival;
         }.bind(this);
 
+        this.getCountdownFromDate = function(date) {
+            var now  = new Date();
+            var date = new Date(date);
+            return (date-0);
+        };
+
+        //load festivals
+        festivalRestService.getFestivals()
+            .then(function(festivals) {
+                festivals.forEach(function(festival) {
+                    if(festival.start_date && this.countdownFestivals.length < 1) {
+                        festival.countdown = this.getCountdownFromDate(festival.start_date);
+                        this.countdownFestivals.push(festival);
+                    }
+                    this.festivals.push(festival);
+                }.bind(this));
+            }.bind(this));
+
+        festivalRestService.getFestivalsRandomPictures(16)
+            .then(function(pictures) {
+                this.randomPictures = pictures;
+            }.bind(this));
     }
 
     angular.module('Frontoffice').controller(

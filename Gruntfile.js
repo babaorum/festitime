@@ -28,6 +28,13 @@ module.exports = function (grunt) {
             }
         },
 
+        ngAnnotate: {
+            dist: {
+                src: ['./web/assets/dist/js/built.js'],
+                dest: './web/assets/dist/js/built.js'
+            }
+        },
+
         uglify: {
             dist: {
                 src: ['./web/assets/dist/js/built.js'],
@@ -35,10 +42,9 @@ module.exports = function (grunt) {
             }
         },
 
-        'sf2-cache-clear': {
-            options: {},
-            clear_all: {
-                cmd: 'cache:clear'
+        shell: {
+            removeSymfonyCache: {
+                command: 'rm -rf ./app/cache'
             }
         },
 
@@ -77,11 +83,14 @@ module.exports = function (grunt) {
     // plugin for concat files
     grunt.loadNpmTasks('grunt-contrib-concat');
 
+    // plugin for annotate AngularJS files
+    grunt.loadNpmTasks('grunt-ng-annotate');
+
     // plugin for minify js files
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    // plugin for using symfony2 console's commands
-    grunt.loadNpmTasks('grunt-symfony2');
+    // plugin for using shell commands
+    grunt.loadNpmTasks('grunt-shell');
 
     // plugin for watching for change and play tasks
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -94,7 +103,7 @@ module.exports = function (grunt) {
      * task 'watch-src' will not stop, but grunt will stay active
      * to see any possible change
      */
-    grunt.registerTask('default', ['less:dist', 'cssmin', 'concat', 'uglify', 'sf2-cache-clear:clear_all']);
+    grunt.registerTask('default', ['less:dist', 'cssmin', 'concat', 'ngAnnotate', 'uglify', 'shell:removeSymfonyCache']);
     grunt.registerTask('watch-src', ['default', 'watch']);
 
 };

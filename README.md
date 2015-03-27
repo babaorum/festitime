@@ -53,11 +53,11 @@ Before install of basic npm dependencies you need to have **ruby** and **g++** i
 So, if one of the previous package is missing run the following command :
 + For Debian :
     
-    $ sudo apt-get install rubygems
+    `$ sudo apt-get install rubygems`
 
-+ For Ubuntu
++ For Ubuntu :
 
-    $ sudo aptitude install rubygems
+    `$ sudo aptitude install rubygems`
 
 ##### Install Dependencies
 
@@ -185,15 +185,16 @@ You're supposed to run
 You have to run it in a second terminal, because it will watch you're files during you modify it. And when you make a change in a less or javascript file, grunt will compile it again.
 
 Grunt watch will do some tasks:
-    1. preprocessing less files into one unique css file : **/assets/dist/css/styles.css**
-    2. minify styles.css into **/assets/dist/css/styles.min.css**
-    3. concat javascript files into **/assets/dist/js/built.js**
-    4. minify and uglify built.js into **/assets/dist/js/built.min.js**
-    5. clear symfony2 cache for the appropriate environment (in case you forget to clear it)
+
+1. preprocessing less files into one unique css file : **/assets/dist/css/styles.css**
+2. minify styles.css into **/assets/dist/css/styles.min.css**
+3. concat javascript files into **/assets/dist/js/built.js**
+4. minify and uglify built.js into **/assets/dist/js/built.min.js**
+5. clear symfony2 cache for the appropriate environment (in case you forget to clear it)
 
 Grunt also provide a task for building the API.md file (blueprint document)
 
-    grunt blueprint2json
+    $ grunt blueprint2json
 
 This will parse **API.md** and create a **blueprint.json** file in */web/assets/blueprint*
 

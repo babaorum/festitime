@@ -6,6 +6,7 @@
     "jquery": "*",
     "angular": "*",
     "bootstrap": "*",
-    "underscore": "*"
+    "underscore": "*",
+    "angular-timer": "~1.3.1"
   }
 }

@@ -3,12 +3,19 @@
     <title>Accueil - Festitime</title>
     <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="/assets/dist/js/built.js"></script>
+    <!-- scripts for using angular-timer -->
+    <script type="text/javascript" src="/assets/js/bower_components/humanize-duration/humanize-duration.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/momentjs/min/moment.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/momentjs/min/locales.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/angular-timer/dist/angular-timer.js"></script>
+    <!-- /scripts for using angular-timer -->
     <link rel="stylesheet" href="/assets/dist/css/styles.min.css">
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Angular app need to be load last -->
+    <script type="text/javascript" src="/assets/dist/js/built.min.js"></script>
 </head>
-<body ng-app="Frontoffice" ng-controller="searchBarController">
+<body ng-app="Frontoffice" ng-controller="searchBarController as searchBarCtrl">
     <header>
         {% set user = app.session.get('user') %}
         <div id="flag">
@@ -77,12 +84,11 @@
                 </div>
             </div>
         </div>
-                <span class="clear"></span>
         <div id="festivals">
             <h1>Vos plus beaux festivals</h1>
             <div id="festival-content">
                 <div id="festival-group">
-                    <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in festivals | filter:search | filter:typeFilter">
+                    <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in searchBarCtrl.festivals | filter:search | filter:typeFilter">
                         <img ng-src="{[{ festival.img }]}" alt="image festival">
                         <div class="festival">
                             <div class="info">
@@ -101,8 +107,68 @@
             </div>
         </div>
         <div id="artists"></div>
-        <div id="countdown"></div>
-        <div id="photos"></div>
+        <div id="countdown" ng-show="searchBarCtrl.countdownFestivals[0] !== undefined">
+            <div class="elem" ng-repeat="countdownFestival in searchBarCtrl.countdownFestivals">
+                <div class="title">
+                    <span>événement à venir</span>
+                    {[{countdownFestival.name}]}
+                    <span class="place">
+                        <!-- it is hard to change svg color -->
+                        <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="37.76px" height="51.61px" viewBox="0 0 37.76 51.61" enable-background="new 0 0 37.76 51.61" xml:space="preserve">
+                            <path fill="#800000018000000180000001" d="M18.88,0C8.45,0,0,8.45,0,18.88c0,1.38,0.15,2.73,0.43,4.02c0.05,0.24,0.1,0.47,0.16,0.7
+                                c2.63,10.81,18.29,28.01,18.29,28.01c9.37-10.47,14.08-18.26,16.45-23.46c0-0.01,0-0.021,0.01-0.03c1.47-3.25,2.03-5.48,2.24-6.7
+                                c0.02-0.12,0.03-0.17,0.03-0.18c0.04-0.31,0.069-0.63,0.09-0.95c0.04-0.46,0.06-0.94,0.06-1.41C37.76,8.45,29.31,0,18.88,0
+                                 M18.88,28.12c-0.37,0-0.729-0.02-1.09-0.06c-4.83-0.54-8.58-4.64-8.58-9.61c0-5.34,4.33-9.67,9.67-9.67s9.67,4.33,9.67,9.67
+                                C28.55,23.79,24.22,28.12,18.88,28.12"/>
+                        </svg>
+                        {[{countdownFestival.city}]} {[{countdownFestival.country}]}
+                    </span>
+                    <span class="types">
+                        <button ng-repeat="genre in countdownFestival.type">{[{genre}]}</button>
+                    </span>
+                </div>
+                <timer end-time="countdownFestival.countdown" class="timer">
+                    <div class="clock">
+                        <span class="time color-dark-grey">
+                            {[{ddays}]}
+                            <p>jour{[{daysS}]}</p>
+                        </span>
+                        <span class="time color-grey">
+                            {[{hhours}]}
+                            <p>heure{[{hoursS}]}</p>
+                        </span>
+                        <span class="time color-light-grey">
+                            {[{mminutes}]}
+                            <p>minute{[{minutesS}]}</p>
+                        </span>
+                        <span class="time color-white">
+                            {[{sseconds}]}
+                            <p>seconde{[{secondsS}]}</p>
+                        </span>
+                        <span class="clear"></span>
+                    </div>
+                </timer>
+            </div>
+        </div>
+        <div id="pictures" ng-show="searchBarCtrl.randomPictures[0] !== undefined">
+            <div ng-repeat="picture in searchBarCtrl.randomPictures">
+                <img ng-src="{[{picture}]}" alt="sorry an error occured">
+            </div>
+            <div>test</div>
+            <div>test</div>
+            <div>test</div>
+            <div>test</div>
+            <div>test</div>
+            <div>test</div>
+            <div>test</div>
+            <div>test</div>
+            <div>test</div>
+            <div>test</div>
+            <div>test</div>
+            <div>test</div>
+            <div>test</div>
+        </div>
         <div id="newsletter"></div>
     </content>
     <footer></footer>

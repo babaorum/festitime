@@ -1,6 +1,31 @@
 @header-background: #000000;
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 @font-oswald: 'Oswald', sans-serif;
+@color-dark-grey: rgba(255, 255, 255, 0.1);
+@color-grey: rgba(255, 255, 255, 0.3);
+@color-light-grey: rgba(255, 255, 255, 0.6);
+@width: 1900;
+@height: 1080;
+
+.color-dark-grey
+{
+    color: @color-dark-grey;
+}
+
+.color-grey
+{
+    color: @color-grey;
+}
+
+.color-light-grey
+{
+    color: @color-light-grey;
+}
+
+.color-white
+{
+    color: white;
+}
 
 body
 {
@@ -248,7 +273,7 @@ header #search-bar
     color: #FFFFFF;
     border: solid 2px #FFFFFF;
     text-decoration: none;
-    padding: 1%; 
+    padding: 1%;
     text-align: center;
     text-shadow: 2px 2px 3px #000000;
 }
@@ -297,11 +322,201 @@ header #search-bar
     color: #3F3F3F;
 }
 
+#countdown
+{
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.9)
+}
+
+#countdown .elem
+{
+    width: 70%;
+    margin: auto;
+    padding-top: 40px;
+}
+
+#countdown .title
+{
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+#countdown .title span
+{
+    display: block;
+    font-size: 20px;
+    color: grey;
+}
+
+#countdown .place
+{
+    color: rgba(0,0,0,.7);
+}
+
+#countdown .place svg
+{
+    height: 20px;
+    width: 20px;
+    fill: white;
+}
+
+#countdown .types
+{
+    margin-top: 30px;
+}
+
+#countdown .types button
+{
+    background-color: green;
+    border: 0;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: white;
+    font-size: 15px;
+    margin: 0 5px;
+}
+
+#countdown timer
+{
+    width: 100%;
+    display: block;
+    margin-top: 40px;
+}
+
+#countdown timer .clock
+{
+    width: 37%;
+    margin: 0px 37%;
+}
+
+#countdown timer span.time
+{
+    font-size: 80px;
+    float: left;
+    padding: 20px 5px 0 5px;
+    font-weight: bold;
+}
+
+timer span.time p
+{
+    font-size: 20px;
+    border: solid 1px white;
+    text-align: center;
+    width: calc(~"100% - 2px");
+    font-weight: normal;
+}
+
+#pictures
+{
+    width: 100%;
+    height: 400px;
+}
+
+#pictures div
+{
+    width: (@width /8);
+    height: (@width /8);
+    background-color:green;
+    float: left;
+}
+
+#pictures div img
+{
+    width: 100%;
+    height: 100%;
+}
+
+#main
+{
+    float: left;
+    background-color: #F7F7F7;
+    margin-top: 67px;
+    margin-left: 342px;
+    padding-top: 25px;
+    padding-left: 15px;
+    width: calc(100% - 350px);
+}
+
+#main .block
+{
+    width: 24%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+    height: 250px;
+    color: #ffffff;
+    font: 12px @font-oswald;
+    position: relative;
+    overflow: hidden;
+}
+
+#main .block img
+{
+    height: 100%;
+    width: 100%;
+}
+
+#main .block .festival
+{
+    width: 100%;
+    position: absolute;
+    bottom: 15;
+    height: 25%;
+}
+
+#main .block .festival .name
+{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px
+}
+
+#main .block .festival .info
+{
+    height: 80%;
+    background: rgba(40, 40, 40, 0.5);
+    padding-left: 1%;
+}
+
+#main .block .festival .info .left-info
+{
+    float: left;
+}
+
+#main .block .festival .info .price span
+{
+    font-size: 9px;
+    font-weight: normal;
+}
+
+#main .block .festival .info .price
+{
+    float: right;
+    background: #C92A55;
+    font-size: 20px;
+    font-weight: bold;
+    height: 100%;
+    width: 15%;
+    text-align: right;
+    line-height: 100%;
+    padding-right: 5px;
+}
+
+#main .block .info
+{
+
+}
+
 #festivals
 {
     background: url("/assets/images/festival.jpg");
     background-size: 100%;
     margin-top: -10%;
+    padding-top: 10%;
     text-align: center;
     padding-bottom: 5%;
 }
@@ -316,8 +531,7 @@ header #search-bar
     border-style: solid;
     border-color: #F3F3F3;
     border-width: 4px 0px;
-    margin: 3%;
-    margin-top: 9%;
+    margin: 0 3% 3%;
 }
 #festivals #festival-content
 {
@@ -335,6 +549,7 @@ header #search-bar
     position: relative;
     overflow: hidden;
 }
+
 #festivals #festival-content #festival-group .block img
 {
     height: 100%;
@@ -360,18 +575,21 @@ header #search-bar
     text-align: left;
     width: 70%
 }
+
 #festivals #festival-content #festival-group .block .festival .info .left-info img
 {
     height: 10px;
     width: auto;
     margin-right: 1%;
 }
+
 #festivals #festival-content #festival-group .block .festival .info .left-info .name
 {
     font-size: 20px;
     font-weight: bold;
-    margin: 1%; 
+    margin: 1%;
 }
+
 #festivals #festival-content #festival-group .block .festival .info .price
 {
     float: right;
@@ -384,11 +602,13 @@ header #search-bar
     padding: 2.5%;
     box-shadow: 0px 0px 2px #888888;
 }
+
 #festivals #festival-content #festival-group .block .festival .info .price span
 {
     font-size: 9px;
     font-weight: normal;
 }
+
 #festival-content .button
 {
     display: block;
@@ -397,7 +617,7 @@ header #search-bar
     color: #FFFFFF;
     border: solid 2px #FFFFFF;
     text-decoration: none;
-    padding: 1%; 
+    padding: 1%;
     text-align: center;
     text-shadow: 2px 2px 3px #000000;
     width: 100%;
@@ -418,4 +638,3 @@ header #search-bar
 {
     clear: both;
 }
-
