@@ -51,6 +51,11 @@ class Festival
     protected $img;
 
     /**
+     * @var collection $pictures
+     */
+    protected $pictures;
+
+    /**
      * @var date $start_date
      */
     protected $start_date;
@@ -176,6 +181,28 @@ class Festival
     public function getImg()
     {
         return $this->img;
+    }
+
+    /**
+     * Set pictures
+     *
+     * @param collection $pictures
+     * @return self
+     */
+    public function setPictures($pictures)
+    {
+        $this->pictures = $pictures;
+        return $this;
+    }
+
+    /**
+     * Get pictures
+     *
+     * @return collection $pictures
+     */
+    public function getPictures()
+    {
+        return $this->pictures;
     }
 
     /**

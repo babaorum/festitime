@@ -54,6 +54,9 @@ class FestivalService
                 if (!empty($query['festival']['price'])) {
                     $festival->setPrice($query['festival']['price']);
                 }
+                if (!empty($query['festival']['pictures'])) {
+                    $festival->setPictures($query['festival']['pictures']);
+                }
                 $this->mongoManager->persist($festival);
                 $this->mongoManager->flush();
 
@@ -82,7 +85,7 @@ class FestivalService
             $count = intval($count);
         }
         $pictures = $this->getAllFestivalsPictures();
-        if (count($count) > $pictures) {
+        if ($count > count($pictures)) {
             return $pictures;
         } else {
             $randomKeys = array_rand($pictures, $count);
@@ -98,7 +101,9 @@ class FestivalService
     {
         $pictures = array();
         foreach ($this->getFestivals() as $festival) {
-            $pictures = array_merge($pictures, $festival->pictures);
+            if (!is_null($festival->getPictures())) {
+                $pictures = array_merge($pictures, $festival->getPictures());
+            }
         }
         return $pictures;
     }
@@ -107,9 +112,12 @@ class FestivalService
     {
         $R_festival = $this->mongoManager->getRepository('FestitimeDatabaseBundle:Festival');
         $festival = $R_festival->find($id);
-        $festival->setImg('http://www.concertandco.com/crit2/Trans-Musicales-2007web.jpg');
+        $festival->setPictures(array("http://www.laboiteamusiqueinde.com/wp-content/uploads/2013/03/saez5461.jpg",
+"http://www.desinvolt.fr/wp-content/uploads/arton375.jpg",
+"https://i1.ytimg.com/vi/WtFO6GCg8Xo/hqdefault.jpg"));
         $this->mongoManager->persist($festival);
         $this->mongoManager->flush();
+        die(var_dump($festival));
     }
 
     public function deleteFestival($id)

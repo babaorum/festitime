@@ -5,8 +5,12 @@
 
         this.festivals          = [];
         this.types              = [];
-        this.countdownElements  = 3;
         this.countdownFestivals = [];
+        this.randomPictures     = [];
+
+        this.range = function(n) {
+            return new Array(n);
+        };
 
         this.includeType = function(type) {
             var i = this.types.indexOf(type);
@@ -42,15 +46,18 @@
         //load festivals
         festivalRestService.getFestivals()
             .then(function(festivals) {
-                var i = 0;
                 festivals.forEach(function(festival) {
-                    if(festival.start_date && i < this.countdownElements) {
+                    if(festival.start_date && this.countdownFestivals.length < 1) {
                         festival.countdown = this.getCountdownFromDate(festival.start_date);
                         this.countdownFestivals.push(festival);
-                        i++;
                     }
                     this.festivals.push(festival);
                 }.bind(this));
+            }.bind(this));
+
+        festivalRestService.getFestivalsRandomPictures(16)
+            .then(function(pictures) {
+                this.randomPictures = pictures;
             }.bind(this));
     }
 

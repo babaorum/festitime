@@ -1,130 +1,182 @@
-@header-background: #303030;
+@header-background: #000000;
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@font-oswald: 'Oswald', sans-serif;
+@color-dark-grey: rgba(255, 255, 255, 0.1);
+@color-grey: rgba(255, 255, 255, 0.3);
+@color-light-grey: rgba(255, 255, 255, 0.6);
+@width: 1900;
+@height: 979;
 
+.color-dark-grey
+{
+    color: @color-dark-grey;
+}
+
+.color-grey
+{
+    color: @color-grey;
+}
+
+.color-light-grey
+{
+    color: @color-light-grey;
+}
+
+.color-white
+{
+    color: white;
+}
+
+.mixin-tag()
+{
+    background-color: green;
+    border: 0;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: white;
+    font-size: 15px;
+    margin: 0 5px;
+}
+
+a
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: none;
+}
+a:visited
+{
+    text-decoration: none;
+}
+
+body
+{
+    font: @font-oswald;
+}
 header
 {
-	z-index: 10;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 75px;
-	background-color: @header-background;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+    background: fade(@header-background, 70%);
+    font-family: @font-oswald;
+    text-transform: uppercase;
+    font-size: 18px;
 }
 
 #sidebar
 {
-	z-index: 5;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	width: 350px;
-	background-color: #EEEEEE;
-	padding-top: 175px;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 350px;
+    background-color: #EEEEEE;
+    padding-top: 175px;
 }
 
 .sidebar.item
 {
-	margin: 0 5%;
-	margin-bottom: 25px;
-	width: 90%;
-	background-color: #FFFFFF;
-	border: 1px solid #E6E6E6;
+    margin: 0 5%;
+    margin-bottom: 25px;
+    width: 90%;
+    background-color: #FFFFFF;
+    border: 1px solid #E6E6E6;
 }
 
 .sidebar.item .header
 {
-	width: 100%;
-	padding: 5px 0;
-	height: 47px;
-	border-bottom: 1px solid #E6E6E6;
+    width: 100%;
+    padding: 5px 0;
+    height: 47px;
+    border-bottom: 1px solid #E6E6E6;
 }
 
 .sidebar.item .icon
 {
-	float: left;
-	width: 20px;
-	height: 23px;
-	margin: 13px 0 13px 16px;
-	background-size: 100% 100%;
+    float: left;
+    width: 20px;
+    height: 23px;
+    margin: 13px 0 13px 16px;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 .sidebar.item .svg
 {
-	float: left;
-	display: block;
-	width: 20px;
-	height: 23px;
-	margin: 13px 0px 13px 16px;
+    float: left;
+    display: block;
+    width: 20px;
+    height: 23px;
+    margin: 13px 0px 13px 16px;
 }
 
 .sidebar.item .title
 {
-	float: left;
-	width: 75%;
-	font-family: Oswald;
-	font-size: 25px;
-	text-align: center;
-	padding: 5px 0;
-	color: #C92A55;
+    float: left;
+    width: 75%;
+    font: 25px @font-oswald;
+    text-align: center;
+    padding: 5px 0;
+    color: #C92A55;
 }
 
 .sidebar.item .status
 {
-	cursor: pointer;
-	float: left;
-	width: 20px;
-	height: 23px;
-	margin: 13px 16px 13px 0;
+    cursor: pointer;
+    float: left;
+    width: 20px;
+    height: 23px;
+    margin: 13px 16px 13px 0;
 }
 
 .sidebar.item .content
 {
-	padding: 15px;
+    padding: 15px;
 }
 
 .sidebar.item .content .tag
 {
-	cursor: pointer;
-	margin: 3px;
-	padding: 5px 10px;
-	background-color: @header-background;
-	display: inline-block;
-	color: #ffffff;
-    font: 12px 'Open Sans', sans-serif;
+    cursor: pointer;
+    margin: 3px;
+    padding: 5px 10px;
+    background-color: @header-background;
+    display: inline-block;
+    color: #ffffff;
+    font: 12px @font-oswald;
 }
 
 .sidebar.item .content .tag.active
 {
-	background-color: #C92A55;
+    background-color: #C92A55;
 }
 
 .tag input
 {
-	display: none;
-}
-
-#banner-box
-{
-	float: left;
-	width: 350px;
-	height: 100%;
+    display: none;
 }
 
 #flag
 {
-	text-align: center;
+    text-align: center;
     display: block;
+    padding-top: 30px;
     width: 110px;
     height: 110px;
     background: #ffffff;
-    margin: auto;
+    margin: 0 5%;
+    float: left;
 }
 
 #flag:after
 {
-	content: "";
+    content: "";
     display: block;
     position: relative;
     width: 0;
@@ -136,158 +188,363 @@ header
 
 #menu
 {
-	float: left;
-	padding-left: 15px;
-	height: 100%;
+    float: left;
+    padding-left: 15px;
+    height: 100%;
 }
 
 #menu .link
 {
-	float: left;
-	font-size: 18px;
-	font-weight: bold;
-	font-family: 'Open Sans', sans-serif;
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #C8C8C8;
-	display: block;
-	height: 100%;
+    float: left;
+    font-size: 18px;
+    text-decoration: none;
+    color: #F8F8F8;
+    display: block;
+    height: 100%;
 }
 
 #menu .link span
 {
-	display: block;
-	height: 75px;
-	line-height: 75px;
-	padding: 0 10px;
+    display: block;
+    height: 75px;
+    line-height: 75px;
+    padding: 0 10px;
 }
 
 #menu .link span:hover
 {
-	background-color: #262626;
-	color: #C92A55;
-	box-sizing: border-box;
-	border-bottom: 3px solid #C92A55;
+    background-color: #262626;
+    color: #C92A55;
+    box-sizing: border-box;
+    border-bottom: 3px solid #C92A55;
 }
 
 
 #menu .link span.active
 {
-	background-color: #262626;
-	color: #C92A55;
-	box-sizing: border-box;
-	border-bottom: 3px solid #C92A55;
+    background-color: #262626;
+    color: #C92A55;
+    box-sizing: border-box;
+    border-bottom: 3px solid #C92A55;
 }
 
 #connect
 {
-	font-family: 'Open Sans', sans-serif;
-	color: #C8C8C8;
-	display: block;
-	height: 100%;
-	text-decoration: none;
-	float: right;
-	padding-right: 15px;
+    color: #080808;
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    float: right;
+    background: #F8F8F8;
+    margin-right: 10%;
 }
 
 #connect span
 {
-	display: block;
-	height: 75px;
-	line-height: 75px;
-	padding: 0 10px;
+    display: block;
+    height: 75px;
+    line-height: 75px;
+    padding: 0 10px;
 }
 
-#search-bar
+header #search-bar
 {
-	background: url(/assets/images/search-dark.png) no-repeat 325px 10px #262626;
-	float: left;
+    background: url(/assets/images/search-dark.png) no-repeat 325px 10px #262626;
+    float: left;
     border: 0 none;
-    font: 14px 'Open Sans', sans-serif;
+    font: 14px @font-oswald;
     color: #777;
     width: 350px;
     padding: 6px 30px 6px 10px;
     border-radius: 2px;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
-	margin-top: 20px;
-	margin-left: 15px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+#search
+{
+    background: url("/assets/images/search-background.jpg") no-repeat;
+    background-size: 100%;
+}
+#search-content
+{
+    padding: 25%;
+    width: 50%;
+    text-align: center;
+}
+#search-bar
+{
+    display: block;
+    background: url(/assets/images/glass.png) no-repeat 10px fade(#F8F8F8, 70%);
+    background-size: 40px;
+    border: 0 none;
+    font: 40px @font-oswald bold;
+    color: #282828;
+    padding: 10px 1% 10px 10%;
+    margin: 5% 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+    width: 100%;
+
+}
+#search-content .button
+{
+    display: inline;
+    font: 20px @font-oswald;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: solid 2px #FFFFFF;
+    text-decoration: none;
+    padding: 1%;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+#how
+{
+    background: #F8F8F8;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+    text-align: center;
+    height: 600px;
+}
+#how h2
+{
+    display: inline-block;
+    font: 24px @font-oswald;
+    color: #3F3F3F;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border-style: solid;
+    border-color: #3F3F3F;
+    border-width: 4px 0px;
+    margin: 3%;
+}
+#how #how-content
+{
+    transform: skewY(5deg);
+    width: 70%;
+    margin: auto;
+}
+#how #how-content .step
+{
+    width: 30%;
+    margin: 1.6%;
+    float: left;
+    font: 16px @font-oswald;
+}
+#how #how-content .step h3
+{
+    text-transform: uppercase;
+}
+#how #how-content .step p
+{
+    font-size: 14px;
+    color: #3F3F3F;
+}
+
+#artists
+{
+    background: #F8F8F8;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+    text-align: center;
+    height: 600px;
+    margin-top: -2%;
+}
+
+
+#countdown
+{
+    height: 450px;
+    background: url(/assets/images/DSC9588.jpg);
+    background-size: 100%;
+    margin-top: -10%;
+    padding-top: 10%;
+}
+
+#countdown .elem
+{
+    width: 70%;
+    margin: auto;
+}
+
+#countdown .title
+{
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+#countdown .title span
+{
+    display: block;
+    font-size: 20px;
+    color: grey;
+}
+
+#countdown .place
+{
+    color: rgba(0,0,0,.7);
+}
+
+#countdown .place svg
+{
+    height: 20px;
+    width: 20px;
+    fill: white;
+}
+
+#countdown .types
+{
+    margin-top: 30px;
+}
+
+#countdown .types button
+{
+    .mixin-tag;
+}
+
+#countdown timer
+{
+    width: 100%;
+    display: block;
+    margin-top: 40px;
+}
+
+#countdown timer .clock
+{
+    width: 37%;
+    margin: 0px 37%;
+}
+
+#countdown timer span.time
+{
+    font-size: 80px;
+    float: left;
+    padding: 20px 5px 0 5px;
+    font-weight: bold;
+}
+
+timer span.time p
+{
+    font-size: 20px;
+    border: solid 1px white;
+    text-align: center;
+    width: calc(~"100% - 2px");
+    font-weight: normal;
+}
+
+#pictures
+{
+    width: 100%;
+    height: (@width /4);
+}
+
+#pictures div
+{
+    width: (@width /8);
+    height: (@width /8);
+    background-color:green;
+    float: left;
+    overflow: hidden;
+}
+
+#pictures div img
+{
+    width: 100%;
+    height: 100%;
+}
+
+#pictures div img:hover
+{
+    width: 116%;
+    height: 116%;
+    margin-top: -8%;
+    margin-left: -8%;
 }
 
 #main
 {
-	float: left;
-	background-color: #F7F7F7;
-	margin-top: 67px;
-	margin-left: 342px;
-	padding-top: 25px;
-	padding-left: 15px;
-	width: calc(100% - 350px);
+    float: left;
+    background-color: #F7F7F7;
+    margin-top: 67px;
+    margin-left: 342px;
+    padding-top: 25px;
+    padding-left: 15px;
+    width: (@width - 350px);
+    height: (@height - 92px);
 }
 
 #main .block
 {
-	width: 24%;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	float: left;
-	height: 250px;
-	color: #ffffff;
-    font: 12px 'Open Sans', sans-serif;
+    width: 24%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+    height: 250px;
+    color: #ffffff;
+    font: 12px @font-oswald;
     position: relative;
     overflow: hidden;
 }
 
 #main .block img
 {
-	height: 100%;
-	width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 #main .block .festival
 {
-	width: 100%;
-	position: absolute;
-	bottom: 15;
-	height: 25%;
+    width: 100%;
+    position: absolute;
+    bottom: 15;
+    height: 25%;
 }
 
 #main .block .festival .name
 {
-	font-size: 20px;
-	font-weight: bold;
-	margin-left: 5px
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px
 }
 
 #main .block .festival .info
 {
-	height: 80%;
-	background: rgba(40, 40, 40, 0.5);
-	padding-left: 1%;
+    height: 80%;
+    background: rgba(40, 40, 40, 0.5);
+    padding-left: 1%;
 }
 
 #main .block .festival .info .left-info
 {
-	float: left;
+    float: left;
 }
 
 #main .block .festival .info .price span
 {
-	font-size: 9px;
-	font-weight: normal;
+    font-size: 9px;
+    font-weight: normal;
 }
 
 #main .block .festival .info .price
 {
-	float: right;
-	background: #C92A55;
-	font-size: 20px;
-	font-weight: bold;
-	height: 100%;
-	width: 15%;
-	text-align: right;
-	line-height: 100%;
-	padding-right: 5px;
+    float: right;
+    background: #C92A55;
+    font-size: 20px;
+    font-weight: bold;
+    height: 100%;
+    width: 15%;
+    text-align: right;
+    line-height: 100%;
+    padding-right: 5px;
 }
 
 #main .block .info
@@ -295,8 +552,288 @@ header
 
 }
 
-.clear
+#festivals
 {
-	clear: both;
+    background: url("/assets/images/festival.jpg");
+    background-size: 100%;
+    margin-top: -10%;
+    padding-top: 10%;
+    text-align: center;
+    padding-bottom: 10%;
+}
+#festivals h2
+{
+    display: inline-block;
+    font: 24px @font-oswald;
+    color: #F3F3F3;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: skewY(-5deg);
+    border-style: solid;
+    border-color: #F3F3F3;
+    border-width: 4px 0px;
+    margin: 0 3% 3%;
+}
+#festivals #festival-content
+{
+    width: 70%;
+    margin: auto;
+}
+#festivals #festival-content #festival-group .block
+{
+    width: 30%;
+    margin: 1% 1.6%;
+    float: left;
+    height: 250px;
+    color: #ffffff;
+    font: 12px @font-oswald;
+    position: relative;
+    overflow: hidden;
 }
 
+#festivals #festival-content #festival-group .block img
+{
+    height: 100%;
+    width: 100%;
+}
+#festivals #festival-content #festival-group .block .festival
+{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 30%;
+    background: #F8F8F8;
+    color: #8F8F8F;
+}
+#festivals #festival-content #festival-group .block .festival .info
+{
+    padding-left: 1%;
+}
+
+#festivals #festival-content #festival-group .block .festival .info .left-info
+{
+    float: left;
+    text-align: left;
+    width: 70%
+}
+
+#festivals #festival-content #festival-group .block .festival .info .left-info img
+{
+    height: 10px;
+    width: auto;
+    margin-right: 1%;
+}
+
+#festivals #festival-content #festival-group .block .festival .info .left-info .name
+{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1%;
+}
+
+#festivals #festival-content #festival-group .block .festival .info .price
+{
+    float: right;
+    background: #F0F0F0;
+    font-size: 20px;
+    font-weight: bold;
+    width: 20%;
+    line-height: 100%;
+    margin: 2.5%;
+    padding: 2.5%;
+    box-shadow: 0px 0px 2px #888888;
+}
+
+#festivals #festival-content #festival-group .block .festival .info .price span
+{
+    font-size: 9px;
+    font-weight: normal;
+}
+
+#festival-content .button
+{
+    display: block;
+    font: 20px @font-oswald;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: solid 2px #FFFFFF;
+    text-decoration: none;
+    padding: 1%;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000000;
+    width: 100%;
+    clear: both;
+}
+
+#artists
+{
+    background: #F8F8F8;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+    text-align: center;
+    font: 24px @font-oswald;
+    height: auto;
+    padding-bottom: 5%;
+}
+#artists h2
+{
+    display: inline-block;
+    color: #3F3F3F;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border-style: solid;
+    border-color: #3F3F3F;
+    border-width: 4px 0px;
+    margin: 3%;
+}
+#artists-content
+{
+    transform: skewY(5deg);
+    width: 70%;
+    margin: auto;
+}
+.artist
+{
+    height: auto;
+    overflow: hidden;
+    text-align: left;
+}
+.artist img
+{
+    width: 25%;
+    height: auto;
+    float: left;
+}
+.artist-info
+{
+    width: 73%;
+    float: right;
+}
+.artist-info h3
+{
+    margin-bottom: 1%;
+    margin-top: 0;
+    font-size: 16px;
+}
+.artist-info p
+{
+    font-size: 14px;
+    text-align: justify;
+}
+.artist-info .info-right
+{
+    float: right;
+    display: inline-block;
+}
+.artist-info .info-right span
+{
+    font-weight: bold;
+}
+.artist-info .button
+{
+    display: inline;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #080808;
+    border: solid 2px #080808;
+    text-decoration: none;
+    padding: 1%;
+    text-align: center;
+    float: right;
+    text-shadow: 2px 2px 3px #AAAAAA;
+}
+
+footer
+{
+    background-color: #212121;
+    width: 100%;
+    padding: 50px 0;
+    height: 365px;
+}
+
+footer .contener
+{
+    width: 70%;
+    margin: 0 auto;
+    background-color: green;
+}
+
+footer .contener .block
+{
+    background-color: #1C1C1C;
+    padding: 20px 0;
+}
+
+footer .contener .column
+{
+    float: left;
+    margin: 1.6%;
+    width: 30%;
+}
+
+footer .contener .block.first
+{
+    margin-bottom: 20px;
+}
+
+footer .block.second div
+{
+    margin: 0 10%;
+}
+
+footer .block h3
+{
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    padding-bottom: 25px;
+}
+
+footer .block .img-plus
+{
+    width: 10px;
+    height: 10px;
+}
+
+footer .block a
+{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 45px;
+}
+
+footer .block.column div
+{
+    margin-left: 20%;
+    margin-top: 52px;
+}
+
+#search-bar-footer
+{
+    display: block;
+    border: 0;
+    font: 14px @font-oswald;
+    color: white;
+    background-color: #151515;
+    width: 80%;
+    margin: 0px 10% 20px 10%;
+    padding: 5px 10px;
+    border-radius: 2px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+footer .tag
+{
+    .mixin-tag;
+    margin: 5px;
+}
+
+.clear
+{
+    clear: both;
+}
