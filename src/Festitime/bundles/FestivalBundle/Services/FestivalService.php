@@ -54,7 +54,6 @@ class FestivalService
                 if (!empty($query['festival']['price'])) {
                     $festival->setPrice($query['festival']['price']);
                 }
-                // die(var_dump(empty($query['festival']['pictures'])));
                 if (!empty($query['festival']['pictures'])) {
                     $festival->setPictures($query['festival']['pictures']);
                 }
