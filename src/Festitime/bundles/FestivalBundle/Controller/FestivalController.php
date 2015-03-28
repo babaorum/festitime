@@ -23,10 +23,10 @@ class FestivalController extends Controller
         return $this->render('FestitimeFestivalBundle:Festival:admin.html.twig', array());
     }
 
-    public function searchAction($slug)
+    public function searchAction()
     {
-        die(var_dump($slug));
-        die(var_dump($request->request->all()));
+        // die(var_dump($slug));
+        // die(var_dump($request->request->all()));
         return $this->render('FestitimeFestivalBundle:Festival:search.html.twig', array());
     }
 
@@ -47,7 +47,7 @@ class FestivalController extends Controller
 
         if ($response instanceof Festival)
         {
-            die(var_dump($response));
+            // die(var_dump($response));
             $this->get('session')->getFlashBag()->add('success', 'Le festival a bien été créé');
         }
         else
