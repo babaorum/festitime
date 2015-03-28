@@ -2,9 +2,9 @@
 
 namespace Festitime\bundles\UserBundle\Services\OAuth2;
 
-/** 
-*   Interface Google OAuth2 Service with Festitime application
-*/
+/**
+ *   Interface Google OAuth2 Service with Festitime application
+ */
 class GoogleService extends \Google_Service_Oauth2
 {
     protected $googleClient;

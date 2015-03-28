@@ -14,12 +14,10 @@ class UserController extends Controller
         $userService = $this->container->get('festitime.user_service');
         $query = $this->container->get('request_stack')->getCurrentRequest()->request->all();
 
-        if(!empty($query['connect']['pseudo']))
-        {
+        if (!empty($query['connect']['pseudo'])) {
             $response = $userService->connectUser();
             
-            if($response instanceof User)
-            {
+            if ($response instanceof User) {
                 $session->set('user_id', $response->getId());
                 $session->set('user_pseudo', $response->getPseudo());
                 
@@ -29,16 +27,17 @@ class UserController extends Controller
         $this->get('session')->getFlashBag()->add('success', array('message' => 'Vous n\'etes pas connecté'));
         $formConnect = $userService->getConnectForm();
         $formRegister = $userService->getRegisterForm();
-        return $this->render('FestitimeUserBundle:User:index.html.twig', 
-            array(  'formConnect' => $formConnect->createView(), 
-                    'formRegister' => $formRegister->createView() 
+        return $this->render(
+            'FestitimeUserBundle:User:index.html.twig',
+            array(  'formConnect' => $formConnect->createView(),
+                    'formRegister' => $formRegister->createView()
             )
         );
     }
 
     /**
      * @author Romain Grelet
-     * 
+     *
      * login with OAuth2
      * @param  string $provider
      */
@@ -47,22 +46,18 @@ class UserController extends Controller
         $session = $this->container->get('session');
         $homeUrl = $this->generateUrl('home');
 
-        if ($session->has('accessToken') && $session->has('user'))
-        {
+        if ($session->has('accessToken') && $session->has('user')) {
             return $this->redirect($homeUrl);
         }
 
-        if ($provider == 'google')
-        {
+        if ($provider == 'google') {
             $this->client = $this->get('google.oauth_provider')->getGoogleClient();
             $this->client->setScopes(array('email', 'profile'));
             $this->client->setApprovalPrompt('auto');
             $code = $request->query->get('code');
-            if ($code)
-            {
+            if ($code) {
                 $this->client->authenticate($code);
-                if ($this->client->getAccessToken())
-                {
+                if ($this->client->getAccessToken()) {
                     $userService = $this->container->get('festitime.user_service');
                     $this->client->setAccessToken($this->client->getAccessToken());
 
@@ -72,8 +67,7 @@ class UserController extends Controller
 
                     $user = $userService->getUserBy(array('email' => $userData['email']));
 
-                    if(is_null($user))
-                    {
+                    if (is_null($user)) {
                         $user = $userService->postUserFromOAuth($userData);
                     }
 
@@ -95,12 +89,11 @@ class UserController extends Controller
     public function logoutAction()
     {
         $session = $this->container->get('session');
-        if ($session->has('user_id'))
-        {
+        if ($session->has('user_id')) {
             $session->invalidate();
             return $this->redirect($this->generateUrl('login'));
         }
-        if($session->has('user')) {
+        if ($session->has('user')) {
             $session->invalidate();
             return $this->redirect($this->generateUrl('home'));
         }
@@ -111,12 +104,9 @@ class UserController extends Controller
         $userService = $this->container->get('festitime.user_service');
         $response = $userService->postUser();
 
-        if ($response instanceof User)
-        {
+        if ($response instanceof User) {
             $this->get('session')->getFlashBag()->add('success', array('message' => 'Votre compte a bien été créé'));
-        }
-        else
-        {
+        } else {
             $this->get('session')->getFlashBag()->add('error', array('message' => 'Le formulaire comporte des erreurs'));
         }
 

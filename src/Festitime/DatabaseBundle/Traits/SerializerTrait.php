@@ -11,7 +11,8 @@ trait SerializerTrait
      *
      * @return array
      */
-    function toArray() {
+    function toArray()
+    {
         $document = $this->toStdClass();
         return get_object_vars($document);
     }
@@ -21,7 +22,8 @@ trait SerializerTrait
      *
      * @return string
      */
-    function toJSON() {
+    function toJSON()
+    {
         $document = $this->toStdClass();
         return json_encode($document);
     }
@@ -33,7 +35,8 @@ trait SerializerTrait
      *
      * @param array $fields
      */
-    function setIgnoredFields(array $fields) {
+    function setIgnoredFields(array $fields)
+    {
         $this->_ignoreFields = $fields;
     }
 
@@ -46,10 +49,10 @@ trait SerializerTrait
     {
         $document = new \stdClass();
 
-        foreach($this->findGetters() as $getter) {
+        foreach ($this->findGetters() as $getter) {
             $prop = lcfirst(substr($getter, 3));
 
-            if(! in_array($prop, $this->_ignoreFields)) {
+            if (! in_array($prop, $this->_ignoreFields)) {
                 $value = $this->$getter();
                 $document->$prop = $this->formatValue($value);
             }
@@ -63,8 +66,8 @@ trait SerializerTrait
         $funcs = get_class_methods(get_class($this));
         $getters = array();
 
-        foreach($funcs as $func) {
-            if(strpos($func, 'get') === 0) {
+        foreach ($funcs as $func) {
+            if (strpos($func, 'get') === 0) {
                 $getters[] = $func;
             }
         }
@@ -72,9 +75,10 @@ trait SerializerTrait
         return $getters ;
     }
 
-    private function formatValue($value) {
+    private function formatValue($value)
+    {
 
-        if(is_scalar($value)) {
+        if (is_scalar($value)) {
             return $value;
 
         // If the object uses this trait
@@ -85,13 +89,13 @@ trait SerializerTrait
         // If it's a collection, format each value
         } elseif (is_a($value, 'Doctrine\ODM\MongoDB\PersistentCollection')) {
             $prop = array();
-            foreach($value as $k => $v) {
+            foreach ($value as $k => $v) {
                 $prop[] = $this->formatValue($v);
             }
             return $prop;
 
         // If it's a Date, convert to unix timestamp
-        } else if(is_a($value, 'DateTime')) {
+        } else if (is_a($value, 'DateTime')) {
             return $value->getTimestamp();
 
         // Otherwise leave a note that this type is not formatted

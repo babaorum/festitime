@@ -26,13 +26,10 @@ class FestivalController extends Controller
     {
         $festivalService = $this->container->get('festitime.festival_service');
         $response = $festivalService->postFestival();
-        
-        if ($response instanceof Festival)
-        {
+
+        if ($response instanceof Festival) {
             $this->get('session')->getFlashBag()->add('success', 'Le festival a bien été créé');
-        }
-        else
-        {
+        } else {
             $this->get('session')->getFlashBag()->add('error', 'Le nom du festival festival doit être rempli');
         }
         return $this->redirect($this->generateUrl('home'));

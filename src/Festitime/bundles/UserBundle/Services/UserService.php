@@ -63,9 +63,9 @@ class UserService
 
     /**
      * Get a user by id
-     * 
+     *
      * @param  int    $i
-     * 
+     *
      * @return User|null
      */
     public function getUser($id)
@@ -76,9 +76,9 @@ class UserService
 
     /**
      * Get a user by an array of conditions
-     * 
+     *
      * @param  array     $where
-     * 
+     *
      * @return User|null
      */
     public function getUserBy(array $where)
@@ -90,7 +90,7 @@ class UserService
 
     /**
      * Get all users
-     * 
+     *
      * @return array|null
      */
     public function getUsers()
@@ -102,7 +102,7 @@ class UserService
 
     /**
      * Add a new User
-     * 
+     *
      * @return User|array
      */
     public function postUser()
@@ -114,7 +114,6 @@ class UserService
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            
             $this->mongoManager->persist($user);
             $this->mongoManager->flush();
                 
@@ -148,7 +147,7 @@ class UserService
 
     /**
      * Give us the connect form
-     * 
+     *
      * @return ConnectForm
      */
     public function getConnectForm()
@@ -160,7 +159,7 @@ class UserService
 
     /**
      * Give us the register form
-     * 
+     *
      * @return RegisterForm
      */
     public function getRegisterForm()
@@ -172,20 +171,18 @@ class UserService
 
     /**
      * Connect the request user
-     * 
+     *
      * @return User|false
      */
     public function connectUser()
     {
-        $R_user = $this->mongoManager->getRepository('FestitimeDatabaseBundle:User');   
+        $R_user = $this->mongoManager->getRepository('FestitimeDatabaseBundle:User');
         $request = $this->request->getCurrentRequest();
         $query = $request->request->all();
 
-        if(!empty($query['submit']))
-        {
+        if (!empty($query['submit'])) {
             $user = $R_user->findOneBy(array('pseudo' => $query['connect']['pseudo']));
-            if(!is_null($user) && $user->getPassword() === $query['connect']['password'])
-            {
+            if (!is_null($user) && $user->getPassword() === $query['connect']['password']) {
                 return $user;
             }
         }

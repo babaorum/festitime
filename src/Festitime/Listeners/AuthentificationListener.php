@@ -14,7 +14,7 @@ class AuthentificationListener
     protected $twig;
     protected $googleClient;
 
-    public function __construct($router, $loginRoute, $connectedRoute, $twig,$googleOAuthProvider)
+    public function __construct($router, $loginRoute, $connectedRoute, $twig, $googleOAuthProvider)
     {
         $this->router = $router;
         $this->loginRoute = $loginRoute;
@@ -32,23 +32,19 @@ class AuthentificationListener
         $session = $request->getSession();
         $user_id = $session->get('user_id');
         
-        if (empty($user_id))
-        {
+        if (empty($user_id)) {
             $this->googleClient->setScopes(array('email', 'profile'));
             $this->googleClient->setApprovalPrompt('auto');
             $googleAuthUrl = $this->googleClient->createAuthUrl();
             $this->twig->addGlobal('googleAuthUrl', $googleAuthUrl);
 
-            foreach ($this->connectedRoute as $route)
-            {
-                if($currentRoute === $route)
-                {
+            foreach ($this->connectedRoute as $route) {
+                if ($currentRoute === $route) {
                     $redirect = true;
                     break;
                 }
             }
-            if($redirect)
-            {
+            if ($redirect) {
                 $event->setResponse($this->redirectOnLoginPage());
             }
         }
@@ -56,6 +52,6 @@ class AuthentificationListener
 
     public function redirectOnLoginPage()
     {
-       return new RedirectResponse($this->router->generate($this->loginRoute), 302);
+        return new RedirectResponse($this->router->generate($this->loginRoute), 302);
     }
 }

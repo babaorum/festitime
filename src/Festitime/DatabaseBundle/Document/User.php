@@ -10,7 +10,7 @@ use Festitime\DatabaseBundle\Traits\SerializerTrait;
 class User
 {
     /**
-     * Use SerializerTrait to have access 
+     * Use SerializerTrait to have access
      * to generic methods toArray() & toJSON()
      */
     use SerializerTrait;

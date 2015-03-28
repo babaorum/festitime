@@ -12,8 +12,7 @@ class ArtistApiController extends FOSRestController
         $artistService = $this->get('festitime.artist_service');
         $artist = $artistService->getArtist($id);
 
-        if($artist instanceof Artist)
-        {
+        if ($artist instanceof Artist) {
             return $this->view($artist, 200);
         }
 
@@ -24,7 +23,7 @@ class ArtistApiController extends FOSRestController
     {
         $artistService = $this->container->get('festitime.artist_service');
         $artists = $artistService->getArtists();
-        
+
         return $this->view($artists, 200);
     }
 
@@ -46,8 +45,8 @@ class ArtistApiController extends FOSRestController
     public function deleteArtistAction($id)
     {
         $artistService = $this->container->get('festitime.artist_service');
-        $response = $artistService->deleteArtist($id);
-        
+        $artistService->deleteArtist($id);
+
         return $this->view(null, 204);
     }
 }

@@ -4,7 +4,8 @@ namespace Festitime\bundles\UserBundle\Services;
 
 class FormService
 {
-    public function getAllFormErrors($form) {
+    public function getAllFormErrors($form)
+    {
         $errors = array();
         $child_errors = $form->getErrors();
         if (!empty($child_errors)) {
@@ -12,7 +13,7 @@ class FormService
                 $errors[] = $error->getMessage();
             }
         }
-        foreach ($form->all() as $name => $child) {
+        foreach ($form->all() as $child) {
             $errors = array_merge($this->getAllFormErrors($child), $errors);
         }
 

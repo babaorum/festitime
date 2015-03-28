@@ -62,7 +62,6 @@ class ArtistService
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-
             $this->mongoManager->persist($artist);
             $this->mongoManager->flush();
 
@@ -100,7 +99,6 @@ class ArtistService
         $form->handleRequest($request);
         //@todo Update is not working
         if ($form->isValid()) {
-
             $this->mongoManager->persist($artist);
             $this->mongoManager->flush();
 
@@ -113,8 +111,7 @@ class ArtistService
     {
         $R_artist = $this->mongoManager->getRepository('FestitimeDatabaseBundle:Artist');
         $artist = $R_artist->find($id);
-        if(!is_null($artist))
-        {
+        if (!is_null($artist)) {
             $this->mongoManager->remove($artist);
             $this->mongoManager->flush();
         }

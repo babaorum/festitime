@@ -9,11 +9,10 @@ class UserApiController extends FOSRestController
 {
     public function getUserAction($id)
     {
-        $userService = $this->container->get('festitime.user_service');        
+        $userService = $this->container->get('festitime.user_service');
         $user = $userService->getUser($id);
         
-        if($user instanceof User)
-        {
+        if ($user instanceof User) {
             return $this->view($user, 200);
         }
         return $this->view(null, 204);
@@ -21,7 +20,7 @@ class UserApiController extends FOSRestController
 
     public function getUsersAction()
     {
-        $userService = $this->container->get('festitime.user_service');        
+        $userService = $this->container->get('festitime.user_service');
         $users = $userService->getUsers();
 
         return $this->view($users, 200);

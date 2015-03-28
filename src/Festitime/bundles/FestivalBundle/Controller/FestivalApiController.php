@@ -45,7 +45,7 @@ class FestivalApiController extends FOSRestController
     public function deleteFestivalAction($id)
     {
         $festivalService = $this->container->get('festitime.festival_service');
-        $response = $festivalService->deleteFestival($id);
+        $festivalService->deleteFestival($id);
 
         return $this->view(null, 204);
     }
