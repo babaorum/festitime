@@ -1,5 +1,5 @@
 module.exports = function (grunt) {
-    
+
     grunt.initConfig({
 
         less: {
@@ -23,7 +23,7 @@ module.exports = function (grunt) {
 
         concat: {
             dist: {
-                src: ['./web/assets/js/app/*/*/module.js', './web/assets/js/app/**'],
+                src: ['./web/assets/js/app/*/*/module.js', './web/assets/js/app/**/*.js'],
                 dest: './web/assets/dist/js/built.js'
             }
         },
@@ -99,7 +99,7 @@ module.exports = function (grunt) {
      * Declaration of grouped tasks
      * the default task (when just tiping 'grunt') will load tasks 'less:dist', 'cssmin', 'concat' and 'uglify'
      * 'grunt watch-src' will load task 'default' then 'watch' (the declaration order is important)
-     * 
+     *
      * task 'watch-src' will not stop, but grunt will stay active
      * to see any possible change
      */

@@ -1,0 +1,14 @@
+<div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in searchFestivalsCtrl.festivals | filter:searchText | filter:searchFestivalsCtrl.typeFilter">
+    <img ng-src="{[{ festival.img }]}" alt="image festival">
+    <div class="festival">
+        <div class="name">{[{ festival.name }]}</div>
+        <div class="info">
+            <div class="left-info">
+                <div class="date">{[{ festival.start_date | date : "dd" }]} - {[{ festival.end_date | date : "dd MMMM yyyy" }]}</div>
+                <div class="location">{[{ festival.city+", "+festival.country }]}</div>
+            </div>
+            <div class="price"><span>A partir de </span>{[{ festival.price }]}&#128;</div>
+        </div>
+    </div>
+</div>
+<span class="clear"></span>

@@ -22,13 +22,13 @@
             <img id="logo" width="110px" src="/assets/images/logo.png"/>
         </div>
         <div id="menu">
-            <a href="#" class="link">
+            <a href="{{url('home')}}" class="link">
                 <span>Accueil</span>
             </a>
             <a href="#" class="link">
                 <span>Comment ça marche</span>
             </a>
-            <a href="#" class="link">
+            <a href="{{url('search')}}" class="link">
                 <span>Les festivals</span>
             </a>
             <a href="#" class="link">
@@ -37,19 +37,22 @@
             <!-- <input id="search-bar" type="text" size="10" ng-model="search"/> -->
             <span class="clear"></span>
         </div>
+        {% if user.firstname is defined %}
             <a href="#" id="connect">
-                {% if user.firstname is defined %}
-                    {{ user.firstname | capitalize }} {{ user.name | upper }}
-                {% endif %}
+                {{ user.firstname | capitalize }} {{ user.name | upper }}
+            </a>
+        {% else %}
+            <a href="{{googleAuthUrl}}" id="connect">
                 <span>Connexion</span>
             </a>
+        {% endif %}
         <span class="clear"></span>
     </header>
     <content>
         <div id="search">
             <div id="search-content">
                 <input id="search-bar" type="text" ng-model="search"/>
-                <a href="#" class="button">Voir tous les festivals</a>
+                <a href="{{url('search')}}" class="button">Voir tous les festivals</a>
             </div>
         </div>
         <div id="how">
@@ -97,7 +100,7 @@
                     </div>
                 </div>
                 <span class="clear"></span>
-                <a href="#" class="button">Voir tous les festivals</a>
+                <a href="{{url('search')}}" class="button">Voir tous les festivals</a>
             </div>
         </div>
         <div id="artists">
@@ -167,7 +170,7 @@
     <footer>
         <img src="" alt="">
         <div class="contener">
-            <div class="block column">
+            <div class="block column" style="padding-bottom:110px;">
                 <h3>à propos de festitime</h3>
                 <div>
                     <span class="img-plus"></span> <a href="">Qui sommes-nous ?</a>

@@ -5,6 +5,7 @@
         "Frontoffice",
         [
             "Rest",
+            "Filter",
             "timer"
         ]
     ).config(function($interpolateProvider){

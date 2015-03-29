@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    function searchBarController($scope, festivalRestService) {
+    function searchBarController($scope, festivalRestService, typeRestService) {
 
         this.festivals          = [];
         this.types              = [];
@@ -13,12 +13,7 @@
         };
 
         this.includeType = function(type) {
-            var i = this.types.indexOf(type);
-            if (i > -1) {
-                this.types.splice(i, 1);
-            } else {
-                this.types.push(type);
-            }
+            $scope.$broadcast('searchFestivalsIncludeType', type);
         }.bind(this);
 
         this.typeFilter = function(festival) {
@@ -55,6 +50,8 @@
                 }.bind(this));
             }.bind(this));
 
+        this.types = typeRestService.getTypes();
+
         festivalRestService.getFestivalsRandomPictures(16)
             .then(function(pictures) {
                 this.randomPictures = pictures;
@@ -63,7 +60,7 @@
 
     angular.module('Frontoffice').controller(
         "searchBarController",
-        ['$scope', 'festivalRestService', searchBarController]
+        ['$scope', 'festivalRestService', 'typeRestService', searchBarController]
     );
 
 })();
