@@ -134,7 +134,9 @@
                         {[{countdownFestival.city}]} {[{countdownFestival.country}]}
                     </span>
                     <span class="types">
-                        <button ng-repeat="genre in countdownFestival.type">{[{genre}]}</button>
+                        <a href="/search/type/{[{genre}]}" ng-repeat="genre in countdownFestival.type">
+                            <button>{[{genre | capitalize}]}</button>
+                        </a>
                     </span>
                 </div>
                 <timer end-time="countdownFestival.countdown" class="timer">
@@ -168,16 +170,15 @@
         <div id="newsletter"></div>
     </content>
     <footer>
-        <img src="" alt="">
         <div class="contener">
             <div class="block column" style="padding-bottom:110px;">
                 <h3>à propos de festitime</h3>
                 <div>
-                    <span class="img-plus"></span> <a href="">Qui sommes-nous ?</a>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Qui sommes-nous ?</a>
                     <br>
-                    <span class="img-plus"></span> <a href="">Nous contacter</a>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Nous contacter</a>
                     <br>
-                    <span class="img-plus"></span> <a href="">Plan du site</a>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Plan du site</a>
                 </div>
             </div>
             <div class="column">
@@ -188,36 +189,42 @@
                 <div class="block second">
                     <h3>genres de musique</h3>
                     <div>
-                        <button class="tag">jazz</button>
-                        <button class="tag">electro</button>
-                        <button class="tag">rock</button>
-                        <button class="tag">pop</button>
-                        <button class="tag">hip hop</button>
-                        <button class="tag">rap</button>
-                        <button class="tag">reggae</button>
-                        <button class="tag">ragga</button>
-                        <button class="tag">dark</button>
-                        <button class="tag">metal</button>
-                        <button class="tag">punk</button>
+                        <a href="/search/type/{[{type}]}" ng-repeat="type in searchBarCtrl.types">
+                            <button class="tag">{[{type | capitalize }]}</button>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="block column">
                 <h3>infos légales</h3>
                 <div>
-                    <span class="img-plus"></span> <a href="">Conditions générales de vente</a>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Conditions générales de vente</a>
                     <br>
-                    <span class="img-plus"></span> <a href="">Données personnelles</a>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Données personnelles</a>
                     <br>
-                    <span class="img-plus"></span> <a href="">Mentions légales</a>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Mentions légales</a>
                     <br>
-                    <span class="img-plus"></span> <a href="">Signaler un abus</a>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Signaler un abus</a>
                     <br>
-                    <span class="img-plus"></span> <a href="">Cookies</a>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Cookies</a>
                 </div>
             </div>
             <span class="clear"></span>
         </div>
     </footer>
+    <script type="text/javascript">
+        $('#search-bar').keypress(function(e) {
+            if(e.which == 13) {
+                console.log($(this).val());
+                window.location.href = '/search/'+encodeURIComponent($(this).val());
+            }
+        });
+        $('#search-bar-footer').keypress(function(e) {
+            if(e.which == 13) {
+                console.log($(this).val());
+                window.location.href = '/search/'+encodeURIComponent($(this).val());
+            }
+        });
+    </script>
 </body>
 </html>
