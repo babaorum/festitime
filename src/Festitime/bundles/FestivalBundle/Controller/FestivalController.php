@@ -28,6 +28,16 @@ class FestivalController extends Controller
         return $this->render('FestitimeFestivalBundle:Festival:search.html.twig', array());
     }
 
+    public function searchBySlugAction($slug)
+    {
+        return $this->render(
+            'FestitimeFestivalBundle:Festival:search.html.twig',
+            array(
+                'searchedSlug' => utf8_encode(utf8_decode($slug))
+            )
+        );
+    }
+
     public function searchByTypeAction($type)
     {
         return $this->render(

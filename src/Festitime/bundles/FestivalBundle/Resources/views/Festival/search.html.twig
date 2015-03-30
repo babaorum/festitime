@@ -34,7 +34,11 @@
             <a href="#" class="link">
                 <span>Les artistes</span>
             </a>
-            <input id="search-bar" type="text" size="10" ng-model="search"/>
+            {% if searchedSlug is defined %}
+                <input id="search-bar" type="text" size="10" ng-model="search" ng-init="search='{{searchedSlug}}'"/>
+            {% else %}
+                <input id="search-bar" type="text" size="10" ng-model="search"/>
+            {% endif %}
             <span class="clear"></span>
         </div>
         {% if user.firstname is defined %}
@@ -70,6 +74,7 @@
                 <img width="20px" height="23px" class="status open" alt="arrow" src="/assets/images/arrow-up.svg"/>
             </div>
             <div class="content">
+            {% if searchedType is defined %}
                 <span ng-repeat="type in searchBarCtrl.types">
                     <span class="tag tag-{[{type}]} active" ng-if="type == '{{searchedType}}'">{[{type | capitalize }]}
                         <input type="checkbox" ng-click="searchBarCtrl.includeType(type)" checked="checked">
@@ -78,6 +83,13 @@
                         <input type="checkbox" ng-click="searchBarCtrl.includeType(type)">
                     </span>
                 </span>
+            {% else %}
+                <span ng-repeat="type in searchBarCtrl.types">
+                    <span class="tag tag-{[{type}]}">{[{type | capitalize }]}
+                        <input type="checkbox" ng-click="searchBarCtrl.includeType(type)">
+                    </span>
+                </span>
+            {% endif %}
             </div>
         </div>
         <div class="sidebar item">
