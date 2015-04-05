@@ -11,3 +11,4 @@
 /web/bundles/
 /web/assets/js/bower_components/*
 /web/assets/dist/*
+/**/.DS_Store
