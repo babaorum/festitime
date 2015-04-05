@@ -6,6 +6,7 @@
         [
             "Rest",
             "Filter",
+            "ui.bootstrap",
             "timer"
         ]
     ).config(function($interpolateProvider){
