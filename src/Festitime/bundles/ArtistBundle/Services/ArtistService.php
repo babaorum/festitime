@@ -83,7 +83,11 @@ class ArtistService
         return $artist;
     }
 
-    public function getArtists()
+    /**
+     * @param  array|null $params
+     * @return array
+     */
+    public function getArtists(array $params = null)
     {
         $repository = $this->mongoManager->getRepository('FestitimeDatabaseBundle:Artist');
         if (!empty($params['limit'])) {
@@ -91,20 +95,6 @@ class ArtistService
         } else {
             $artists = $repository->findAll();
         }
-
-
-        /*$id = '54c019394c0f6177088b4567';
-        foreach($artists as $artist) {
-            foreach($artist->getFestivals() as $festival) {
-                $artist->removeFestival($festival);
-                $this->mongoManager->persist($artist);
-                $this->mongoManager->flush();
-                die(var_dump($artist));
-                $arrayCollection = new \Doctrine\Common\Collections\ArrayCollection();
-                $artist->setFestivals($arrayCollection);
-                var_dump($festival);
-            }
-        }*/
 
         return $artists;
     }
