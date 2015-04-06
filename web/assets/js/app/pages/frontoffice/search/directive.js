@@ -23,7 +23,7 @@
                 return festival;
             }.bind(this);
 
-            this.includeType = function(type) {
+            var includeType = function(type) {
                 var i = this.types.indexOf(type);
                 if (i > -1) {
                     this.types.splice(i, 1);
@@ -33,7 +33,7 @@
             }.bind(this);
 
             $scope.$on('searchFestivalsIncludeType', function(event, type) {
-                this.includeType(type);
+                includeType(type);
             }.bind(this));
 
             $scope.$watch('types', function(type) {
@@ -53,7 +53,6 @@
             restrict: 'E',
             scope: {
                 types: '=',
-                festivals: '=',
                 searchText: '='
             },
             controller: [

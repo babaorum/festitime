@@ -7,7 +7,7 @@
     "angular": "*",
     "bootstrap": "*",
     "underscore": "*",
-    "angular-timer": "~1.3.1",
-    "angular-bootstrap": "~0.12.1"
+    "angular-timer": "*",
+    "humanize-duration": "*"
   }
 }

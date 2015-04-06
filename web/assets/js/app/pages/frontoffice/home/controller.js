@@ -34,8 +34,7 @@
         }.bind(this);
 
         this.getCountdownFromDate = function(date) {
-            var now  = new Date(),
-                date = new Date(date);
+            date = new Date(date);
             return (date - 0);
         };
 
@@ -59,7 +58,14 @@
             }.bind(this));
     }
 
-    angular.module('Frontoffice').controller(
+    angular.module('Frontoffice'
+        //second argument to .module() to remove when ui-bootstrap is accept angular1.3
+        // ,[
+        //     "Rest",
+        //     "Filter",
+        //     "timer"
+        // ]
+        ).controller(
         "searchBarController",
         [
             '$scope',

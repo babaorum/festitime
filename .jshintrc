@@ -31,7 +31,7 @@
     "maxdepth"      : false,     // {int} Max depth of nested blocks (within functions)
     "maxstatements" : false,     // {int} Max number statements per function
     "maxcomplexity" : false,     // {int} Max cyclomatic complexity per function
-    "maxlen"        : 90,        // {int} Max number of characters per line
+    "maxlen"        : 95,        // {int} Max number of characters per line
 
     // Relaxing
     "asi"           : false,     // true: Tolerate Automatic Semicolon Insertion (no semicolons)
@@ -59,7 +59,7 @@
     "shadow"        : false,     // true: Allows re-define variables later in code e.g. `var x=1; x=2;`
     "sub"           : false,     // true: Tolerate using `[]` notation when it can still be expressed in dot notation
     "supernew"      : false,     // true: Tolerate `new function () { ... };` and `new Object;`
-    "validthis"     : false,     // true: Tolerate using this in a non-constructor function
+    "validthis"     : true,      // true: Tolerate using this in a non-constructor function
 
     "browser"       : true,      // Web Browser (window, document, etc)
     "browserify"    : false,     // Browserify (node.js code in the browser)
@@ -83,6 +83,7 @@
     // Custom Globals
     "globals"       : {          // additional predefined global variables
         "angular" : true,
-        "console" : true
+        "console" : true,
+        "jQuery"  : true
     }
 }

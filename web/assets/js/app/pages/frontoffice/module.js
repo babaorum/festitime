@@ -6,7 +6,8 @@
         [
             "Rest",
             "Filter",
-            "ui.bootstrap",
+            //To uncomment when angular-bootstrap work with angular 1.3.*
+            //"ui.bootstrap",
             "timer"
         ]
     ).config(function($interpolateProvider){

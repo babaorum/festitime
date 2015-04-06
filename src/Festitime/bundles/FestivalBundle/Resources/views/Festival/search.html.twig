@@ -1,9 +1,17 @@
 <html>
 <head>
     <title>Les Festivals - Festitime</title>
-    <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="/assets/js/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- To uncomment when angular-bootstrap work with angular 1.3.* -->
+    <!-- <script type="text/javascript" src="/assets/js/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script> -->
+    <!-- scripts for using angular-timer -->
+    <script type="text/javascript" src="/assets/js/bower_components/humanize-duration/humanize-duration.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/momentjs/min/moment.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/momentjs/min/locales.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/angular-timer/dist/angular-timer.js"></script>
+    <!-- /scripts for using angular-timer -->
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/js/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/dist/css/styles.min.css">
@@ -13,9 +21,8 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!-- /Fonts -->
     <!-- Angular app need to be load last -->
-    <script type="text/javascript" src="/assets/dist/js/built.js"></script>
-</head>
-<body ng-app="Frontoffice" ng-controller="searchBarController as searchBarCtrl">
+    <script type="text/javascript" src="/assets/dist/js/built.min.js"></script>
+<body ng-app="Frontoffice" ng-controller="searchPageController as searchPageCtrl">
     <header>
         {% set user = app.session.get('user') %}
         <div id="flag">
@@ -75,18 +82,18 @@
             </div>
             <div class="content">
             {% if searchedType is defined %}
-                <span ng-repeat="type in searchBarCtrl.types">
+                <span ng-repeat="type in searchPageCtrl.types">
                     <span class="tag tag-{[{type}]} active" ng-if="type == '{{searchedType}}'">{[{type | capitalize }]}
-                        <input type="checkbox" ng-click="searchBarCtrl.includeType(type)" checked="checked">
+                        <input type="checkbox" ng-click="searchPageCtrl.includeType(type)" checked="checked">
                     </span>
                     <span class="tag tag-{[{type}]}" ng-if="type != '{{searchedType}}'">{[{type | capitalize }]}
-                        <input type="checkbox" ng-click="searchBarCtrl.includeType(type)">
+                        <input type="checkbox" ng-click="searchPageCtrl.includeType(type)">
                     </span>
                 </span>
             {% else %}
-                <span ng-repeat="type in searchBarCtrl.types">
+                <span ng-repeat="type in searchPageCtrl.types">
                     <span class="tag tag-{[{type}]}">{[{type | capitalize }]}
-                        <input type="checkbox" ng-click="searchBarCtrl.includeType(type)">
+                        <input type="checkbox" ng-click="searchPageCtrl.includeType(type)">
                     </span>
                 </span>
             {% endif %}
@@ -117,32 +124,34 @@
     {% endif %}
     </div>
     <script type="text/javascript">
-        $('.sidebar.item .content').on('click', '.tag', function(e) {
-            if($(this).children('input').is(':checked'))
-            {
+(function() {
+    "use strict";
+
+    jQuery(function($) {
+        $('.sidebar.item .content').on('click', '.tag', function() {
+            if ($(this).children('input').is(':checked')) {
                 $(this).addClass("active");
-            }
-            else
-            {
+            } else {
                 $(this).removeClass("active");
             }
             $(this).children('input').trigger("click");
         });
 
-        $('.sidebar.item .header').on('click', '.status', function(e) {
-            if($(this).hasClass('close')){
+        $('.sidebar.item .header').on('click', '.status', function() {
+            if ($(this).hasClass('close')) {
                 $(this).closest('.sidebar.item').children('.content').slideDown(200);
                 $(this).attr("src", "/assets/images/arrow-up.svg");
                 $(this).removeClass("close");
                 $(this).addClass("open");
-            }
-            else if($(this).hasClass('open')){
+            } else if ($(this).hasClass('open')) {
                 $(this).closest('.sidebar.item').children('.content').slideUp(200);
                 $(this).attr("src", "/assets/images/arrow-bottom.svg");
                 $(this).removeClass("open");
                 $(this).addClass("close");
             }
         });
+    });
+})();
     </script>
 </body>
 </html>

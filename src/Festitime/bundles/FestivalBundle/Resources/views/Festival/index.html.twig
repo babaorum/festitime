@@ -2,7 +2,10 @@
 <head>
     <title>Accueil - Festitime</title>
     <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
+    <!-- To uncomment when angular-bootstrap work with angular 1.3.* -->
+    <!-- <script type="text/javascript" src="/assets/js/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script> -->
     <!-- scripts for using angular-timer -->
     <script type="text/javascript" src="/assets/js/bower_components/humanize-duration/humanize-duration.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/momentjs/min/moment.min.js"></script>
@@ -218,18 +221,22 @@
         </div>
     </footer>
     <script type="text/javascript">
+(function() {
+    "use strict";
+
+    jQuery(function($) {
         $('#search-bar').keypress(function(e) {
-            if(e.which == 13) {
-                console.log($(this).val());
-                window.location.href = '/search/'+encodeURIComponent($(this).val());
+            if (e.which === 13) {
+                window.location.href = '/search/' + encodeURIComponent($(this).val());
             }
         });
         $('#search-bar-footer').keypress(function(e) {
-            if(e.which == 13) {
-                console.log($(this).val());
-                window.location.href = '/search/'+encodeURIComponent($(this).val());
+            if (e.which === 13) {
+                window.location.href = '/search/' + encodeURIComponent($(this).val());
             }
         });
+    });
+})();
     </script>
 </body>
 </html>
