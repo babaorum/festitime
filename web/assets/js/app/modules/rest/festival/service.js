@@ -1,4 +1,4 @@
-(function(){
+(function() {
     "use strict";
 
     function festivalRestService($http, $q) {
@@ -23,10 +23,10 @@
             }).then(handleSuccess, handleError);
         };
 
-        var getFestivalsRandomPictures = function (number) {
+        var getFestivalsRandomPictures = function(number) {
             return $http({
                 method: 'get',
-                url: '/festivals/'+number+'/random/pictures'
+                url: '/festivals/' + number + '/random/pictures'
             }).then(handleSuccess, handleError);
         }
 
@@ -45,13 +45,13 @@
 
         var handleError = function(response) {
             if (
-                ! angular.isObject( response.data ) ||
-                ! response.data.message
-                ) {
-                return( $q.reject( "An unknown error occurred." ) );
+                !angular.isObject( response.data ) ||
+                !response.data.message
+            ) {
+                return ($q.reject("An unknown error occurred."));
             }
             // Otherwise, use expected error message.
-            return( $q.reject( response.data.message ) );
+            return ($q.reject(response.data.message));
         };
 
         var handleSuccess = function(response) {
@@ -71,6 +71,10 @@
 
     angular.module('Rest').service(
         "festivalRestService",
-        ['$http', '$q', festivalRestService]
+        [
+            '$http',
+            '$q',
+            festivalRestService
+        ]
     );
 })();

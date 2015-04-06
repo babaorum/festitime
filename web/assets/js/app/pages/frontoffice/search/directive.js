@@ -8,16 +8,17 @@
             this.types = [];
 
             this.typeFilter = function(festival) {
-                if(this.types.length > 0) {
+                if (this.types.length > 0) {
                     var match = false;
                     for (var i in festival.type) {
-                        if(this.types.indexOf(festival.type[i]) > -1)
+                        if (this.types.indexOf(festival.type[i]) > -1)
                         {
                             match = true;
                         }
                     }
-                    if(!match)
+                    if (!match) {
                         return;
+                    }
                 }
                 return festival;
             }.bind(this);
@@ -49,16 +50,20 @@
         }
 
         return {
-            restrict: "E",
+            restrict: 'E',
             scope: {
                 types: '=',
                 festivals: '=',
                 searchText: '='
             },
-            controller: ["$scope", 'festivalRestService', Controller],
+            controller: [
+                "$scope",
+                "festivalRestService",
+                Controller
+            ],
             controllerAs: 'searchFestivalsCtrl',
             templateUrl: '/assets/js/app/pages/frontoffice/search/template.html'
-        }
+        };
     }
 
     angular.module('Frontoffice').directive(

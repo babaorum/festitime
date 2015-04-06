@@ -1,4 +1,4 @@
-(function () {
+(function() {
     "use strict";
 
     function searchBarController($scope, festivalRestService, typeRestService) {
@@ -17,32 +17,33 @@
         }.bind(this);
 
         this.typeFilter = function(festival) {
-            if(this.types.length > 0) {
+            if (this.types.length > 0) {
                 var match = false;
                 for (var i in festival.type) {
-                    if(this.types.indexOf(festival.type[i]) > -1)
+                    if (this.types.indexOf(festival.type[i]) > -1)
                     {
                         match = true;
                     }
                 }
-                if(!match)
+                if (!match) {
                     return;
+                }
             }
 
             return festival;
         }.bind(this);
 
         this.getCountdownFromDate = function(date) {
-            var now  = new Date();
-            var date = new Date(date);
-            return (date-0);
+            var now  = new Date(),
+                date = new Date(date);
+            return (date - 0);
         };
 
         //load festivals
         festivalRestService.getFestivals()
             .then(function(festivals) {
                 festivals.forEach(function(festival) {
-                    if(festival.start_date && this.countdownFestivals.length < 1) {
+                    if (festival.start_date && this.countdownFestivals.length < 1) {
                         festival.countdown = this.getCountdownFromDate(festival.start_date);
                         this.countdownFestivals.push(festival);
                     }
@@ -60,7 +61,12 @@
 
     angular.module('Frontoffice').controller(
         "searchBarController",
-        ['$scope', 'festivalRestService', 'typeRestService', searchBarController]
+        [
+            '$scope',
+            'festivalRestService',
+            'typeRestService',
+            searchBarController
+        ]
     );
 
 })();

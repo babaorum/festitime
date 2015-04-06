@@ -1,7 +1,7 @@
-(function(){
+(function() {
     "use strict";
 
-    function typeRestService($http, $q) {
+    function typeRestService() {
 
         var getTypes = function() {
             return [
@@ -26,6 +26,8 @@
 
     angular.module('Rest').service(
         "typeRestService",
-        ['$http', '$q', typeRestService]
+        [
+            typeRestService
+        ]
     );
 })();
