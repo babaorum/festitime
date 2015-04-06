@@ -85,8 +85,27 @@ class ArtistService
 
     public function getArtists()
     {
-        $R_artist = $this->mongoManager->getRepository('FestitimeDatabaseBundle:Artist');
-        $artists = $R_artist->findAll();
+        $repository = $this->mongoManager->getRepository('FestitimeDatabaseBundle:Artist');
+        if (!empty($params['limit'])) {
+            $artists = array_values($repository->getArtists($params['limit']));
+        } else {
+            $artists = $repository->findAll();
+        }
+
+
+        /*$id = '54c019394c0f6177088b4567';
+        foreach($artists as $artist) {
+            foreach($artist->getFestivals() as $festival) {
+                $artist->removeFestival($festival);
+                $this->mongoManager->persist($artist);
+                $this->mongoManager->flush();
+                die(var_dump($artist));
+                $arrayCollection = new \Doctrine\Common\Collections\ArrayCollection();
+                $artist->setFestivals($arrayCollection);
+                var_dump($festival);
+            }
+        }*/
+
         return $artists;
     }
 

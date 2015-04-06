@@ -1,9 +1,10 @@
 (function() {
     "use strict";
 
-    function searchBarController($scope, festivalRestService, typeRestService) {
+    function searchBarController($scope, festivalRestService, artistRestService, typeRestService) {
 
         this.festivals          = [];
+        this.artists            = [];
         this.types              = [];
         this.countdownFestivals = [];
         this.randomPictures     = [];
@@ -12,34 +13,13 @@
             return new Array(n);
         };
 
-        this.includeType = function(type) {
-            $scope.$broadcast('searchFestivalsIncludeType', type);
-        }.bind(this);
-
-        this.typeFilter = function(festival) {
-            if (this.types.length > 0) {
-                var match = false;
-                for (var i in festival.type) {
-                    if (this.types.indexOf(festival.type[i]) > -1)
-                    {
-                        match = true;
-                    }
-                }
-                if (!match) {
-                    return;
-                }
-            }
-
-            return festival;
-        }.bind(this);
-
         this.getCountdownFromDate = function(date) {
             date = new Date(date);
             return (date - 0);
         };
 
         //load festivals
-        festivalRestService.getFestivals()
+        festivalRestService.getFestivals(6)
             .then(function(festivals) {
                 festivals.forEach(function(festival) {
                     if (festival.start_date && this.countdownFestivals.length < 1) {
@@ -50,26 +30,29 @@
                 }.bind(this));
             }.bind(this));
 
+        //Load artists
+        artistRestService.getArtists(3)
+            .then(function(artists) {
+                console.log(artists);
+                this.artists = artists;
+            }.bind(this));
+
+        //Load types
         this.types = typeRestService.getTypes();
 
+        //Load randomPictures
         festivalRestService.getFestivalsRandomPictures(16)
             .then(function(pictures) {
                 this.randomPictures = pictures;
             }.bind(this));
     }
 
-    angular.module('Frontoffice'
-        //second argument to .module() to remove when ui-bootstrap is accept angular1.3
-        // ,[
-        //     "Rest",
-        //     "Filter",
-        //     "timer"
-        // ]
-        ).controller(
+    angular.module('Frontoffice').controller(
         "searchBarController",
         [
             '$scope',
             'festivalRestService',
+            'artistRestService',
             'typeRestService',
             searchBarController
         ]

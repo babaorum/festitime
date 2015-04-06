@@ -72,10 +72,19 @@ class FestivalService
         return $festival;
     }
 
-    public function getFestivals()
+    /**
+     * @param  array|null $params
+     * @return array
+     */
+    public function getFestivals(array $params = null)
     {
-        $R_festival = $this->mongoManager->getRepository('FestitimeDatabaseBundle:Festival');
-        $festivals = $R_festival->findAll();
+        $repository = $this->mongoManager->getRepository('FestitimeDatabaseBundle:Festival');
+        if (!empty($params['limit'])) {
+            $festivals = array_values($repository->getFestivals($params['limit']));
+        } else {
+            $festivals = $repository->findAll();
+        }
+
         return $festivals;
     }
 

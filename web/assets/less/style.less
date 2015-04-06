@@ -40,6 +40,7 @@
 
 a
 {
+    width: auto;
     text-decoration: none;
 }
 a:hover
@@ -55,6 +56,7 @@ body
 {
     font: @font-oswald;
 }
+
 header
 {
     z-index: 10;
@@ -67,6 +69,11 @@ header
     font-family: @font-oswald;
     text-transform: uppercase;
     font-size: 18px;
+}
+
+content
+{
+    width: 100%;
 }
 
 #sidebar
@@ -272,7 +279,7 @@ header #search-bar
 #search-content
 {
     padding: 25%;
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 
@@ -289,7 +296,6 @@ header #search-bar
     border-radius: 2px;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
     width: 100%;
-
 }
 
 #search-content .button
@@ -326,6 +332,7 @@ header #search-bar
     border-color: #3F3F3F;
     border-width: 4px 0px;
     margin: 3%;
+    width: auto;
 }
 #how #how-content
 {
@@ -365,7 +372,7 @@ header #search-bar
 
 #countdown
 {
-    height: 450px;
+    height: 640px;
     background: url(/assets/images/DSC9588.jpg);
     background-size: 100%;
     margin-top: -10%;
@@ -575,6 +582,7 @@ timer span.time p
     border-color: #F3F3F3;
     border-width: 4px 0px;
     margin: 0 3% 3%;
+    width: auto;
 }
 #festivals #festival-content
 {
@@ -678,7 +686,7 @@ timer span.time p
     text-align: center;
     font: 24px @font-oswald;
     height: auto;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
 }
 #artists h2
 {
@@ -690,7 +698,8 @@ timer span.time p
     border-style: solid;
     border-color: #3F3F3F;
     border-width: 4px 0px;
-    margin: 3%;
+    margin: 3% 3% 2% 3%;
+    width: auto;
 }
 #artists-content
 {
@@ -703,11 +712,12 @@ timer span.time p
     height: auto;
     overflow: hidden;
     text-align: left;
+    margin: 50px 0;
 }
 .artist img
 {
     width: 25%;
-    height: auto;
+    height: 31%;
     float: left;
 }
 .artist-info
@@ -754,7 +764,7 @@ footer
     background-color: #212121;
     width: 100%;
     padding: 50px 0;
-    height: 365px;
+    height: 484px;
 }
 
 footer .contener

@@ -2,24 +2,18 @@
     "use strict";
 
     function festivalRestService($http, $q) {
+        var basicUrl = "/festivals";
 
-        var addFestival = function(name) {
-            return $http({
-                method: "post",
-                url: "api/index.cfm",
-                params: {
-                    action: "add"
-                },
-                data: {
-                    name: name
-                }
-            }).then(handleSuccess, handleError);
-        };
+        var getFestivals = function(limit) {
+            var url = basicUrl;
 
-        var getFestivals = function() {
+            if (limit) {
+                url += '?limit='+limit;
+            }
+
             return $http({
-                method: "get",
-                url: "/festivals"
+                "method": "get",
+                "url": url
             }).then(handleSuccess, handleError);
         };
 
@@ -59,7 +53,6 @@
         };
 
         return {
-            addFestival:                addFestival,
             getFestivals:               getFestivals,
             getFestivalsRandomPictures: getFestivalsRandomPictures,
             removeFestival:             removeFestival

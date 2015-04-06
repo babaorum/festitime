@@ -4,6 +4,7 @@ namespace Festitime\bundles\FestivalBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use FOS\RestBundle\Controller\FOSRestController;
+use FOS\RestBundle\Controller\Annotations\Get;
 use Festitime\DatabaseBundle\Document\Festival;
 
 class FestivalApiController extends FOSRestController
@@ -20,10 +21,11 @@ class FestivalApiController extends FOSRestController
         return $this->view(null, 204);
     }
 
-    public function getFestivalsAction()
+    public function getFestivalsAction(Request $request)
     {
+        $queryParams = $request->query->all();
         $festivalService = $this->container->get('festitime.festival_service');
-        $festivals = $festivalService->getFestivals();
+        $festivals = $festivalService->getFestivals($queryParams);
 
         return $this->view($festivals, 200);
     }

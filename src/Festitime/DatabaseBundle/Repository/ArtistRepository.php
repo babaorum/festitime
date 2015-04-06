@@ -12,4 +12,15 @@ use Doctrine\ODM\MongoDB\DocumentRepository;
  */
 class ArtistRepository extends DocumentRepository
 {
+    public function getArtists($limit)
+    {
+        $artists = $this->dm->createQueryBuilder('FestitimeDatabaseBundle:Artist')
+            ->limit($limit)
+            ->hydrate()
+            ->getQuery()
+            ->execute()
+        ;
+
+        return $artists->toArray();
+    }
 }

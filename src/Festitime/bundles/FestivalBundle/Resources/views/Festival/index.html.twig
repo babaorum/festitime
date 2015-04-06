@@ -93,7 +93,7 @@
             <h2>Vos plus beaux festivals</h2>
             <div id="festival-content">
                 <div id="festival-group">
-                    <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in searchBarCtrl.festivals | filter:search | filter:typeFilter">
+                    <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in searchBarCtrl.festivals">
                         <img ng-src="{[{ festival.img }]}" alt="image festival">
                         <div class="festival">
                             <div class="info">
@@ -114,12 +114,13 @@
         <div id="artists">
             <h2>découvrez nos artistes !</h2>
             <div id="artists-content">
-                <div class="artist">
-                    <img src="/assets/images/Lorde.jpg" alt="picture artist">
+                <div class="artist" ng-repeat="artist in searchBarCtrl.artists">
+                    <img ng-src="{[{artist.picture}]}" alt="picture artist">
                     <div class="artist-info">
                         <div class="info-right"><span>2</span> Festivals</div>
-                        <h3>Lorde</h3>
-                        <p>Ella Marija Lani Yelich-O'Connor (né le 7 Novembre 1996), connue sous son nom de scène Lorde, est un chanteur et auteur-compositeur Nouvelle-Zélande. Né à Takapuna et a grandi à Devonport, Auckland, elle se intéresse à exécuter comme un enfant. En début de son adolescence, elle a signé avec Universal Music Group et a ensuite été jumelé avec l'auteur-compositeur et producteur Joel Little, qui a co-écrit et produit la plupart des œuvres de Lorde. Sa première version majeure, L'Amour du Club EP, a été libéré commercialement dans Mars 2013. Le projet tracé au numéro deux sur les records cartes nationales d'Australie et de Nouvelle-Zélande.</p>
+                        <h3 ng-if="artist.pseudo">{[{artist.pseudo | capitalize}]}</h3>
+                        <h3 ng-if="!artist.pseudo">{[{artist.firstname | capitalize}]} {[{artist.lastname | capitalize}]}</h3>
+                        <p>{[{artist.description}]}</p>
                         <a href="#" class="button">En savoir plus</a>
                     </div>
                 </div>
@@ -179,7 +180,7 @@
     </content>
     <footer>
         <div class="contener">
-            <div class="block column" style="padding-bottom:110px;">
+            <div class="block column" style="padding-bottom:125px;">
                 <h3>à propos de festitime</h3>
                 <div>
                     <span class="img-plus"></span> <a class="footer-link" href="">Qui sommes-nous ?</a>
@@ -203,7 +204,7 @@
                     </div>
                 </div>
             </div>
-            <div class="block column">
+            <div class="block column" style="padding-bottom:36px;">
                 <h3>infos légales</h3>
                 <div>
                     <span class="img-plus"></span> <a class="footer-link" href="">Conditions générales de vente</a>

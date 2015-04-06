@@ -2,6 +2,7 @@
 
 namespace Festitime\bundles\ArtistBundle\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
 use FOS\RestBundle\Controller\FOSRestController;
 use Festitime\DatabaseBundle\Document\Artist;
 
@@ -19,10 +20,11 @@ class ArtistApiController extends FOSRestController
         return $this->view(null, 204);
     }
 
-    public function getArtistsAction()
+    public function getArtistsAction(Request $request)
     {
+        $queryParams = $request->query->all();
         $artistService = $this->container->get('festitime.artist_service');
-        $artists = $artistService->getArtists();
+        $artists = $artistService->getArtists($queryParams);
 
         return $this->view($artists, 200);
     }

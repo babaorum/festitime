@@ -1,6 +1,8 @@
 (function () {
     "use strict";
 
+    var test = 'test';
+
     angular.module(
         "Frontoffice",
         [

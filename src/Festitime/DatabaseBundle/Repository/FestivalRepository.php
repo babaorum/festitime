@@ -12,4 +12,15 @@ use Doctrine\ODM\MongoDB\DocumentRepository;
  */
 class FestivalRepository extends DocumentRepository
 {
+    public function getFestivals($limit)
+    {
+        $festivals = $this->dm->createQueryBuilder('FestitimeDatabaseBundle:Festival')
+            ->limit($limit)
+            ->hydrate()
+            ->getQuery()
+            ->execute()
+        ;
+
+        return $festivals->toArray();
+    }
 }
