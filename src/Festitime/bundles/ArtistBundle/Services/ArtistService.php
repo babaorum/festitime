@@ -121,6 +121,11 @@ class ArtistService
         $R_artist = $this->mongoManager->getRepository('FestitimeDatabaseBundle:Artist');
         $artist = $R_artist->find($id);
         if (!is_null($artist)) {
+            $festivals = $this->mongoManager->getRepository('FestitimeDatabaseBundle:Artist')->findAll();
+            foreach ($festivals as $festival) {
+                $festival->removeArtist($artist);
+                $this->mongoManager->persist($festival);
+            }
             $this->mongoManager->remove($artist);
             $this->mongoManager->flush();
         }

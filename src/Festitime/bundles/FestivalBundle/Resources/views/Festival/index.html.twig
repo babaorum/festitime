@@ -117,7 +117,7 @@
                 <div class="artist" ng-repeat="artist in searchBarCtrl.artists">
                     <img ng-src="{[{artist.picture}]}" alt="picture artist">
                     <div class="artist-info">
-                        <div class="info-right"><span>2</span> Festivals</div>
+                        <div class="info-right"><span>{[{artist.festivals.length}]}</span> Festivals</div>
                         <h3 ng-if="artist.pseudo">{[{artist.pseudo | capitalize}]}</h3>
                         <h3 ng-if="!artist.pseudo">{[{artist.firstname | capitalize}]} {[{artist.lastname | capitalize}]}</h3>
                         <p>{[{artist.description}]}</p>
