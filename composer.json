@@ -26,7 +26,9 @@
         "friendsofsymfony/rest-bundle": "~1.4",
         "happyr/google-api-bundle": "~2.1",
         "doctrine/doctrine-fixtures-bundle": "~2.2",
-        "khepin/yaml-fixtures-bundle": "~1.0"
+        "khepin/yaml-fixtures-bundle": "~1.0",
+        "payum/payum-bundle": "0.14.*",
+        "payum/offline": "0.14.*"
     },
     "scripts": {
         "post-install-cmd": [

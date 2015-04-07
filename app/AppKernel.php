@@ -2,6 +2,7 @@
 
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
+use Doctrine\ODM\MongoDB\Types\Type;
 
 class AppKernel extends Kernel
 {
@@ -19,6 +20,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
+            new Payum\Bundle\PayumBundle\PayumBundle(),
             new HappyR\Google\ApiBundle\HappyRGoogleApiBundle(),
             new Festitime\DatabaseBundle\FestitimeDatabaseBundle(),
             new Festitime\bundles\FestivalBundle\FestitimeFestivalBundle(),
@@ -35,6 +37,12 @@ class AppKernel extends Kernel
         }
 
         return $bundles;
+    }
+
+    public function boot()
+    {
+        Type::addType('object', 'Payum\Core\Bridge\Doctrine\Types\ObjectType');
+        parent::boot();
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)

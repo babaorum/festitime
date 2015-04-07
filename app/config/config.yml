@@ -101,6 +101,26 @@ happy_r_google_api:
     developer_key: %google_developer_key%
     site_name: mysite.com
 
+# Payum Configuration
+doctrine_mongodb:
+    document_managers:
+        default:
+            auto_mapping: true
+
+            mappings:
+                payum:
+                    is_bundle: false
+                    type: xml
+                    dir: %kernel.root_dir%/../vendor/payum/core/Payum/Core/Bridge/Doctrine/Resources/mapping
+                    prefix: Payum\Core\Model
+payum:
+    security:
+        token_storage:
+            Festitime\DatabaseBundle\Document\PaymentToken: { doctrine: mongodb }
+
+    storages:
+        Festitime\DatabaseBundle\Document\PaymentDetails: { doctrine: mongodb }
+
 services:
     kernel.listener.authentification_listener:
         class: Festitime\Listeners\AuthentificationListener
