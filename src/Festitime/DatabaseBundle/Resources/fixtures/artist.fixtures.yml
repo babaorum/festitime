@@ -3,7 +3,7 @@ save_in_reverse: false
 persistence: mongodb
 fixtures:
     saez:
-        pseudo: saez
+        pseudo: ~
         firstname: damien
         lastname: saez
         description: un exelent artiste un peu différents des autres
@@ -16,3 +16,28 @@ fixtures:
             - "http://www.laboiteamusiqueinde.com/wp-content/uploads/2013/03/saez5461.jpg"
             - "http://www.desinvolt.fr/wp-content/uploads/arton375.jpg"
             - "https://i1.ytimg.com/vi/WtFO6GCg8Xo/hqdefault.jpg"
+    rihanna:
+        pseudo: rihanna
+        firstname: robyn
+        lastname: fenty
+        description: "Robyn Rihanna Fenty, dite Rihanna, née le 20 février 1988 à Saint Michael (Barbade), est une chanteuse et actrice barbadienne. Au long de sa carrière, Rihanna a fait paraître sept albums studios et deux albums de remixes, changeant souvent de style."
+        type:
+            - pop
+            - reggae
+            - hip-hop
+        picture: "http://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Rihanna_concert_in_Washington_DC_%282%29.jpg/1024px-Rihanna_concert_in_Washington_DC_%282%29.jpg"
+        pictures:
+            - "http://www.jeka.be/resource/static/galleries/festivals/sziget-festival/Island%20Obudai%20Sziget.jpg"
+            - "http://www.mylittlehungary.com/images/stories/ittjartunk/sziget2013zsolt/201308076588.jpg"
+    macklemore:
+        pseudo: macklemore
+        firstname: ben
+        lastname: haggerty
+        description: "Macklemore, nom de scène de Ben Haggerty, né le 19 juin 1983 à Seattle (État de Washington), est un rappeur américain. Il travaille avec le producteur Ryan Lewis, le violoniste Andrew Joslyn, le trompettiste Owuor Arunga, le tromboniste Greg Kramer, la violoncelliste Rebecca Chung Filice et le multi-instrumentiste Budo (Josh Karp) (batterie, guitare et basse). Macklemore a commencé à devenir célèbre à Seattle depuis le début de sa carrière musicale à la Garfield High School, jouant souvent à la Capitol Hill Block Party."
+        type:
+            - rap
+            - hip-hop
+        picture: "http://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Macklemore_%26_Ryan_Lewis_at_Sasquatch_2011.jpg/1024px-Macklemore_%26_Ryan_Lewis_at_Sasquatch_2011.jpg"
+        pictures:
+            - "http://static.gigwise.com/artists/wenn20884012_600.jpg"
+            - "http://www.blokkmedia.com/wp-content/uploads/2014/08/x9.jpg"
