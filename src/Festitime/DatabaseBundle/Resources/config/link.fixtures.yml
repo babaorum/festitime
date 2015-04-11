@@ -1,0 +1,10 @@
+festival:
+    - name
+artist:
+    - firstname
+    - lastname
+links:
+    festival:
+        sziget:
+            artist:
+                - saez

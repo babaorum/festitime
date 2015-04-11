@@ -15,8 +15,8 @@ fixtures:
             - punk
         img: "http://www.funzine.hu/wp-content/uploads/2009/07/Sziget19.jpg"
         pictures:
-            - "http://www.laboiteamusiqueinde.com/wp-content/uploads/2013/03/saez5461.jpg",
-            - "http://www.desinvolt.fr/wp-content/uploads/arton375.jpg",
+            - "http://www.laboiteamusiqueinde.com/wp-content/uploads/2013/03/saez5461.jpg"
+            - "http://www.desinvolt.fr/wp-content/uploads/arton375.jpg"
             - "https://i1.ytimg.com/vi/WtFO6GCg8Xo/hqdefault.jpg"
         start_date: "2015-08-10T00:00:00+0200"
         end_date: "2015-08-17T00:00:00+0200"
