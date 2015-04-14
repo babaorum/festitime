@@ -1,0 +1,42 @@
+model: Festitime\DatabaseBundle\Document\Festival
+save_in_reverse: false
+persistence: mongodb
+fixtures:
+    sziget:
+        name: sziget festival
+        description: "Le Sziget Festival (en hongrois : Sziget Fesztivál, [ˈsigɛt ˈfɛstiva:l]) est un festival de musique hongrois, fondé en 1993 à Budapest. Il est l'héritier de l'Île des étudiants (Diáksziget) (1993-1996), de l'Île Pepsi (Pepsi Sziget) (1996-2001). Sziget signifie « île » en hongrois. Le festival a lieu chaque année dans le 3e arrondissement de Budapest sur l'île d'Óbuda, au bord du Danube. Il rassemble près de 400 000 personnes pendant la deuxième semaine du mois d'août. Il est souvent considéré comme le Woodstock européen. Après presque deux décennies d'existence, le Sziget remporte en 2011 et en 2014 le titre de Meilleur Grand Festival Européen1 décerné par les European Festival Awards. Il est également nommé dans le Top 5 Européen, dans la catégorie « Festival européen préféré des artistes »"
+        type:
+            - jazz
+            - electro
+            - rock
+            - pop
+            - reggae
+            - metal
+            - punk
+        img: "http://www.funzine.hu/wp-content/uploads/2009/07/Sziget19.jpg"
+        pictures:
+            - "http://www.laboiteamusiqueinde.com/wp-content/uploads/2013/03/saez5461.jpg"
+            - "http://www.desinvolt.fr/wp-content/uploads/arton375.jpg"
+            - "https://i1.ytimg.com/vi/WtFO6GCg8Xo/hqdefault.jpg"
+        start_date: "2015-08-10T00:00:00+0200"
+        end_date: "2015-08-17T00:00:00+0200"
+        city: budapest
+        country: hongrie
+        price: 300
+    solidays:
+        name: solidays
+        description: "Le festival Solidays est une manifestation de lutte contre le SIDA organisé par Solidarité sida, qui a lieu chaque année depuis 1999, sur l'hippodrome de Longchamp et qui rassemble plus de 150 artistes et jusqu'à 170 000 festivaliers pendant trois jours. Les bénéfices du festival sont reversés à des associations de lutte contre le sida, à des programmes de prévention et d'aide d'urgence aux malades, dont certains spécifiquement créés pour l'Afrique, continent qui compte le plus grand nombre de malades. Les artistes qui interviennent à Solidays acceptent un cachet réduit ou se produisent bénévolement par solidarité."
+        type:
+            - electro
+            - rock
+            - pop
+            - hip-hop
+        img: "http://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Solidays_2013_-_La_sc%C3%A8ne_Paris_-_058.jpg/1024px-Solidays_2013_-_La_sc%C3%A8ne_Paris_-_058.jpg"
+        pictures:
+            - "http://www.soul-kitchen.fr/wp/wp-content/uploads/2010/02/solidays.jpg"
+            - "http://upload.multimediaxe.fr/musique/live/solidays_antoine2.jpg"
+        start_date: "2015-06-26T00:00:00+0200"
+        end_date: "2015-06-28T00:00:00+0200"
+        city: paris
+        country: france
+        price: 100
