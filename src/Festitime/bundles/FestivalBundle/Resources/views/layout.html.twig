@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <title>{% block title %}Festitime{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        {% block scripts %}{% endblock %}
+    </head>
+    <body ng-app="Frontoffice" ng-controller="searchBarController as searchBarCtrl">
+        {% include 'FestitimeFestivalBundle::modalConnect.html.twig' %}
+        {% include 'FestitimeFestivalBundle::header.html.twig' %}
+        <content>
+            {% block content %}{% endblock %}
+        </content>
+        {% include 'FestitimeFestivalBundle::footer.html.twig' %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

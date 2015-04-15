@@ -1,6 +1,19 @@
-<html>
-<head>
-    <title>Accueil - Festitime</title>
+{% extends 'FestitimeFestivalBundle::layout.html.twig' %}
+
+{% block title %}Accueil - Festitime{% endblock %}
+
+{% block stylesheets %}
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/js/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/dist/css/styles.min.css">
+    <!-- /CSS -->
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- /Fonts -->
+{% endblock %}
+
+{% block scripts %}
     <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
@@ -12,275 +25,153 @@
     <script type="text/javascript" src="/assets/js/bower_components/momentjs/min/locales.min.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/angular-timer/dist/angular-timer.js"></script>
     <!-- /scripts for using angular-timer -->
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/js/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/dist/css/styles.min.css">
-    <!-- /CSS -->
-    <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <!-- /Fonts -->
     <!-- Angular app need to be load last -->
     <script type="text/javascript" src="/assets/dist/js/built.min.js"></script>
-</head>
-<body ng-app="Frontoffice" ng-controller="searchBarController as searchBarCtrl">
-        <div id="connect-modal" class="modal fade">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true">X</button>
-                    </div>
-                    <div id="connect-content">
-                        <h4 class="modal-title">Se connecter</h4>
-                        <div class="modal-body">
-                            <h5 class="modal-subtitle">Déjà membre ?</h5>
-                            <p>XXXXXXXXXXXXXXXXXXXXXXXXXX DES BOUTONS XXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-                            <p class="modal-subtitle-small">Ou par email</p><br>
-                           <!-- <p class="modal-text">Email</p>
-                            <input type="text"/>
-                            <p class="modal-text">Mot de passe</p>
-                            <input type="password"/>
-                            <p class="modal-text-italic">Mot de passe oublié ?</p>
-                            <p class="modal-text-right">Se souvenir de moi</p>-->
-                            <!-- Slide THREE -->
-                            <div class="slideThree">    
-                                <input type="checkbox" value="None" id="slideThree" name="check" />
-                                <label for="slideThree"></label>
-                            </div>
-                            <button type="submit" class="modal-button btn btn-lg">Se connecter</button>
-                        </div>
-                    </div>
-                    <div id="register-content">
-                        <h4 class="modal-title">S'inscrire</h4>
-                        <div class="modal-body">
-                            <h5 class="modal-subtitle">Pas encore de compte ?</h5>
-                            <p>XXXXXXXXXXXXXXXXXXXXXXXXXX DES BOUTONS XXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-                            <p class="modal-subtitle-small">Ou par email</p><br>
-                            <button type="submit" class="modal-button btn btn-lg">S'inscrire</button>
-                            <br><img src="http://ikonal.com/wp-content/uploads/2011/06/100-chats-1662099.jpg" width="150px"; height="150px;"/>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-    <header>
-        {% set user = app.session.get('user') %}
-        <div id="flag">
-            <img id="logo" width="110px" src="/assets/images/logo.png"/>
-        </div>
-        <div id="menu">
-            <a href="{{url('home')}}" class="link">
-                <span>Accueil</span>
-            </a>
-            <a href="#" class="link">
-                <span>Comment ça marche</span>
-            </a>
-            <a href="{{url('search')}}" class="link">
-                <span>Les festivals</span>
-            </a>
-            <a href="#" class="link">
-                <span>Les artistes</span>
-            </a>
-            <span class="clear"></span>
-        </div>
-        {% if user.firstname is defined %}
-            <a href="#" id="connect">
-                {{ user.firstname | capitalize }} {{ user.name | upper }}
-            </a>
-        {% else %}
-            <a href="#" id="connect">
-                <span>Connexion</span>
-            </a>
-        {% endif %}
-        <span class="clear"></span>
-    </header>
-    <content>
-        <div id="search">
-            <div id="search-content">
-                <input id="search-bar" type="text" ng-model="search"/>
-                <a href="{{url('search')}}" class="button">Voir tous les festivals</a>
-            </div>
-        </div>
-        <div id="how">
-            <h2>Comment ça marche ?</h2>
-            <div id="how-content">
-                <div id="step1" class="step">
-                    <img src="/assets/images/ticket.png">
-                    <h3>Choisis ton festival !</h3>
-                    <p>
-                        Des achats simples et sécurisés, c’est ce que nous voulons avant tout. Avec nous, réservez en quelques clics et avec le moins d’étapes possibles. Tout simplement.
-                    </p>
-                </div>
-                <div id="step2" class="step">
-                    <img src="/assets/images/voiture.png">
-                    <h3>Comment y aller ?</h3>
-                    <p>
-                        Vous ne savez pas comment venir et n’avez pas envie de passer des heures à chercher ? Pas de problème ! Nous vous indiquons pour chaque festival l’accès le plus proche, et nous organisons votre déplacement de A à Z, quel que soit votre moyen de transport.
-                    </p>
-                </div>
-                <div id="step3" class="step">
-                    <img src="/assets/images/hotel.png">
-                    <h3>Où dormir ?</h3>
-                    <p>
-                        Il n’est pas toujours facile de savoir où loger une fois sur place. Festitime vous aide en vous proposant différents packagings comprenant hôtel, camping, location, et vous accompagne à chaque étape de votre démarche.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div id="festivals">
-            <h2>Vos plus beaux festivals</h2>
-            <div id="festival-content">
-                <div id="festival-group">
-                    <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in searchBarCtrl.festivals">
-                        <img ng-src="{[{ festival.img }]}" alt="image festival">
-                        <div class="festival">
-                            <div class="info">
-                                <div class="left-info">
-                                    <div class="name">{[{ festival.name }]}</div>
-                                    <div class="date"><img src="/assets/images/temps.png" alt="time icon">{[{ festival.start_date | date : "dd" }]} - {[{ festival.end_date | date : "dd MMMM yyyy" }]}</div>
-                                    <div class="location"><img src="/assets/images/lieu.png" alt="location icon">{[{ festival.city+", "+festival.country }]}</div>
-                                </div>
-                                <div class="price"><span>A partir de </span>{[{ festival.price }]}&#128;</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <span class="clear"></span>
-                <a href="{{url('search')}}" class="button">Voir tous les festivals</a>
-            </div>
-        </div>
-        <div id="artists">
-            <h2>découvrez nos artistes !</h2>
-            <div id="artists-content">
-                <div class="artist" ng-repeat="artist in searchBarCtrl.artists">
-                    <img ng-src="{[{artist.picture}]}" alt="picture artist">
-                    <div class="artist-info">
-                        <div class="info-right"><span>{[{artist.festivals.length}]}</span> Festivals</div>
-                        <h3 ng-if="artist.pseudo">{[{artist.pseudo | capitalize}]}</h3>
-                        <h3 ng-if="!artist.pseudo">{[{artist.firstname | capitalize}]} {[{artist.lastname | capitalize}]}</h3>
-                        <p>{[{artist.description}]}</p>
-                        <a href="#" class="button">En savoir plus</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="countdown" ng-show="searchBarCtrl.countdownFestivals[0] !== undefined">
-            <div class="elem" ng-repeat="countdownFestival in searchBarCtrl.countdownFestivals">
-                <div class="title">
-                    <span>événement à venir</span>
-                    {[{countdownFestival.name}]}
-                    <span class="place">
-                        <!-- it is hard to change svg color -->
-                        <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="37.76px" height="51.61px" viewBox="0 0 37.76 51.61" enable-background="new 0 0 37.76 51.61" xml:space="preserve">
-                            <path fill="#800000018000000180000001" d="M18.88,0C8.45,0,0,8.45,0,18.88c0,1.38,0.15,2.73,0.43,4.02c0.05,0.24,0.1,0.47,0.16,0.7
-                                c2.63,10.81,18.29,28.01,18.29,28.01c9.37-10.47,14.08-18.26,16.45-23.46c0-0.01,0-0.021,0.01-0.03c1.47-3.25,2.03-5.48,2.24-6.7
-                                c0.02-0.12,0.03-0.17,0.03-0.18c0.04-0.31,0.069-0.63,0.09-0.95c0.04-0.46,0.06-0.94,0.06-1.41C37.76,8.45,29.31,0,18.88,0
-                                 M18.88,28.12c-0.37,0-0.729-0.02-1.09-0.06c-4.83-0.54-8.58-4.64-8.58-9.61c0-5.34,4.33-9.67,9.67-9.67s9.67,4.33,9.67,9.67
-                                C28.55,23.79,24.22,28.12,18.88,28.12"/>
-                        </svg>
-                        {[{countdownFestival.city}]} {[{countdownFestival.country}]}
-                    </span>
-                    <span class="types">
-                        <a href="/search/type/{[{genre}]}" ng-repeat="genre in countdownFestival.type">
-                            <button>{[{genre | capitalize}]}</button>
-                        </a>
-                    </span>
-                </div>
-                <timer end-time="countdownFestival.countdown" class="timer">
-                    <div class="clock">
-                        <span class="time color-dark-grey">
-                            {[{ddays}]}
-                            <p>jour{[{daysS}]}</p>
-                        </span>
-                        <span class="time color-grey">
-                            {[{hhours}]}
-                            <p>heure{[{hoursS}]}</p>
-                        </span>
-                        <span class="time color-light-grey">
-                            {[{mminutes}]}
-                            <p>minute{[{minutesS}]}</p>
-                        </span>
-                        <span class="time color-white">
-                            {[{sseconds}]}
-                            <p>seconde{[{secondsS}]}</p>
-                        </span>
-                        <span class="clear"></span>
-                    </div>
-                </timer>
-            </div>
-        </div>
-        <div id="pictures" ng-show="searchBarCtrl.randomPictures[0] !== undefined">
-            <div ng-repeat="picture in searchBarCtrl.randomPictures">
-                <img ng-src="{[{picture}]}" alt="sorry an error occured">
-            </div>
-        </div>
-        <div id="newsletter"></div>
-    </content>
-    <footer>
-        <div class="contener">
-            <div class="block column" style="padding-bottom:125px;">
-                <h3>à propos de festitime</h3>
-                <div>
-                    <span class="img-plus"></span> <a class="footer-link" href="">Qui sommes-nous ?</a>
-                    <br>
-                    <span class="img-plus"></span> <a class="footer-link" href="">Nous contacter</a>
-                    <br>
-                    <span class="img-plus"></span> <a class="footer-link" href="">Plan du site</a>
-                </div>
-            </div>
-            <div class="column">
-                <div class="block first">
-                    <h3>rechercher</h3>
-                    <input id="search-bar-footer" type="text" ng-model="search" placeholder="Rechercher"/>
-                </div>
-                <div class="block second">
-                    <h3>genres de musique</h3>
-                    <div>
-                        <a href="/search/type/{[{type}]}" ng-repeat="type in searchBarCtrl.types">
-                            <button class="tag">{[{type | capitalize }]}</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="block column" style="padding-bottom:36px;">
-                <h3>infos légales</h3>
-                <div>
-                    <span class="img-plus"></span> <a class="footer-link" href="">Conditions générales de vente</a>
-                    <br>
-                    <span class="img-plus"></span> <a class="footer-link" href="">Données personnelles</a>
-                    <br>
-                    <span class="img-plus"></span> <a class="footer-link" href="">Mentions légales</a>
-                    <br>
-                    <span class="img-plus"></span> <a class="footer-link" href="">Signaler un abus</a>
-                    <br>
-                    <span class="img-plus"></span> <a class="footer-link" href="">Cookies</a>
-                </div>
-            </div>
-            <span class="clear"></span>
-        </div>
-    </footer>
-    <script type="text/javascript">
-(function() {
-    "use strict";
+{% endblock %}
 
-    jQuery(function($) {
-        $('#search-bar').keypress(function(e) {
-            if (e.which === 13) {
-                window.location.href = '/search/' + encodeURIComponent($(this).val());
-            }
+{% block content %}
+    <div id="search">
+        <div id="search-content">
+            <input id="search-bar" type="text" ng-model="search"/>
+            <a href="{{url('search')}}" class="button">Voir tous les festivals</a>
+        </div>
+    </div>
+    <div id="how">
+        <h2>Comment ça marche ?</h2>
+        <div id="how-content">
+            <div id="step1" class="step">
+                <img src="/assets/images/ticket.png">
+                <h3>Choisis ton festival !</h3>
+                <p>
+                    Des achats simples et sécurisés, c’est ce que nous voulons avant tout. Avec nous, réservez en quelques clics et avec le moins d’étapes possibles. Tout simplement.
+                </p>
+            </div>
+            <div id="step2" class="step">
+                <img src="/assets/images/voiture.png">
+                <h3>Comment y aller ?</h3>
+                <p>
+                    Vous ne savez pas comment venir et n’avez pas envie de passer des heures à chercher ? Pas de problème ! Nous vous indiquons pour chaque festival l’accès le plus proche, et nous organisons votre déplacement de A à Z, quel que soit votre moyen de transport.
+                </p>
+            </div>
+            <div id="step3" class="step">
+                <img src="/assets/images/hotel.png">
+                <h3>Où dormir ?</h3>
+                <p>
+                    Il n’est pas toujours facile de savoir où loger une fois sur place. Festitime vous aide en vous proposant différents packagings comprenant hôtel, camping, location, et vous accompagne à chaque étape de votre démarche.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="festivals">
+        <h2>Vos plus beaux festivals</h2>
+        <div id="festival-content">
+            <div id="festival-group">
+                <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in searchBarCtrl.festivals">
+                    <img ng-src="{[{ festival.img }]}" alt="image festival">
+                    <div class="festival">
+                        <div class="info">
+                            <div class="left-info">
+                                <div class="name">{[{ festival.name }]}</div>
+                                <div class="date"><img src="/assets/images/temps.png" alt="time icon">{[{ festival.start_date | date : "dd" }]} - {[{ festival.end_date | date : "dd MMMM yyyy" }]}</div>
+                                <div class="location"><img src="/assets/images/lieu.png" alt="location icon">{[{ festival.city+", "+festival.country }]}</div>
+                            </div>
+                            <div class="price"><span>A partir de </span>{[{ festival.price }]}&#128;</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="clear"></span>
+            <a href="{{url('search')}}" class="button">Voir tous les festivals</a>
+        </div>
+    </div>
+    <div id="artists">
+        <h2>découvrez nos artistes !</h2>
+        <div id="artists-content">
+            <div class="artist" ng-repeat="artist in searchBarCtrl.artists">
+                <img ng-src="{[{artist.picture}]}" alt="picture artist">
+                <div class="artist-info">
+                    <div class="info-right"><span>{[{artist.festivals.length}]}</span> Festivals</div>
+                    <h3 ng-if="artist.pseudo">{[{artist.pseudo | capitalize}]}</h3>
+                    <h3 ng-if="!artist.pseudo">{[{artist.firstname | capitalize}]} {[{artist.lastname | capitalize}]}</h3>
+                    <p>{[{artist.description}]}</p>
+                    <a href="#" class="button">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="countdown" ng-show="searchBarCtrl.countdownFestivals[0] !== undefined">
+        <div class="elem" ng-repeat="countdownFestival in searchBarCtrl.countdownFestivals">
+            <div class="title">
+                <span>événement à venir</span>
+                {[{countdownFestival.name}]}
+                <span class="place">
+                    <!-- it is hard to change svg color -->
+                    <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="37.76px" height="51.61px" viewBox="0 0 37.76 51.61" enable-background="new 0 0 37.76 51.61" xml:space="preserve">
+                        <path fill="#800000018000000180000001" d="M18.88,0C8.45,0,0,8.45,0,18.88c0,1.38,0.15,2.73,0.43,4.02c0.05,0.24,0.1,0.47,0.16,0.7
+                            c2.63,10.81,18.29,28.01,18.29,28.01c9.37-10.47,14.08-18.26,16.45-23.46c0-0.01,0-0.021,0.01-0.03c1.47-3.25,2.03-5.48,2.24-6.7
+                            c0.02-0.12,0.03-0.17,0.03-0.18c0.04-0.31,0.069-0.63,0.09-0.95c0.04-0.46,0.06-0.94,0.06-1.41C37.76,8.45,29.31,0,18.88,0
+                             M18.88,28.12c-0.37,0-0.729-0.02-1.09-0.06c-4.83-0.54-8.58-4.64-8.58-9.61c0-5.34,4.33-9.67,9.67-9.67s9.67,4.33,9.67,9.67
+                            C28.55,23.79,24.22,28.12,18.88,28.12"/>
+                    </svg>
+                    {[{countdownFestival.city}]} {[{countdownFestival.country}]}
+                </span>
+                <span class="types">
+                    <a href="/search/type/{[{genre}]}" ng-repeat="genre in countdownFestival.type">
+                        <button>{[{genre | capitalize}]}</button>
+                    </a>
+                </span>
+            </div>
+            <timer end-time="countdownFestival.countdown" class="timer">
+                <div class="clock">
+                    <span class="time color-dark-grey">
+                        {[{ddays}]}
+                        <p>jour{[{daysS}]}</p>
+                    </span>
+                    <span class="time color-grey">
+                        {[{hhours}]}
+                        <p>heure{[{hoursS}]}</p>
+                    </span>
+                    <span class="time color-light-grey">
+                        {[{mminutes}]}
+                        <p>minute{[{minutesS}]}</p>
+                    </span>
+                    <span class="time color-white">
+                        {[{sseconds}]}
+                        <p>seconde{[{secondsS}]}</p>
+                    </span>
+                    <span class="clear"></span>
+                </div>
+            </timer>
+        </div>
+    </div>
+    <div id="pictures" ng-show="searchBarCtrl.randomPictures[0] !== undefined">
+        <div ng-repeat="picture in searchBarCtrl.randomPictures">
+            <img ng-src="{[{picture}]}" alt="sorry an error occured">
+        </div>
+    </div>
+    <div id="newsletter"></div>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+    (function() {
+        "use strict";
+
+        jQuery(function($) {
+            $('#search-bar').keypress(function(e) {
+                if (e.which === 13) {
+                    window.location.href = '/search/' + encodeURIComponent($(this).val());
+                }
+            });
+            $('#search-bar-footer').keypress(function(e) {
+                if (e.which === 13) {
+                    window.location.href = '/search/' + encodeURIComponent($(this).val());
+                }
+            });
+            $("#connect").click(function(){
+                $("#connect-modal").modal('show');
+            });
         });
-        $('#search-bar-footer').keypress(function(e) {
-            if (e.which === 13) {
-                window.location.href = '/search/' + encodeURIComponent($(this).val());
-            }
-        });
-        $("#connect").click(function(){
-            $("#connect-modal").modal('show');
-        });
-    });
-})();
+    })();
     </script>
-</body>
-</html>
+{% endblock %}

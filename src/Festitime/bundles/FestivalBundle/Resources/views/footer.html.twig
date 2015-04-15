@@ -1,0 +1,43 @@
+<footer>
+    <div class="contener">
+        <div class="block column" style="padding-bottom:125px;">
+            <h3>à propos de festitime</h3>
+            <div>
+                <span class="img-plus"></span> <a class="footer-link" href="">Qui sommes-nous ?</a>
+                <br>
+                <span class="img-plus"></span> <a class="footer-link" href="">Nous contacter</a>
+                <br>
+                <span class="img-plus"></span> <a class="footer-link" href="">Plan du site</a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="block first">
+                <h3>rechercher</h3>
+                <input id="search-bar-footer" type="text" ng-model="search" placeholder="Rechercher"/>
+            </div>
+            <div class="block second">
+                <h3>genres de musique</h3>
+                <div>
+                    <a href="/search/type/{[{type}]}" ng-repeat="type in searchBarCtrl.types">
+                        <button class="tag">{[{type | capitalize }]}</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="block column" style="padding-bottom:36px;">
+            <h3>infos légales</h3>
+            <div>
+                <span class="img-plus"></span> <a class="footer-link" href="">Conditions générales de vente</a>
+                <br>
+                <span class="img-plus"></span> <a class="footer-link" href="">Données personnelles</a>
+                <br>
+                <span class="img-plus"></span> <a class="footer-link" href="">Mentions légales</a>
+                <br>
+                <span class="img-plus"></span> <a class="footer-link" href="">Signaler un abus</a>
+                <br>
+                <span class="img-plus"></span> <a class="footer-link" href="">Cookies</a>
+            </div>
+        </div>
+        <span class="clear"></span>
+    </div>
+</footer>

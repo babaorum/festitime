@@ -1,0 +1,31 @@
+<header>
+    {% set user = app.session.get('user') %}
+    <div id="flag">
+        <img id="logo" width="110px" src="/assets/images/logo.png"/>
+    </div>
+    <div id="menu">
+        <a href="{{url('home')}}" class="link">
+            <span>Accueil</span>
+        </a>
+        <a href="#" class="link">
+            <span>Comment ça marche</span>
+        </a>
+        <a href="{{url('search')}}" class="link">
+            <span>Les festivals</span>
+        </a>
+        <a href="#" class="link">
+            <span>Les artistes</span>
+        </a>
+        <span class="clear"></span>
+    </div>
+    {% if user.firstname is defined %}
+        <a href="#" id="connect">
+            {{ user.firstname | capitalize }} {{ user.name | upper }}
+        </a>
+    {% else %}
+        <a href="#" id="connect">
+            <span>Connexion</span>
+        </a>
+    {% endif %}
+    <span class="clear"></span>
+</header>
