@@ -10,6 +10,7 @@
             "Filter",
             //To uncomment when angular-bootstrap work with angular 1.3.*
             //"ui.bootstrap",
+            "ngAnimate",
             "timer"
         ]
     ).config(function($interpolateProvider){

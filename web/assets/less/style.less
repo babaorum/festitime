@@ -7,6 +7,32 @@
 @width: 1900;
 @height: 979;
 
+/*search festival animation*/
+#main .block {
+  -webkit-transition: 400ms;
+}
+#main .block.ng-enter {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+#main .block.ng-leave {
+    width: 24%;
+    height: 250px;
+    opacity: 1;
+}
+#main .block.ng-enter.ng-enter-active {
+    width: 24%;
+    height: 250px;
+    opacity: 1;
+}
+#main .block.ng-leave.ng-leave-active {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+/*!search festival animation*/
+
 .color-dark-grey
 {
     color: @color-dark-grey;
