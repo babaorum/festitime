@@ -6,6 +6,8 @@
         this.festivals          = [];
         this.artists            = [];
         this.types              = [];
+        this.festivalSearch     = [];
+        this.artistSearch       = [];
         this.countdownFestivals = [];
         this.randomPictures     = [];
 
@@ -17,6 +19,38 @@
             date = new Date(date);
             return (date - 0);
         };
+
+        /*$scope.$watch('search', function(newValue, oldValue) {
+            if (newValue && newValue.length > 0) {
+                console.log(newValue);
+                var festivalSearch = [];
+                var artistSearch   = [];
+                this.festivals.forEach(function(festival) {
+                    if (festivalSearch.length < 5 && festival.name.indexOf(newValue) > -1) {
+                        festivalSearch.push(festival);
+                    }
+                });
+                this.artists.forEach(function(artist) {
+                    if (artistSearch.length < 2) {
+                        if (artist.pseudo && artist.pseudo.indexOf(newValue) > -1) {
+                            artistSearch.push(artist);
+                        } else if (!artist.pseudo
+                            && (artist.firstname.indexOf(newValue) > -1
+                                || artist.lastname.indexOf(newValue) > -1)
+                            ) {
+                            artistSearch.push(artist);
+                        }
+                    }
+                });
+                console.log(festivalSearch);
+                console.log(artistSearch);
+                this.festivalSearch = festivalSearch;
+                this.artistSearch   = artistSearch;
+            } else {
+                this.festivalSearch     = [];
+                this.artistSearch       = [];
+            }
+        }.bind(this));*/
 
         //load festivals
         festivalRestService.getFestivals(6)
@@ -33,7 +67,6 @@
         //Load artists
         artistRestService.getArtists(3)
             .then(function(artists) {
-                console.log(artists);
                 this.artists = artists;
             }.bind(this));
 
