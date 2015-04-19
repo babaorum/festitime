@@ -8,6 +8,7 @@
     "bootstrap": "*",
     "underscore": "*",
     "angular-timer": "*",
-    "humanize-duration": "*"
+    "humanize-duration": "*",
+    "angular-animate": "~1.3.15"
   }
 }
