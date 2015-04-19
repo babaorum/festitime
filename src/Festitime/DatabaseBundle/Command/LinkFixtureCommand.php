@@ -49,10 +49,6 @@ class LinkFixtureCommand extends Command
             $outputText = '<info>Links have all been generated</info>';
         }
         $output->writeln($outputText);
-
-        /*$rbac = $this->getApplication()->getKernel()->getContainer()->get('rbac.manager');
-        $text = ($rbac->reset(true)) ? '<info>Root created</info>' : '<comment>Command failed</comment>' ;*/
-//        $output->writeln($text);
     }
 
     protected function linkDocument($mainDocument, $toLinks)
