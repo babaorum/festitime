@@ -4,7 +4,7 @@
             <div class="modal-header">
                 <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true">X</button>
             </div>
-            <div id="connect-content">
+            <div id="connect-content-modal">
                 <h4 class="modal-title">Se connecter</h4>
                 <div class="modal-body">
                     <h5 class="modal-subtitle">Déjà membre ?</h5>
@@ -21,16 +21,17 @@
                         <input type="checkbox" value="None" id="slideThree" name="check" />
                         <label for="slideThree"></label>
                     </div>
-                    <button type="submit" class="modal-button btn btn-lg">Se connecter</button>
+                    <!--  -->
+                    <a href="#" class="modal-button btn btn-lg">Se connecter</a>
                 </div>
             </div>
-            <div id="register-content">
+            <div id="register-content-modal">
                 <h4 class="modal-title">S'inscrire</h4>
                 <div class="modal-body">
                     <h5 class="modal-subtitle">Pas encore de compte ?</h5>
                     <p>XXXXXXXXXXXXXXXXXXXXXXXXXX DES BOUTONS XXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
                     <p class="modal-subtitle-small">Ou par email</p><br>
-                    <button type="submit" class="modal-button btn btn-lg">S'inscrire</button>
+                    <a href="{{url('login')}}" class="modal-button btn btn-lg">S'inscrire</a>
                     <br><img src="http://ikonal.com/wp-content/uploads/2011/06/100-chats-1662099.jpg" width="150px"; height="150px;"/>
                 </div>
             </div>

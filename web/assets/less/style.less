@@ -4,8 +4,6 @@
 @color-dark-grey: rgba(255, 255, 255, 0.1);
 @color-grey: rgba(255, 255, 255, 0.3);
 @color-light-grey: rgba(255, 255, 255, 0.6);
-@width: 1900;
-@height: 979;
 
 .color-dark-grey
 {
@@ -38,6 +36,18 @@
     margin: 0 5px;
 }
 
+
+.button
+{
+    display: inline;
+    font: 20px @font-oswald;
+    text-transform: uppercase;
+    border: solid 2px;
+    text-decoration: none;
+    padding: 1%;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000000;
+}
 a
 {
     width: auto;
@@ -55,6 +65,7 @@ a:visited
 body
 {
     font: @font-oswald;
+    background-color: #F8F8F8;
 }
 
 header
@@ -350,11 +361,13 @@ content
 
 /* SLIDE THREE */
 
-input[type=checkbox] {
+.slideThreeinput[type=checkbox]
+{
     visibility: hidden;
 }
 
-.slideThree {
+.slideThree
+{
     width: 40px;
     height: 20px;
     background: #333;
@@ -366,19 +379,22 @@ input[type=checkbox] {
     position: relative;
 }
 
-.slideThree:after {
+.slideThree:after
+{
     position: absolute;
     right: 10px;
     z-index: 0;
 }
 
-.slideThree:before {
+.slideThree:before
+{
     position: absolute;
     left: 10px;
     z-index: 0;
 }
 
-.slideThree label {
+.slideThree label 
+{
     display: block;
     width: 20px;
     height: 20px;
@@ -417,13 +433,13 @@ input[type=checkbox] {
 }
 
 
-#connect-content
+#connect-content-modal
 {
     width: 50%;
     float: left;
 }
 
-#register-content
+#register-content-modal
 {
     width: 50%;
     float: left;
@@ -480,15 +496,9 @@ header #search-bar
 
 #search-content .button
 {
-    display: inline;
-    font: 20px @font-oswald;
-    text-transform: uppercase;
+    
     color: #FFFFFF;
     border: solid 2px #FFFFFF;
-    text-decoration: none;
-    padding: 1%;
-    text-align: center;
-    text-shadow: 2px 2px 3px #000000;
 }
 
 #how
@@ -637,13 +647,13 @@ timer span.time p
 #pictures
 {
     width: 100%;
-    height: (@width /4);
+    height: 25%;
 }
 
 #pictures div
 {
-    width: (@width /8);
-    height: (@width /8);
+    width: 12.5%;
+    height: 12.5%;
     background-color:green;
     float: left;
     overflow: hidden;
@@ -671,8 +681,8 @@ timer span.time p
     margin-left: 342px;
     padding-top: 25px;
     padding-left: 15px;
-    width: (@width - 350px);
-    height: (@height - 92px);
+    // width: (@width - 350px);
+    // height: (@height - 92px);
 }
 
 #main .block
@@ -939,12 +949,110 @@ timer span.time p
     text-shadow: 2px 2px 3px #AAAAAA;
 }
 
+#register
+{
+    background: #F8F8F8;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+    text-align: center;
+    font: 16px @font-oswald;
+    text-transform: uppercase;
+    overflow: visible;
+    color: #5F5F5F;
+}
+
+#register h2
+{
+    display: inline-block;
+    color: #3F3F3F;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border-style: solid;
+    border-color: #3F3F3F;
+    border-width: 4px 0px;
+    margin: 3%;
+    width: auto;
+}
+#register-content
+{
+    transform: skewY(5deg);
+    width: 70%;
+    margin: auto;
+}
+#register-content h3
+{
+    font-size: 20px;
+    margin: 1% 0 3%;
+
+}
+#register-form
+{
+    text-align: left;
+}
+#register-left,
+#register-right
+{
+    width: 40%;
+    float: left;
+    margin: 0 5%;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 3px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border: solid 2px #000000;
+    border-radius: 1px;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+label
+{
+    font-weight: bold;
+}
+#register_gender > div
+{
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 10px 0 0;
+}
+#submit-center
+{
+    text-align: center;
+}
+form input[type='submit']
+{
+    display: inline-block;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    border: 0;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin: 5%;
+}
+
 footer
 {
     background-color: #212121;
     width: 100%;
     padding: 50px 0;
-    height: 484px;
+    overflow: hidden;
 }
 
 footer .contener
@@ -963,7 +1071,7 @@ footer .contener .block
 footer .contener .column
 {
     float: left;
-    margin: 0 (@width*0.7*0.1/6);
+    margin: 0 1.5%;
     width: 30%;
 }
 

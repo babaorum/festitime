@@ -4,16 +4,57 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <title>{% block title %}Festitime{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        {% block scripts %}{% endblock %}
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <!-- /Fonts -->
+        <!-- CSS -->
+        <link rel="stylesheet" href="/assets/js/bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <!-- /CSS -->
+        <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/assets/js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
+        <!-- To uncomment when angular-bootstrap work with angular 1.3.* -->
+        <!-- <script type="text/javascript" src="/assets/js/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script> -->
+        {% block specificRessources %}{% endblock %}
+        <link rel="stylesheet" href="/assets/dist/css/styles.min.css">
+        <!-- Angular app need to be load last -->
+        <script type="text/javascript" src="/assets/dist/js/built.min.js"></script>
     </head>
     <body ng-app="Frontoffice" ng-controller="searchBarController as searchBarCtrl">
         {% include 'FestitimeFestivalBundle::modalConnect.html.twig' %}
         {% include 'FestitimeFestivalBundle::header.html.twig' %}
         <content>
+
+
+            {% block top %}
+                <div id="search">
+                    <div id="search-content">
+                        <input id="search-bar" type="text" ng-model="search"/>
+                        <a href="{{url('search')}}" class="button">Voir tous les festivals</a>
+                    </div>
+                </div>
+            {% endblock %}
             {% block content %}{% endblock %}
         </content>
         {% include 'FestitimeFestivalBundle::footer.html.twig' %}
-        {% block javascripts %}{% endblock %}
+            <script type="text/javascript">
+            (function() {
+                "use strict";
+
+                jQuery(function($) {
+                    $('#search-bar-footer').keypress(function(e) {
+                        if (e.which === 13) {
+                            window.location.href = '/search/' + encodeURIComponent($(this).val());
+                        }
+                    });
+                    $("#connect").click(function(){
+                        $("#connect-modal").modal('show');
+                    });
+                });
+            })();
+            </script>
+        {% block javascripts %}
+        {% endblock %}
     </body>
 </html>

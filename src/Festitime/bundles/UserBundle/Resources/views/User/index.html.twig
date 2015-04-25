@@ -1,49 +1,55 @@
-{% extends 'FestitimeUserBundle::layout.html.twig' %}
+{% extends 'FestitimeFestivalBundle::layout.html.twig' %}
 
     {% block title %}Festitime{% endblock %}
 
 
-    {% block body %}
-        <div>
+    {% block content %}
+        <!-- <div>
         <a href="{{googleAuthUrl}}">google connect</a>
+        </div> -->
+        <div id="register">
+            <h2>S'inscrire</h2>
+            <div id="register-content">
+                <h3>Pas encore de compte ?</h3>
+                {% form_theme formRegister 'bootstrap_3_layout.html.twig' %}
+                <form action="{{ path('postUser') }}" method="POST" id="register-form">
+                    {{ form_errors(formRegister) }}
+                    <br>
+                    <div id="register-left">
+                        {{ form_row(formRegister.firstname) }}
+                        <br>
+                        {{ form_row(formRegister.gender) }}
+                        <br>
+                        {{ form_row(formRegister.email.first) }}
+                        <br>
+                        {{ form_row(formRegister.email.second) }}
+                        <br>
+                        {{ form_row(formRegister.address) }}
+                        <br>
+                        {{ form_row(formRegister.zipcode) }}
+                        <br>
+                    </div>
+                    <div id="register-right">
+                        {{ form_row(formRegister.name) }}
+                        <br>
+                        {{ form_row(formRegister.birthdate,  { 'attr': {'class': 'border-select'} }) }}
+                        <br>
+                        {{ form_row(formRegister.password.first) }}
+                        <br>
+                        {{ form_row(formRegister.password.second) }}
+                        <br>
+                        {{ form_row(formRegister.city) }}
+                        <br>
+                        {{ form_row(formRegister.country) }}
+                        <br>
+                    </div>
+                    <div id="submit-center">
+                        <input type="submit" name="submit" value="S'inscrire">
+                    </div>
+                </form>
+            </div>
         </div>
-        <div>
-            <form action="{{ path('postUser') }}" method="POST">
-                Créez vous un compte :
-                <br>
-                {{ form_errors(formRegister) }}
-                <br>
-                {{ form_row(formRegister.pseudo) }}
-                <br>
-                {{ form_row(formRegister.email.first) }}
-                <br>
-                {{ form_row(formRegister.email.second) }}
-                <br>
-                {{ form_row(formRegister.password.first) }}
-                <br>
-                {{ form_row(formRegister.password.second) }}
-                <br>
-                {{ form_row(formRegister.birthdate) }}
-                <br>
-                {{ form_row(formRegister.gender) }}
-                <br>
-                {{ form_row(formRegister.firstname) }}
-                <br>
-                {{ form_row(formRegister.name) }}
-                <br>
-                {{ form_row(formRegister.address) }}
-                <br>
-                {{ form_row(formRegister.city) }}
-                <br>
-                {{ form_row(formRegister.zipcode) }}
-                <br>
-                {{ form_row(formRegister.country) }}
-                <br>
-                <input type="submit" name="submit" value="Envoyer">
-            
-            </form>
-        </div>
-        <div>
+        <!-- <div>
             <form action="{{ path('login') }}" method="POST">
                 {{ form_row(formConnect.pseudo) }}
                 <br>
@@ -51,5 +57,5 @@
                 <br>
                 <input type="submit" name="submit" value="submit">
             </form>
-        </div>
+        </div> -->
     {% endblock %}
