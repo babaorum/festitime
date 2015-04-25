@@ -1,4 +1,4 @@
-<div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in searchFestivalsCtrl.festivals | filter:searchText | filter:searchFestivalsCtrl.typeFilter">
+<div class="block" ng-repeat="festival in searchFestivalsCtrl.festivals | filter:searchText | filter:searchFestivalsCtrl.typeFilter">
     <img ng-src="{[{ festival.img }]}" alt="image festival">
     <div class="festival">
         <div class="name">{[{ festival.name }]}</div>
