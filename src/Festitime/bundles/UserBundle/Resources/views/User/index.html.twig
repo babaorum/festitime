@@ -1,6 +1,15 @@
 {% extends 'FestitimeFestivalBundle::layout.html.twig' %}
 
-    {% block title %}Festitime{% endblock %}
+    {% block title %}Inscription{% endblock %}
+
+    {% block specificRessources %}
+        <!-- scripts for using angular-timer -->
+        <script type="text/javascript" src="/assets/js/bower_components/humanize-duration/humanize-duration.js"></script>
+        <script type="text/javascript" src="/assets/js/bower_components/momentjs/min/moment.min.js"></script>
+        <script type="text/javascript" src="/assets/js/bower_components/momentjs/min/locales.min.js"></script>
+        <script type="text/javascript" src="/assets/js/bower_components/angular-timer/dist/angular-timer.js"></script>
+        <!-- /scripts for using angular-timer -->
+    {% endblock %}
 
 
     {% block content %}
@@ -59,3 +68,14 @@
             </form>
         </div> -->
     {% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+    (function() {
+        "use strict";
+
+        angular.module("ngAnimate", []);
+
+    })();
+    </script>
+{% endblock %}

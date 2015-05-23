@@ -4,6 +4,8 @@
 @color-dark-grey: rgba(255, 255, 255, 0.1);
 @color-grey: rgba(255, 255, 255, 0.3);
 @color-light-grey: rgba(255, 255, 255, 0.6);
+@facebook: #3b5998;
+@google: #D3262B;
 
 /*search festival animation*/
 #main .block {
@@ -294,10 +296,14 @@ content
 .modal-close
 {
     float: right;
-    border: 2px solid black;
     background: white;
+    border: 0;
     margin: 0;
     padding: 0;
+}
+.modal-close img
+{
+   width: 20px; 
 }
 .modal-header
 {
@@ -312,6 +318,13 @@ content
 {
     border-radius: 0px;
     text-align: center;
+}
+
+#connect-content-modal,
+#register-content-modal
+{
+    width: 50%;
+    float: left;
 }
 
 .modal-title
@@ -344,6 +357,7 @@ content
     font: 14px @font-oswald;
     color: #5F5F5F;
     font-weight: bold;
+    margin: 5%;
 }
 
 .modal-text
@@ -358,7 +372,7 @@ content
 .modal-text-right
 {
     text-transform: uppercase;
-    font: 11px @font-oswald;
+    font: 14px @font-oswald;
     color: #5F5F5F;
     font-weight: bold;
     float: right;
@@ -367,7 +381,7 @@ content
 .modal-text-italic
 {
     text-transform: uppercase;
-    font: 8px @font-oswald;
+    font: 10px @font-oswald;
     color: #ababab;
     font-weight: bold;
     font-style: italic;
@@ -380,14 +394,67 @@ content
     display: inline-block;
     text-transform: uppercase;
     font: 16px @font-oswald;
-    background-color:#676767;
-    border-radius: initial; 
-    color : #FFFFFF;
+    background-color: #000000;
+    border-radius: 0;
+    border: 0; 
+    color: #FFFFFF;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin: 5%;
+}
+
+.social-button
+{
+    margin: 2.5%;
+    border: 2px solid;
+    height: 40px;
+    width: 45%;
+    float: left;
+}
+.social-button#facebook
+{
+    border-color: @facebook;
+}
+.social-button#google
+{
+    border-color: @google;
+}
+
+.social-button img
+{
+    width: 36px;
+    float: left;
+    padding: 5px;
+    background-color: #FFFFFF;
+}
+
+.social-button p
+{
+    color: #fff;
+    text-transform: uppercase;
+    font: 12px Oswald,sans-serif;
+    line-height: 38px;
+}
+.social-button#facebook p
+{
+    background-color: @facebook;
+}
+.social-button#google p
+{
+    background-color: @google;
+}
+
+.form-group
+{
+    text-align: left;
+    text-transform: uppercase;
+    font: 16px @font-oswald;
+    color: #5F5F5F;font-weight: bold;
 }
 
 /* SLIDE THREE */
 
-.slideThreeinput[type=checkbox]
+.slideThree input[type=checkbox]
 {
     visibility: hidden;
 }
@@ -396,13 +463,14 @@ content
 {
     width: 40px;
     height: 20px;
-    background: #333;
-    margin: 20px auto;
-
+    background: #999999;
+    float: right;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
     position: relative;
+    margin-right: 10px;
+    margin-top: 1px;
 }
 
 .slideThree:after
@@ -424,7 +492,9 @@ content
     display: block;
     width: 20px;
     height: 20px;
-    top: 0px;
+    top: 0;
+
+    border: 1px solid #999999;
 
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -441,34 +511,11 @@ content
     left: 0;
     z-index: 1;
 
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
     background: #fcfff4;
-
-    background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-    background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-    background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-    background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
 }
 
 .slideThree input[type=checkbox]:checked + label {
     left: 20px;
-}
-
-
-#connect-content-modal
-{
-    width: 50%;
-    float: left;
-}
-
-#register-content-modal
-{
-    width: 50%;
-    float: left;
 }
 
 .modal-footer
@@ -1011,6 +1058,7 @@ timer span.time p
 {
     font-size: 20px;
     margin: 1% 0 3%;
+    font-weight: bold;
 
 }
 #register-form
@@ -1061,6 +1109,7 @@ label
 {
     text-align: center;
 }
+
 form input[type='submit']
 {
     display: inline-block;
