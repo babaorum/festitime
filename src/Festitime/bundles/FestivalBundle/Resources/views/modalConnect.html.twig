@@ -13,10 +13,12 @@
                             <img src="/assets/images/FB.png">
                             <p>Connexion facebook</p>
                         </div>
-                        <div id="google" class="social-button">
-                            <img src="/assets/images/Google.png">
-                            <p>Connexion google</p>
-                        </div>
+                        <a href="{{googleAuthUrl}}">
+                            <div id="google" class="social-button">
+                                <img src="/assets/images/Google.png">
+                                <p>Connexion google</p>
+                            </div>
+                        </a>
                     <div class="clear"></div>
                     <p class="modal-subtitle-small">Ou par email</p><br>
                     <form action="{{ path('login') }}" method="POST" role="form">
@@ -28,13 +30,13 @@
                             <label for="password">Mot de passe</label>
                             <input type="password" id="password" class="form-control" />
                         </div>
-                        <p class="modal-text-italic">Mot de passe oublié ?</p>
                         <p class="modal-text-right">Se souvenir de moi</p>
                         <!-- Slide THREE -->
                         <div class="slideThree">    
                             <input type="checkbox" value="None" id="slideThree" name="check" />
                             <label for="slideThree"></label>
                         </div>
+                        <div class="clear"></div>
                         <!--  -->
                         <input type="submit" class="modal-button btn btn-lg" value="Se connecter">
                     </form>
