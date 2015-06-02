@@ -60,4 +60,20 @@ class FestivalController extends Controller
         }
         return $this->redirect($this->generateUrl('home'));
     }
+
+    public function festivalAction($id)
+    {
+        $festivalService = $this->container->get('festitime.festival_service');
+        if (!empty($id)) {
+            $festival = $festivalService->getFestival($id);
+            if ($festival instanceof Festival) {
+                return $this->render(
+                    'FestitimeFestivalBundle:Festival:festival.html.twig',
+                    array(
+                        'festival' => $festival
+                    )
+                );
+            }
+        }
+    }
 }

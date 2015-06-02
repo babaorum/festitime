@@ -1,0 +1,168 @@
+<html>
+<head>
+    <title>Accueil - Festitime</title>
+    <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/angular-animate/angular-animate.min.js"></script>
+    <!-- To uncomment when angular-bootstrap work with angular 1.3.* -->
+    <!-- <script type="text/javascript" src="/assets/js/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script> -->
+    <!-- scripts for using angular-timer -->
+    <script type="text/javascript" src="/assets/js/bower_components/humanize-duration/humanize-duration.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/momentjs/min/moment.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/momentjs/min/locales.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/angular-timer/dist/angular-timer.js"></script>
+    <!-- /scripts for using angular-timer -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/js/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/dist/css/styles.min.css">
+    <!-- /CSS -->
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- /Fonts -->
+    <!-- Angular app need to be load last -->
+    <script type="text/javascript" src="/assets/dist/js/built.js"></script>
+</head>
+<body ng-app="Frontoffice" ng-controller="festivalController as festivalCtrl" ng-init="festivalCtrl.getFestival('{{festival.id}}')">
+    <header>
+        {% set user = app.session.get('user') %}
+        <div id="flag">
+            <img id="logo" width="110px" src="/assets/images/logo.png"/>
+        </div>
+        <div id="menu">
+            <a href="{{url('home')}}" class="link">
+                <span>Accueil</span>
+            </a>
+            <a href="#" class="link">
+                <span>Comment ça marche</span>
+            </a>
+            <a href="{{url('search')}}" class="link">
+                <span>Les festivals</span>
+            </a>
+            <a href="#" class="link">
+                <span>Les artistes</span>
+            </a>
+            <span class="clear"></span>
+        </div>
+        {% if user.firstname is defined %}
+            <a href="#" id="connect">
+                {{ user.firstname | capitalize }} {{ user.name | upper }}
+            </a>
+        {% else %}
+            <a href="{{googleAuthUrl}}" id="connect">
+                <span>Connexion</span>
+            </a>
+        {% endif %}
+        <span class="clear"></span>
+    </header>
+    <content id="festival-content">
+        <div class="first-block" ng-style="festivalPicture">
+            <div class="infos">
+                <h1>{{ festival.name | capitalize }}</h1>
+                <span> {{ festival.city | capitalize }}, {{ festival.country | capitalize }} </span>
+                <span>{{ festival.startDate | date("d") }} - {{ festival.endDate | date("d F o") }}</span>
+            </div>
+        </div>
+        <div class="description-block block block-leaning">
+            <h2>découvrez le festival</h2>
+            <div class="block-content">
+                {{ festival.description }}
+            </div>
+        </div>
+        <div class="artists block after-block-leaning">
+
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+        <table>
+            <tr>
+                <td>Places</td>
+                <td ng-repeat="place in festivalCtrl.travels.places">{[{ place.longName + ' : ' + place.pos }]}</td>
+            </tr>
+            <tr><td colspan="2">Travels</td></tr>
+            <tr ng-repeat="travel in festivalCtrl.travels.routes">
+                <td>
+                    <table>
+                        <tr>
+                            <th>{[{ travel.name }]}</th>
+                            <th>{[{ (travel.duration - (travel.duration%60))/60 + 'heures'}]} {[{ travel.duration%60 + 'minutes' }]}</th>
+                            <th>{[{ travel.indicativePrice.price + " €" }]}</th>
+                        </tr>
+                        <tr>
+                            <td ng-repeat="stop in travel.stops">
+                                <span>
+                                    {[{stop.name }]}
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>segments</th>
+                        </tr>
+                        <tr ng-repeat="segment in travel.segments">
+                            <td>
+                                {[{ segment.kind + ' ( ' + segment.vehicle + ' ) : ' + segment.sName + ' -> ' + segment.tName }]}
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </content>
+    <footer>
+        <div class="contener">
+            <div class="block column" style="padding-bottom:125px;">
+                <h3>à propos de festitime</h3>
+                <div>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Qui sommes-nous ?</a>
+                    <br>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Nous contacter</a>
+                    <br>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Plan du site</a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="block first">
+                    <h3>rechercher</h3>
+                    <input id="search-bar-footer" type="text" ng-model="search" placeholder="Rechercher"/>
+                </div>
+                <div class="block second">
+                    <h3>genres de musique</h3>
+                    <div>
+                        <a href="/search/type/{[{type}]}" ng-repeat="type in searchBarCtrl.types">
+                            <button class="tag">{[{type | capitalize }]}</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="block column" style="padding-bottom:36px;">
+                <h3>infos légales</h3>
+                <div>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Conditions générales de vente</a>
+                    <br>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Données personnelles</a>
+                    <br>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Mentions légales</a>
+                    <br>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Signaler un abus</a>
+                    <br>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Cookies</a>
+                </div>
+            </div>
+            <span class="clear"></span>
+        </div>
+    </footer>
+    <script type="text/javascript">
+(function() {
+    "use strict";
+
+    jQuery(function($) {
+        $('#search-bar-footer').keypress(function(e) {
+            if (e.which === 13) {
+                window.location.href = '/search/' + encodeURIComponent($(this).val());
+            }
+        });
+    });
+})();
+    </script>
+</body>
+</html>

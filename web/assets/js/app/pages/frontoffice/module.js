@@ -1,8 +1,6 @@
 (function () {
     "use strict";
 
-    var test = 'test';
-
     angular.module(
         "Frontoffice",
         [
@@ -13,8 +11,12 @@
             "ngAnimate",
             "timer"
         ]
-    ).config(function($interpolateProvider){
+    )
+    .config(function($interpolateProvider){
             $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
+    })
+    .constant( 'FESTITIME_CONSTS', {
+        'ROME2RIO_TOKEN': 'If5B9HTd'
     });
 
 })();

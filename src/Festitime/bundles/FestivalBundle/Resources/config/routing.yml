@@ -28,6 +28,10 @@ postFestival:
     requirements:
         _method: POST
 
+festival:
+    path: /festival/{id}
+    defaults: { _controller: FestitimeFestivalBundle:Festival:festival }
+
 festivals:
     type: rest
     resource: Festitime\bundles\FestivalBundle\Controller\FestivalApiController

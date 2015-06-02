@@ -24,6 +24,13 @@
             }).then(handleSuccess, handleError);
         }
 
+        var getFestival = function(id) {
+            return $http({
+                method: 'get',
+                url: '/festivals/'+id
+            }).then(handleSuccess, handleError);
+        };
+
         var removeFestival = function(id) {
             return $http({
                 method: "delete",
@@ -55,6 +62,7 @@
         return {
             getFestivals:               getFestivals,
             getFestivalsRandomPictures: getFestivalsRandomPictures,
+            getFestival:                getFestival,
             removeFestival:             removeFestival
         };
     }
