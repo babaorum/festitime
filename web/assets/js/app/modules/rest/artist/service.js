@@ -8,7 +8,7 @@
             var url = basicUrl;
 
             if (limit) {
-                url += '?limit='+limit;
+                url += '?limit=' + limit;
             }
 
             return $http({

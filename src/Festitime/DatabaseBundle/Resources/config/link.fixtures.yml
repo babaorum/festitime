@@ -4,11 +4,11 @@ artist:
     - firstname
     - lastname
 links:
-    festival:
-        sziget:
-            artist:
-                - macklemore
-    artist:
-        macklemore:
-            festival:
-                - sziget
+    # festival:
+    #     sziget:
+    #         artist:
+    #             - macklemore
+    # artist:
+    #     macklemore:
+    #         festival:
+    #             - sziget
