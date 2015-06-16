@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Accueil - Festitime</title>
+    <title>{{ festival.name }} - Festitime</title>
     <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
@@ -56,24 +56,82 @@
         {% endif %}
         <span class="clear"></span>
     </header>
-    <content id="festival-content">
-        <div class="first-block" ng-style="festivalPicture">
+    <content>
+        <div id="festival-info">
+            <div id="festival-basic">
+                <h1>{{ festival.name }}</h1>
+                <p id="date">{{ festival.startDate | date("d") }} - {{ festival.endDate | date("d F o") }}</p>
+                <p id="place"> {{ festival.city | capitalize }}, {{ festival.country | capitalize }} </p>
+            </div>
+        </div>
+
+        <!-- <div class="first-block" ng-style="festivalPicture">
             <div class="infos">
                 <h1>{{ festival.name | capitalize }}</h1>
                 <span> {{ festival.city | capitalize }}, {{ festival.country | capitalize }} </span>
                 <span>{{ festival.startDate | date("d") }} - {{ festival.endDate | date("d F o") }}</span>
             </div>
-        </div>
-        <div class="description-block block block-leaning">
-            <h2>découvrez le festival</h2>
-            <div class="block-content">
-                {{ festival.description }}
+        </div> -->
+        <div class="festival-block">
+            <div class="festival">
+                <h2>Découvrez le festival</h2>
+                <div class="festival-description">
+                    <img src="{{ festival.img }}" alt="festival image">
+                    <div id="description-text">
+                        <p>{{ festival.description }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="artists">
+                <h2>Les artistes dufestival</h2>
+                <div class="artists-block">
+                    <div class="festival-artists">
+                        <div class="block" >
+                            <img src="http://www.edelweissmag.ch/sites/www.edelweissmag.ch/files/spicegirlsspicegirls1997_011.jpg" alt="image artist">
+                            <div class="artist">
+                                <div class="info">
+                                        <div class="name">Spice Girls</div>
+                                    <div class="number-festivals">Dans {[{ festival.price }]} festivals</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block" >
+                            <img src="http://www.edelweissmag.ch/sites/www.edelweissmag.ch/files/spicegirlsspicegirls1997_011.jpg" alt="image artist">
+                            <div class="artist">
+                                <div class="info">
+                                        <div class="name">Spice Girls</div>
+                                    <div class="number-festivals">Dans {[{ festival.price }]} festivals</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block" >
+                            <img src="http://www.edelweissmag.ch/sites/www.edelweissmag.ch/files/spicegirlsspicegirls1997_011.jpg" alt="image artist">
+                            <div class="artist">
+                                <div class="info">
+                                        <div class="name">Spice Girls</div>
+                                    <div class="number-festivals">Dans {[{ festival.price }]} festivals</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block" >
+                            <img src="http://www.edelweissmag.ch/sites/www.edelweissmag.ch/files/spicegirlsspicegirls1997_011.jpg" alt="image artist">
+                            <div class="artist">
+                                <div class="info">
+                                        <div class="name">Spice Girls</div>
+                                    <div class="number-festivals">Dans {[{ festival.price }]} festivals</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <a href="{{url('search')}}" class="button">Voir tous les festivals</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="artists block after-block-leaning">
 
         </div>
-        <br><br><br><br><br><br><br><br><br><br>
         <table>
             <tr>
                 <td>Places</td>

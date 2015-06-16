@@ -630,7 +630,6 @@ timer span.time p
 
 #festivals #festival-content #festival-group .block img
 {
-    height: 100%;
     width: 100%;
 }
 
@@ -733,14 +732,14 @@ timer span.time p
     width: 70%;
     margin: auto;
 }
-.artist
+#artists-content .artist
 {
     height: auto;
     overflow: hidden;
     text-align: left;
     margin: 50px 0;
 }
-.artist img
+#artists-content .artist img
 {
     width: 25%;
     height: 31%;
@@ -783,6 +782,134 @@ timer span.time p
     text-align: center;
     float: right;
     text-shadow: 2px 2px 3px #AAAAAA;
+}
+
+#festival-basic
+{
+    padding: 12%;
+    width: 100%;
+    text-align: center;
+    background-color: #9f9f9f;
+}
+.festival-block
+{
+    background: #FFFFFF;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+    text-align: center;
+    overflow: hidden;
+}
+.festival-block h2
+{
+    display: inline-block;
+    font: 24px @font-oswald;
+    color: #3F3F3F;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border-style: solid;
+    border-color: #3F3F3F;
+    border-width: 4px 0px;
+    margin: 3%;
+    width: auto;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+}
+.festival-description
+{
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.festival-description img
+{
+    width: 25%;
+    float: left;
+}
+#description-text
+{
+    width: 73%;
+    float: right;
+}
+#description-text p
+{
+    text-align: left;
+}
+
+.festival-block .festival
+{
+    transform: skewY(5deg);
+}
+
+.festival-block .artists
+{
+    background-color: #F6F6F6;
+    transform: skewY(5deg);
+    padding-bottom: 10%;
+    margin-bottom: -5%;
+}
+
+.artists-block
+{
+    width: 70%;
+    margin: auto;   
+}
+.festival-artists .block
+{
+    height: 300px;
+    width: 24%;
+    margin: 1% 0.5%;
+    float: left;
+    color: #ffffff;
+    font: 12px @font-oswald;
+    text-align: left;
+    border-radius: 3px;
+    border: solid #DFDFDF 1px;
+    position: relative;
+    overflow: hidden;
+}
+.festival-artists .block img
+{
+    height: auto;
+    width: 100%;
+}
+.festival-artists .block .artist
+{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    background: #F8F8F8;
+    color: #8F8F8F;
+}
+.festival-artists .block .artist .info
+{
+    padding-left: 1%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.festival-artists .block .artist .info .number-festivals
+{
+    color: #DFDFDF;
+    font-size: 18px;
+    margin: 1%;
+}
+
+.artists-block .button
+{
+    display: block;
+    font: 20px @font-oswald;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #0A0A0A;
+    text-decoration: none;
+    padding: 1%;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000000;
+    width: 100%;
+    margin: 20px 0;
+    clear: both;
 }
 
 footer
