@@ -25,6 +25,76 @@
     <script type="text/javascript" src="/assets/dist/js/built.js"></script>
 </head>
 <body ng-app="Frontoffice" ng-controller="searchBarController as searchBarCtrl">
+    <!-- Connect modal -->
+    <div id="connect-modal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true"><img src="/assets/images/Croix.png" /></button>
+                </div>
+                <div id="connect-content-modal">
+                    <h4 class="modal-title">Se connecter</h4>
+                    <div class="modal-body">
+                        <h5 class="modal-subtitle">Déjà membre ?</h5>
+                        <div class="clear"></div>
+                            <div id="facebook" class="social-button">
+                                <img src="/assets/images/FB.png">
+                                <p>Connexion facebook</p>
+                            </div>
+                            <a href="{{googleAuthUrl}}">
+                                <div id="google" class="social-button">
+                                    <img src="/assets/images/Google.png">
+                                    <p>Connexion google</p>
+                                </div>
+                            </a>
+                        <div class="clear"></div>
+                        <p class="modal-subtitle-small">Ou par email</p><br>
+                        <form action="{{ path('login') }}" method="POST" role="form">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Mot de passe</label>
+                                <input type="password" id="password" class="form-control" />
+                            </div>
+                            <p class="modal-text-right">Se souvenir de moi</p>
+                            <!-- Slide THREE -->
+                            <div class="slideThree">
+                                <input type="checkbox" value="None" id="slideThree" name="check" />
+                                <label for="slideThree"></label>
+                            </div>
+                            <div class="clear"></div>
+                            <!--  -->
+                            <input type="submit" class="modal-button btn btn-lg" value="Se connecter">
+                        </form>
+                    </div>
+                </div>
+                <div id="register-content-modal">
+                    <h4 class="modal-title">S'inscrire</h4>
+                    <div class="modal-body">
+                        <h5 class="modal-subtitle">Pas encore de compte ?</h5>
+                        <div class="clear"></div>
+                            <div id="facebook" class="social-button">
+                                <img src="/assets/images/FB.png">
+                                <p>Inscription facebook</p>
+                            </div>
+                            <div id="google" class="social-button">
+                                <img src="/assets/images/Google.png">
+                                <p>Inscription google</p>
+                            </div>
+                        <div class="clear"></div>
+                        <p class="modal-subtitle-small">Ou par email</p><br>
+                        <a href="{{url('login')}}" class="modal-button btn btn-lg">S'inscrire</a>
+                        <br><img src="/assets/images/Fusee.png" height="150px"/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Connect modal -->
     <header>
         {% set user = app.session.get('user') %}
         <div id="flag">
@@ -50,7 +120,7 @@
                 {{ user.firstname | capitalize }} {{ user.name | upper }}
             </a>
         {% else %}
-            <a href="{{googleAuthUrl}}" id="connect">
+            <a href="" id="connect">
                 <span>Connexion</span>
             </a>
         {% endif %}
@@ -244,6 +314,9 @@
             if (e.which === 13) {
                 window.location.href = '/search/' + encodeURIComponent($(this).val());
             }
+        });
+        $("#connect").click(function(){
+            $("#connect-modal").modal('show');
         });
     });
 })();

@@ -6,27 +6,41 @@
 @color-light-grey: rgba(255, 255, 255, 0.6);
 @width: 1900;
 @height: 979;
+@facebook: #3b5998;
+@google: #D3262B;
+
+.button
+{
+    display: inline;
+    font: 20px @font-oswald;
+    text-transform: uppercase;
+    border: solid 2px;
+    text-decoration: none;
+    padding: 1%;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000000;
+}
 
 /*search festival animation*/
-#main .block {
+.search-item {
   -webkit-transition: 400ms;
 }
-#main .block.ng-enter {
+.search-item.ng-enter {
     width: 0;
     height: 0;
     opacity: 0;
 }
-#main .block.ng-leave {
+.search-item.ng-leave {
     width: 24%;
     height: 250px;
     opacity: 1;
 }
-#main .block.ng-enter.ng-enter-active {
+.search-item.ng-enter.ng-enter-active {
     width: 24%;
     height: 250px;
     opacity: 1;
 }
-#main .block.ng-leave.ng-leave-active {
+.search-item.ng-leave.ng-leave-active {
     width: 0;
     height: 0;
     opacity: 0;
@@ -81,6 +95,7 @@ a:visited
 body
 {
     font: @font-oswald;
+    background-color: #F8F8F8;
 }
 
 header
@@ -279,6 +294,338 @@ content
     line-height: 75px;
     padding: 0 10px;
 }
+
+.modal-close
+{
+    float: right;
+    background: white;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.modal-close img
+{
+   width: 20px;
+}
+.modal-header
+{
+    border: 0;
+}
+
+.modal-body
+{
+    padding: 30px;
+}
+.modal-content
+{
+    border-radius: 0px;
+    text-align: center;
+}
+
+#connect-content-modal,
+#register-content-modal
+{
+    width: 50%;
+    float: left;
+}
+
+.modal-title
+{
+    display: inline-block;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+    text-transform: uppercase;
+    font: 24px @font-oswald;
+    color: #3F3F3F;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #3F3F3F;
+    border-width: 4px 0px;
+}
+
+.modal-subtitle
+{
+    display: inline-block;
+    text-transform: uppercase;
+    font: 16px @font-oswald;
+    color: #5F5F5F;
+    font-weight: bold;
+}
+
+.modal-subtitle-small
+{
+    display: inline-block;
+    text-transform: uppercase;
+    font: 14px @font-oswald;
+    color: #5F5F5F;
+    font-weight: bold;
+    margin: 5%;
+}
+
+.modal-text
+{
+    text-transform: uppercase;
+    font: 11px @font-oswald;
+    color: #5F5F5F;
+    font-weight: bold;
+    float: left;
+}
+
+.modal-text-right
+{
+    text-transform: uppercase;
+    font: 14px @font-oswald;
+    color: #5F5F5F;
+    font-weight: bold;
+    float: right;
+}
+
+.modal-text-italic
+{
+    text-transform: uppercase;
+    font: 10px @font-oswald;
+    color: #ababab;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    float: left;
+}
+
+.modal-button
+{
+    display: inline-block;
+    text-transform: uppercase;
+    font: 16px @font-oswald;
+    background-color: #000000;
+    border-radius: 0;
+    border: 0;
+    color: #FFFFFF;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin: 5%;
+}
+
+.social-button
+{
+    margin: 2.5%;
+    border: 2px solid;
+    height: 40px;
+    width: 45%;
+    float: left;
+}
+.social-button#facebook
+{
+    border-color: @facebook;
+}
+.social-button#google
+{
+    border-color: @google;
+}
+
+.social-button img
+{
+    width: 36px;
+    float: left;
+    padding: 5px;
+    background-color: #FFFFFF;
+}
+
+.social-button p
+{
+    color: #fff;
+    text-transform: uppercase;
+    font: 12px Oswald,sans-serif;
+    line-height: 38px;
+}
+.social-button#facebook p
+{
+    background-color: @facebook;
+}
+.social-button#google p
+{
+    background-color: @google;
+}
+
+#register
+{
+    background: #F8F8F8;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+    text-align: center;
+    font: 16px @font-oswald;
+    text-transform: uppercase;
+    overflow: visible;
+    color: #5F5F5F;
+}
+
+#register h2
+{
+    display: inline-block;
+    color: #3F3F3F;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border-style: solid;
+    border-color: #3F3F3F;
+    border-width: 4px 0px;
+    margin: 3%;
+    width: auto;
+}
+#register-content
+{
+    transform: skewY(5deg);
+    width: 70%;
+    margin: auto;
+}
+#register-content h3
+{
+    font-size: 20px;
+    margin: 1% 0 3%;
+    font-weight: bold;
+
+}
+#register-form
+{
+    text-align: left;
+}
+#register-left,
+#register-right
+{
+    width: 40%;
+    float: left;
+    margin: 0 5%;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 3px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border: solid 2px #000000;
+    border-radius: 1px;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+label
+{
+    font-weight: bold;
+}
+#register_gender > div
+{
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 10px 0 0;
+}
+#submit-center
+{
+    text-align: center;
+}
+
+form input[type='submit']
+{
+    display: inline-block;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    border: 0;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin: 5%;
+}
+
+
+.form-group
+{
+    text-align: left;
+    text-transform: uppercase;
+    font: 16px @font-oswald;
+    color: #5F5F5F;font-weight: bold;
+}
+
+/* SLIDE THREE */
+
+.slideThree input[type=checkbox]
+{
+    visibility: hidden;
+}
+
+.slideThree
+{
+    width: 40px;
+    height: 20px;
+    background: #999999;
+    float: right;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    position: relative;
+    margin-right: 10px;
+    margin-top: 1px;
+}
+
+.slideThree:after
+{
+    position: absolute;
+    right: 10px;
+    z-index: 0;
+}
+
+.slideThree:before
+{
+    position: absolute;
+    left: 10px;
+    z-index: 0;
+}
+
+.slideThree label
+{
+    display: block;
+    width: 20px;
+    height: 20px;
+    top: 0;
+
+    border: 1px solid #999999;
+
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    transition: all .4s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    background: #fcfff4;
+}
+
+.slideThree input[type=checkbox]:checked + label {
+    left: 20px;
+}
+
+.modal-footer
+{
+    border: 0;
+}
+
 
 header #search-bar
 {

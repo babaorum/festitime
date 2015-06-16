@@ -1,55 +1,238 @@
-{% extends 'FestitimeUserBundle::layout.html.twig' %}
-
-    {% block title %}Festitime{% endblock %}
-
-
-    {% block body %}
-        <div>
-        <a href="{{googleAuthUrl}}">google connect</a>
+<html>
+<head>
+    <title>Accueil - Festitime</title>
+    <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/angular-animate/angular-animate.min.js"></script>
+    <!-- To uncomment when angular-bootstrap work with angular 1.3.* -->
+    <!-- <script type="text/javascript" src="/assets/js/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script> -->
+    <!-- scripts for using angular-timer -->
+    <script type="text/javascript" src="/assets/js/bower_components/humanize-duration/humanize-duration.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/momentjs/min/moment.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/momentjs/min/locales.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/angular-timer/dist/angular-timer.js"></script>
+    <!-- /scripts for using angular-timer -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/js/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/dist/css/styles.min.css">
+    <!-- /CSS -->
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- /Fonts -->
+    <!-- Angular app need to be load last -->
+    <script type="text/javascript" src="/assets/dist/js/built.js"></script>
+</head>
+<body ng-app="Frontoffice" ng-controller="searchBarController as searchBarCtrl">
+    <!-- Connect modal -->
+    <div id="connect-modal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true"><img src="/assets/images/Croix.png" /></button>
+                </div>
+                <div id="connect-content-modal">
+                    <h4 class="modal-title">Se connecter</h4>
+                    <div class="modal-body">
+                        <h5 class="modal-subtitle">Déjà membre ?</h5>
+                        <div class="clear"></div>
+                            <div id="facebook" class="social-button">
+                                <img src="/assets/images/FB.png">
+                                <p>Connexion facebook</p>
+                            </div>
+                            <a href="{{googleAuthUrl}}">
+                                <div id="google" class="social-button">
+                                    <img src="/assets/images/Google.png">
+                                    <p>Connexion google</p>
+                                </div>
+                            </a>
+                        <div class="clear"></div>
+                        <p class="modal-subtitle-small">Ou par email</p><br>
+                        <form action="{{ path('login') }}" method="POST" role="form">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Mot de passe</label>
+                                <input type="password" id="password" class="form-control" />
+                            </div>
+                            <p class="modal-text-right">Se souvenir de moi</p>
+                            <!-- Slide THREE -->
+                            <div class="slideThree">
+                                <input type="checkbox" value="None" id="slideThree" name="check" />
+                                <label for="slideThree"></label>
+                            </div>
+                            <div class="clear"></div>
+                            <!--  -->
+                            <input type="submit" class="modal-button btn btn-lg" value="Se connecter">
+                        </form>
+                    </div>
+                </div>
+                <div id="register-content-modal">
+                    <h4 class="modal-title">S'inscrire</h4>
+                    <div class="modal-body">
+                        <h5 class="modal-subtitle">Pas encore de compte ?</h5>
+                        <div class="clear"></div>
+                            <div id="facebook" class="social-button">
+                                <img src="/assets/images/FB.png">
+                                <p>Inscription facebook</p>
+                            </div>
+                            <div id="google" class="social-button">
+                                <img src="/assets/images/Google.png">
+                                <p>Inscription google</p>
+                            </div>
+                        <div class="clear"></div>
+                        <p class="modal-subtitle-small">Ou par email</p><br>
+                        <a href="{{url('login')}}" class="modal-button btn btn-lg">S'inscrire</a>
+                        <br><img src="/assets/images/Fusee.png" height="150px"/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
         </div>
-        <div>
-            <form action="{{ path('postUser') }}" method="POST">
-                Créez vous un compte :
-                <br>
-                {{ form_errors(formRegister) }}
-                <br>
-                {{ form_row(formRegister.pseudo) }}
-                <br>
-                {{ form_row(formRegister.email.first) }}
-                <br>
-                {{ form_row(formRegister.email.second) }}
-                <br>
-                {{ form_row(formRegister.password.first) }}
-                <br>
-                {{ form_row(formRegister.password.second) }}
-                <br>
-                {{ form_row(formRegister.birthdate) }}
-                <br>
-                {{ form_row(formRegister.gender) }}
-                <br>
-                {{ form_row(formRegister.firstname) }}
-                <br>
-                {{ form_row(formRegister.name) }}
-                <br>
-                {{ form_row(formRegister.address) }}
-                <br>
-                {{ form_row(formRegister.city) }}
-                <br>
-                {{ form_row(formRegister.zipcode) }}
-                <br>
-                {{ form_row(formRegister.country) }}
-                <br>
-                <input type="submit" name="submit" value="Envoyer">
-            
-            </form>
+    </div>
+    <!-- /Connect modal -->
+    <header>
+        {% set user = app.session.get('user') %}
+        <div id="flag">
+            <img id="logo" width="110px" src="/assets/images/logo.png"/>
         </div>
-        <div>
-            <form action="{{ path('login') }}" method="POST">
-                {{ form_row(formConnect.pseudo) }}
-                <br>
-                {{ form_row(formConnect.password) }}
-                <br>
-                <input type="submit" name="submit" value="submit">
-            </form>
+        <div id="menu">
+            <a href="{{url('home')}}" class="link">
+                <span>Accueil</span>
+            </a>
+            <a href="#" class="link">
+                <span>Comment ça marche</span>
+            </a>
+            <a href="{{url('search')}}" class="link">
+                <span>Les festivals</span>
+            </a>
+            <a href="#" class="link">
+                <span>Les artistes</span>
+            </a>
+            <span class="clear"></span>
         </div>
-    {% endblock %}
+        {% if user.firstname is defined %}
+            <a href="#" id="connect">
+                {{ user.firstname | capitalize }} {{ user.name | upper }}
+            </a>
+        {% else %}
+            <a href="" id="connect">
+                <span>Connexion</span>
+            </a>
+        {% endif %}
+        <span class="clear"></span>
+    </header>
+    <content>
+        <div id="register">
+            <h2>S'inscrire</h2>
+            <div id="register-content">
+                <h3>Pas encore de compte ?</h3>
+                {% form_theme formRegister 'bootstrap_3_layout.html.twig' %}
+                <form action="{{ path('postUser') }}" method="POST" id="register-form">
+                    {{ form_errors(formRegister) }}
+                    <br>
+                    <div id="register-left">
+                        {{ form_row(formRegister.firstname) }}
+                        <br>
+                        {{ form_row(formRegister.gender) }}
+                        <br>
+                        {{ form_row(formRegister.email.first) }}
+                        <br>
+                        {{ form_row(formRegister.email.second) }}
+                        <br>
+                        {{ form_row(formRegister.address) }}
+                        <br>
+                        {{ form_row(formRegister.zipcode) }}
+                        <br>
+                    </div>
+                    <div id="register-right">
+                        {{ form_row(formRegister.name) }}
+                        <br>
+                        {{ form_row(formRegister.birthdate,  { 'attr': {'class': 'border-select'} }) }}
+                        <br>
+                        {{ form_row(formRegister.password.first) }}
+                        <br>
+                        {{ form_row(formRegister.password.second) }}
+                        <br>
+                        {{ form_row(formRegister.city) }}
+                        <br>
+                        {{ form_row(formRegister.country) }}
+                        <br>
+                    </div>
+                    <div id="submit-center">
+                        <input type="submit" name="submit" value="S'inscrire">
+                    </div>
+                </form>
+            </div>
+         </div>
+    </content>
+    <footer>
+        <div class="contener">
+            <div class="block column" style="padding-bottom:125px;">
+                <h3>à propos de festitime</h3>
+                <div>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Qui sommes-nous ?</a>
+                    <br>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Nous contacter</a>
+                    <br>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Plan du site</a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="block first">
+                    <h3>rechercher</h3>
+                    <input id="search-bar-footer" type="text" ng-model="search" placeholder="Rechercher"/>
+                </div>
+                <div class="block second">
+                    <h3>genres de musique</h3>
+                    <div>
+                        <a href="/search/type/{[{type}]}" ng-repeat="type in searchBarCtrl.types">
+                            <button class="tag">{[{type | capitalize }]}</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="block column" style="padding-bottom:36px;">
+                <h3>infos légales</h3>
+                <div>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Conditions générales de vente</a>
+                    <br>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Données personnelles</a>
+                    <br>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Mentions légales</a>
+                    <br>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Signaler un abus</a>
+                    <br>
+                    <span class="img-plus"></span> <a class="footer-link" href="">Cookies</a>
+                </div>
+            </div>
+            <span class="clear"></span>
+        </div>
+    </footer>
+    <script type="text/javascript">
+(function() {
+    "use strict";
+
+    jQuery(function($) {
+        $('#search-bar').keypress(function(e) {
+            if (e.which === 13) {
+                window.location.href = '/search/' + encodeURIComponent($(this).val());
+            }
+        });
+        $('#search-bar-footer').keypress(function(e) {
+            if (e.which === 13) {
+                window.location.href = '/search/' + encodeURIComponent($(this).val());
+            }
+        });
+        $("#connect").click(function(){
+            $("#connect-modal").modal('show');
+        });
+    });
+})();
+    </script>
+</body>
+</html>
