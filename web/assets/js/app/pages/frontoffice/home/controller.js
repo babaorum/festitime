@@ -53,7 +53,7 @@
         }.bind(this));*/
 
         //load festivals
-        festivalRestService.getFestivals(6)
+        festivalRestService.getFestivals(9)
             .then(function(festivals) {
                 festivals.forEach(function(festival) {
                     if (festival.start_date && this.countdownFestivals.length < 1) {

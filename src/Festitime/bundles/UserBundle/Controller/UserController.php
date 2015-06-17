@@ -16,11 +16,11 @@ class UserController extends Controller
 
         if (!empty($query['connect']['pseudo'])) {
             $response = $userService->connectUser();
-            
+
             if ($response instanceof User) {
                 $session->set('user_id', $response->getId());
                 $session->set('user_pseudo', $response->getPseudo());
-                
+
                 return $this->redirect($this->generateUrl('index'));
             }
         }
@@ -73,15 +73,15 @@ class UserController extends Controller
 
                     $session->set('accessToken', $this->client->getAccessToken());
                     $session->set('user', $user->toArray());
-                    
+
                     return $this->redirect($homeUrl);
                 }
             }
         }
-        
+
         return $this->redirect($homeUrl);
     }
-    
+
     /**
      * @author Romain Grelet
      * logout action

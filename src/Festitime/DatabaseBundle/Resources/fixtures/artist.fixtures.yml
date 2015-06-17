@@ -2,42 +2,569 @@ model: Festitime\DatabaseBundle\Document\Artist
 save_in_reverse: false
 persistence: mongodb
 fixtures:
-    saez:
-        pseudo: ~
-        firstname: damien
-        lastname: saez
-        description: un exelent artiste un peu différents des autres
+    selah sue:
+        pseudo: Selah Sue
+        firstname: Sue
+        lastname: Selah
+        description: "Sanne Putseys est née à Louvain1, mais a vécu dans le village tout proche de Leefdaal. À l'âge de 15 ans, Sanne Putseys apprend à jouer de la guitare acoustique et commence à écrire ses propres chansons. À 17 ans, elle est la plus jeune et unique participante féminine du concours Open Mic-avond de Het Depot à Louvain. L'organisateur et chanteur Milow remarque ses talents et lui demande de jouer ses premières parties de concert3. Initialement, Sanne Putseys gère sa carrière musicale en parallèle à ses études de psychologie à la Katholieke Universiteit Leuven. Selon elle, étudier la psychologie l'a aidée à mieux comprendre les émotions humaines, qui jouent aussi un rôle dans ses activités musicales. Finalement, elle continue à faire des premières parties en collaboration avec des artistes comme Jamie Lidell à Londres et Paris. Par ailleurs, elle a joué avec le groupe belge Novastar au Paradiso à Amsterdam."
         type:
-            - electro
+            - groove
+            - neo-soul
+            - reggae
+            - pop
+        picture: "https://lh3.googleusercontent.com/-3SpoMuxIAew/VE5rYfxxCNI/AAAAAAAAAxE/CkxnKDVpwcY/s926-fcrop64=1,00560000ff52ffff/SelahSueNew2014.jpg"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.funku.fr/wp-content/uploads/2012/08/Selah+Sue+Photo.jpg&sa=X&ei=3OtyVdCsGYntUqjMgYgL&ved=0CAkQ8wc&usg=AFQjCNGR8PlWAmCx3Asob4_JoSUP43sRWQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://upload.wikimedia.org/wikipedia/commons/0/0d/SelahSue_4a.jpg&sa=X&ei=8-tyVdK9IsKwUdaygPAM&ved=0CAkQ8wc&usg=AFQjCNG4WDKB8moQu7tiza7QzjbErGrTHQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://avantgardists.com/wp-content/uploads/2011/02/SELAH-SUE.jpg&sa=X&ei=D-xyVYHWJ4H6UpvigfAK&ved=0CAkQ8wc&usg=AFQjCNH5SCb5qIs27dWicHAmGkusodBzjA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn-parismatch.ladmedia.fr/var/news/storage/images/paris-match/culture/musique/selah-sue-album-raggamuffin-146367/1388852-1-fre-FR/Dans-le-monde-de-Selah.jpg&sa=X&ved=0CAkQ8wdqFQoTCM7s_ay1isYCFYU3FAodjGIAfA&usg=AFQjCNH0xWP8B9zrTe6MdPMOGeHDp2mlZw"
+    deep purple:
+        pseudo: Deep Purple
+        firstname: Deep Purple
+        lastname: Deep Purple
+        description: "Deep Purple est un groupe rock britannique fondé en 1968, considéré comme l'un des fondateurs du genre hard rock avec Led Zeppelin. Au cours de ses quarante ans d'existence, le groupe a toujours été constitué de cinq musiciens (un chanteur, un guitariste, un bassiste, un batteur et un organiste), mais il a connu plusieurs changements de personnel qui ont déterminé son évolution musicale. Les éléments caractéristiques du son de Deep Purple durant la majeure partie de son existence sont la guitare Fender Stratocaster de Ritchie Blackmore et l'orgue Hammond de Jon Lord."
+        type:
+            - hard-rock
+            - heavy-metal
+            - rock
+            - blues
+            - rock progressif
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://fr.montecarlosbm.com/wp-content/uploads/2013/04/DeepPurple.jpg&sa=X&ei=I-9yVZb5NMz5Up_1gLAC&ved=0CAkQ8wc&usg=AFQjCNH3YmWbnhq1259u-1Vm9s15owcDGA"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.justmusic.fr/wp-content/uploads/2013/05/deepPurple.jpg&sa=X&ei=QO9yVeq3EcftUuqEgogE&ved=0CAkQ8wc&usg=AFQjCNG4iWMWLVgU-1koSYpUfBej-5wYVg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=https://ernestto.files.wordpress.com/2013/11/deep-purple-3.jpg&sa=X&ei=Ve9yVdCkNMvxUIvogZAN&ved=0CAkQ8wc&usg=AFQjCNGvCHaYHzZu6R_7i3DMhwiPsVAZrg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://femininisrael.com/wp-content/uploads/2010/12/Deep_Purple_.jpeg&sa=X&ei=b-9yVfz9NIqvU4XcgtAD&ved=0CAkQ8wc4Gw&usg=AFQjCNGE5vYtzvrxE72h8F9ngdSi24a3sQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn.mos.musicradar.com//images/bass-features/2013/bass-expo-features/glenn-hughes/deep-purple-corbis-460-85.jpg&sa=X&ved=0CAkQ8wdqFQoTCP-r3MG1isYCFcjVFAodIkYAGw&usg=AFQjCNEGNk-bvgoWkCnFXwF7ibKhDRo07w"
+    Fauve:
+        pseudo: Fauve
+        firstname: Fauve
+        lastname: Fauve
+        description: "Fauve est un collectif artistique français, originaire de Paris, opérant sur plusieurs supports : musique, vidéos, photos, textes, visuels, web… Fauve se présente comme un collectif ouvert, sous le nom de Fauve Corp. Il est composé de cinq membres permanents qui qualifient leur musique de « spoken word ». Le collectif utilise souvent le symbole ? (différent) dans sa communication, notamment dans son logo."
+        type:
             - rock
             - pop
-        picture: "http://www.saez.mu/jemarchenu/mondino/SAEZ-Mondino4.jpg"
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.espace-culturel-leclerc.com/IMG/arton156.jpg&sa=X&ei=qvFyVeesFoT8UJfhgbAC&ved=0CAkQ8wc&usg=AFQjCNGzJrN2u1SfJLdZOlTEF_g1onDkYw"
         pictures:
-            - "http://www.laboiteamusiqueinde.com/wp-content/uploads/2013/03/saez5461.jpg"
-            - "http://www.desinvolt.fr/wp-content/uploads/arton375.jpg"
-            - "https://i1.ytimg.com/vi/WtFO6GCg8Xo/hqdefault.jpg"
-    rihanna:
-        pseudo: rihanna
-        firstname: robyn
-        lastname: fenty
-        description: "Robyn Rihanna Fenty, dite Rihanna, née le 20 février 1988 à Saint Michael (Barbade), est une chanteuse et actrice barbadienne. Au long de sa carrière, Rihanna a fait paraître sept albums studios et deux albums de remixes, changeant souvent de style."
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://i.f1g.fr/media/ext/orig/www.lefigaro.fr/medias/2014/02/07/PHO148d32fa-902a-11e3-a955-e265a046ab8c-805x453.jpg&sa=X&ei=wfFyVaSwEIT8UJfhgbAC&ved=0CAkQ8wc&usg=AFQjCNEHGdumwka41L6IZQHNpTu4zu8HAw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://static.ladepeche.fr/content/media/image/zoom/2014/03/30/201403300050-full.jpg&sa=X&ei=3PFyVfqyDsu2UZmkgOgF&ved=0CAkQ8wc&usg=AFQjCNF7c-QG8ntksrOl30RwmLtYcSecrg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=https://laurabruneau.files.wordpress.com/2014/09/fauve-vieux-freres.jpg&sa=X&ei=8PFyVbHtC4GkUOq6g5gD&ved=0CAkQ8wc&usg=AFQjCNENY1if6DivjEYKCUc2MekYEzJGeA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://lamaisonmusee.files.wordpress.com/2013/07/fauve-corp-musique.jpg&sa=X&ved=0CAkQ8wdqFQoTCOntkdq1isYCFQtaFAodTwsA6Q&usg=AFQjCNGB3YsUOWzsZ04qZvJc56tyQMqhIw"
+    Lilly Wood and the Prick:
+        pseudo: Lilly Wood and the Prick
+        firstname: Lilly Wood and the Prick
+        lastname: Lilly Wood and the Prick
+        description: "Le groupe Lilly Wood and the Prick est né en 2006, de la rencontre entre la chanteuse Nili Hadida et le guitariste Benjamin Cotto, par l'intermédiaire d'un ami commun dans un café parisien. Ils se retrouvent deux jours après pour composer trois chansons.Fin 2008, ils se font connaître sur MySpace grâce à une reprise de L.E.S Artistes de Santigold. C'est à ce moment-là qu'ils rencontrent Pierre Guimard. Excité par ce qu'il a entendu sur leur Myspace, il leur ouvre les portes de son studio. Ils sont ensuite lancés en 2008 par la compilation Folk & Proud. En 2009, Pierre Guimard fonde alors avec Matthieu Tessier, manager du groupe, le label Choke Industry sur lequel sort le premier EP du duo : Lilly who and the what ?, baptisé en référence à leur nom de scène. En 2009, ils signent avec le label indépendant Cinq."
+        type:
+            - electro
+            - folk
+            - pop
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.prun.net/im/article/normal/2013-02-11-5516c4ad4509f3ee604ede48e63eed79.jpg&sa=X&ei=DPNyVci7Fcn_UOTKgrgH&ved=0CAkQ8wc&usg=AFQjCNE6c5pHg1UFn4OB86TFgIf1uFpvbA"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.paulette-magazine.com/assets/paulette/culture/quizzette%20lilly%20wood%20prick/LWATP%20%20%20%C2%A9%20mark%20maggiori.jpg&sa=X&ei=K_NyVYGFBYGOU4e_g4AP&ved=0CAkQ8wc&usg=AFQjCNHhSnA6p4JSIIbptR6_Zu494bZ9Pw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://i.ytimg.com/vi/JrlfFTS9kGU/maxresdefault.jpg&sa=X&ei=TPNyVYaPBMXpUoiEgagK&ved=0CAkQ8wc&usg=AFQjCNFhK0ZDiqqsj7fFl2wf0wl42uB23Q"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.potoclips.com/wp-content/uploads/2014/09/Lilly-Wood-and-the-Prick-2014-09.jpg&sa=X&ei=QvNyVZ_hDcLkUYGMgbAM&ved=0CAkQ8wc&usg=AFQjCNESQPSgLzlTPvRfmbQJbIRb_fKy5A"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.megaconnard.com/wp-content/uploads/2012/10/lilly-wood-the-prick1.jpg&sa=X&ved=0CAkQ8wdqFQoTCIL2lOu1isYCFYEuFAodnXIA5w&usg=AFQjCNEg2OlfD2Q3FthvTv5aUb99qFOSJA"
+    The Black Keys:
+        pseudo: The Black Keys
+        firstname: The Black Keys
+        lastname: The Black Keys
+        description: "The Black Keys est un groupe de blues rock américain originaire d'Akron dans l'État de l'Ohio. Le groupe est composé du chanteur et guitariste Dan Auerbach et du batteur Patrick Carney. Le nom du groupe provient d'un artiste schizophrène nommé Alfred McMoore que le duo connaissait et qui aurait laissé des messages incohérents sur le répondeur de leurs pères se référant à eux comme des 'notes noires' (traduction de l'anglais 'black keys') quand il était en colère."
+        type:
+            - rock-alternatif
+            - blues
+            - rock
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://i2.wp.com/anderson69s.com/wp-content/uploads/2012/12/mxthod_the-black-keys-sketch.png?resize=825%2C510&sa=X&ei=RPRyVYv8KoH6UIaggKgF&ved=0CAkQ8wc&usg=AFQjCNEHcPw-ImKad8dILgLUcwLh97Vcmw"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.impactnottingham.com/wp-content/uploads/2014/10/24-black-keys.jpg&sa=X&ei=R_RyVfTjA4miU4-Bgig&ved=0CAkQ8wc&usg=AFQjCNHNPsqqOcqBbviUQ3K2DeTKl60wPQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.lolanne.fr/wp-content/uploads/2013/07/the-black-keys-4.jpg&sa=X&ei=SfRyVZq4OsGrU_vegdgH&ved=0CAkQ8wc&usg=AFQjCNFZ48apIL-0AbnrF9JH_4MctxU-8w"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://dynamhit.org/wp-content/uploads/2014/05/dan-auerbach-pat-carney.jpg&sa=X&ei=k_RyVYi6HsrxUtyjgagP&ved=0CAkQ8wc&usg=AFQjCNEcEV0NXevfOvXkikb5aiHLIj720wA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://lediscolab.fr/wp-content/uploads/2014/03/black-keys.png&sa=X&ved=0CAkQ8wdqFQoTCInp4Ii2isYCFUVZFAodTA0Abg&usg=AFQjCNELMhKEWZrx3YDy1POT1VlohjqT_g"
+    New Order:
+        pseudo: New Order
+        firstname: New Order
+        lastname: New Order
+        description: "Il se compose au départ des membres restant du groupe Joy Division dont le chanteur Ian Curtis s'est suicidé. À la suite de ce drame, ils optent pour un changement de nom et adoptent celui de New Order sur une suggestion de leur manager, Rob Gretton. Ce nom a fait l'objet de polémiques, comme celui de Joy Division qui pouvait faire allusion au nazisme.Le groupe comprend Bernard Sumner (dit Barney ou encore, dans Joy Division, Bernard Albrecht ou Bernard Dicken) au chant, à la guitare et aux claviers, Peter Hook (dit Hooky) à la basse et Stephen Morris à la batterie. Gillian Gilbert, la compagne de Stephen Morris, rejoint les trois anciens de Joy Division dès le tout début des années 1980, aux claviers. Elle est remplacée depuis 2001 par Phil Cunningham (ancien guitariste du groupe Marion (en), autre groupe de Manchester)"
+        type:
+            - dance-alternative
+            - pop
+            - post-punk
+            - new-wave
+            - rock-alternatif
+            - dance-rock
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://wp-images.emusic.com/assets/2012/11/new-order-110512-download.jpg&sa=X&ei=tfVyVd2JAsywUfT3gFg&ved=0CAkQ8wc&usg=AFQjCNEbJuSAQ6lF-Ro2dL3Vn0XiCBTZrQ"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.wornby.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/n/e/new_order.jpg&sa=X&ei=uPVyVfyPNsXrUsCQgJgL&ved=0CAkQ8wc&usg=AFQjCNE3PasTGn11ENnLGVV3rj221a_SDg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.high-five-mag.com/wp-content/uploads/2013/01/New-order.jpg&sa=X&ei=uvVyVZvsJ4r8UvH_gLgO&ved=0CAkQ8wc&usg=AFQjCNGAYKsytzX7u4iDa1s1lHkYMT_qWA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=https://consequenceofsound.files.wordpress.com/2013/10/neworder1983.png&sa=X&ei=vfVyVbS9D8PYU7Ttg7AO&ved=0CAkQ8wc&usg=AFQjCNEtnKZTI2UPodYoVro_pb2u-AmttA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.bopping-elf.co.uk/wp-content/uploads/2011/07/newordermain.jpg&sa=X&ved=0CAkQ8wdqFQoTCPiT-Py5isYCFcK7FAodWi8Jjw&usg=AFQjCNH7gUa3xoIW0L8f-Ey0JLqej0KTnw"
+    Blondie:
+        pseudo: Blondie
+        firstname: Blondie
+        lastname: Blondie
+        description: "Blondie est un groupe de musique américain, fondé en 1975 à New York par Deborah Harry et Chris Stein. Pionnier de la scène pop punk des années 1970, le groupe devient célèbre pour son mélange électrique de styles musicaux intégrant des éléments disco, pop, rap, reggae tout en conservant une base new wave.Blondie se sépare après la sortie de son sixième album studio, The Hunter en 1982. Debbie Harry continue en solo avec plus ou moins de succès. Le groupe se reforme en 1997, avec un single à succès, Maria qui devient #1 aux Royaume-Uni en 1999. Le groupe effectue des tournées à travers le monde durant les années suivantes.Blondie a vendu plus de 40 millions d'albums dans le monde et continue d'en vendre encore aujourd'hui avec la sortie de son neuvième album, Panic of Girls. Parmi leurs plus grands succès, on peut notamment citer Heart of Glass, Call Me, The Tide Is High, One Way or Another, Atomic ou encore Maria."
         type:
             - pop
-            - reggae
-            - hip-hop
-        picture: "http://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Rihanna_concert_in_Washington_DC_%282%29.jpg/1024px-Rihanna_concert_in_Washington_DC_%282%29.jpg"
+            - rock
+            - new-wave
+            - punk
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.lemouv.fr/sites/default/files/2013/07/11/84056/Blondie_2.jpg&sa=X&ei=F_dyVfDKN8P-UKG-gsAP&ved=0CAkQ8wc&usg=AFQjCNFWjbP_f0kmMWTz9NCaN3_eZ7F6PQ"
         pictures:
-            - "http://www.jeka.be/resource/static/galleries/festivals/sziget-festival/Island%20Obudai%20Sziget.jpg"
-            - "http://www.mylittlehungary.com/images/stories/ittjartunk/sziget2013zsolt/201308076588.jpg"
-    macklemore:
-        pseudo: macklemore
-        firstname: ben
-        lastname: haggerty
-        description: "Macklemore, nom de scène de Ben Haggerty, né le 19 juin 1983 à Seattle (État de Washington), est un rappeur américain. Il travaille avec le producteur Ryan Lewis, le violoniste Andrew Joslyn, le trompettiste Owuor Arunga, le tromboniste Greg Kramer, la violoncelliste Rebecca Chung Filice et le multi-instrumentiste Budo (Josh Karp) (batterie, guitare et basse). Macklemore a commencé à devenir célèbre à Seattle depuis le début de sa carrière musicale à la Garfield High School, jouant souvent à la Capitol Hill Block Party."
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cps-static.rovicorp.com/3/JPG_400/MI0001/852/MI0001852417.jpg?partner=allrovi.com&sa=X&ei=GvdyVaOpFcK2UYmtgdgJ&ved=0CAkQ8wc&usg=AFQjCNFIVg7nOsu1yTbjWCUN5-ji0CZ0tA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.inside-rock.fr/IMG/jpg/blondie_wideweb__430x380.jpg&sa=X&ei=HPdyVeffGsP8UMWHgbAD&ved=0CAkQ8wc&usg=AFQjCNGhM77ktoJvR_qNVtchPnvSFNdHUg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://wac.450f.edgecastcdn.net/80450F/ultimateclassicrock.com/files/2013/06/Blondie.jpg&sa=X&ei=IfdyVZeoJ8OuUaqvgogM&ved=0CAkQ8wc&usg=AFQjCNE4uswzbc6fEwvXd07w4DG8lpRo6w"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://boptopop.files.wordpress.com/2011/05/blondie.jpg&sa=X&ved=0CAkQ8wdqFQoTCPmvrKe6isYCFUG3FAod73IA-Q&usg=AFQjCNF6pEfvZiKsyH2nd1MUIu8yOpWRRQ"
+    Stromae:
+        pseudo: Stromae
+        firstname: Stromae
+        lastname: Stromae
+        description: "Paul Van Haver, dit Stromae (prononcé [st?omaj ]1,2), né le 12 mars 1985 à Etterbeek, est un auteur-compositeur-interprète et producteur belge de hip-hop, de musique électronique et de chanson française originaire du quartier de Laeken, à Bruxelles3,4.Il se fait connaître en 2009 avec la chanson Alors on danse extraite de l'album Cheese. En 2013, son deuxième album Racine carrée est un succès critique et commercial. La tournée qui suivra le fera connaître mondialement avec plus de 200 dates dans plus de 25 pays dont les États-Unis, le Brésil, le Canada, ou encore la Russie. Au total plus de 1 million de personnes assisteront à cette tournée."
+        type:
+            - Hip-hop
+            - variété française
+            - electro house
+            - new beat
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.zicabloc.com/wp-content/uploads/2013/12/stromae-enfoires.jpg&sa=X&ei=7fdyVf26LcL-Uq2dgPAF&ved=0CAkQ8wc&usg=AFQjCNHvhdY6HVjsTXLwokKFrsJxvZHwNg"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.metronews.fr/_internal/gxml!0/r0dc21o2f3vste5s7ezej9x3a10rp3w$lxm680c5a91xdxco19jymyztxuli419/stromae.jpeg&sa=X&ei=AfhyVff6F8yvUei3gLgL&ved=0CAkQ8wc&usg=AFQjCNG6jKRgqBceUraSIm51gQDjXpdi5Q"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://i.ytimg.com/vi/1qr3BSUuYFM/maxresdefault.jpg&sa=X&ei=AfhyVY2VHcWvUYLxgKAJ&ved=0CAkQ8wc4Fw&usg=AFQjCNE4yusKzrOzKFwMIh4Qm_CDqfQKJA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.demotivateur.fr/images-buzz/stromae-tous.jpg&sa=X&ei=BfhyVfbYA8jSUa7ngYgJ&ved=0CAkQ8wc4Fw&usg=AFQjCNHg_ZRg2frEqaguwhYHDKDgOyeMAA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.metronews.fr/_internal/gxml!0/r0dc21o2f3vste5s7ezej9x3a10rp3w$hbpos94f4xziyzenqpk1ft0g8jddse2/IP3GIR130827029001.jpeg&sa=X&ved=0CAkQ8wdqFQoTCMX1sNG6isYCFQq0FAodF7cA7w&usg=AFQjCNHGFj1Qh29FiAHtmlllXl-cV4Q3-g"
+    Cerrone:
+        pseudo: Cerrone
+        firstname: Cerrone
+        lastname: Cerrone
+        description: "Marc Cerrone, né Jean-Marc Cerrone le 24 mai 1952 à Vitry-sur-Seine, est un musicien, compositeur, producteur de musique et écrivain français. Il est un des grands noms du disco, cumulant nombre de tubes dont Supernature (chanson). Durant sa carrière, il a vendu plus de 30 millions de disques.Il est aussi l'auteur de concerts-événements ayant réuni des centaines de milliers de personnes à travers le monde tels que la Dance Party Live à Versailles, le Los Angeles Millenium Celebration, ou le concert à Paris place de la Concorde pour la célébration du bicentenaire de la Révolution."
+        type:
+            - disco
+            - rock
+            - soul
+            - funk
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://upload.wikimedia.org/wikipedia/commons/1/1a/CERRONE_Marc_02-24x30-2009.jpg&sa=X&ei=EvpyVZv5K8avUfOZgaAO&ved=0CAkQ8wc&usg=AFQjCNF83MU2BphQ-72suv232nXyKUXamA"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://referentiel.nouvelobs.com/file/6788781.jpg&sa=X&ei=EPpyVaO6G4GsU5ylgegM&ved=0CAkQ8wc&usg=AFQjCNGlffTHg7TJ7X2rbWsYypfn7pSVyQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn2.greatsong.net/photo/ext/cerrone-186842.jpg&sa=X&ei=CfpyVa6NG4mrU_m6g8gB&ved=0CAkQ8wc&usg=AFQjCNEEN6vuiAESwJszW5-W3wKIb7_Xdw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn2.greatsong.net/photo/ext/cerrone-186840.jpg&sa=X&ei=W_pyVc7mLcbuUvPqgGA&ved=0CAkQ8wc&usg=AFQjCNFgD0ac4UU25qYIL1cAeIK--q2sSg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://s.wat.tv/image/cerrone-love-in-minor_1i9ex_jnil7.jpg&sa=X&ved=0CAkQ8wdqFQoTCIGE84W7isYCFUy4FAodoU4AXQ&usg=AFQjCNHeMxCwuTrjfUmhXHXtmC64hsamJA"
+    Muse :
+        pseudo: Muse
+        firstname: Muse
+        lastname: Muse
+        description: "Muse est un groupe de rock alternatif britannique originaire de Teignmouth, Devon en Angleterre. Apparu sur la scène musicale en 1994, le trio est composé de Matthew Bellamy (chant, guitare, piano), Christopher Wolstenholme (basse, chant, chœurs) et Dominic Howard (batterie, percussions).Muse dénombre six albums studio depuis ses débuts que sont Showbiz (1999), Origin of Symmetry (2001), Absolution (2003), Black Holes and Revelations (2006), The Resistance (2009) et The 2nd Law (2012). Ce dernier prend la première place des classements dans plusieurs pays tels que le Royaume-Uni et la France. Ils sont également auteurs de quatre DVD live à leur actif qui incluent Hullabaloo Soundtrack (2002), Absolution Tour (2005), HAARP (2008), et le Live at Rome Olympic Stadium (2013)."
+        type:
+            - rock
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.stay-tuned.be/wp-content/uploads/2015/03/muse.jpg&sa=X&ei=UftyVcOzCsvkUczsgIAF&ved=0CAkQ8wc&usg=AFQjCNEMeyxZiG9eiNFCMWyjY0zSz35hkA"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.zicabloc.com/wp-content/uploads/2011/12/muse-separation.jpg&sa=X&ei=FPtyVdzsAYK1UfPggbgF&ved=0CAkQ8wc&usg=AFQjCNEE34SdgOv8CqwRZmDM7_XPOv9enQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://theaudioperv.com/wp-content/uploads/2012/11/muse2.jpg&sa=X&ei=F_tyVfn6H8fpUqTagMgN&ved=0CAkQ8wc&usg=AFQjCNF6T-Yro_zabRdtYQ-AMpHZoRT7pQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.bbc.co.uk/staticarchive/746891596cbb5288dd1d96a428607d2188a117e4.jpg&sa=X&ei=H_tyVb7TNIG2Up2cgJAF&ved=0CAkQ8wc&usg=AFQjCNF7-12YM1GsRd-M63TJAabWEHUyeQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img10.deviantart.net/9cb3/i/2013/031/6/b/muse_by_lolzertron-d5tdoli.jpg&sa=X&ved=0CAkQ8wdqFQoTCJWbs6a7isYCFcy-FAod90oAVA&usg=AFQjCNHj6nv-0od_oQ6Bzh2_H7UuOlOkdA"
+    Yelle:
+        pseudo: Yelle
+        firstname: Yelle
+        lastname: Yelle
+        description: "Yelle est une artiste française de musique électro-pop, originaire de Bretagne. Découverte sur Internet en 2005, via le réseau social MySpace, Yelle compte trois albums à son actif, Pop Up en 2007, Safari Disco Club en 2011 et Complètement fou en 2014, ainsi que quelques EPs sortis sur le label parisien Kitsuné. Elle est réputée pour avoir parcouru le monde avec son groupe et donné plus de 350 concerts, notamment aux États-Unis où elle connaît un succès remarquable."
+        type:
+            - pop
+            - dance
+            - electro
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://media.melty.fr/article-2443121-ajust_930/yelle-revient-avec-son-troisieme-album.jpg&sa=X&ei=-PtyVbuoGILbU4LYgLAC&ved=0CAkQ8wc&usg=AFQjCNHaY5cTppPthujOl3SrOmbjWpFCMA"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://static1.purepeople.com/articles/9/11/48/59/@/1042951-yelle-performs-on-stage-at-get-loaded-950x0-2.jpg&sa=X&ei=-_tyVfCQMoGtUeyHg_gE&ved=0CAkQ8wc&usg=AFQjCNFqpcDkU_HupzU_U_j_j3VOt5mn8Q"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://news.jukebo.fr/files/2011/06/yelle-papyrus-580x773.jpg&sa=X&ei=APxyVb3IB4azUbLOgig&ved=0CAkQ8wc&usg=AFQjCNH0tUbICDT9juamJ95dTO-8V8fHlg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.lesinrocks.com/wp-content/thumbnails/uploads/2014/10/yelle-604-tt-width-604-height-400-bgcolor-FFFFFF.jpg&sa=X&ei=MvxyVd6uJ8yvUei3gLgL&ved=0CAkQ8wc&usg=AFQjCNG7u-lwXXlLxNst87hbZsgIfMVh7w"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://imados.fr/content/4/1/7/554178/Yelle.png&sa=X&ved=0CAkQ8wdqFQoTCJCZn7S7isYCFUdpFAodfMQAJw&usg=AFQjCNFEnHMHJ3cqE_xAjvOtvFpwdS5DyA"
+    UB40:
+        pseudo: UB40
+        firstname: UB40
+        lastname: UB40
+        description: "UB40 a été influencé par les soirées blues que les membres fréquentaient pendant leur adolescence, et conjointement déterminé par le ska et le reggae qui ont inspiré les chansons King, Madam Medusa, Food for Thought, Signing Off and One in Ten.Le groupe a acheté ses premiers instruments avec l'argent du dédommagement qu'Ali Campbell a reçu après une bagarre dans un bar. Ils ont répété durant 6 mois dans une cave avant de se produire en public dans un pub de Birmingham le 9 février 1979. Ils ont commencé en faisant la première partie des Pretenders, durant leur tournée en Angleterre. Leur premier LP Signing Off est un disque auto-produit, une première dans l'histoire de l'industrie discographique britannique. La majorité de leurs chansons est par la suite inspirée du ska des années 1960."
+        type:
+            - reggae
+            - ska
+            - pop
+            - rock
+            - jazz
+            - dub
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://ticketnews.eventim.co.uk/wp-content/uploads/2013/11/ub40-tickets.jpg&sa=X&ei=zP1yVaSkDcqBU8zwgMgD&ved=0CAkQ8wc4Cg&usg=AFQjCNEwhEB__BcelrZ25Np6vKZgRwnQng"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.dublinconcerts.ie/content/uploads/2013/11/ub-40.jpg&sa=X&ei=3v1yVZrKIcLoUsHTg6AI&ved=0CAkQ8wc4Cg&usg=AFQjCNFBZLKV1xdZbLetDCdAiTLuoxEapA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://images1.musicfeeds.com.au/1f145ead2553e555af32d48870616c73-640x360.jpg&sa=X&ei=w_1yVZPJAcjsUs3wgsgC&ved=0CAkQ8wc&usg=AFQjCNEGXdSgW_MRPKmrOUVX1cS3PRip-Q"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.horizon-fm.fr/wp-content/uploads/2015/03/UB40.jpg&sa=X&ei=wP1yVZaxE4GoUoaTgPAI&ved=0CAkQ8wc&usg=AFQjCNGHj9Y1xbGM1tqNyVxMbByNrqxzkw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.thewinehousemag.com/wp-content/uploads/2013/09/Brit-Hit11.jpg&sa=X&ved=0CAkQ8wdqFQoTCLz2rNO7isYCFUY6FAodZl0Ahw&usg=AFQjCNGUt3HFCN3XOegrjw4vPhEmB28IMw"
+    Iggy Pop:
+        pseudo: Iggy Pop
+        firstname: James
+        lastname: Österberg
+        description: "Iggy Pop, de son vrai nom James Newel Österberg Jr., né le 21 avril 1947 à Muskegon, dans le Michigan (États-Unis) est un chanteur, compositeur et acteur américain. Il est considéré comme un des artistes rock les plus influents. The Stooges (son groupe de 1967 à 1974, et de 2003 à nos jours) est historiquement un des premiers groupes précurseurs du mouvement punk.Iggy Pop est aussi connu pour son jeu de scène torse nu impressionnant et excessif. Surnommé « L'Iguane », il est l'un des rares artistes des années 1960 épargnés par les punks des années 1970 et des années 1980, étant reconnu comme The Godfather of Punk (« Le Parrain du Punk »). Dans une moindre mesure, la scène grunge se l'appropriera également dans les années 1990.Ses morceaux les plus connus avec les Stooges sont I Wanna Be Your Dog et Search and Destroy. Il a aussi décroché quelques tubes en solo, la plupart ayant été faits grâce à la collaboration de David Bowie, parmi lesquels Nightclubbing, Lust for Life, The Passenger, I'm Bored, Real Wild Child, ou encore Candy, un duo avec Kate Pierson."
+        type:
+            - rock-n-roll
+            - punk
+            - rock
+            - protopunk
+            - rock-garage
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://img1.gtsstatic.com/wallpapers/3693387e0344730da38502e1030a7cd5_large.jpeg&sa=X&ei=Ef9yVbjQGIGsU5ylgegM&ved=0CAkQ8wc4KQ&usg=AFQjCNFA7sFfcXxrkHpfa7sPBtQAZcGzWw"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.staragora.com/images/flux/default/0/1/012fc1d99aca0c106bebf08b4b901c4d48b4186309103.jpg&sa=X&ei=Ff9yVZWVDYTTU9v5g5gP&ved=0CAkQ8wc4KQ&usg=AFQjCNEARk7kWZu4qv4Z_VHRNXcxumpA8w"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://static.guim.co.uk/sys-images/Music/Pix/pictures/2009/5/22/1242981335019/Iggy-Pop-of-the-Stooges-001.jpg&sa=X&ei=Jf9yVb6eM8blUuaWgaAO&ved=0CAkQ8wc4Yg&usg=AFQjCNHdyf6V3maBd6AQd2q1YQjLR5JBNQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://images.popmatters.com/news_art/i/iggypop.jpg&sa=X&ei=YP9yVeiGNMfqUr27gdgJ&ved=0CAkQ8wc4Yg&usg=AFQjCNGZenImd0B2cpxLzlx_BEQLORU3IQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.la-clau.net/imatges/noticia/iggy_pop_la_clau.jpg&sa=X&ved=0CAkQ8wdqFQoTCO-M--a7isYCFUxaFAodVAcAOA&usg=AFQjCNH81d3TEhLgqFrn_eYy-VAz7U5R-g"
+    alt-J :
+        pseudo: alt-J
+        firstname: alt-J
+        lastname: alt-J
+        description: "alt-J est un groupe de rock indépendant alternatif anglais originaire de Leeds composé de quatre musiciens et formé en 2007.Leur musique mélange des interludes folks, des rythmes hip-hop, ou encore des harmonies vocales. Le groupe, d'abord connu sous le nom de Films, est composé à l'origine de Joe Newman (guitariste/voix), Gus Unger-Hamilton (claviériste), Gwil Sainsbury (guitariste/bassiste) et Thom Green (batteur). Le groupe tient son nom du raccourci qui donne le symbole ? sur un Macintosh à clavier QWERTY1."
+        type:
+            - rock
+            - folk
+            - synthpop
+            - hip-hop
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://artichaut.bdarts.org/wp-content/uploads/2015/02/alt-j.jpg&sa=X&ei=MABzVcOXBcLWUb7IgJgD&ved=0CAkQ8wc&usg=AFQjCNEVcmanUvw-IobYDmDkNZ-m4Urv4g"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://laplumedauphine.fr/wordpress/wp-content/uploads/2015/02/alt-j-breezeblocks-single-cover-640x640.jpg&sa=X&ei=NQBzVYTVHMj-UpOdgLgE&ved=0CAkQ8wc&usg=AFQjCNETkdIAAo_p4S7LK2zuevOy6QNiow"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://assets.rollingstone.com/assets/2014/article/how-alt-j-sold-a-million-records-and-made-miley-a-fan-20141127/175911/medium_rect/1417023939/720x405-alt_J_SMALL.jpg&sa=X&ei=OABzVfOrIYn9Up-HgfgK&ved=0CAkQ8wc&usg=AFQjCNFxB-71NjqvlTBb5CoHndWrKP6iIA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.mtv.com/crop-images/2013/09/10/alt_j.jpg&sa=X&ei=PABzVbH-OcOBU_e3gHA&ved=0CAkQ8wc&usg=AFQjCNGObDvfakE1CLlDRXTGkgDQlbLKTg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://i.f1g.fr/media/ext/orig/www.lefigaro.fr/medias/2012/11/02/8a0041c6-24d3-11e2-8f46-ba31020eb522-493x328.jpg&sa=X&ved=0CAkQ8wdqFQoTCI_k8IO8isYCFYq2FAod1v4AKg&usg=AFQjCNF69P7hTOABYU9fxusnn-wQpfIrdg"
+    andré manoukian:
+        firstname: andré manoukian
+        lastname: andré manoukian
+        description: "André Manoukian, né le 9 avril 1957 à Lyon dans le Rhône est un compositeur qui œuvre principalement pour la variété. Il est apparu à l'avant scène en tant que membre du jury de l'émission de télé-crochet Nouvelle Star sur M6, puis sur D8, à laquelle il participe depuis la première édition en 2003."
+        type:
+            - jazz
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.metronews.fr/_internal/gxml!0/r0dc21o2f3vste5s7ezej9x3a10rp3w$lrxqexwn79ob72ysjwvfikl6v5hjsee/andre.jpeg&sa=X&ei=MwFzVYAZhfNShuuByA0&ved=0CAkQ8wc&usg=AFQjCNEsDdetRnyFvi86_0opCvvK19EcUQ"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://mycontact.fr/public/podcasts/images/andr-manoukian-chez-dj-19-d-c.-2013114249.jpg&sa=X&ei=NQFzVavEDcz9UNnIg5gG&ved=0CAkQ8wc&usg=AFQjCNHopvK58E3d-_o0t8tmJpHN2J1_gA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=https://pbs.twimg.com/profile_images/378800000511108507/784cd00e9a24ec74bc3fb3d40ec7d528.jpeg&sa=X&ei=OwFzVZufO8HxUO7DgMAB&ved=0CAkQ8wc&usg=AFQjCNGiUi8WcGsB-MqrAdslXhuB9zXBlg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn-premiere.ladmedia.fr/var/premiere/storage/images/public/news-people/exclu-andre-manoukian-s-ils-nous-resservent-une-cindy-sander-sur-le-plateau-on-montrera-nos-fesses-tous-les-quatre-/17363235-1-fre-FR/EXCLU-Andre-Manoukian-S-ils-nous-resservent-une-Cindy-Sander-sur-le-plateau-on-montrera-nos-fesses-tous-les-quatre-_portrait_w532.jpg&sa=X&ei=iAFzVfOwNcirU53ngLgN&ved=0CAkQ8wc&usg=AFQjCNE_RRiHrnKAOxf_98jG0HVyC_GRbA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://s2.lemde.fr/image/2013/10/03/534x0/3489089_4_67e0_andre-manoukian_0a21186f0e1092794367593315f7d056.jpg&sa=X&ved=0CAkQ8wdqFQoTCMCGlKW8isYCFQbAFAod-lIASw&usg=AFQjCNHFurBkSTbuIM0YZMrH5wnfTpLF3g"
+    M.I.A.:
+        pseudo: M.I.A.
+        firstname: Mathangi
+        lastname: Arulpragasam
+        description: "Mathangi « Maya » Arulpragasam (née le 18 juillet 1975), plus connue sous son nom de scène M.I.A., est une auteure-compositrice-interprète, peintre et réalisatrice britannique. Son surnom « M.I.A. » est à la fois un clin d'œil à son propre nom et une référence à l'abréviation pour Missing in Action. Ses compositions combinent des éléments d'électronique, de dance, d'alternatif, de hip-hop et de musiques du monde. M.I.A. commence sa carrière d'artiste visuelle en 2000 dans l'ouest de Londres, avant de se lancer dans la musique en 2002. Depuis sa montée vers le succès en 2004, agrémentée par des titres tels que Sunshowers et Galang, elle a été nommée pour un Oscar, deux Grammy de même qu'un prix Mercure."
+        type:
+            - electro
+            - hip-hop
+            - dance
+            - new-rave
+            - world
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.hartzine.com/wp-content/uploads/2010/04/mia.jpg&sa=X&ei=WgJzVaL4EILlUprdgLAH&ved=0CAkQ8wc&usg=AFQjCNFUCuB-MKZ02BF0tszrIrqCYPM-QA"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.ill-click.com/wp-content/uploads/2012/04/MIA.jpg&sa=X&ei=YAJzVYnlG8XaUf6igugL&ved=0CAkQ8wc&usg=AFQjCNENahxWloEbiDO2YN39qVyt3ohMGA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.welovemusic.fr/wp-content/uploads/2014/07/M.I.A.jpg&sa=X&ei=YgJzVciwLIOAUa6JgvAC&ved=0CAkQ8wc&usg=AFQjCNFNYTzsVCZcr9HNt-oZD50BqZLPMw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=https://s3.amazonaws.com/vice_asset_uploader/files/1383582077mia_2.jpg&sa=X&ei=ZgJzVbTYCIPqUsj7gMgM&ved=0CAkQ8wc&usg=AFQjCNHo8M50vTR_a6vgKvQZn8NSCnF52Q"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.noiseporn.com/wp-content/uploads/Mia_CanSeeCanDo.jpg&sa=X&ved=0CAkQ8wdqFQoTCLv644W9isYCFcPAFAodKVYAYg&usg=AFQjCNEC2L9v27qLItHkpMdxBPIu6h1wTg"
+    Ebony Bones:
+        firstname: ebony
+        lastname: bones
+        description: "Ebony Bones, née Ebony Thomas, est une britannique d'origine des Caraïbes. Chanteuse-compositeur, productrice et musicienne, elle est considérée comme l'une des rares artistes féminines à s'autoproduire. Son style musical est éclectique. Il combine des éléments de post-punk, afro-beat, art -rock, classique, new wave et souvent électronique. Nommé par son premier batteur, Rat Scabies, du légendaire groupe punk The Damned, son premier album, Bone of My Bones, est sorti en 2009 avec des critiques positives. Elle est ensuite partie voyager en Inde pour produire son deuxième album, Behold a Pale Horse, sorti en septembre 2013, acclamé par la critique."
+        type:
+            - electro
+            - hip-hop
+            - dance
+            - new-rave
+            - afro-punk
+            - punk
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.lesinrocks.com/wp-content/thumbnails/uploads/2013/07/EbonyBones604-tt-width-604-height-400-crop-1-bgcolor-000000.jpg&sa=X&ei=nQNzVd3-M8W2Ufr9gdgI&ved=0CAkQ8wc&usg=AFQjCNEH_4mr-HgAvfeazn9But7bcvRTeQ"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://static.blog.leparisien.fr/media/12/3508298612.2.jpg&sa=X&ei=oQNzVfG6JYa1UfDVgkA&ved=0CAkQ8wc&usg=AFQjCNH5rN9VJielrdIXDTQvdME8AKobRA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://soundofbrit.fr/wp-content/uploads/2013/08/ebonybones.jpg&sa=X&ei=pQNzVaPdKMGkUt-FgeAN&ved=0CAkQ8wc&usg=AFQjCNHMnCdo-anZKNP6S358ZU-PQOb_Lw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.standardmagazine.com/wp-content/uploads/2009/10/ebony_bones3.jpg&sa=X&ei=qANzVe-6Lcz9UNnIg5gG&ved=0CAkQ8wc&usg=AFQjCNEHIi8dwoNcD70iq1NNZe5CJJSy0A"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.novaplanet.com/sites/default/files/imagecache/page_mea/articles/images/ebony-bones.jpg&sa=X&ved=0CAkQ8wdqFQoTCOnl6Ze9isYCFUJcFAods4YA8w&usg=AFQjCNHxSuDmteXFYOrrztu9L6xo5Nlszg"
+    Arcade Fire:
+        pseudo: Arcade Fire
+        firstname: Arcade Fire
+        lastname: Arcade Fire
+        description: "Arcade Fire (auparavant appelé The Arcade Fire) est une formation américano-canadienne de rock, basée à Montréal. Les membres du groupe sont les multi-instrumentistes Win Butler, Régine Chassagne, Richard Parry, Tim Kingsbury, William Butler, Sarah Neufeld et Jeremy Gara. Le groupe a pris forme au début des années 2000. Il s'est développé autour du couple formé par Win Butler et Régine Chassagne. Il a reçu en 2011 à Los Angeles le Grammy Award de l'album de l'année pour The Suburbs, devançant alors aux scrutins d'importantes vedettes de la pop américaine.Pendant la tournée Funeral, le groupe incluait le joueur de cor Pietro Amato et le violoniste Owen Pallett du groupe Final Fantasy. Ce dernier, bien qu'il ne soit pas cité comme un membre du groupe sur le site officiel, participe aux concerts du groupe et, selon Win Butler, a apporté son aide pour les arrangements des cordes de leur second album Neon Bible. Howard Bilerman , qui jouait de la batterie sur Funeral, a depuis quitté le groupe."
+        type:
+            - Rock indépendant
+            - rock alternatif
+            - pop
+            - rock
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.noodlesrec.com/wp-content/uploads/2013/09/arcade-fire-noodlesrec.jpg&sa=X&ei=CwpzVfCUF4nyUqWagsgC&ved=0CAkQ8wc&usg=AFQjCNE0hSN9qhDsrRV990ZitCcjV85-Rw"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://montreal.tv/portail/blog/wp-content/uploads/2013/11/arcade-fire-snl-2010.jpg&sa=X&ei=DQpzVd2EHYb9UoTag4gJ&ved=0CAkQ8wc&usg=AFQjCNFX17ds5puqMwmTEt35SZkEIXMhzQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=https://vagabondssolitaires.files.wordpress.com/2013/11/black_pizza_arcadefire.jpg&sa=X&ei=DwpzVfCsOMqxUeb_gPAL&ved=0CAkQ8wc&usg=AFQjCNFz6HFl7U66nN90Al6uMpzldt2Ghw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://jto.s3.amazonaws.com/wp-content/uploads/2014/07/z1-curran-arcade-fire-a-20140725.jpg&sa=X&ei=SwpzVfmaJoHiUZjSgdAD&ved=0CAkQ8wc&usg=AFQjCNHzEhbj6eGYZd1FS0sBYXAzEhSm3w"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=https://brinkmusic.files.wordpress.com/2013/10/arcade-fire1.jpg&sa=X&ved=0CAkQ8wdqFQoTCKHn66m9isYCFUe1FAodjHoA7g&usg=AFQjCNE5Hp2tBaIt4COnjEnFrB9eGO_CcQ"
+    Pharrell Williams:
+        firstname: pharrell
+        lastname: williams
+        description: "Pharrell Williams, ou tout simplement Pharrell, né le 5 avril 1973 à Virginia Beach (Virginie), est un auteur-compositeur-interprète, rappeur, producteur et styliste américain. Avec Chad Hugo, ils forment le duo de production musicale The Neptunes. Il est également le chanteur et le batteur du groupe N.E.R.D qu'il forme avec Hugo et son ami d'enfance Shay Haley. Son premier single Frontin' est sorti en 2003 et son premier album solo, In My Mind, en 2006. Il se distingue notamment dans cinq duos avec Snoop Dogg : Beautiful, Drop It Like It's Hot, Sets Up, Let's Get Blown et So Many Pros. C'est sa participation en tant que producteur du titre I'm a Slave 4 U de Britney Spears et de l'album Justified de Justin Timberlake qui le révèle auprès du grand public.En 2013, il enchaine les succès mondiaux en chantant sur deux titres de l'album Random Access Memories des Daft Punk : les singles Get Lucky et Lose Yourself to Dance, ainsi qu'avec Robin Thicke et T.I. sur le no 1 Blurred Lines, et enfin Happy, une chanson qu'il a écrite et composée. En 2014, il devient commissaire d'une exposition titrée GIRL, à la galerie Perrotin, à Paris."
+        type:
+            - hip-hop
+            - randb
+            - funk
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://intothegloss.com/wp-content/uploads3/2013/10/IMG_1875.jpg&sa=X&ei=QgtzVcOdC4L9ULX_gtAF&ved=0CAkQ8wc&usg=AFQjCNHwCLLFLzgE1IBD4CEC4IWEkyjFFA"
+        pictures:
+            - "http://mybandnews.com/wp-content/uploads/2014/04/gq-style-pharrell-williams-1-700x325.jpg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.frequence-sud.fr/admin/transfert/data/31529.jpg&sa=X&ei=SgtzVeKHK8X8UrSkgIAK&ved=0CAkQ8wc&usg=AFQjCNEDqamQDBIdsgI4fpuWTLu0nNyxPg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img0.ndsstatic.com/wallpapers/2ccc4a699945fecaa8b195d869a89c7f_large.jpeg&sa=X&ei=UAtzVeSRJ8H1UurqgbAE&ved=0CAkQ8wc&usg=AFQjCNF1aFqMDLj9_GmvCfD8r11i-XoIuQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.gentlemale.fr/wp-content/uploads/2014/10/pharrell-williams.jpg&sa=X&ved=0CAkQ8wdqFQoTCJDv2ri9isYCFUXsFAod3bgAAA&usg=AFQjCNERU2hmLGMXFEHKh6myjyfvl6GFtQ"
+    Skip the Use:
+        pseudo: Skip the Use
+        firstname: Skip the Use
+        lastname: Skip the Use
+        description: "Skip the Use se forme à Lille en 2007. Après avoir soutenu le groupe punk Carving pendant dix ans, le chanteur Matt Bastard fait équipe avec le compositeur et guitariste Yann Stefani. Jay Gimenez, Lio Rapsaert et Manamax Catteloin complètent la formation.Remarqué par un éditeur lors d'un concert au Portugal, Skip the Use peaufine son premier album avec les producteurs Manu Guiot et Yves Jaget. Le résultat paru sur le label du groupe (Calysta) en octobre 2009, amène un rock puissant et néanmoins dansant. Le quintette entame une tournée nationale dans la foulée."
+        type:
+            - electro
+            - pop
+            - rock
+            - funk
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.justmusic.fr/wp-content/uploads/2014/01/Skip-The-Use.jpg&sa=X&ei=TwxzVYS6FoflUtvxgPAD&ved=0CAkQ8wc&usg=AFQjCNGh433JxezSGBysAtJ-6t2eehu7IQ"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.lesfrancaisdebarcelone.com/wp-content/uploads/2014/12/ZOOM-Skip-The-Use-c-Slam.jpg&sa=X&ei=UgxzVfPjL8rxUJT-ggg&ved=0CAkQ8wc&usg=AFQjCNE6tPXHpaxxxlTLKrz-gsunCEBmDA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.centres-culturels-limoges.fr/IMG/jpg/15_02_13STU.jpg&sa=X&ei=VgxzVerPF8vbU7-YgegK&ved=0CAkQ8wc&usg=AFQjCNGP7iE7Fsb6NFZLnCFHugrP7Kq5Sw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.discordance.fr/wp-content/IMG/2013/03/MMS1574.jpg&sa=X&ei=WQxzVd7hJcHWU_iQg7gJ&ved=0CAkQ8wc&usg=AFQjCNHNK5Al5nFjutM8ilpQ3BkJF9TuMQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.file7.com/wmedias1/artistes/photos_fiche/skip_artiste.jpg&sa=X&ved=0CAkQ8wdqFQoTCMidzc29isYCFUztFAod5RYA3g&usg=AFQjCNGKH8yavts2VWzP3b3pCet-1snKNg"
+    Lionel Richie:
+        firstname: Lionel Richie
+        lastname: Lionel Richie
+        description: "Lionel Richie est né le 20 juin 1949 à Tuskegee, dans l'Alabama. Enfant, il fréquente la chorale de l'église locale, encouragé par ses parents, tous deux agents administratifs, pour l'US Army (son père) ou l'éducation nationale (sa mère). A la maison, le gamin est sensible à la soul du label Tamla Motown, sans se douter un instant qu'il fera un jour partie de la grande famille. Il prend quelques leçons de saxophone - participant à quelques groupes de rhythm 'n' blues au milieu des années 60 - et s'initie seul au piano, sans l'aide de sa grand-mère pianiste professionnelle. C'est en 1968, avec ses camarades d'université Milan Williams, Ronald LaPread, William King Jr."
+        type:
+            - soul
+            - randb
+            - funk
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://quicksound.com/wp-content/uploads/2013/07/lionel-richie-background.jpg&sa=X&ei=dA1zVe7iDcX-UMyygrAM&ved=0CAkQ8wc4JA&usg=AFQjCNGw03B-xtEKccU6vgLQTO06VhRWWg"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.nouvelle-vague.com/wp-content/uploads/2015/03/A-VENIR-CONCERT-Lionel-Richie.jpg&sa=X&ei=dg1zVaSiFcajU9ykgOAD&ved=0CAkQ8wc4JA&usg=AFQjCNHl208ujK9vW400VFpplA-0C1nu-w"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.thepromota.co.uk/wp-content/uploads/2014/11/Lionel-Richie.jpg&sa=X&ei=eA1zVe7HOML-Uq2dgPAF&ved=0CAkQ8wc4JA&usg=AFQjCNFemtK402LH5qsJWqnMTA9ALtISxg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=https://pbs.twimg.com/profile_images/431131388889165824/ZU0IqgeL_400x400.jpeg&sa=X&ei=WQ1zVefXM8iqUYPAgMAN&ved=0CAkQ8wc&usg=AFQjCNFi3U57xcHoGR1MSCpadaOuAd0W6Q"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://lionelrichie.com/wp-content/uploads/2013/06/LIONEL-RICHIE-PERFORM.jpg&sa=X&ved=0CAkQ8wdqFQoTCPng4Oi9isYCFQXtFAodsvsAeg&usg=AFQjCNGGI7Ff446XDAFBQ-xC_N4nDkS5hA"
+    Coldplay:
+        pseudo: Coldplay
+        firstname: Coldplay
+        lastname: Coldplay
+        description: "Coldplay est un groupe de rock britannique formé à Londres en 1996 par le chanteur, guitariste et pianiste Chris Martin et le guitariste Jon Buckland. Le guitariste Guy Berryman rejoint ensuite le groupe, qui prend le nom de Starfish avant que le batteur Will Champion devienne membre à son tour et que le producteur Phil Harvey s'associe avec eux dans leur entreprise. En 1998, le groupe voit le jour sous son nom définitif et sort leurs deux premiers EPs. Ils en profitent alors pour signer chez le label Parlophone."
+        type:
+            - pop
+            - rock
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://img0.ndsstatic.com/wallpapers/420ce4fbb4dc8beb17da06968f7de980_large.jpeg&sa=X&ei=Vg5zVe-MOcT4UsKZgcAP&ved=0CAkQ8wc&usg=AFQjCNH8-6Hh6YOMENrRwayATjukFX4HAQg"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.actu-concert.fr/wp-content/uploads/2013/01/Coldplay.jpg&sa=X&ei=WA5zVcTMOYT_UNDwgvgK&ved=0CAkQ8wc&usg=AFQjCNGY7m_XRqSgzcPfg-MB7Eg8-VDuPw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img1.ndsstatic.com/wallpapers/15d1a0a1c695c296a723342e7fd8f3dc_large.jpeg&sa=X&ei=Ww5zVdDoCIWqU_j3gKgK&ved=0CAkQ8wc&usg=AFQjCNFO0ZHxEfmskKc6MpzEDWXOwiJ9fg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://madeira.hccanet.org/project2/walterp2/coldplay1-1.jpg&sa=X&ei=XQ5zVd_zOsGeUMGxg-AF&ved=0CAkQ8wc&usg=AFQjCNGHzapPEz1_8yDIym7henhlQBGAPQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://musiceny.fr/wp-content/uploads/2014/12/coldplay-press-2014-650.jpg&sa=X&ved=0CAkQ8wdqFQoTCJqi-_q9isYCFYNbFAodbG0ATQ&usg=AFQjCNFv-Bl2LoSJlR-OXCVGg3dZX4WpbQ"
+    JoeyStarr:
+        pseudo: JoeyStarr
+        firstname: Didier
+        lastname: Morville
+        description: "JoeyStarr, parfois orthographié Joey Starr, né Didier Morville le 27 octobre 1967 à Saint-Denis, est un rappeur, compositeur, producteur et acteur français.Il commence sa carrière musicale en duo avec Kool Shen, sous le nom de groupe Suprême NTM, l'un des piliers du rap français durant les années 19902, devenu inactif en 1998, puis reformé dix ans plus tard en 2008. Parallèlement à sa carrière de chanteur, Morville fait quelques apparitions dans le milieu du cinéma dans des films tels que La Tour Montparnasse infernale, Old School, Le Bal des actrices, et Polisse.Morville est souvent considéré par les médias comme instable, violent, et représente une figure connue du grand public au fil de ses démêlés avec la justice3. Malgré cela, son manager Sébastien Farran lui reconnaît une qualité première, celle de « l'authenticité », qui se reflète dans ses textes : « Joey la Starr est un personnage entier4. »"
         type:
             - rap
             - hip-hop
-        picture: "http://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Macklemore_%26_Ryan_Lewis_at_Sasquatch_2011.jpg/1024px-Macklemore_%26_Ryan_Lewis_at_Sasquatch_2011.jpg"
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.metronews.fr/_internal/gxml!0/r0dc21o2f3vste5s7ezej9x3a10rp3w$eowasf0mncaege6ufa7jnejawv4maa3/Capture-decran-2013-02-19-a-18.jpeg&sa=X&ei=uQ9zVfy0FYKqUey2gLgC&ved=0CAkQ8wc&usg=AFQjCNHXEmUXw4wUa4TxwRbkLqtNEFz8PQ"
         pictures:
-            - "http://static.gigwise.com/artists/wenn20884012_600.jpg"
-            - "http://www.blokkmedia.com/wp-content/uploads/2014/08/x9.jpg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://s2.lemde.fr/image/2009/06/13/534x267/1206428_3_51f0_cagoules-et-armes-les-voleurs-se-sont_3e2f6bb407272205bb2e72b8c073ab31.jpg&sa=X&ei=tQ9zVaSJIMSBU_TwgegN&ved=0CAkQ8wc&usg=AFQjCNEQ4p5V43yS81yGEyHyR6X1KrQV4A"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.13or-du-hiphop.fr/le-blog/wp-content/uploads/2015/01/3433615_3_08b4_joey-starr_c86b32cfc6c6db382d8ad43a3bb0f8d4.jpg&sa=X&ei=rw9zVdXuK8X5Ut7ygYgM&ved=0CAkQ8wc&usg=AFQjCNGkGQ4l_pvw7B8b5VXgL5x9HcmYdg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://braindamaged.fr/wp-content/uploads/2015/02/ted-2-joey-starr-a-la-voix-une-631x250.jpg&sa=X&ei=rQ9zVebfI4rpUqaYgNAO&ved=0CAkQ8wc&usg=AFQjCNHoviR9AnYl-pQx2v_Deftp4WLrkg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.metronews.fr/_internal/gxml!0/r0dc21o2f3vste5s7ezej9x3a10rp3w$eowasf0mncaege6ufa7jnejawv4maa3/Capture-decran-2013-02-19-a-18.jpeg&sa=X&ved=0CAkQ8wdqFQoTCOeqsY2-isYCFQO7FAodpmcA0Q&usg=AFQjCNGTsd5vfWlEMDk2WaOP80rN7qi5Ug"
+    David Bowie:
+        pseudo: David Bowie
+        firstname: David
+        lastname: Jones
+        description: "David Bowie, de son vrai nom David Robert Jones, né le 8 janvier 1947 à Londres, dans le quartier de Brixton, est un chanteur, compositeur, producteur de disques et acteur britannique. Au long de plus de quatre décennies d'une carrière marquée par des changements fréquents de style, une ré-invention permanente de son personnage et de ses approches musicales, il s'est imposé comme un des artistes musicaux les plus originaux, les plus importants et novateurs de la musique pop et rock, au point que de très nombreux artistes se sont réclamés de son influence. Il a vendu plus de 140 millions d'albums dans le monde1.Après des débuts hésitants entre folk et variété, dans la deuxième moitié des années 1960, et un détour par le mime, il se fait connaître du public, en juillet 1969, lorsque son titre Space Oddity entre dans le top five des meilleurs ventes au Royaume-Uni."
+        type:
+            - rock
+            - soul
+            - pop
+            - protopunk
+            - post-punk
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.servicelitteraire.fr/wp-content/uploads/2015/04/21_bowie3_g_w.jpg&sa=X&ei=NxBzVeq7L4roUuXqgOgI&ved=0CAkQ8wc&usg=AFQjCNHrwC0DWfGaVVrw8gvUvDD5p5rzZQ"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.actuhightech.com/wp-content/uploads/2014/10/David-Bowie-Sue-or-In-A-Season-of-Crime1.jpg&sa=X&ei=ORBzVfW3LcP0UuLUg_gN&ved=0CAkQ8wc&usg=AFQjCNFvsxO0uGzuTDJJQpAQt92Z2gOrdQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn.vrworld.com/wp-content/uploads/2014/08/bow1.jpg&sa=X&ei=QBBzVZiHMIHwUMbcgfgJ&ved=0CAkQ8wc4Iw&usg=AFQjCNEPA-kSA0o0hfVO2kHklgFddxJz6A"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://i.telegraph.co.uk/multimedia/archive/02447/david-bowie_2447216b.jpg&sa=X&ei=QxBzVYj3IYLjU-KegOAG&ved=0CAkQ8wc4Iw&usg=AFQjCNHFk4aVDUrpk2QH4J7kMpvBqr0QMw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn1-public.ladmedia.fr/var/public/storage/images/look/toutes-les-news-look/mode-david-bowie-future-egerie-louis-vuitton-451316/5419301-1-fre-FR/Mode-David-Bowie-future-egerie-Louis-Vuitton_portrait_w674.jpg&sa=X&ved=0CAkQ8wdqFQoTCM-BhKC-isYCFcnAFAodjjsA3g&usg=AFQjCNEkSGXcKsi1A9l-0ZQJMK3bet5SQw"
+    London Grammar:
+        pseudo: London Grammar
+        firstname: London Grammar
+        lastname: London Grammar
+        description: "London Grammar est un groupe de musique anglais formé par Hannah Reid, Dominic « Dot » Major et Dan Rothman.Les membres du groupes sont originaires de Londres et Northampton et le style musical du groupe est un mélange d'electronica, de trip hop et de pop. Le premier EP de London Grammar Metal & Dust est sorti en février 2013 et le premier album If You Wait est sorti le 9 septembre 2013."
+        type:
+            - electronica
+            - pop
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.qobuz.com/info/IMG/arton173938.jpg&sa=X&ei=_RFzVae2E4XoUtWngJAL&ved=0CAkQ8wc&usg=AFQjCNHxCbfo17uwK-586_rcTTugxybdow"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.thewebtape.net/wp-content/uploads/2014/03/london_grammar_glastonbury_to_paris.jpg&sa=X&ei=BRJzVZ2kHMLbU4jXgIgK&ved=0CAkQ8wc&usg=AFQjCNEWCvacqwX-JOyIk6WbnXRiee2HCg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2013/9/11/1378894941004/London-Grammar-Hannah-Rei-013.jpg&sa=X&ei=BxJzVY7tK8HXU4njg5AP&ved=0CAkQ8wc&usg=AFQjCNEXOAuh1k5a-xkoJSHLtoK9pnN2OA"
+            - "http://xyetz.com/wp-content/uploads/2013/11/London+Grammar+Wasting+my+young+years.jpg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.qobuz.com/info/IMG/arton174148.jpg&sa=X&ved=0CAkQ8wdqFQoTCM3047W-isYCFUTtFAodyGMAlQ&usg=AFQjCNGtjw58sTHQ5pomB_56Cv_qQhYrjw"
+    Depeche Mode:
+        pseudo: Depeche Mode
+        firstname: Depeche Mode
+        lastname: Depeche Mode
+        description: "Depeche Mode est un groupe de musique anglais, originaire de Basildon (Essex), formé en 1979. Toujours présent sur la scène internationale, il s'agit d'un groupe influent et populaire apparu au cours de l'ère new wave au sein du courant synthpop. Son nom provient d'un magazine français. Après avoir été lancés par le manager de Soft Cell, ils sont repérés par Daniel Miller, qui les fait signer sur son label Mute Records en 1981. Depeche Mode connaît son premier succès en Europe à partir du mois de septembre de cette même année avec Just Can't Get Enough et aux États-Unis en 1984/1985 avec le single People Are People."
+        type:
+            - pop
+            - rock
+            - synthpop
+            - new-wave
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://lenouveaucenacle.fr/wp-content/uploads/2013/06/dmpromo.jpg&sa=X&ei=2BJzVcjwKsL3UtyYg7gJ&ved=0CAkQ8wc&usg=AFQjCNEwCWXwZgWLq6tOArzOuzfi9Spz5Q"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.streetgeneration.fr/wp-content/uploads/2012/10/546451_10151267183975329_1179572890_n.jpg&sa=X&ei=3hJzVZamOMGAUfHOgeAF&ved=0CAkQ8wc&usg=AFQjCNG_2w7S7tup9yCk3MWK3TwYvDo-eg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.depechemode.com/wp-content/uploads/2013/12/christmas-card.jpg&sa=X&ei=6BJzVebUD8HoUK6FgcgI&ved=0CAkQ8wc&usg=AFQjCNE7KQtIV5-UlV4v6C5A-rfv3BkuFw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://images2.alphacoders.com/196/196612.jpg&sa=X&ei=9RJzVa2gK4byUsibg7AJ&ved=0CAkQ8wc4IQ&usg=AFQjCNG1iGuZ5IjEXd58nkF5xhbpB-TYMw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://borgniet.be/wp-content/uploads/depeche-mode-bum-byAntonCorbijn.jpg&sa=X&ved=0CAkQ8wdqFQoTCMu0p8q-isYCFUE-FAod2SMAUQ&usg=AFQjCNEY8NDIUbnuaPRgXfV8IQeWpJ1HYQ"
+    Veronique Sanson:
+        firstname: veronique
+        lastname: sanson
+        description: "Cette auteur-compositeur-interprète à la voix exceptionnelle est tombée dans la musique quand elle était petite. Elevée par des parents mélomanes, Véronique fait preuve dès son plus jeune âge d'un grand talent pour le piano. Avec sa soeur et un ami, François Bernheim, aujourd'hui compositeur, elle crée un groupe, les Roche Martin, auteur de deux 45 tours aux succès mitigés. Mais cette expérience lui permet de collaborer avec un certain Michel Berger qui produit son premier album, 'Amoureuse' en 1972. Ensemble, ils vont connaître le succès et leur chemin ne se séparera qu'à la mort de l'artiste. Véronique, artiste 100% française, se découvre par ailleurs une passion pour les Etats-Unis où elle va vivre pendant dix ans, mariée au musicien Stephen Stills. Sa musique sera toujours influencée par ce séjour et son amour du travail bien fait. Forte de douze albums et de nombreuses récompenses, Véronique est une artiste généreuse et entière, autant aimée par le public que par la profession."
+        type:
+            - pop
+            - world
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://img.voi.pmdstatic.net/pad/http.3A.2F.2Fwww.2Evoici.2Efr.2Fvar.2Fvoi.2Fstorage.2Fimages.2Fmedia.2Fmultiupload-du-01-fevrier-2015.2Fveroniquesanson1.2F9214826-1-fre-FR.2Fveroniquesanson1.2Ejpg/620x465/quality/80/veroniquesanson1.jpg&sa=X&ei=SRRzVfjPBMT6Uu2hgJgJ&ved=0CAkQ8wc&usg=AFQjCNFrNNEgGFiFlaTEvgvtyNjQYhPGeg"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn2.artwhere.net/www.cinetelerevue.be/imf/c/eyJtYXNrIjoiNjE4eDM5NyIsIm0iOjE3fQ/images/actus_musique/veronique-sanson-10-reporters.jpg&sa=X&ei=VhRzVfPyHontUqjMgYgL&ved=0CAkQ8wc4Iw&usg=AFQjCNEG6-gcWVgevv4NRLT2T_U5oF0Eng"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.chartsinfrance.net/style/breves/7/photo_1421840921.jpg&sa=X&ei=WRRzVaiCI8KBUZTGgIAL&ved=0CAkQ8wc4Iw&usg=AFQjCNEMGiagPyi7XMv9Z6CxaopGGN3v4A"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.chartsinfrance.net/style/breves/4/photo_1331630646.jpg&sa=X&ei=ZxRzVaibBITwUMPygPgC&ved=0CAkQ8wc4WQ&usg=AFQjCNH9nb0E5YktPK3HWGxr1jYXJM5PIw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn-parismatch.ladmedia.fr/var/news/storage/images/paris-match/culture/musique/musique-match-9-veronique-sanson-au-firmament-152779/1517092-1-fre-FR/Musique-Match-9-Veronique-Sanson-au-firmament_article_landscape_pm_v8.jpg&sa=X&ved=0CAkQ8wc4TWoVChMIqISe476KxgIVyloUCh2V4QBs&usg=AFQjCNFshQOKvSEBmD7pjqKN-DwWVBIAMA"
+    Christine and the Queens:
+        pseudo: Christine and the Queens
+        firstname: Christine and the Queens
+        lastname: Christine and the Queens
+        description: "Christine and the Queens n'est pas un groupe mais la seule Christine. Brouilleuse de pistes, l'intrépide étudiante répond en fait au doux nom d'Héloïse Lhetissier et passe un Master d'études théâtrales. Composant seule sur son ordinateur, Christine and the Queens souhaitait à l'origine enrôler des drag queens sur scène pour justifier l'appellation du groupe. Devant le refus de ceux qu'elle a contactés, Christine and the Queens se produit seule dans une ambiance inspirée par Laurie Anderson ou plus près de nous de Lykke Li ou Lana Del Rey. Après les EP « Miséricorde », « Mac Abbey » et « Nuit 17 à 52 », il est temps pour Christine And The Queens de présenter son premier album « Chaleur Humaine ». On l'a d'abord connue seule en scène avec son ordinateur, puis retrouvée sur les premières parties de The Do et de Stromae. Sa prestation à la grâce saisissante aux Victoires de la Musique 2014 la révèle au plus grand nombre.La consécration est atteinte lors des Victoires de la Musique 2015 où Christine And The Queens remporte la Victoire de l'Artiste Féminine de l'Année ainsi que la Victoire du Clip de l'Année pour le clip de la chanson 'Saint Claude'."
+        type:
+            - electro
+            - pop
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=https://yt3.ggpht.com/-OMpEQR220X8/AAAAAAAAAAI/AAAAAAAAAAA/grnDjA2cFgE/s900-c-k-no/photo.jpg&sa=X&ei=axVzVZPTG4LWU--ogYgM&ved=0CAkQ8wc&usg=AFQjCNEP20Zn4LpZtf_6NZu2lntvob97tA"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.nrj.be/images/News_Musique/MARS2015/christine-and-the-queens.jpg&sa=X&ei=bRVzVazVOsz-UvOMgZgH&ved=0CAkQ8wc&usg=AFQjCNHpUBNRHSWyDA6PyjnYcS7DIDFYJw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.chartsinfrance.net/style/breves/3/photo_1398784842.jpg&sa=X&ei=cRVzVcSdBISPU8a2gdgD&ved=0CAkQ8wc&usg=AFQjCNECKTrSbssFThasho1ma3UGyTYwSQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.lookcoco.fr/wp-content/uploads/2014/05/christine-and-the-queens-top.jpg&sa=X&ei=cxVzVfSYE8PmUpX_geAB&ved=0CAkQ8wc&usg=AFQjCNGi-LcSBsh1-doIlCP1biZQVM2YWg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://blogs.paris.fr/chuchotements/files/2012/07/CATQ.jpg&sa=X&ved=0CAkQ8wdqFQoTCLyNw4m_isYCFQU4FAodIkUApA&usg=AFQjCNE671uDA9Ou23nu3JBtpF5qJEt8tA"
+    Lenny Kravitz:
+        pseudo: lenny kravitz
+        firstname: leonard
+        lastname: kravitz
+        description: "Lenny Kravitz, né Leonard Albert Kravitz le 26 mai 1964 à New York, est un chanteur, musicien, compositeur et acteur américain.Ses compositions mêlent des éléments aussi variés que le rock psychédélique, le hard rock, le rhythm and blues, la soul, le funk et la pop. Ses principales influences sont Jimi Hendrix, Funkadelic, John Lennon et Prince.En plus de chanter et de faire les backing vocals c'est un musicien complet qui joue lui-même de tous les instruments lorsqu'il enregistre (guitare, basse, batterie, clavier et percussions). Il a gagné le Grammy Award pour la « Meilleure prestation rock masculine » quatre fois de 1999 à 2002. Ses ventes sont estimées à 381 millions d'albums dans le monde."
+        type:
+            - pop
+            - rock
+            - soul
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.mtv.com/shared/promoimages/bands/k/kravitz_lenny/a-z/lenny_kravitz_final.jpg&sa=X&ei=QRZzVbiiDorkUpTTgZAF&ved=0CAkQ8wc&usg=AFQjCNEYzhTBFIzoIgkblP-_yaGOA4Lecg"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://okp-cdn.okayplayer.com/wp-content/uploads/2014/10/lenny-kravitz-the-chamber-behind-the-scenes-video-main.jpeg&sa=X&ei=URZzVdLXAcG2Uo_FgYAN&ved=0CAkQ8wc4KA&usg=AFQjCNFKfx-rXVJK5LKJW4dgYfcjYLiRlg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=https://fanart.tv/fanart/music/0ef3f425-9bd2-4216-9dd2-219d2fe90f1f/artistbackground/kravitz-lenny-505aecb2dccb2.jpg&sa=X&ei=UxZzVfDmEcbyUqOKgLgF&ved=0CAkQ8wc4KA&usg=AFQjCNHx6akzJFL15c-udw7yaa-1lwCK5w"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://monsieurf.typepad.com/photos/uncategorized/2007/03/16/lenny_kravitz_1.jpg&sa=X&ei=VhZzVdfFMIK0UZmrgKgD&ved=0CAkQ8wc4KA&usg=AFQjCNGYhuiJ3Dr4wePJFynPCQmA17zijg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img0.gtsstatic.com/wallpapers/c3372fa744e79e196e0dff99fe8a31e5_large.jpeg&sa=X&ved=0CAkQ8wdqFQoTCIerqKW_isYCFQVxFAodM9cAxg&usg=AFQjCNEkNL7qcd3_PZZTQFffdsTR-JjYvw"
+    Placebo:
+        pseudo: Placebo
+        firstname: Placebo
+        lastname: Placebo
+        description: "Placebo est un groupe musical de rock alternatif formé en 1994 à Londres par Brian Molko et Stefan Olsdal, d'abord accompagnés par Robert Schultzberg jusqu'en 1996, puis Steve Hewitt jusqu'en 2007 et Steve Forrest jusque début 2015.La musique et les textes de Placebo se distinguent par une inclination romantique exacerbée. Autrefois allié à une imagerie provocante et excessive alimentant l'image sulfureuse du groupe, ce romantisme exubérant s'inscrit désormais dans une attitude plus introvertie (voir le concept Placebo). Opérant un changement progressif de son image et de sa musique, le groupe peut être affilié au punk rock pour ses débuts, puis au rock alternatif et à la power pop.Placebo a gagné une reconnaissance internationale, ayant vendu en 2011 plus de onze millions d'exemplaires de ses albums à travers le monde3, et est connu du grand public pour ses titres Nancy Boy, Pure Morning, Every You Every Me, Special K, The Bitter End, Meds, Song to Say Goodbye ou encore For What It's Worth, et certaines reprises comme Johnny and Mary (Robert Palmer) ou Running Up that Hill (Kate Bush)."
+        type:
+            - rock
+            - punk
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn-premiere.ladmedia.fr/var/premiere/storage/images/fluctuat/musique/news/loud-like-love-placebo-retrouve-des-couleurs-3836862/69841158-1-fre-FR/Loud-Like-Love-Placebo-retrouve-des-couleurs_w670_h372.jpg&sa=X&ei=RRdzVa-xFMPZU9Wqg5AI&ved=0CAkQ8wc&usg=AFQjCNHP_Xl3z661K7-urz_Da1px34uN8A"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.freddymadit.com/wp-content/uploads/2012/10/PLACEBO-2013-JL-LEAD-SHOT-2.jpg&sa=X&ei=SxdzVcShAYuBU7mJgLAD&ved=0CAkQ8wc&usg=AFQjCNFo2pfE5RYaQuGkB8d50stPHMhfnw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.artisthick.ma/wp-content/uploads/2015/02/placebo-1.jpg&sa=X&ei=TxdzVaj9HsHWU_iQg7gJ&ved=0CAkQ8wc&usg=AFQjCNFLeIA_anKyBQM906It05mXBARD9Q"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.polarimagazine.com/wp-content/uploads/2011/11/Placebo.jpg&sa=X&ei=UxdzVdX7AYSAUc7ag8AH&ved=0CAkQ8wc&usg=AFQjCNEGBAKQxF5g4QyctXt4sapMiefvlwg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.artisthick.ma/wp-content/uploads/2015/02/placebo-1.jpg&sa=X&ved=0CAkQ8wdqFQoTCM7h4LO_isYCFQnRFAodMdgAVg&usg=AFQjCNHjidw9Q0zFPsaJCXk2RF1e81jeAw"
+    Florent Pagny:
+        firstname: Florent Pagny
+        lastname: Florent Pagny
+        description: "Florent Pagny est un chanteur et acteur français né le 6 novembre 1961 à Chalon-sur-Saône (Saône-et-Loire). Chanteur de rock et de pop, on peut citer parmi ses plus grands succès N'importe quoi, Si tu veux m'essayer, Caruso, Savoir aimer, Et un jour une femme, Ma liberté de penser, et Là où je t'emmènerai. Au total, il a vendu plus de 15 millions de disques.C'est également une personnalité télévisuelle : il fait partie du jury de The Voice, la plus belle voix en France depuis le début de l'émission en 2012."
+        type:
+            - pop
+            - pop-rock
+            - rock
+            - world
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.metronews.fr/_internal/gxml!0/r0dc21o2f3vste5s7ezej9x3a10rp3w$mxrj34o96bivgdisbhm9dfo2n857nai/florent-pagny.jpeg&sa=X&ei=ohhzVaDfLYPfUb_Fg9gG&ved=0CAkQ8wc&usg=AFQjCNFy1P7LGTZevjdkwSsRSbXP6H16MQ"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.metronews.fr/_internal/gxml!0/r0dc21o2f3vste5s7ezej9x3a10rp3w$9700iof7jq5ucvnwt6xhklp1ue4ssxj/Florent-Pagny2454-(1).jpeg&sa=X&ei=pBhzVYXKHMauUaeDgtgC&ved=0CAkQ8wc&usg=AFQjCNEg_rcHr-SOCDTwG8JTRdD-rYrz5A"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.chartsinfrance.net/style/breves/1/photo_1382425568.png&sa=X&ei=pxhzVfuLIIP2UKGWgdgM&ved=0CAkQ8wc&usg=AFQjCNFCIbWIGiuG8KNMu2towz9g65Pz4Q"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://s.wat.tv/image/florent-pagny-vieillir-avec_6go5r_2uch96.jpg&sa=X&ei=qxhzVbGxDYbnUpLWg-AF&ved=0CAkQ8wc&usg=AFQjCNFiMvGrCpPPOmSEkq4u6GZViM8tZw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://news.jukebo.fr/files/2014/06/florent-pagny-1.jpg&sa=X&ved=0CAkQ8wc4UWoVChMIuvPDzL-KxgIVQb4UCh3QqwC_&usg=AFQjCNH6B9gXks5yjQe7AdXcj1Fhzzv_Ew"
+    Calogero:
+        pseudo: Calogero
+        firstname: Calogero
+        lastname: Maurici
+        description: "Calogero, né Calogero Maurici le 30 juillet 1971 à Échirolles, dans la banlieue de Grenoble (Isère), est un chanteur, compositeur et musicien. Il débute initialement dans la musique en formant le groupe Les Charts avec son frère Gioacchino, et Francis Maggiulli. En 1999, il se lance dans une carrière en solo avec un premier album, Au milieu des autres. Il se popularise grâce à son second album, Calogero, sorti en 2002. Au cours de sa carrière, il participe également à des tournées et émissions de télévision."
+        type:
+            - pop
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.chartsinfrance.net/style/breves/4/photo_1396426102.jpg&sa=X&ei=kxlzVaL3EYnpUtrugbgB&ved=0CAkQ8wc&usg=AFQjCNHhEy5FKLrL9sJ_VONlEPeb8bK5Kg"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.nostalgie.be/images/journal-de-la-musique/2014/Calogero.jpg&sa=X&ei=lhlzVZC_Dcm5UZGqgOAD&ved=0CAkQ8wc&usg=AFQjCNFmlA48gPCEEb8FZu5q60qWL-5ujg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img.gal.pmdstatic.net/fit/http.3A.2F.2Fwww.2Egala.2Efr.2Fvar.2Fgal.2Fstorage.2Fimages.2Fmedia.2Fmultimedia.2Fbrightcove.2Fgala.2Efr_calogero_-_un_jour_au_mauvais_endroit.2F2951283-1-fre-FR.2Fgala.2Efr_calogero_-_un_jour_au_mauvais_endroit.2Ejpg/1140x499/crop-from/top/gala-fr-calogero-un-jour-au-mauvais-endroit.jpg&sa=X&ei=nBlzVcrmM4nyUqWagsgC&ved=0CAkQ8wc&usg=AFQjCNE7YBuQWKg5B_ReqaWgHjtbQ_VL7g"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://images.sudouest.fr/images/2014/04/03/calogero-va-entamer-une-nouvelle-tournee-a-l-automne_1739021_800x400.jpg?v=1&sa=X&ei=1BlzVc_fHYK1UfPggbgF&ved=0CAkQ8wc4JA&usg=AFQjCNEZFwEGfc_6_TwXo-uGZQieDaFBLQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://images.doctissimo.fr/1/musique/grands-classiques/photo/hd/7917861791/1834129386c/grands-classiques-calogero-big.jpg?v=11&sa=X&ved=0CAkQ8wdqFQoTCOLM2dy_isYCFcZXFAody04AQA&usg=AFQjCNHNOQthMeaZKH1xxdS2-cUZTKBjdQ"
+    Brigitte:
+        pseudo: Brigitte
+        firstname: Brigitte
+        lastname: Brigitte
+        description: "Brigitte, qui n'est pas une femme, et qui ne s'appelle toujours pas Brigitte dans la vraie vie, nous livre son deuxième album À bouche que veux-tu. Aurélie Saada et Sylvie Hoarau y incarnent des jumelles à la bouche rouge piment, et donnent doublement corps à une femme plurielle qui arbore fièrement ses contradictions. La Brigitte d'aujourd'hui est tant Barbarella de banlieue au coeur de boxeur que féline enchantée d'être captive d'un amant solaire."
+        type:
+            - indie-folk
+            - folk
+            - indie-pop
+            - neo-soul
+            - soul
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://static1.puretrend.com/articles/2/10/50/42/@/1185898-le-duo-brigitte-nouvelles-egeries-de-580x0-1.jpg&sa=X&ei=gBtzVZmIEsT6Uu2hgJgJ&ved=0CAkQ8wc&usg=AFQjCNGCRqvaheQuCa3oC6lzV4O7ofbgeQ"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img.20mn.fr/Ye72DUYqTyuUWVQwzsY1_w/648x415_duo-brigitte-sort-deuxieme-album.jpg&sa=X&ei=ghtzVcSGFMHxUO7DgMAB&ved=0CAkQ8wc&usg=AFQjCNHtkQbAxNIfybbw6fvgVl6Lldbo3A"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://s3.lprs1.fr/images/2014/11/18/4301309_brigitte.jpg&sa=X&ei=ixtzVbKWPMKnU_u0gMgG&ved=0CAkQ8wc&usg=AFQjCNHD47KIMPueqSEqweNa1mFfAzOZuQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img.src.ca/2012/05/29/635x357/120529_2s5qy_mediumlarge_brigitte_sn635.jpg&sa=X&ei=jxtzVc3BB4PWU8XigYgI&ved=0CAkQ8wc&usg=AFQjCNGNl6ls0ZKHcoQEsm-QB76C0I9oyw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn-parismatch.ladmedia.fr/var/news/storage/images/paris-match/actu/medias/en-images/femmes-en-or-2014-des-laureates-d-exception-671276/brigitte-a-avoriaz-le-13-decembre-2014/6731348-1-fre-FR/Brigitte-a-Avoriaz-le-13-decembre-2014.jpg&sa=X&ved=0CAkQ8wdqFQoTCKazwfW_isYCFULXFAodgA4AkQ&usg=AFQjCNENYXwdcrxPAygp3QUNWQN7CZ73zw"
+    Fréro Delavega:
+        pseudo: Fréro Delavega
+        firstname: Fréro Delavega
+        lastname: Fréro Delavega
+        description: "C'est aux alentours de l'année 2009 que se rencontrent Jérémy Frérot (né en 1990) et Florian Delavega (né Garcia en 1987). Les deux Girondins, tous deux guitaristes et chanteurs, postent alors leurs reprises et compositions, ensemble ou séparément, sur internet, via YouTube ou les réseaux sociaux.Durant la saison 2013-2014, ils participent à la troisième édition de l'émission The Voice, la plus belle voix sous le nom de Fréro Delavega. Le duo « coaché » par Mika parvient jusqu'aux quarts de finale en reprenant des titres de MC Solaar, Vanessa Paradis, 50 Cent, Pink Martini ou Passenger."
+        type:
+            - pop
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://images.sudouest.fr/images/2014/07/08/les-frero-delavega-un-duo-compose-de-flo-delavega-et-jeremy_1929493_800x400.jpg?v=2&sa=X&ei=IR1zVfP7E4ayUYfRgqAG&ved=0CAkQ8wc&usg=AFQjCNFK9ZW_IbyLqK6JazcMWwAbnSCx0Q"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.frequence-sud.fr/admin/transfert/data/33011.jpg&sa=X&ei=KB1zVZWmFsvlUrPUgYgM&ved=0CAkQ8wc&usg=AFQjCNHnzo_9D5sBu0z6D2s72jJEjU1J_g"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://static2.potins.net/wp-content/uploads/2014/05/1400827517-b75f6a14a773d18a14d9f5ec54dc4c0b.jpg&sa=X&ei=Kx1zVaOQLonWU_vOgqAJ&ved=0CAkQ8wc&usg=AFQjCNE_qZGZecYLAJaQ-AfCcDgPDqKRfA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://riviera-city-guide.com/wp-content/uploads/2015/02/frero_delavega.jpg&sa=X&ei=Lh1zVaqUHsG0UpulgdgI&ved=0CAkQ8wc&usg=AFQjCNE6w7pZNloTBi8avmy02Ybj_mKxjQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://media.jukebox.fr/a166185/articles/i846196.jpg&sa=X&ved=0CAkQ8wdqFQoTCOOXuInAisYCFcJYFAodXQMAEw&usg=AFQjCNHboYiAigHvr_NGTvxZMBAZKPXzsw"
+    David Guetta:
+        pseudo: David Guetta
+        firstname: david
+        lastname: guetta
+        description: "David Guetta, né le 7 novembre 1967 à Paris, est un platiniste, remixeur, producteur de musique. Il se fait connaitre au début de sa carrière comme une figure des nuits parisiennes, puis acquiert une reconnaissance internationale avec ses albums Pop Life en 2007-2008 et One Love en 2009. Dès lors, plusieurs de ses titres comme When Love Takes Over, Sexy Bitch, ou Gettin' Over You se classent en tête des ventes à travers le monde.De grands noms de la scène urbaine collaborent sur la majorité de ces derniers singles mais il participe aussi à l'introduction de nouveaux talents. Sur l'ensemble de sa carrière, il a vendu plus de 9 millions d'albums et plus de 30 millions de singles, soit 39 millions de disques. En 2011, il est élu meilleur DJ du monde par le classement TOP 100 du magazine DJ Mag. En 2013, le titre When Love Takes Over de David Guetta en collaboration avec Kelly Rowland, est élue meilleure collaboration pop-dance de tous les temps par le magazine Billboard."
+        type:
+            - dance
+            - electro
+            - house
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.elremix.com/wp-content/uploads/2014/10/David-Guetta-dangerous.png&sa=X&ei=hx5zVYWLDYLnUrD6g6gO&ved=0CAkQ8wc&usg=AFQjCNHQewNkc-_nYkao1kibA9hr5b6cmQ"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://nick-intl.mtvnimages.com/uri/mgid:file:gsp:scenic:/international/mtvema/2014/images/nominees/main/David-Guetta-1940x720.jpg?height=720&width=1940&matte=true&quality=0.75&sa=X&ei=gR5zVYCLKoWqU_j3gKgK&ved=0CAkQ8wc&usg=AFQjCNHUWA_Vuq4xR6dXGO1q_y0Qy7oFcw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.snepmusique.com/wp-content/uploads/2015/04/guetta.jpg&sa=X&ei=hB5zVYTyD8LWUb7IgJgD&ved=0CAkQ8wc&usg=AFQjCNFPdWvBsrmMOZOQ2le_4ImxTt4jAw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img0.gtsstatic.com/wallpapers/e93914ca861c95b0725452a60e0c0ebf_large.jpeg&sa=X&ei=ih5zVcPMEIL9ULX_gtAF&ved=0CAkQ8wc&usg=AFQjCNGSOHjtKpIR4BsAPL1SKOvrkPL3Jg"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img0.ndsstatic.com/wallpapers/91146dfe27748851469336f168a613b1_large.jpeg&sa=X&ved=0CAkQ8wdqFQoTCPmO9MLAisYCFUa3FAodlFsAbQ&usg=AFQjCNEeY_PTNA6hDV7we3Sh41e4BP9DZA"
+    Carlos Santana:
+        pseudo: Carlos Santana
+        firstname: Carlos Santana
+        lastname: Carlos Santana
+        description: "Carlos Alberto Santana Barragán connu sous le simple nom Carlos Santana (né le 20 juillet 1947 à Autlán de Navarro dans l'État de Jalisco, au Mexique) est un guitariste, compositeur et chanteur américain d'origine mexicaine, pivot des groupes Santana Blues Band et Santana Brothers. Il est un des guitaristes contemporains les plus connus au monde.Carlos Santana chante également, bien qu'il n'ait posé sa voix qu'à de rares occasions dans ses derniers albums, comme sur le titre Africa Bamba qui figure sur l'album Supernatural.Carlos Santana est aujourd'hui considéré comme un des créateurs du rock Latino et précurseur de la World music, dès 1969.En 2003, le mensuel Rolling Stone l'a classé quinzième dans sa liste des meilleurs guitaristes de tous les temps (uniquement en Jazz-Rock-Folk)"
+        type:
+            - blues
+            - rock
+            - jazz
+            - instrumental
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.billboard.com/files/styles/promo_650/public/media/carlos-santana-press-2013-650-430.jpg?itok=GnhO35VU&sa=X&ei=sB9zVZnsJMKtU7zigJgF&ved=0CAkQ8wc&usg=AFQjCNG5YH4eSHBvJ2eX0SNLjp6uaSYVZw"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://earthtones.org/wp-content/uploads/2013/09/carlos-santana.jpg&sa=X&ei=uB9zVavgDoWqU_j3gKgK&ved=0CAkQ8wc&usg=AFQjCNEM-OrtjAcj0iHIirYd6zSxNXh3Gw"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://hollowverse.com/wp-content/uploads/2012/10/carlos-santana-640x360.jpg&sa=X&ei=uh9zVaa9A8m0UZ_ugNAO&ved=0CAkQ8wc&usg=AFQjCNHfYLSMU0JtnothHKtldKFjwRIk2A"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img.interia.pl/rozrywka/nimg/h/m/Carlos_Santana_fot_Trisha_4654565.jpg&sa=X&ei=EyBzVYf0LYT8UJfhgbAC&ved=0CAkQ8wc4nAE&usg=AFQjCNHZet6l4YRjd6tcboqqdQPyDutYpQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img.interia.pl/rozrywka/nimg/h/m/Carlos_Santana_fot_Trisha_4654565.jpg&sa=X&ei=EyBzVYf0LYT8UJfhgbAC&ved=0CAkQ8wc4nAE&usg=AFQjCNHZet6l4YRjd6tcboqqdQPyDutYpQ"
+    Shaka Ponk:
+        pseudo: Shaka Ponk
+        firstname: Shaka Ponk
+        lastname: Shaka Ponk
+        description: "Shaka Ponk (parfois orthographié SHK PNK) est un groupe de musique d'électro-rock1 français créé en 2004. Shaka Ponk utilise des éléments de différents courants musicaux tels que le côté punk, le metal, la funk et le hip-hop. Leurs textes sont un mélange d'anglais et d'espagnol et, plus rarement, de français.L'écran circulaire sur lequel apparaissait à chaque concert Goz, singe virtuel devenu la mascotte du groupe, a été remplacé par un gigantesque écran de dels sur scène."
+        type:
+            - hip-hop
+            - funk
+            - électro
+            - rock
+            - Punk
+            - Metal
+        picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://static.agendaculturel.fr/im/art_org/s/shaka-ponk-3352bn.jpg&sa=X&ei=ISFzVcKsIomyUZ-zgYAE&ved=0CAkQ8wc&usg=AFQjCNF_zx4L5nwEdPPkzPoSED7QwBiyCw"
+        pictures:
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://imados.fr/content/0/5/4/590549/shaka-ponk.jpg&sa=X&ei=JSFzVY3jK8GtU7ibgLAG&ved=0CAkQ8wc&usg=AFQjCNEB-8rbFuVF8P_4LQ7g8Tqavcqr7Q"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.metronews.fr/_internal/gxml!0/r0dc21o2f3vste5s7ezej9x3a10rp3w$pvyfnbtv2r19ee28traj5fb78cfl24q/shaka.jpeg&sa=X&ei=KSFzVavACYOuUcOzgaAD&ved=0CAkQ8wc&usg=AFQjCNFTkOS_rQqRdbot84TETQ8v2Tk2gQ"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img.musiquemag.fr/datas/groupe/s/h/shaka-ponk/xl/shaka-ponk-4decce10060d6.jpg&sa=X&ei=VSFzVZ6BIsP9UOfEgMgN&ved=0CAkQ8wc&usg=AFQjCNE_XUH4u8bgKvopJ5It8SEuO-J8UA"
+            - "http://www.google.fr/url?source=imglanding&ct=img&q=http://shuffle-musik.com/wordpress/wp-content/flagallery/shaka-ponk-shuffle/shakaponk1.png&sa=X&ved=0CAkQ8wdqFQoTCLWUzIjBisYCFcm7FAodFFYAdw&usg=AFQjCNGRFKdbeuBPjBGLyI76CE4vucmEOQ"

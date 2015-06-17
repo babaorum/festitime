@@ -10,12 +10,12 @@ class UserService
      * @var RequestStack
      */
     protected $request;
-    
+
     /**
      * @var MongoManager
      */
     protected $mongoManager;
-    
+
     /**
      * @var FormBuilder
      */
@@ -30,7 +30,7 @@ class UserService
      * @var RegisterType
      */
     protected $formRegister;
-    
+
     /**
      * @var FormTool
      */
@@ -116,10 +116,10 @@ class UserService
         if ($form->isValid()) {
             $this->mongoManager->persist($user);
             $this->mongoManager->flush();
-                
+
             return $user;
         }
-        
+
         return $this->formTool->getAllFormErrors($form);
     }
 
@@ -131,7 +131,7 @@ class UserService
     public function postUserFromOAuth(array $userData)
     {
         $user = new User();
-        
+
         $user->setEmail($userData['email'])
             ->setName($userData['name'])
             ->setFirstname($userData['firstname'])
@@ -141,7 +141,7 @@ class UserService
 
         $this->mongoManager->persist($user);
         $this->mongoManager->flush();
-        
+
         return $user;
     }
 
@@ -162,9 +162,12 @@ class UserService
      *
      * @return RegisterForm
      */
-    public function getRegisterForm()
+    public function getRegisterForm($user = null)
     {
-        $user = new User();
+        if (!$user) {
+            $user = new User();
+        }
+
         $form = $this->form->create($this->formRegister, $user);
         return $form;
     }
