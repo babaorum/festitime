@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Accueil - Festitime</title>
+    <title>{{ festival.name }} - Festitime</title>
     <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
@@ -74,18 +74,27 @@
 
         </div>
         <br><br><br><br><br><br><br><br><br><br>
-        <div id="choose-package">
+        <div id="choose-package" ng-init="festivalCtrl.choosePackageTab = 1">
             <div class="content">
                 <div class="navigation">
                     <span>
-                        <button>ticket</button>
+                        <button ng-class="{ active: festivalCtrl.choosePackageTab === 1 }" ng-click="festivalCtrl.choosePackageTab = 1">ticket</button>
                     </span>
                     <span>
-                        <button>transport</button>
+                        <button ng-class="{ active: festivalCtrl.choosePackageTab === 2 }" ng-click="festivalCtrl.choosePackageTab = 2">transport</button>
                     </span>
                     <span>
-                        <button>hébergement</button>
+                        <button ng-class="{ active: festivalCtrl.choosePackageTab === 3 }" ng-click="festivalCtrl.choosePackageTab = 3">hébergement</button>
                     </span>
+                </div>
+                <div class="content-choose tickets" ng-if="festivalCtrl.choosePackageTab === 1">
+                    <h1>Tickets aaahhhahahahhahhahahahahahahah</h1>
+                </div>
+                <div class="content-choose transport" ng-if="festivalCtrl.choosePackageTab === 2">
+                    <h1>transport aaahhhahahahhahhahahahahahahah</h1>
+                </div>
+                <div class="content-choose hebergement" ng-if="festivalCtrl.choosePackageTab === 3">
+                    <h1>hebergement aaahhhahahahhahhahahahahahahah</h1>
                 </div>
             </div>
         </div>
