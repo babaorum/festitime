@@ -35,7 +35,7 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=https://ernestto.files.wordpress.com/2013/11/deep-purple-3.jpg&sa=X&ei=Ve9yVdCkNMvxUIvogZAN&ved=0CAkQ8wc&usg=AFQjCNGvCHaYHzZu6R_7i3DMhwiPsVAZrg"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://femininisrael.com/wp-content/uploads/2010/12/Deep_Purple_.jpeg&sa=X&ei=b-9yVfz9NIqvU4XcgtAD&ved=0CAkQ8wc4Gw&usg=AFQjCNGE5vYtzvrxE72h8F9ngdSi24a3sQ"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn.mos.musicradar.com//images/bass-features/2013/bass-expo-features/glenn-hughes/deep-purple-corbis-460-85.jpg&sa=X&ved=0CAkQ8wdqFQoTCP-r3MG1isYCFcjVFAodIkYAGw&usg=AFQjCNEGNk-bvgoWkCnFXwF7ibKhDRo07w"
-    Fauve:
+    fauve:
         pseudo: Fauve
         firstname: Fauve
         lastname: Fauve
@@ -97,7 +97,7 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.high-five-mag.com/wp-content/uploads/2013/01/New-order.jpg&sa=X&ei=uvVyVZvsJ4r8UvH_gLgO&ved=0CAkQ8wc&usg=AFQjCNGAYKsytzX7u4iDa1s1lHkYMT_qWA"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=https://consequenceofsound.files.wordpress.com/2013/10/neworder1983.png&sa=X&ei=vfVyVbS9D8PYU7Ttg7AO&ved=0CAkQ8wc&usg=AFQjCNEtnKZTI2UPodYoVro_pb2u-AmttA"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.bopping-elf.co.uk/wp-content/uploads/2011/07/newordermain.jpg&sa=X&ved=0CAkQ8wdqFQoTCPiT-Py5isYCFcK7FAodWi8Jjw&usg=AFQjCNH7gUa3xoIW0L8f-Ey0JLqej0KTnw"
-    Blondie:
+    blondie:
         pseudo: Blondie
         firstname: Blondie
         lastname: Blondie
@@ -113,7 +113,7 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.inside-rock.fr/IMG/jpg/blondie_wideweb__430x380.jpg&sa=X&ei=HPdyVeffGsP8UMWHgbAD&ved=0CAkQ8wc&usg=AFQjCNGhM77ktoJvR_qNVtchPnvSFNdHUg"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://wac.450f.edgecastcdn.net/80450F/ultimateclassicrock.com/files/2013/06/Blondie.jpg&sa=X&ei=IfdyVZeoJ8OuUaqvgogM&ved=0CAkQ8wc&usg=AFQjCNE4uswzbc6fEwvXd07w4DG8lpRo6w"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://boptopop.files.wordpress.com/2011/05/blondie.jpg&sa=X&ved=0CAkQ8wdqFQoTCPmvrKe6isYCFUG3FAod73IA-Q&usg=AFQjCNF6pEfvZiKsyH2nd1MUIu8yOpWRRQ"
-    Stromae:
+    stromae:
         pseudo: Stromae
         firstname: Stromae
         lastname: Stromae
@@ -129,7 +129,7 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://i.ytimg.com/vi/1qr3BSUuYFM/maxresdefault.jpg&sa=X&ei=AfhyVY2VHcWvUYLxgKAJ&ved=0CAkQ8wc4Fw&usg=AFQjCNE4yusKzrOzKFwMIh4Qm_CDqfQKJA"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.demotivateur.fr/images-buzz/stromae-tous.jpg&sa=X&ei=BfhyVfbYA8jSUa7ngYgJ&ved=0CAkQ8wc4Fw&usg=AFQjCNHg_ZRg2frEqaguwhYHDKDgOyeMAA"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.metronews.fr/_internal/gxml!0/r0dc21o2f3vste5s7ezej9x3a10rp3w$hbpos94f4xziyzenqpk1ft0g8jddse2/IP3GIR130827029001.jpeg&sa=X&ved=0CAkQ8wdqFQoTCMX1sNG6isYCFQq0FAodF7cA7w&usg=AFQjCNHGFj1Qh29FiAHtmlllXl-cV4Q3-g"
-    Cerrone:
+    cerrone:
         pseudo: Cerrone
         firstname: Cerrone
         lastname: Cerrone
@@ -145,7 +145,7 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn2.greatsong.net/photo/ext/cerrone-186842.jpg&sa=X&ei=CfpyVa6NG4mrU_m6g8gB&ved=0CAkQ8wc&usg=AFQjCNEEN6vuiAESwJszW5-W3wKIb7_Xdw"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn2.greatsong.net/photo/ext/cerrone-186840.jpg&sa=X&ei=W_pyVc7mLcbuUvPqgGA&ved=0CAkQ8wc&usg=AFQjCNFgD0ac4UU25qYIL1cAeIK--q2sSg"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://s.wat.tv/image/cerrone-love-in-minor_1i9ex_jnil7.jpg&sa=X&ved=0CAkQ8wdqFQoTCIGE84W7isYCFUy4FAodoU4AXQ&usg=AFQjCNHeMxCwuTrjfUmhXHXtmC64hsamJA"
-    Muse :
+    Muse:
         pseudo: Muse
         firstname: Muse
         lastname: Muse
@@ -208,7 +208,7 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://static.guim.co.uk/sys-images/Music/Pix/pictures/2009/5/22/1242981335019/Iggy-Pop-of-the-Stooges-001.jpg&sa=X&ei=Jf9yVb6eM8blUuaWgaAO&ved=0CAkQ8wc4Yg&usg=AFQjCNHdyf6V3maBd6AQd2q1YQjLR5JBNQ"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://images.popmatters.com/news_art/i/iggypop.jpg&sa=X&ei=YP9yVeiGNMfqUr27gdgJ&ved=0CAkQ8wc4Yg&usg=AFQjCNGZenImd0B2cpxLzlx_BEQLORU3IQ"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.la-clau.net/imatges/noticia/iggy_pop_la_clau.jpg&sa=X&ved=0CAkQ8wdqFQoTCO-M--a7isYCFUxaFAodVAcAOA&usg=AFQjCNH81d3TEhLgqFrn_eYy-VAz7U5R-g"
-    alt-J :
+    alt-J:
         pseudo: alt-J
         firstname: alt-J
         lastname: alt-J

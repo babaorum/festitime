@@ -4,11 +4,189 @@ artist:
     - firstname
     - lastname
 links:
-    # festival:
-    #     sziget:
-    #         artist:
-    #             - macklemore
-    # artist:
-    #     macklemore:
-    #         festival:
-    #             - sziget
+    festival:
+        Le Big festival:
+            artist:
+                - selah sue
+                - Iggy Pop
+                - Skip the Use
+                - JoeyStarr
+                - Brigitte
+                - Shaka Ponk
+        Festival de Nîmes:
+            artist:
+                - Lionel Richie
+                - David Bowie
+                - Depeche Mode
+                - Placebo
+        Les Vieilles Charrues:
+            artist:
+                - deep purple
+                - New Order
+                - Arcade Fire
+                - Lionel Richie
+                - London Grammar
+                - David Guetta
+        Les Déferlantes:
+            artist:
+                - fauve
+                - blondie
+                - UB40
+                - Lenny Kravitz
+                - Calogero
+                - Brigitte
+                - Carlos Santana
+        Main Square:
+            artist:
+                - Lilly Wood and the Prick
+                - The Black Keys
+                - stromae
+                - Pharrell Williams
+                - Coldplay
+                - London Grammar
+                - Depeche Mode
+                - Lenny Kravitz
+                - Placebo
+                - Shaka Ponk
+        Festival Musilac:
+            artist:
+                - cerrone
+                - Muse
+                - alt-J
+                - David Guetta
+        Festival Les Femmes s'en Mêlent:
+            artist:
+                - Yelle
+                - M.I.A.
+                - Ebony Bones
+                - Brigitte
+        CosmoJazz Festival:
+            artist:
+                - andré manoukian
+        Les Francofolies:
+            artist:
+                - Veronique Sanson
+                - Christine and the Queens
+                - Florent Pagny
+                - Fréro Delavega
+    artist:
+        selah sue:
+            festival:
+                - Le Big festival
+        deep purple:
+            festival:
+                - Les Vieilles Charrues
+        fauve:
+            festival:
+                - Les Déferlantes
+        Lilly Wood and the Prick:
+            festival:
+                - Main Square
+        The Black Keys:
+            festival:
+                - Main Square
+        New Order:
+            festival:
+                - Les Vieilles Charrues
+        blondie:
+            festival:
+                - Les Déferlantes
+        stromae:
+            festival:
+                - Main Square
+        cerrone:
+            festival:
+                - Festival Musilac
+        Muse:
+            festival:
+                - Festival Musilac
+        Yelle:
+            festival:
+                - Festival Les Femmes s'en Mêlent
+        UB40:
+            festival:
+                - Les Déferlantes
+        Iggy Pop:
+            festival:
+                - Le Big festival
+        alt-J:
+            festival:
+                - Festival Musilac
+        andré manoukian:
+            festival:
+                - CosmoJazz Festival
+        M.I.A.:
+            festival:
+                - Festival Les Femmes s'en Mêlent
+        Ebony Bones:
+            festival:
+                - Festival Les Femmes s'en Mêlent
+        Arcade Fire:
+            festival:
+                - Les Vieilles Charrues
+        Pharrell Williams:
+            festival:
+                - Main Square
+        Skip the Use:
+            festival:
+                - Le Big festival
+        Coldplay:
+            festival:
+                - Main Square
+        JoeyStarr:
+            festival:
+                - Le Big festival
+        Lionel Richie:
+            festival:
+                - Festival de Nîmes
+                - Les Vieilles Charrues
+        David Bowie:
+            festival:
+                - Festival de Nîmes
+        London Grammar:
+            festival:
+                - Les Vieilles Charrues
+                - Main Square
+        Depeche Mode:
+            festival:
+                - Festival de Nîmes
+                - Main Square
+        Veronique Sanson:
+            festival:
+                - Les Francofolies
+        Christine and the Queens:
+            festival:
+                - Les Francofolies
+        Lenny Kravitz:
+            festival:
+                - Les Déferlantes
+                - Main Square
+        Placebo:
+            festival:
+                - Festival de Nîmes
+                - Main Square
+        Florent Pagny:
+            festival:
+                - Les Francofolies
+        Calogero:
+            festival:
+                - Les Déferlantes
+        Brigitte:
+            festival:
+                - Les Déferlantes
+                - Le Big festival
+                - Festival Les Femmes s'en Mêlent
+        Fréro Delavega:
+            festival:
+                - Les Francofolies
+        David Guetta:
+            festival:
+                - Les Vieilles Charrues
+                - Festival Musilac
+        Carlos Santana:
+            festival:
+                - Les Déferlantes
+        Shaka Ponk:
+            festival:
+                - Main Square
+                - Le Big festival
