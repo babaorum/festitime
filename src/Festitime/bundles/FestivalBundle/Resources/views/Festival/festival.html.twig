@@ -142,20 +142,6 @@
                 </div>
                 <div class="ticket">
                     <h3>Réserver</h3>
-                    <p class="title">Pass 1 jour</p>
-                    <p class="price">41 &#128;</p>
-                    <p class="date">Samedi 30 mai</p>
-                    <img src="http://puu.sh/iveuV/eb82872997.png">
-                </div>
-                <div class="ticket">
-                    <h3>Réserver</h3>
-                    <p class="title">Pass 1 jour</p>
-                    <p class="price">41 &#128;</p>
-                    <p class="date">Samedi 30 mai</p>
-                    <img src="http://puu.sh/iveuV/eb82872997.png">
-                </div>
-                <div class="ticket">
-                    <h3>Réserver</h3>
                     <p class="title">Pass 2 jours</p>
                     <p class="price">82 &#128;</p>
                     <p class="date">Samedi 30 &amp; Dimanche 31 mai</p>
@@ -164,8 +150,8 @@
             </div>
             <div class="clear"></div>
         </div>
-        <div id="purchase">
-            <div id="initial-choices">
+        <div id="purchase" ng-init="festivalCtrl.choosePackageTab = 1">
+            <div id="initial-choices" ng-if="festivalCtrl.choosePackageTab === 1">
                 <div id="lodging">
                     <p>Besoin d'un hébergement sur place ?</p>
                     <div class="yes selected">Oui</div>
@@ -180,17 +166,45 @@
                     <p>Combien de personne(s) ?</p>
                     <input type="text">
                 </div>
-                <div id="confirm-next">
+                <div id="confirm-next" ng-class="{ active: festivalCtrl.choosePackageTab === 2 }" ng-click="festivalCtrl.choosePackageTab = 2">
                     <p>Continuer la réservation</p>
                 </div>
             </div>
-            <!-- <div id="purchase-steps">
-                <div class="step">Hébergement</div>
-                <div class="step">Transport</div>
+            <div class="purchase-steps" ng-if="festivalCtrl.choosePackageTab === 2">
+                <div class="step in-progress">Hébergement</div>
+                <div class="step" ng-class="{ active: festivalCtrl.choosePackageTab === 3 }" ng-click="festivalCtrl.choosePackageTab = 3">Transport</div>
                 <div class="step">Récapitulatif</div>
                 <div class="step">Paiement</div>
                 <div class="step">Confirmation</div>
-            </div> -->
+            </div>
+            <div class="purchase-steps" ng-if="festivalCtrl.choosePackageTab === 3">
+                <div class="step checked" ng-class="{ active: festivalCtrl.choosePackageTab === 2 }" ng-click="festivalCtrl.choosePackageTab = 2">Hébergement</div>
+                <div class="step in-progress">Transport</div>
+                <div class="step" ng-class="{ active: festivalCtrl.choosePackageTab === 4 }" ng-click="festivalCtrl.choosePackageTab = 4">Récapitulatif</div>
+                <div class="step">Paiement</div>
+                <div class="step">Confirmation</div>
+            </div>
+            <div class="purchase-steps" ng-if="festivalCtrl.choosePackageTab === 4">
+                <div class="step checked" ng-class="{ active: festivalCtrl.choosePackageTab === 2 }" ng-click="festivalCtrl.choosePackageTab = 2">Hébergement</div>
+                <div class="step checked" ng-class="{ active: festivalCtrl.choosePackageTab === 3 }" ng-click="festivalCtrl.choosePackageTab = 3">Transport</div>
+                <div class="step in-progress">Récapitulatif</div>
+                <div class="step" ng-class="{ active: festivalCtrl.choosePackageTab === 5 }" ng-click="festivalCtrl.choosePackageTab = 5">Paiement</div>
+                <div class="step">Confirmation</div>
+            </div>
+            <div class="purchase-steps" ng-if="festivalCtrl.choosePackageTab === 5">
+                <div class="step checked" ng-class="{ active: festivalCtrl.choosePackageTab === 2 }" ng-click="festivalCtrl.choosePackageTab = 2">Hébergement</div>
+                <div class="step checked" ng-class="{ active: festivalCtrl.choosePackageTab === 3 }" ng-click="festivalCtrl.choosePackageTab = 3">Transport</div>
+                <div class="step checked" ng-class="{ active: festivalCtrl.choosePackageTab === 4 }" ng-click="festivalCtrl.choosePackageTab = 4">Récapitulatif</div>
+                <div class="step in-progress">Paiement</div>
+                <div class="step" ng-class="{ active: festivalCtrl.choosePackageTab === 6 }" ng-click="festivalCtrl.choosePackageTab = 6">Confirmation</div>
+            </div>
+            <div class="purchase-steps" ng-if="festivalCtrl.choosePackageTab === 6">
+                <div class="step checked" ng-class="{ active: festivalCtrl.choosePackageTab === 2 }" ng-click="festivalCtrl.choosePackageTab = 2">Hébergement</div>
+                <div class="step checked" ng-class="{ active: festivalCtrl.choosePackageTab === 3 }" ng-click="festivalCtrl.choosePackageTab = 3">Transport</div>
+                <div class="step checked" ng-class="{ active: festivalCtrl.choosePackageTab === 4 }" ng-click="festivalCtrl.choosePackageTab = 4">Récapitulatif</div>
+                <div class="step checked" ng-class="{ active: festivalCtrl.choosePackageTab === 5 }" ng-click="festivalCtrl.choosePackageTab = 5">Paiement</div>
+                <div class="step in-progress">Confirmation</div>
+            </div>
         </div>
         <table>
             <tr>
