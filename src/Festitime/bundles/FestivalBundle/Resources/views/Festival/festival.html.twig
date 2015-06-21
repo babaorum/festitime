@@ -88,10 +88,29 @@
                     </span>
                 </div>
                 <div class="content-choose tickets" ng-if="festivalCtrl.choosePackageTab === 1">
-                    <h1>Tickets aaahhhahahahhahhahahahahahahah</h1>
+                    <div class="ticket">
+                        <div class="info">
+                            <h4 class="title">Ticket nom - ticket date</h4>
+                            <p class="description">description tral la aala lorem ipsum idolorium expeliormus tatam lagli</p>
+                        </div>
+                        <span class="price">ticket prix</span>
+                        <span class="clear"></span>
+                    </div>
+                    <div class="ticket">
+                        <div class="info">
+                            <h4 class="title">Ticket nom - ticket date</h4>
+                            <p class="description">description tral la aala lorem ipsum idolorium expeliormus tatam lagli</p>
+                        </div>
+                        <span class="price">ticket prix</span>
+                        <span class="clear"></span>
+                    </div>
                 </div>
-                <div class="content-choose transport" ng-if="festivalCtrl.choosePackageTab === 2">
-                    <h1>transport aaahhhahahahhahhahahahahahahah</h1>
+                <div class="content-choose travels" ng-if="festivalCtrl.choosePackageTab === 2">
+                    <div class="travel" ng-repeat="travel in festivalCtrl.travels.routes">
+                        <h4>{[{ travel.name }]}</h4>
+                        <span>durée de trajet : {[{ (travel.duration - (travel.duration%60))/60 + 'heures'}]} {[{ travel.duration%60 + 'minutes' }]}</span>
+                        <span>{[{ travel.indicativePrice.price + " €" }]}</span>
+                    </div>
                 </div>
                 <div class="content-choose hebergement" ng-if="festivalCtrl.choosePackageTab === 3">
                     <h1>hebergement aaahhhahahahhahhahahahahahahah</h1>
