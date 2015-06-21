@@ -64,14 +64,6 @@
                 <p id="place"> {{ festival.city | capitalize }}, {{ festival.country | capitalize }} </p>
             </div>
         </div>
-
-        <!-- <div class="first-block" ng-style="festivalPicture">
-            <div class="infos">
-                <h1>{{ festival.name | capitalize }}</h1>
-                <span> {{ festival.city | capitalize }}, {{ festival.country | capitalize }} </span>
-                <span>{{ festival.startDate | date("d") }} - {{ festival.endDate | date("d F o") }}</span>
-            </div>
-        </div> -->
         <div class="festival-block">
             <div class="festival">
                 <h2>Découvrez le festival</h2>
@@ -129,8 +121,76 @@
                 </div>
             </div>
         </div>
-        <div class="artists block after-block-leaning">
 
+        <div id="tickets-block">
+            <h2>La billetterie</h2>
+
+            <div class="tickets">
+                <div class="ticket">
+                    <h3>Réserver</h3>
+                    <p class="title">Pass 1 jour</p>
+                    <p class="price">41 &#128;</p>
+                    <p class="date">Samedi 30 mai</p>
+                    <img src="http://puu.sh/iveuV/eb82872997.png">
+                </div>
+                <div class="ticket">
+                    <h3>Réserver</h3>
+                    <p class="title">Pass 1 jour</p>
+                    <p class="price">41 &#128;</p>
+                    <p class="date">Dimanche 31 mai</p>
+                    <img src="http://puu.sh/iveuV/eb82872997.png">
+                </div>
+                <div class="ticket">
+                    <h3>Réserver</h3>
+                    <p class="title">Pass 1 jour</p>
+                    <p class="price">41 &#128;</p>
+                    <p class="date">Samedi 30 mai</p>
+                    <img src="http://puu.sh/iveuV/eb82872997.png">
+                </div>
+                <div class="ticket">
+                    <h3>Réserver</h3>
+                    <p class="title">Pass 1 jour</p>
+                    <p class="price">41 &#128;</p>
+                    <p class="date">Samedi 30 mai</p>
+                    <img src="http://puu.sh/iveuV/eb82872997.png">
+                </div>
+                <div class="ticket">
+                    <h3>Réserver</h3>
+                    <p class="title">Pass 2 jours</p>
+                    <p class="price">82 &#128;</p>
+                    <p class="date">Samedi 30 &amp; Dimanche 31 mai</p>
+                    <img src="http://puu.sh/iveuV/eb82872997.png">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="purchase">
+            <div id="initial-choices">
+                <div id="lodging">
+                    <p>Besoin d'un hébergement sur place ?</p>
+                    <div class="yes selected">Oui</div>
+                    <div class="no">Non</div>
+                </div>
+                <div id="conveyance">
+                    <p>Besoin d'un moyen de transport ?</p>
+                    <div class="yes selected">Oui</div>
+                    <div class="no">Non</div>
+                </div>
+                <div id="how-many">
+                    <p>Combien de personne(s) ?</p>
+                    <input type="text">
+                </div>
+                <div id="confirm-next">
+                    <p>Continuer la réservation</p>
+                </div>
+            </div>
+            <!-- <div id="purchase-steps">
+                <div class="step">Hébergement</div>
+                <div class="step">Transport</div>
+                <div class="step">Récapitulatif</div>
+                <div class="step">Paiement</div>
+                <div class="step">Confirmation</div>
+            </div> -->
         </div>
         <table>
             <tr>

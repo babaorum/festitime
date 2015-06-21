@@ -94,7 +94,7 @@ a:visited
 
 body
 {
-    font: @font-oswald;
+    font: @font-oswald 14px;
     background-color: #F8F8F8;
 }
 
@@ -942,7 +942,6 @@ timer span.time p
     text-align: center;
     padding-bottom: 10%;
 }
-
 #festivals h2
 {
     display: inline-block;
@@ -962,7 +961,6 @@ timer span.time p
     width: 70%;
     margin: auto;
 }
-
 #festivals #festival-content #festival-group .block
 {
     width: 30%;
@@ -974,12 +972,10 @@ timer span.time p
     position: relative;
     overflow: hidden;
 }
-
 #festivals #festival-content #festival-group .block img
 {
     width: 100%;
 }
-
 #festivals #festival-content #festival-group .block .festival
 {
     width: 100%;
@@ -989,33 +985,28 @@ timer span.time p
     background: #F8F8F8;
     color: #8F8F8F;
 }
-
 #festivals #festival-content #festival-group .block .festival .info
 {
     padding-left: 1%;
 }
-
 #festivals #festival-content #festival-group .block .festival .info .left-info
 {
     float: left;
     text-align: left;
     width: 70%
 }
-
 #festivals #festival-content #festival-group .block .festival .info .left-info img
 {
     height: 10px;
     width: auto;
     margin-right: 1%;
 }
-
 #festivals #festival-content #festival-group .block .festival .info .left-info .name
 {
     font-size: 20px;
     font-weight: bold;
     margin: 1%;
 }
-
 #festivals #festival-content #festival-group .block .festival .info .price
 {
     float: right;
@@ -1028,13 +1019,11 @@ timer span.time p
     padding: 2.5%;
     box-shadow: 0px 0px 2px #888888;
 }
-
 #festivals #festival-content #festival-group .block .festival .info .price span
 {
     font-size: 9px;
     font-weight: normal;
 }
-
 #festival-content .button
 {
     display: block;
@@ -1196,7 +1185,6 @@ timer span.time p
     padding-bottom: 10%;
     margin-bottom: -5%;
 }
-
 .artists-block
 {
     width: 70%;
@@ -1257,7 +1245,228 @@ timer span.time p
     text-shadow: 2px 2px 3px #000000;
     width: 100%;
     margin: 20px 0;
+    border: none;
     clear: both;
+}
+
+#tickets-block
+{
+    background: url("/assets/images/purchase-background.jpg");
+    background-size: 100%;
+    margin-top: -10%;
+    padding-top: 10%;
+    overflow: hidden;
+    text-align: center;
+}
+#tickets-block h2
+{
+    display: inline-block;
+    font: 24px @font-oswald;
+    color: #F3F3F3;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: skewY(-5deg);
+    border-style: solid;
+    border-color: #F3F3F3;
+    border-width: 4px 0px;
+    margin: 0 3% 3%;
+    width: auto;
+}
+.tickets
+{
+    width: 70%;
+    margin: auto;
+}
+.ticket
+{
+    margin: 1%;
+    padding: 1%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: #FFFFFF;
+    float: right;
+    font: 14px @font-oswald;
+}
+.ticket.selected
+{
+    border: #C92A55 solid 2px;
+    border-bottom: 0px;
+    margin-bottom: -2px;
+}
+/* one item */
+.ticket:nth-child(1):nth-last-child(1) 
+{
+    width: 98%;
+}
+
+/* two items */
+.ticket:nth-child(1):nth-last-child(2),
+.ticket:nth-child(2):nth-last-child(1) 
+{
+    width: 48%;
+}
+
+/* three items */
+.ticket:nth-child(1):nth-last-child(3),
+.ticket:nth-child(2):nth-last-child(2),
+.ticket:nth-child(3):nth-last-child(1) 
+{
+    width: 31.3333%;
+}
+
+/* four items */
+.ticket:nth-child(1):nth-last-child(4),
+.ticket:nth-child(2):nth-last-child(3),
+.ticket:nth-child(3):nth-last-child(2),
+.ticket:nth-child(4):nth-last-child(1) 
+{
+    width: 23%;
+}
+
+/* five items */
+.ticket:nth-child(1):nth-last-child(5),
+.ticket:nth-child(2):nth-last-child(4),
+.ticket:nth-child(3):nth-last-child(3),
+.ticket:nth-child(4):nth-last-child(2),
+.ticket:nth-child(5):nth-last-child(1) 
+{
+    width: 18%;
+}
+
+.ticket h3
+{
+    text-transform: uppercase;
+    color: #C92A55;
+    font-weight: bold;
+    font-size: 20px;
+}
+.ticket .title,
+.ticket .price
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 26px;
+}
+.ticket img
+{
+    visibility: hidden;
+}
+.ticket.selected img
+{
+    visibility: visible;
+}
+
+#purchase
+{
+    background-color: #212121;
+    overflow: hidden;
+    font: 14px @font-oswald;
+}
+#initial-choices
+{
+    width: 70%;
+    padding: 2% 0;
+    margin: auto;
+    overflow: hidden;
+    font: 14px @font-oswald;
+}
+
+#lodging,
+#conveyance,
+#how-many
+{
+    width: 23%;
+    margin: 2%;
+    float: left;
+}
+#lodging p,
+#conveyance p,
+#how-many p
+{
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+.yes,
+.no
+{
+    width: 48%;
+    margin: 1%;
+    border: 1px dashed grey;
+    text-align: center;
+    color: grey;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: normal;
+    float: left;
+}
+.yes.selected,
+.no.selected
+{
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+}
+#how-many input
+{
+    width: 100%;
+    height: 34px;
+    border: 1px solid white;
+    background-color: #212121;
+    color: white;
+    font-weight: normal;
+    padding-left: 20px;
+}
+#confirm-next
+{
+    color: white;
+    font-weight: bold;
+    background-color: #C92A55;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1%;
+    margin: 1.5%;
+    width: 15%;
+    float: left;
+}
+#confirm-next p
+{
+    margin-bottom: 0;
+}
+
+#purchase-steps
+{
+    width: 70%;
+    margin: auto;
+}
+#purchase-steps .step
+{
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: dashed 2px #6F6F6F;
+    color: #6F6F6F;
+    font-size: 16px;
+    width: 15%;
+    margin: 2.5%;
+    padding: 1%;
+    float: left;
+}
+#purchase-steps .step.in-progress
+{
+    border: solid 2px #FFFFFF;
+    color: #FFFFFF;
+}
+#purchase-steps .step.checked
+{
+    border: solid 2px #FFFFFF;
+    color: #FFFFFF;
+}
+#purchase-steps .step.checked:after
+{
+    content: "\2713 ";
+    float: right;
+    padding-right: 3%;
 }
 
 footer
