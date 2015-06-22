@@ -162,7 +162,7 @@ fixtures:
         city: Paris
         country: france
         price: 70
-    Hellfest:
+    hellfest:
         name: Hellfest
         description: "Scorpions, Faith No More, Slash, Motörhead, Marilyn Manson ou encore Anthrax seront à Clisson pour l'édition 2015 du Hellfest, qui promet de faire beaucoup de bruit les 19, 20 et 21 juin prochains! Voici le rendez-vous musical français incontournable pour tous les fans de métal et autres amoureux de musique aux hautes décibels... Chaque année depuis 2006, le Hellfest Summer Open Air, plus connu sous le nom de Hellfest Festival, accueille un très grand nombre de groupes essentiellement à la racine du metal et, dans une moindre mesure, punk hardcore. Avec plusieurs dizaines de milliers de festivaliers et le passage de groupes cultes de renommée internationale comme Alice Cooper, Kiss, Motörhead et Mötley Crüe, le Hellfest s'est imposé comme l'un des principaux festivals de musique européens et comme l'un des principaux évènements culturels en France. Cette année ne dérogera pas à la règle et accueillera notamment, du 19 au 21 juin 2015, à Clisson, des groupes aussi mythiques que Scorpions, Faith No More, Slash, Motörhead, L7, Marilyn Manson, Korn, Slipknot, Airbourne, Nightwish ou encore ZZ Top !"
         type:

@@ -568,3 +568,65 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.metronews.fr/_internal/gxml!0/r0dc21o2f3vste5s7ezej9x3a10rp3w$pvyfnbtv2r19ee28traj5fb78cfl24q/shaka.jpeg&sa=X&ei=KSFzVavACYOuUcOzgaAD&ved=0CAkQ8wc&usg=AFQjCNFTkOS_rQqRdbot84TETQ8v2Tk2gQ"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img.musiquemag.fr/datas/groupe/s/h/shaka-ponk/xl/shaka-ponk-4decce10060d6.jpg&sa=X&ei=VSFzVZ6BIsP9UOfEgMgN&ved=0CAkQ8wc&usg=AFQjCNE_XUH4u8bgKvopJ5It8SEuO-J8UA"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://shuffle-musik.com/wordpress/wp-content/flagallery/shaka-ponk-shuffle/shakaponk1.png&sa=X&ved=0CAkQ8wdqFQoTCLWUzIjBisYCFcm7FAodFFYAdw&usg=AFQjCNGRFKdbeuBPjBGLyI76CE4vucmEOQ"
+    scorpions:
+        pseudo: Scorpions
+        firstname: Scorpions
+        lastname: Scorpions
+        description: "Rudolf Schenker (né en 1948) forme une première mouture des Scorpions en 1965 à Hanovre. Guitariste rythmique et chanteur, il est accompagné de Karl Heinz Follmer comme guitariste soliste, Lothar Heimberg comme bassiste et du batteur Wolfgang Dziony. Ils sont bientôt rejoints par Michael Schenker, jeune frère de Rudolf, guitariste soliste incisif et Klaus Meine qui devient le chanteur du groupe en 1970. Le 1er janvier 1971, le groupe fait ses débuts sous le nom officiel de Scorpions, dans sa ville natale. Ils enregistrent leur premier album Lonesome Crow, qui paraît en 1972. Mais l'échec artistique et commercial est au Rendez-Vous pour cette très pâle copie des standards du genre."
+        type:
+            - hard-rock
+            - heavy-metal
+            - power-ballad
+        picture: "http://www.audiodynamics.info/wp-content/uploads/2015/03/scorpions.jpeg"
+        pictures:
+            - "http://wordpress.crazyscorps.com/wp-content/uploads/2014/11/scorpions.jpg"
+            - "http://blog.tiqiq.com/wp-content/uploads/2015/03/scorpions.jpg"
+            - "http://specials.dw.de/scorpions-en/files/Scorpions-3-%C2%B8-Udo-Weger.jpg"
+            - "http://wac.450f.edgecastcdn.net/80450F/ultimateclassicrock.com/files/2015/01/scorpions.jpg?w=630"
+    faith no more:
+        pseudo: Faith No More
+        firstname: Faith No More
+        lastname: Faith No More
+        description: "Groupe fondé à San Francisco en 1981 par Roddy Bottum (claviers), Jim Martin (guitare), Bill Gould (basse), Mike Bordin (batterie) et Chuck Mosely (chant), Faith No More s'avère précurseur dans l'art de fusionner des éléments metal et rap, le tout lié par un groove funk.Leur premier album auto-produit, We Care a Lot en 1985, reste un galop d'essai bourré d'idées non-encore totalement au point. Dès Introduce Yourself en 1987 l'évolution est manifeste. Faith No More affirme sa puissance et impose un son proche de Red Hot Chili Peppers, mais en plus heavy.Chuck Mosely quitte le groupe en 1988 et est remplacé par Mike Patton. The REAL Thing en 1989, voit le groupe décoller avec en particulier une reprise épique de « War Pigs » de Black Sabbath. L'album en public Live at Brixton Academy en 1991 vient simplement confirmer la réputation scénique du groupe, rien moins qu'excellente.Album phare du groupe, Angel Dust est aussi celui de sa consécration internationale en 1992. Angel Dust entre n° 2 anglais et n° 10 américain. Le groupe est cependant frappé par la fameuse malédiction du 'slow qui tue' avec le tube « Easy » reprise de The Commodores et ballade hard à faire pâlir Extreme."
+        type:
+            - funk
+            - rock
+            - metal
+        picture: "http://www.soundwavefestival.com/sites/default/files/blog/FNM%20Promo.png"
+        pictures:
+            - "http://www.hardforce.fr/img/uploads/Posts/2014/11/HardForce-blog-117.jpg"
+            - "http://www.metalinjection.net/wp-content/uploads/2014/05/Faith-No-More-New-Album-2014.jpg"
+            - "http://musictour.eu/data//uploads/media/albums/1195/b20a93281caa138725944a5678fcc323.jpg"
+            - "http://www.metalsucks.net/wp-content/uploads/2012/06/faithnomore2010.jpg"
+    slash:
+        pseudo: Slash
+        firstname: Slash
+        lastname: Slash
+        description: "Slash est né le 23 juillet 1965 à Stoke-on-Trent (Staffordshire) sous le nom de Saul Hudson. Ses origines familiales le plongent très vite dans le rock et le show business, sa mère est costumière - pour David Bowie, en particulier - et son père réalise des pochettes de disques. La famille Hudson part habiter à Los Angeles alors que Slash a onze ans.A partir de 1983, Slash forme Road Crew avec Steven Adler (batterie) et Duff McKagan (basse). De la rencontre de ses trois hommes avec Hollywood Rose, naît en 1986 Guns N' Roses, plus grand groupe de metal des années quatre-vingt-dix. Slash devient alors le nouveau symbole du guitar hero, ses riffs tranchants et ses solos vicieux faisant de Appetite for Destruction (1987) un pur chef d'oeuvre.Slash succède alors à Eddie Van Halen comme caution rock auprès de Michael Jackson. Il participe à l'album Dangerous en 1991, sur le titre « Give in to Me ». Très courtisé, Slash multiplie les apparitions, devenant un personnage de people un brin canaille. Alors que les nuages s'amoncellent sur sa relation avec le caractériel Axl Rose, Slash forme en 1993 Slash's Snakepit entre projet solo et groupe de substitution. Slash's Snakepit sort en 1995 le très convaincant It's Five O'Clock Somewhere. Il faut attendre 2000 pour la sortie du moins rutilant Ain't Life Grant."
+        type:
+            - Hard-rock
+            - blues-rock
+            - heavy-metal
+        picture: "http://babymetal.net/wp-content/uploads/2015/02/slash-4e58b1c09245b.jpg"
+        pictures:
+            - "http://images6.fanpop.com/image/photos/33000000/Slash-slash-33022871-588-582.jpg"
+            - "http://images.epiphone.com.s3.amazonaws.com/News/Features/2014/20141001_rossocorsa/N_100114D3.jpg"
+            - "http://netstorage.metrolyrics.com/blog/wp-content/uploads/2012/04/Slash_Feature.jpg"
+            - "http://medias.2kmusic.com/uploads/2010/04/01/img-1270118856-b3706d715968cc560a568aa96df445b3.jpg"
+    marilyn manson:
+        pseudo: Marilyn Manson
+        firstname: Brian
+        lastname: Warner
+        description: "Marilyn Manson, de son vrai nom Brian Warner, est une personnalité tourmentée, et ce dès son plus jeune âge. Il découvre très tôt le rock « décadent » avec des groupes comme Iron Maiden ou Judas Priest, et ses icônes telles David Bowie ou Alice Cooper. Après quelques expériences dans le journalisme et la rédaction d'un fanzine, il décide, en 1989, de fonder son propre groupe, Marilyn Manson AnD The Spooky Kids, avec la ferme intention d'explorer les limites de la censure et de devenir une star de rock. Aujourd'hui encore il est difficile d'appréhender Marilyn Manson en tant que groupe et non juste en tant qu'individu, tant la personnalité extravertie de Brian Warner est dominante. Cette caravane musicale se compose de personnages tous plus excentriques les uns que les autres, dont Marilyn Manson semble être le moins « atteint » psychologiquement : chant et guitare sont réservés à la star, la batterie à Sara Lee Lucas, la basse à Olivia Newton-Bundy, les claviers à Zsa Zsa Speck et la guitare à Daisy Berkowitz. Tous ont empruntés leurs noms à de grandes icônes américaines associées à divers serials Killers (Brian Warner a ainsi fait un milk-shake de Marilyn Monroe et Charles Manson). Leur look, leur musique et les connotations fortement sexuelles de leurs concerts attirent rapidement un public fasciné par cette atmosphère SM et gothique."
+        type:
+            - hard-rock
+            - blues-rock
+            - rock-alternatif
+            - industrial
+            - rock
+        picture: "http://www.dailystormer.com/wp-content/uploads/2014/11/o-MARILYN-MANSON-SAINT-LAURENT-facebook.jpg"
+        pictures:
+            - "http://img0.ndsstatic.com/wallpapers/4fa04e67be3b71c6324c94d2d27cc27a_large.jpeg"
+            - "http://assets.rollingstone.com/assets/2014/article/see-marilyn-mansons-unsettling-phallic-deep-six-video-20141219/178442/large_rect/1419006722/1401x788-manson.jpg"
+            - "http://www.buzzly.fr/jq/ckeditor/plugins/doksoft_uploader/userfiles/Marilyn-Manson-marilyn-manson-29937716-1500-1000.jpg"
+            - "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQC18vF_BkOeaEy0&w=470&h=246&url=http%3A%2F%2Fcdn.papermag.com%2Fuploaded_images%2FMarilynMansonMarchPaperCover.jpg&cfs=1&upscale=1&sx=0&sy=377&sw=700&sh=366"

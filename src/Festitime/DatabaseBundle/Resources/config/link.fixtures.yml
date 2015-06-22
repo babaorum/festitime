@@ -69,6 +69,12 @@ links:
                 - Christine and the Queens
                 - Florent Pagny
                 - Fréro Delavega
+        hellfest:
+            artist:
+                - scorpions
+                - faith no more
+                - slash
+                - marilyn manson
     artist:
         selah sue:
             festival:
@@ -190,3 +196,15 @@ links:
             festival:
                 - Main Square
                 - Le Big festival
+        scorpions:
+            festival:
+                - hellfest
+        faith no more:
+            festival:
+                - hellfest
+        slash:
+            festival:
+                - hellfest
+        marilyn manson:
+            festival:
+                - hellfest
