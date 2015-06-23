@@ -73,39 +73,15 @@
         <div class="artists block after-block-leaning">
             <h2 class="add-rotate-left">Les artistes du festival</h2>
             <div class="artists-block">
-                <div class="block" >
-                    <img src="http://www.edelweissmag.ch/sites/www.edelweissmag.ch/files/spicegirlsspicegirls1997_011.jpg" alt="image artist">
+                <div class="block" ng-repeat="artist in festivalCtrl.artists">
+                    <img ng-src="{[{artist.picture}]}" alt="image artist">
                     <div class="artist">
                         <div class="info">
-                            <div class="name">Spice Girls</div>
-                            <div class="number-festivals">Dans {[{ festival.price }]} festivals</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block" >
-                    <img src="http://www.edelweissmag.ch/sites/www.edelweissmag.ch/files/spicegirlsspicegirls1997_011.jpg" alt="image artist">
-                    <div class="artist">
-                        <div class="info">
-                            <div class="name">Spice Girls</div>
-                            <div class="number-festivals">Dans {[{ festival.price }]} festivals</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block" >
-                    <img src="http://www.edelweissmag.ch/sites/www.edelweissmag.ch/files/spicegirlsspicegirls1997_011.jpg" alt="image artist">
-                    <div class="artist">
-                        <div class="info">
-                            <div class="name">Spice Girls</div>
-                            <div class="number-festivals">Dans {[{ festival.price }]} festivals</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block" >
-                    <img src="http://www.edelweissmag.ch/sites/www.edelweissmag.ch/files/spicegirlsspicegirls1997_011.jpg" alt="image artist">
-                    <div class="artist">
-                        <div class="info">
-                            <div class="name">Spice Girls</div>
-                            <div class="number-festivals">Dans {[{ festival.price }]} festivals</div>
+                            <div ng-if="artist.pseudo" class="name">{[{ artist.pseudo | capitalize}]}</div>
+                            <div ng-if="!artist.pseudo" class="name">
+                                {[{ artist.firstname | capitalize }]} {[{ artist.lastname | capitalize }]}
+                            </div>
+                            <div class="number-festivals">Dans {[{ artist.festivals.length }]} festivals</div>
                         </div>
                     </div>
                 </div>

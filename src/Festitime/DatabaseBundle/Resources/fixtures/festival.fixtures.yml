@@ -25,7 +25,6 @@ fixtures:
         type:
             - electro
             - rock
-            - pop
             - hip-hop
             - pop
             - reggae
@@ -46,7 +45,6 @@ fixtures:
             - rock
             - pop
             - hip-hop
-            - pop
             - reggae
         img: "http://media.virginradio.fr/pmedia-2526730-ajust_640/l-affiche-allechante-du-main-square-festival.jpg"
         pictures:
@@ -79,7 +77,6 @@ fixtures:
             - rock
             - pop
             - hip-hop
-            - pop
             - reggae
             - house
         img: "http://www.bigfest.fr/img-2015/big.png"
@@ -185,7 +182,6 @@ fixtures:
             - rock
             - pop
             - hip-hop
-            - pop
             - reggae
             - variété française
         img: "http://ursofrench.fr/wp-content/uploads/2014/07/Solidays2.png"

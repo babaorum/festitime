@@ -255,7 +255,7 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=https://s3.amazonaws.com/vice_asset_uploader/files/1383582077mia_2.jpg&sa=X&ei=ZgJzVbTYCIPqUsj7gMgM&ved=0CAkQ8wc&usg=AFQjCNHo8M50vTR_a6vgKvQZn8NSCnF52Q"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.noiseporn.com/wp-content/uploads/Mia_CanSeeCanDo.jpg&sa=X&ved=0CAkQ8wdqFQoTCLv644W9isYCFcPAFAodKVYAYg&usg=AFQjCNEC2L9v27qLItHkpMdxBPIu6h1wTg"
     Ebony Bones:
-        pesudo: Ebony Bones
+        pseudo: Ebony Bones
         firstname: Ebony
         lastname: Thomas
         description: "Ebony Bones, née Ebony Thomas, est une britannique d'origine des Caraïbes. Chanteuse-compositeur, productrice et musicienne, elle est considérée comme l'une des rares artistes féminines à s'autoproduire. Son style musical est éclectique. Il combine des éléments de post-punk, afro-beat, art -rock, classique, new wave et souvent électronique. Nommé par son premier batteur, Rat Scabies, du légendaire groupe punk The Damned, son premier album, Bone of My Bones, est sorti en 2009 avec des critiques positives. Elle est ensuite partie voyager en Inde pour produire son deuxième album, Behold a Pale Horse, sorti en septembre 2013, acclamé par la critique."

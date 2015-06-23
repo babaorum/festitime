@@ -3,8 +3,12 @@
 
     function festivalController($scope, rome2rioRestService, festivalRestService) {
         this.festival = {};
-        this.travels
-        //load travels
+
+        // DisplayedArtists
+        this.artists  = [];
+
+        // Contain Rome2rio travels information
+        this.travels;
 
         var getTravels = function() {
             rome2rioRestService.getTravels('Paris', this.festival.city)
@@ -21,8 +25,18 @@
                     $scope.festivalPicture = {
                         background: 'url('+ festival.img +')'
                     };
+                    getDisplayedArtists();
                     getTravels();
                 }.bind(this));
+        }.bind(this);
+
+        var getDisplayedArtists = function() {
+            if (this.festival.artists.length > 4) {
+                this.artists = this.festival.artists.slice(0, 4);
+                console.log(this.artists);
+            } else {
+                this.artists = this.festival.artists;
+            }
         }.bind(this);
     }
 
