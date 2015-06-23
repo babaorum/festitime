@@ -4,9 +4,9 @@ persistence: mongodb
 fixtures:
     selah sue:
         pseudo: Selah Sue
-        firstname: Sue
-        lastname: Selah
-        description: "Sanne Putseys est née à Louvain1, mais a vécu dans le village tout proche de Leefdaal. À l'âge de 15 ans, Sanne Putseys apprend à jouer de la guitare acoustique et commence à écrire ses propres chansons. À 17 ans, elle est la plus jeune et unique participante féminine du concours Open Mic-avond de Het Depot à Louvain. L'organisateur et chanteur Milow remarque ses talents et lui demande de jouer ses premières parties de concert3. Initialement, Sanne Putseys gère sa carrière musicale en parallèle à ses études de psychologie à la Katholieke Universiteit Leuven. Selon elle, étudier la psychologie l'a aidée à mieux comprendre les émotions humaines, qui jouent aussi un rôle dans ses activités musicales. Finalement, elle continue à faire des premières parties en collaboration avec des artistes comme Jamie Lidell à Londres et Paris. Par ailleurs, elle a joué avec le groupe belge Novastar au Paradiso à Amsterdam."
+        firstname: Sanne
+        lastname: Putseys
+        description: "Sanne Putseys est née en 1989 à Louvain en Belgique, mais a vécu dans le village tout proche de Leefdaal. À l'âge de 15 ans, Sanne Putseys apprend à jouer de la guitare acoustique et commence à écrire ses propres chansons. À 17 ans, elle est la plus jeune et unique participante féminine du concours Open Mic-avond de Het Depot à Louvain. L'organisateur et chanteur Milow remarque ses talents et lui demande de jouer ses premières parties de concert. Initialement, Sanne Putseys gère sa carrière musicale en parallèle à ses études de psychologie à la Katholieke Universiteit Leuven. Selon elle, étudier la psychologie l'a aidée à mieux comprendre les émotions humaines, qui jouent aussi un rôle dans ses activités musicales. Finalement, elle continue à faire des premières parties en collaboration avec des artistes comme Jamie Lidell à Londres et Paris. Par ailleurs, elle a joué avec le groupe belge Novastar au Paradiso à Amsterdam."
         type:
             - groove
             - neo-soul
@@ -20,8 +20,8 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn-parismatch.ladmedia.fr/var/news/storage/images/paris-match/culture/musique/selah-sue-album-raggamuffin-146367/1388852-1-fre-FR/Dans-le-monde-de-Selah.jpg&sa=X&ved=0CAkQ8wdqFQoTCM7s_ay1isYCFYU3FAodjGIAfA&usg=AFQjCNH0xWP8B9zrTe6MdPMOGeHDp2mlZw"
     deep purple:
         pseudo: Deep Purple
-        firstname: Deep Purple
-        lastname: Deep Purple
+        firstname: ~
+        lastname: ~
         description: "Deep Purple est un groupe rock britannique fondé en 1968, considéré comme l'un des fondateurs du genre hard rock avec Led Zeppelin. Au cours de ses quarante ans d'existence, le groupe a toujours été constitué de cinq musiciens (un chanteur, un guitariste, un bassiste, un batteur et un organiste), mais il a connu plusieurs changements de personnel qui ont déterminé son évolution musicale. Les éléments caractéristiques du son de Deep Purple durant la majeure partie de son existence sont la guitare Fender Stratocaster de Ritchie Blackmore et l'orgue Hammond de Jon Lord."
         type:
             - hard-rock
@@ -37,9 +37,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn.mos.musicradar.com//images/bass-features/2013/bass-expo-features/glenn-hughes/deep-purple-corbis-460-85.jpg&sa=X&ved=0CAkQ8wdqFQoTCP-r3MG1isYCFcjVFAodIkYAGw&usg=AFQjCNEGNk-bvgoWkCnFXwF7ibKhDRo07w"
     fauve:
         pseudo: Fauve
-        firstname: Fauve
-        lastname: Fauve
-        description: "Fauve est un collectif artistique français, originaire de Paris, opérant sur plusieurs supports : musique, vidéos, photos, textes, visuels, web… Fauve se présente comme un collectif ouvert, sous le nom de Fauve Corp. Il est composé de cinq membres permanents qui qualifient leur musique de « spoken word ». Le collectif utilise souvent le symbole ? (différent) dans sa communication, notamment dans son logo."
+        firstname: ~
+        lastname: ~
+        description: "Fauve est un collectif artistique français, originaire de Paris, opérant sur plusieurs supports : musique, vidéos, photos, textes, visuels, web… Fauve se présente comme un collectif ouvert, sous le nom de Fauve Corp. Il est composé de cinq membres permanents qui qualifient leur musique de « spoken word ». Le collectif utilise souvent le symbole &ne; (différent) dans sa communication, notamment dans son logo."
         type:
             - rock
             - pop
@@ -51,9 +51,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://lamaisonmusee.files.wordpress.com/2013/07/fauve-corp-musique.jpg&sa=X&ved=0CAkQ8wdqFQoTCOntkdq1isYCFQtaFAodTwsA6Q&usg=AFQjCNGB3YsUOWzsZ04qZvJc56tyQMqhIw"
     Lilly Wood and the Prick:
         pseudo: Lilly Wood and the Prick
-        firstname: Lilly Wood and the Prick
-        lastname: Lilly Wood and the Prick
-        description: "Le groupe Lilly Wood and the Prick est né en 2006, de la rencontre entre la chanteuse Nili Hadida et le guitariste Benjamin Cotto, par l'intermédiaire d'un ami commun dans un café parisien. Ils se retrouvent deux jours après pour composer trois chansons.Fin 2008, ils se font connaître sur MySpace grâce à une reprise de L.E.S Artistes de Santigold. C'est à ce moment-là qu'ils rencontrent Pierre Guimard. Excité par ce qu'il a entendu sur leur Myspace, il leur ouvre les portes de son studio. Ils sont ensuite lancés en 2008 par la compilation Folk & Proud. En 2009, Pierre Guimard fonde alors avec Matthieu Tessier, manager du groupe, le label Choke Industry sur lequel sort le premier EP du duo : Lilly who and the what ?, baptisé en référence à leur nom de scène. En 2009, ils signent avec le label indépendant Cinq."
+        firstname: ~
+        lastname: ~
+        description: "Le groupe Lilly Wood and the Prick est né en 2006, de la rencontre entre la chanteuse Nili Hadida et le guitariste Benjamin Cotto, par l'intermédiaire d'un ami commun dans un café parisien. Ils se retrouvent deux jours après pour composer trois chansons. Fin 2008, ils se font connaître sur MySpace grâce à une reprise de L.E.S Artistes de Santigold. C'est à ce moment-là qu'ils rencontrent Pierre Guimard. Excité par ce qu'il a entendu sur leur Myspace, il leur ouvre les portes de son studio. Ils sont ensuite lancés en 2008 par la compilation Folk & Proud. En 2009, Pierre Guimard fonde alors avec Matthieu Tessier, manager du groupe, le label Choke Industry sur lequel sort le premier EP du duo : Lilly who and the what ?, baptisé en référence à leur nom de scène. En 2009, ils signent avec le label indépendant Cinq."
         type:
             - electro
             - folk
@@ -66,8 +66,8 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.megaconnard.com/wp-content/uploads/2012/10/lilly-wood-the-prick1.jpg&sa=X&ved=0CAkQ8wdqFQoTCIL2lOu1isYCFYEuFAodnXIA5w&usg=AFQjCNEg2OlfD2Q3FthvTv5aUb99qFOSJA"
     The Black Keys:
         pseudo: The Black Keys
-        firstname: The Black Keys
-        lastname: The Black Keys
+        firstname: ~
+        lastname: ~
         description: "The Black Keys est un groupe de blues rock américain originaire d'Akron dans l'État de l'Ohio. Le groupe est composé du chanteur et guitariste Dan Auerbach et du batteur Patrick Carney. Le nom du groupe provient d'un artiste schizophrène nommé Alfred McMoore que le duo connaissait et qui aurait laissé des messages incohérents sur le répondeur de leurs pères se référant à eux comme des 'notes noires' (traduction de l'anglais 'black keys') quand il était en colère."
         type:
             - rock-alternatif
@@ -81,9 +81,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://lediscolab.fr/wp-content/uploads/2014/03/black-keys.png&sa=X&ved=0CAkQ8wdqFQoTCInp4Ii2isYCFUVZFAodTA0Abg&usg=AFQjCNELMhKEWZrx3YDy1POT1VlohjqT_g"
     New Order:
         pseudo: New Order
-        firstname: New Order
-        lastname: New Order
-        description: "Il se compose au départ des membres restant du groupe Joy Division dont le chanteur Ian Curtis s'est suicidé. À la suite de ce drame, ils optent pour un changement de nom et adoptent celui de New Order sur une suggestion de leur manager, Rob Gretton. Ce nom a fait l'objet de polémiques, comme celui de Joy Division qui pouvait faire allusion au nazisme.Le groupe comprend Bernard Sumner (dit Barney ou encore, dans Joy Division, Bernard Albrecht ou Bernard Dicken) au chant, à la guitare et aux claviers, Peter Hook (dit Hooky) à la basse et Stephen Morris à la batterie. Gillian Gilbert, la compagne de Stephen Morris, rejoint les trois anciens de Joy Division dès le tout début des années 1980, aux claviers. Elle est remplacée depuis 2001 par Phil Cunningham (ancien guitariste du groupe Marion (en), autre groupe de Manchester)"
+        firstname: ~
+        lastname: ~
+        description: "Il se compose au départ des membres restant du groupe Joy Division dont le chanteur Ian Curtis s'est suicidé. À la suite de ce drame, ils optent pour un changement de nom et adoptent celui de New Order sur une suggestion de leur manager, Rob Gretton. Ce nom a fait l'objet de polémiques, comme celui de Joy Division qui pouvait faire allusion au nazisme. Le groupe comprend Bernard Sumner (dit Barney ou encore, dans Joy Division, Bernard Albrecht ou Bernard Dicken) au chant, à la guitare et aux claviers, Peter Hook (dit Hooky) à la basse et Stephen Morris à la batterie. Gillian Gilbert, la compagne de Stephen Morris, rejoint les trois anciens de Joy Division dès le tout début des années 1980, aux claviers. Elle est remplacée depuis 2001 par Phil Cunningham (ancien guitariste du groupe Marion, autre groupe de Manchester)"
         type:
             - dance-alternative
             - pop
@@ -99,9 +99,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.bopping-elf.co.uk/wp-content/uploads/2011/07/newordermain.jpg&sa=X&ved=0CAkQ8wdqFQoTCPiT-Py5isYCFcK7FAodWi8Jjw&usg=AFQjCNH7gUa3xoIW0L8f-Ey0JLqej0KTnw"
     blondie:
         pseudo: Blondie
-        firstname: Blondie
-        lastname: Blondie
-        description: "Blondie est un groupe de musique américain, fondé en 1975 à New York par Deborah Harry et Chris Stein. Pionnier de la scène pop punk des années 1970, le groupe devient célèbre pour son mélange électrique de styles musicaux intégrant des éléments disco, pop, rap, reggae tout en conservant une base new wave.Blondie se sépare après la sortie de son sixième album studio, The Hunter en 1982. Debbie Harry continue en solo avec plus ou moins de succès. Le groupe se reforme en 1997, avec un single à succès, Maria qui devient #1 aux Royaume-Uni en 1999. Le groupe effectue des tournées à travers le monde durant les années suivantes.Blondie a vendu plus de 40 millions d'albums dans le monde et continue d'en vendre encore aujourd'hui avec la sortie de son neuvième album, Panic of Girls. Parmi leurs plus grands succès, on peut notamment citer Heart of Glass, Call Me, The Tide Is High, One Way or Another, Atomic ou encore Maria."
+        firstname: ~
+        lastname: ~
+        description: "Blondie est un groupe de musique américain, fondé en 1975 à New York par Deborah Harry et Chris Stein. Pionnier de la scène pop punk des années 1970, le groupe devient célèbre pour son mélange électrique de styles musicaux intégrant des éléments disco, pop, rap, reggae tout en conservant une base new wave. Blondie se sépare après la sortie de son sixième album studio, The Hunter en 1982. Debbie Harry continue en solo avec plus ou moins de succès. Le groupe se reforme en 1997, avec un single à succès, Maria qui devient #1 aux Royaume-Uni en 1999. Le groupe effectue des tournées à travers le monde durant les années suivantes. Blondie a vendu plus de 40 millions d'albums dans le monde et continue d'en vendre encore aujourd'hui avec la sortie de son neuvième album, Panic of Girls. Parmi leurs plus grands succès, on peut notamment citer Heart of Glass, Call Me, The Tide Is High, One Way or Another, Atomic ou encore Maria."
         type:
             - pop
             - rock
@@ -115,9 +115,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://boptopop.files.wordpress.com/2011/05/blondie.jpg&sa=X&ved=0CAkQ8wdqFQoTCPmvrKe6isYCFUG3FAod73IA-Q&usg=AFQjCNF6pEfvZiKsyH2nd1MUIu8yOpWRRQ"
     stromae:
         pseudo: Stromae
-        firstname: Stromae
-        lastname: Stromae
-        description: "Paul Van Haver, dit Stromae (prononcé [st?omaj ]1,2), né le 12 mars 1985 à Etterbeek, est un auteur-compositeur-interprète et producteur belge de hip-hop, de musique électronique et de chanson française originaire du quartier de Laeken, à Bruxelles3,4.Il se fait connaître en 2009 avec la chanson Alors on danse extraite de l'album Cheese. En 2013, son deuxième album Racine carrée est un succès critique et commercial. La tournée qui suivra le fera connaître mondialement avec plus de 200 dates dans plus de 25 pays dont les États-Unis, le Brésil, le Canada, ou encore la Russie. Au total plus de 1 million de personnes assisteront à cette tournée."
+        firstname: Paul
+        lastname: Van Hamer
+        description: "Paul Van Haver, dit Stromae, né le 12 mars 1985 à Etterbeek en Belgique, est un auteur-compositeur-interprète et producteur belge de hip-hop, de musique électronique et de chanson française originaire du quartier de Laeken, à Bruxelles. Il se fait connaître en 2009 avec la chanson Alors on danse extraite de l'album Cheese. En 2013, son deuxième album Racine carrée est un succès critique et commercial. La tournée qui suivra le fera connaître mondialement avec plus de 200 dates dans plus de 25 pays dont les États-Unis, le Brésil, le Canada, ou encore la Russie. Au total plus de 1 million de personnes assisteront à cette tournée."
         type:
             - Hip-hop
             - variété française
@@ -131,9 +131,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.metronews.fr/_internal/gxml!0/r0dc21o2f3vste5s7ezej9x3a10rp3w$hbpos94f4xziyzenqpk1ft0g8jddse2/IP3GIR130827029001.jpeg&sa=X&ved=0CAkQ8wdqFQoTCMX1sNG6isYCFQq0FAodF7cA7w&usg=AFQjCNHGFj1Qh29FiAHtmlllXl-cV4Q3-g"
     cerrone:
         pseudo: Cerrone
-        firstname: Cerrone
+        firstname: Marc
         lastname: Cerrone
-        description: "Marc Cerrone, né Jean-Marc Cerrone le 24 mai 1952 à Vitry-sur-Seine, est un musicien, compositeur, producteur de musique et écrivain français. Il est un des grands noms du disco, cumulant nombre de tubes dont Supernature (chanson). Durant sa carrière, il a vendu plus de 30 millions de disques.Il est aussi l'auteur de concerts-événements ayant réuni des centaines de milliers de personnes à travers le monde tels que la Dance Party Live à Versailles, le Los Angeles Millenium Celebration, ou le concert à Paris place de la Concorde pour la célébration du bicentenaire de la Révolution."
+        description: "Marc Cerrone, né Jean-Marc Cerrone le 24 mai 1952 à Vitry-sur-Seine, est un musicien, compositeur, producteur de musique et écrivain français. Il est un des grands noms du disco, cumulant nombre de tubes dont Supernature. Durant sa carrière, il a vendu plus de 30 millions de disques. Il est aussi l'auteur de concerts-événements ayant réuni des centaines de milliers de personnes à travers le monde tels que la Dance Party Live à Versailles, le Los Angeles Millenium Celebration, ou le concert à Paris place de la Concorde pour la célébration du bicentenaire de la Révolution."
         type:
             - disco
             - rock
@@ -147,9 +147,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://s.wat.tv/image/cerrone-love-in-minor_1i9ex_jnil7.jpg&sa=X&ved=0CAkQ8wdqFQoTCIGE84W7isYCFUy4FAodoU4AXQ&usg=AFQjCNHeMxCwuTrjfUmhXHXtmC64hsamJA"
     Muse:
         pseudo: Muse
-        firstname: Muse
-        lastname: Muse
-        description: "Muse est un groupe de rock alternatif britannique originaire de Teignmouth, Devon en Angleterre. Apparu sur la scène musicale en 1994, le trio est composé de Matthew Bellamy (chant, guitare, piano), Christopher Wolstenholme (basse, chant, chœurs) et Dominic Howard (batterie, percussions).Muse dénombre six albums studio depuis ses débuts que sont Showbiz (1999), Origin of Symmetry (2001), Absolution (2003), Black Holes and Revelations (2006), The Resistance (2009) et The 2nd Law (2012). Ce dernier prend la première place des classements dans plusieurs pays tels que le Royaume-Uni et la France. Ils sont également auteurs de quatre DVD live à leur actif qui incluent Hullabaloo Soundtrack (2002), Absolution Tour (2005), HAARP (2008), et le Live at Rome Olympic Stadium (2013)."
+        firstname: ~
+        lastname: ~
+        description: "Muse est un groupe de rock alternatif britannique originaire de Teignmouth, Devon en Angleterre. Apparu sur la scène musicale en 1994, le trio est composé de Matthew Bellamy (chant, guitare, piano), Christopher Wolstenholme (basse, chant, chœurs) et Dominic Howard (batterie, percussions). Muse dénombre six albums studio depuis ses débuts que sont Showbiz (1999), Origin of Symmetry (2001), Absolution (2003), Black Holes and Revelations (2006), The Resistance (2009) et The 2nd Law (2012). Ce dernier prend la première place des classements dans plusieurs pays tels que le Royaume-Uni et la France. Ils sont également auteurs de quatre DVD live à leur actif qui incluent Hullabaloo Soundtrack (2002), Absolution Tour (2005), HAARP (2008), et le Live at Rome Olympic Stadium (2013)."
         type:
             - rock
         picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.stay-tuned.be/wp-content/uploads/2015/03/muse.jpg&sa=X&ei=UftyVcOzCsvkUczsgIAF&ved=0CAkQ8wc&usg=AFQjCNEMeyxZiG9eiNFCMWyjY0zSz35hkA"
@@ -160,8 +160,8 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img10.deviantart.net/9cb3/i/2013/031/6/b/muse_by_lolzertron-d5tdoli.jpg&sa=X&ved=0CAkQ8wdqFQoTCJWbs6a7isYCFcy-FAod90oAVA&usg=AFQjCNHj6nv-0od_oQ6Bzh2_H7UuOlOkdA"
     Yelle:
         pseudo: Yelle
-        firstname: Yelle
-        lastname: Yelle
+        firstname: Julie
+        lastname: Budet
         description: "Yelle est une artiste française de musique électro-pop, originaire de Bretagne. Découverte sur Internet en 2005, via le réseau social MySpace, Yelle compte trois albums à son actif, Pop Up en 2007, Safari Disco Club en 2011 et Complètement fou en 2014, ainsi que quelques EPs sortis sur le label parisien Kitsuné. Elle est réputée pour avoir parcouru le monde avec son groupe et donné plus de 350 concerts, notamment aux États-Unis où elle connaît un succès remarquable."
         type:
             - pop
@@ -175,9 +175,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://imados.fr/content/4/1/7/554178/Yelle.png&sa=X&ved=0CAkQ8wdqFQoTCJCZn7S7isYCFUdpFAodfMQAJw&usg=AFQjCNFEnHMHJ3cqE_xAjvOtvFpwdS5DyA"
     UB40:
         pseudo: UB40
-        firstname: UB40
-        lastname: UB40
-        description: "UB40 a été influencé par les soirées blues que les membres fréquentaient pendant leur adolescence, et conjointement déterminé par le ska et le reggae qui ont inspiré les chansons King, Madam Medusa, Food for Thought, Signing Off and One in Ten.Le groupe a acheté ses premiers instruments avec l'argent du dédommagement qu'Ali Campbell a reçu après une bagarre dans un bar. Ils ont répété durant 6 mois dans une cave avant de se produire en public dans un pub de Birmingham le 9 février 1979. Ils ont commencé en faisant la première partie des Pretenders, durant leur tournée en Angleterre. Leur premier LP Signing Off est un disque auto-produit, une première dans l'histoire de l'industrie discographique britannique. La majorité de leurs chansons est par la suite inspirée du ska des années 1960."
+        firstname: ~
+        lastname: ~
+        description: "UB40 a été influencé par les soirées blues que les membres fréquentaient pendant leur adolescence, et conjointement déterminé par le ska et le reggae qui ont inspiré les chansons King, Madam Medusa, Food for Thought, Signing Off and One in Ten. Le groupe a acheté ses premiers instruments avec l'argent du dédommagement qu'Ali Campbell a reçu après une bagarre dans un bar. Ils ont répété durant 6 mois dans une cave avant de se produire en public dans un pub de Birmingham le 9 février 1979. Ils ont commencé en faisant la première partie des Pretenders, durant leur tournée en Angleterre. Leur premier LP Signing Off est un disque auto-produit, une première dans l'histoire de l'industrie discographique britannique. La majorité de leurs chansons est par la suite inspirée du ska des années 1960."
         type:
             - reggae
             - ska
@@ -195,7 +195,7 @@ fixtures:
         pseudo: Iggy Pop
         firstname: James
         lastname: Österberg
-        description: "Iggy Pop, de son vrai nom James Newel Österberg Jr., né le 21 avril 1947 à Muskegon, dans le Michigan (États-Unis) est un chanteur, compositeur et acteur américain. Il est considéré comme un des artistes rock les plus influents. The Stooges (son groupe de 1967 à 1974, et de 2003 à nos jours) est historiquement un des premiers groupes précurseurs du mouvement punk.Iggy Pop est aussi connu pour son jeu de scène torse nu impressionnant et excessif. Surnommé « L'Iguane », il est l'un des rares artistes des années 1960 épargnés par les punks des années 1970 et des années 1980, étant reconnu comme The Godfather of Punk (« Le Parrain du Punk »). Dans une moindre mesure, la scène grunge se l'appropriera également dans les années 1990.Ses morceaux les plus connus avec les Stooges sont I Wanna Be Your Dog et Search and Destroy. Il a aussi décroché quelques tubes en solo, la plupart ayant été faits grâce à la collaboration de David Bowie, parmi lesquels Nightclubbing, Lust for Life, The Passenger, I'm Bored, Real Wild Child, ou encore Candy, un duo avec Kate Pierson."
+        description: "Iggy Pop, de son vrai nom James Newel Österberg Jr., né le 21 avril 1947 à Muskegon, dans le Michigan (États-Unis) est un chanteur, compositeur et acteur américain. Il est considéré comme un des artistes rock les plus influents. The Stooges (son groupe de 1967 à 1974, et de 2003 à nos jours) est historiquement un des premiers groupes précurseurs du mouvement punk. Iggy Pop est aussi connu pour son jeu de scène torse nu impressionnant et excessif. Surnommé « L'Iguane », il est l'un des rares artistes des années 1960 épargnés par les punks des années 1970 et des années 1980, étant reconnu comme The Godfather of Punk (« Le Parrain du Punk »). Dans une moindre mesure, la scène grunge se l'appropriera également dans les années 1990. Ses morceaux les plus connus avec les Stooges sont I Wanna Be Your Dog et Search and Destroy. Il a aussi décroché quelques tubes en solo, la plupart ayant été faits grâce à la collaboration de David Bowie, parmi lesquels Nightclubbing, Lust for Life, The Passenger, I'm Bored, Real Wild Child, ou encore Candy, un duo avec Kate Pierson."
         type:
             - rock-n-roll
             - punk
@@ -210,9 +210,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.la-clau.net/imatges/noticia/iggy_pop_la_clau.jpg&sa=X&ved=0CAkQ8wdqFQoTCO-M--a7isYCFUxaFAodVAcAOA&usg=AFQjCNH81d3TEhLgqFrn_eYy-VAz7U5R-g"
     alt-J:
         pseudo: alt-J
-        firstname: alt-J
-        lastname: alt-J
-        description: "alt-J est un groupe de rock indépendant alternatif anglais originaire de Leeds composé de quatre musiciens et formé en 2007.Leur musique mélange des interludes folks, des rythmes hip-hop, ou encore des harmonies vocales. Le groupe, d'abord connu sous le nom de Films, est composé à l'origine de Joe Newman (guitariste/voix), Gus Unger-Hamilton (claviériste), Gwil Sainsbury (guitariste/bassiste) et Thom Green (batteur). Le groupe tient son nom du raccourci qui donne le symbole ? sur un Macintosh à clavier QWERTY1."
+        firstname: ~
+        lastname: ~
+        description: "alt-J est un groupe de rock indépendant alternatif anglais originaire de Leeds composé de quatre musiciens et formé en 2007. Leur musique mélange des interludes folks, des rythmes hip-hop, ou encore des harmonies vocales. Le groupe, d'abord connu sous le nom de Films, est composé à l'origine de Joe Newman (guitariste/voix), Gus Unger-Hamilton (claviériste), Gwil Sainsbury (guitariste/bassiste) et Thom Green (batteur). Le groupe tient son nom du raccourci qui donne le symbole &Delta; (Delta) sur un Macintosh à clavier QWERTY."
         type:
             - rock
             - folk
@@ -225,9 +225,10 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.mtv.com/crop-images/2013/09/10/alt_j.jpg&sa=X&ei=PABzVbH-OcOBU_e3gHA&ved=0CAkQ8wc&usg=AFQjCNGObDvfakE1CLlDRXTGkgDQlbLKTg"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://i.f1g.fr/media/ext/orig/www.lefigaro.fr/medias/2012/11/02/8a0041c6-24d3-11e2-8f46-ba31020eb522-493x328.jpg&sa=X&ved=0CAkQ8wdqFQoTCI_k8IO8isYCFYq2FAod1v4AKg&usg=AFQjCNF69P7hTOABYU9fxusnn-wQpfIrdg"
     andré manoukian:
-        firstname: andré manoukian
-        lastname: andré manoukian
-        description: "André Manoukian, né le 9 avril 1957 à Lyon dans le Rhône est un compositeur qui œuvre principalement pour la variété. Il est apparu à l'avant scène en tant que membre du jury de l'émission de télé-crochet Nouvelle Star sur M6, puis sur D8, à laquelle il participe depuis la première édition en 2003."
+        pseudo: ~
+        firstname: André
+        lastname: Manoukian
+        description: "André Manoukian, né le 9 avril 1957 à Lyon dans le Rhône, est un compositeur qui œuvre principalement pour la variété. Il est apparu à l'avant scène en tant que membre du jury de l'émission de télé-crochet Nouvelle Star sur M6, puis sur D8, à laquelle il participe depuis la première édition en 2003."
         type:
             - jazz
         picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.metronews.fr/_internal/gxml!0/r0dc21o2f3vste5s7ezej9x3a10rp3w$lrxqexwn79ob72ysjwvfikl6v5hjsee/andre.jpeg&sa=X&ei=MwFzVYAZhfNShuuByA0&ved=0CAkQ8wc&usg=AFQjCNEsDdetRnyFvi86_0opCvvK19EcUQ"
@@ -254,8 +255,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=https://s3.amazonaws.com/vice_asset_uploader/files/1383582077mia_2.jpg&sa=X&ei=ZgJzVbTYCIPqUsj7gMgM&ved=0CAkQ8wc&usg=AFQjCNHo8M50vTR_a6vgKvQZn8NSCnF52Q"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.noiseporn.com/wp-content/uploads/Mia_CanSeeCanDo.jpg&sa=X&ved=0CAkQ8wdqFQoTCLv644W9isYCFcPAFAodKVYAYg&usg=AFQjCNEC2L9v27qLItHkpMdxBPIu6h1wTg"
     Ebony Bones:
-        firstname: ebony
-        lastname: bones
+        pesudo: Ebony Bones
+        firstname: Ebony
+        lastname: Thomas
         description: "Ebony Bones, née Ebony Thomas, est une britannique d'origine des Caraïbes. Chanteuse-compositeur, productrice et musicienne, elle est considérée comme l'une des rares artistes féminines à s'autoproduire. Son style musical est éclectique. Il combine des éléments de post-punk, afro-beat, art -rock, classique, new wave et souvent électronique. Nommé par son premier batteur, Rat Scabies, du légendaire groupe punk The Damned, son premier album, Bone of My Bones, est sorti en 2009 avec des critiques positives. Elle est ensuite partie voyager en Inde pour produire son deuxième album, Behold a Pale Horse, sorti en septembre 2013, acclamé par la critique."
         type:
             - electro
@@ -272,9 +274,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.novaplanet.com/sites/default/files/imagecache/page_mea/articles/images/ebony-bones.jpg&sa=X&ved=0CAkQ8wdqFQoTCOnl6Ze9isYCFUJcFAods4YA8w&usg=AFQjCNHxSuDmteXFYOrrztu9L6xo5Nlszg"
     Arcade Fire:
         pseudo: Arcade Fire
-        firstname: Arcade Fire
-        lastname: Arcade Fire
-        description: "Arcade Fire (auparavant appelé The Arcade Fire) est une formation américano-canadienne de rock, basée à Montréal. Les membres du groupe sont les multi-instrumentistes Win Butler, Régine Chassagne, Richard Parry, Tim Kingsbury, William Butler, Sarah Neufeld et Jeremy Gara. Le groupe a pris forme au début des années 2000. Il s'est développé autour du couple formé par Win Butler et Régine Chassagne. Il a reçu en 2011 à Los Angeles le Grammy Award de l'album de l'année pour The Suburbs, devançant alors aux scrutins d'importantes vedettes de la pop américaine.Pendant la tournée Funeral, le groupe incluait le joueur de cor Pietro Amato et le violoniste Owen Pallett du groupe Final Fantasy. Ce dernier, bien qu'il ne soit pas cité comme un membre du groupe sur le site officiel, participe aux concerts du groupe et, selon Win Butler, a apporté son aide pour les arrangements des cordes de leur second album Neon Bible. Howard Bilerman , qui jouait de la batterie sur Funeral, a depuis quitté le groupe."
+        firstname: ~
+        lastname: ~
+        description: "Arcade Fire (auparavant appelé The Arcade Fire) est une formation américano-canadienne de rock, basée à Montréal. Les membres du groupe sont les multi-instrumentistes Win Butler, Régine Chassagne, Richard Parry, Tim Kingsbury, William Butler, Sarah Neufeld et Jeremy Gara. Le groupe a pris forme au début des années 2000. Il s'est développé autour du couple formé par Win Butler et Régine Chassagne. Il a reçu en 2011 à Los Angeles le Grammy Award de l'album de l'année pour The Suburbs, devançant alors aux scrutins d'importantes vedettes de la pop américaine. Pendant la tournée Funeral, le groupe incluait le joueur de cor Pietro Amato et le violoniste Owen Pallett du groupe Final Fantasy. Ce dernier, bien qu'il ne soit pas cité comme un membre du groupe sur le site officiel, participe aux concerts du groupe et, selon Win Butler, a apporté son aide pour les arrangements des cordes de leur second album Neon Bible. Howard Bilerman, qui jouait de la batterie sur Funeral, a depuis quitté le groupe."
         type:
             - Rock indépendant
             - rock alternatif
@@ -287,9 +289,10 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://jto.s3.amazonaws.com/wp-content/uploads/2014/07/z1-curran-arcade-fire-a-20140725.jpg&sa=X&ei=SwpzVfmaJoHiUZjSgdAD&ved=0CAkQ8wc&usg=AFQjCNHzEhbj6eGYZd1FS0sBYXAzEhSm3w"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=https://brinkmusic.files.wordpress.com/2013/10/arcade-fire1.jpg&sa=X&ved=0CAkQ8wdqFQoTCKHn66m9isYCFUe1FAodjHoA7g&usg=AFQjCNE5Hp2tBaIt4COnjEnFrB9eGO_CcQ"
     Pharrell Williams:
-        firstname: pharrell
-        lastname: williams
-        description: "Pharrell Williams, ou tout simplement Pharrell, né le 5 avril 1973 à Virginia Beach (Virginie), est un auteur-compositeur-interprète, rappeur, producteur et styliste américain. Avec Chad Hugo, ils forment le duo de production musicale The Neptunes. Il est également le chanteur et le batteur du groupe N.E.R.D qu'il forme avec Hugo et son ami d'enfance Shay Haley. Son premier single Frontin' est sorti en 2003 et son premier album solo, In My Mind, en 2006. Il se distingue notamment dans cinq duos avec Snoop Dogg : Beautiful, Drop It Like It's Hot, Sets Up, Let's Get Blown et So Many Pros. C'est sa participation en tant que producteur du titre I'm a Slave 4 U de Britney Spears et de l'album Justified de Justin Timberlake qui le révèle auprès du grand public.En 2013, il enchaine les succès mondiaux en chantant sur deux titres de l'album Random Access Memories des Daft Punk : les singles Get Lucky et Lose Yourself to Dance, ainsi qu'avec Robin Thicke et T.I. sur le no 1 Blurred Lines, et enfin Happy, une chanson qu'il a écrite et composée. En 2014, il devient commissaire d'une exposition titrée GIRL, à la galerie Perrotin, à Paris."
+        pseudo: ~
+        firstname: Pharrell
+        lastname: Williams
+        description: "Pharrell Williams, ou tout simplement Pharrell, né le 5 avril 1973 à Virginia Beach (Virginie), est un auteur-compositeur-interprète, rappeur, producteur et styliste américain. Avec Chad Hugo, ils forment le duo de production musicale The Neptunes. Il est également le chanteur et le batteur du groupe N.E.R.D qu'il forme avec Hugo et son ami d'enfance Shay Haley. Son premier single Frontin' est sorti en 2003 et son premier album solo, In My Mind, en 2006. Il se distingue notamment dans cinq duos avec Snoop Dogg : Beautiful, Drop It Like It's Hot, Sets Up, Let's Get Blown et So Many Pros. C'est sa participation en tant que producteur du titre I'm a Slave 4 U de Britney Spears et de l'album Justified de Justin Timberlake qui le révèle auprès du grand public. En 2013, il enchaine les succès mondiaux en chantant sur deux titres de l'album Random Access Memories des Daft Punk : les singles Get Lucky et Lose Yourself to Dance, ainsi qu'avec Robin Thicke et T.I. sur le no 1 Blurred Lines, et enfin Happy, une chanson qu'il a écrite et composée. En 2014, il devient commissaire d'une exposition titrée GIRL, à la galerie Perrotin, à Paris."
         type:
             - hip-hop
             - randb
@@ -302,9 +305,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.gentlemale.fr/wp-content/uploads/2014/10/pharrell-williams.jpg&sa=X&ved=0CAkQ8wdqFQoTCJDv2ri9isYCFUXsFAod3bgAAA&usg=AFQjCNERU2hmLGMXFEHKh6myjyfvl6GFtQ"
     Skip the Use:
         pseudo: Skip the Use
-        firstname: Skip the Use
-        lastname: Skip the Use
-        description: "Skip the Use se forme à Lille en 2007. Après avoir soutenu le groupe punk Carving pendant dix ans, le chanteur Matt Bastard fait équipe avec le compositeur et guitariste Yann Stefani. Jay Gimenez, Lio Rapsaert et Manamax Catteloin complètent la formation.Remarqué par un éditeur lors d'un concert au Portugal, Skip the Use peaufine son premier album avec les producteurs Manu Guiot et Yves Jaget. Le résultat paru sur le label du groupe (Calysta) en octobre 2009, amène un rock puissant et néanmoins dansant. Le quintette entame une tournée nationale dans la foulée."
+        firstname: ~
+        lastname: ~
+        description: "Skip the Use se forme à Lille en 2007. Après avoir soutenu le groupe punk Carving pendant dix ans, le chanteur Matt Bastard fait équipe avec le compositeur et guitariste Yann Stefani. Jay Gimenez, Lio Rapsaert et Manamax Catteloin complètent la formation. Remarqué par un éditeur lors d'un concert au Portugal, Skip the Use peaufine son premier album avec les producteurs Manu Guiot et Yves Jaget. Le résultat paru sur le label du groupe (Calysta) en octobre 2009, amène un rock puissant et néanmoins dansant. Le quintette entame une tournée nationale dans la foulée."
         type:
             - electro
             - pop
@@ -317,9 +320,10 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.discordance.fr/wp-content/IMG/2013/03/MMS1574.jpg&sa=X&ei=WQxzVd7hJcHWU_iQg7gJ&ved=0CAkQ8wc&usg=AFQjCNHNK5Al5nFjutM8ilpQ3BkJF9TuMQ"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.file7.com/wmedias1/artistes/photos_fiche/skip_artiste.jpg&sa=X&ved=0CAkQ8wdqFQoTCMidzc29isYCFUztFAod5RYA3g&usg=AFQjCNGKH8yavts2VWzP3b3pCet-1snKNg"
     Lionel Richie:
-        firstname: Lionel Richie
-        lastname: Lionel Richie
-        description: "Lionel Richie est né le 20 juin 1949 à Tuskegee, dans l'Alabama. Enfant, il fréquente la chorale de l'église locale, encouragé par ses parents, tous deux agents administratifs, pour l'US Army (son père) ou l'éducation nationale (sa mère). A la maison, le gamin est sensible à la soul du label Tamla Motown, sans se douter un instant qu'il fera un jour partie de la grande famille. Il prend quelques leçons de saxophone - participant à quelques groupes de rhythm 'n' blues au milieu des années 60 - et s'initie seul au piano, sans l'aide de sa grand-mère pianiste professionnelle. C'est en 1968, avec ses camarades d'université Milan Williams, Ronald LaPread, William King Jr."
+        pseudo: ~
+        firstname: Lionel
+        lastname: Richie
+        description: "Lionel Richie est né le 20 juin 1949 à Tuskegee, dans l'Alabama. Enfant, il fréquente la chorale de l'église locale, encouragé par ses parents, tous deux agents administratifs, pour l'US Army (son père) ou l'éducation nationale (sa mère). A la maison, le gamin est sensible à la soul du label Tamla Motown, sans se douter un instant qu'il fera un jour partie de la grande famille. Il prend quelques leçons de saxophone - participant à quelques groupes de rhythm 'n' blues au milieu des années 60 - et s'initie seul au piano, sans l'aide de sa grand-mère pianiste professionnelle. C'est en 1968, avec ses camarades d'université Milan Williams, Ronald LaPread, William King Jr qu'il fonde le groupe The Commodores. Il se fait ainsi repérer par les médias et se lance en solo en 1980."
         type:
             - soul
             - randb
@@ -332,8 +336,8 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://lionelrichie.com/wp-content/uploads/2013/06/LIONEL-RICHIE-PERFORM.jpg&sa=X&ved=0CAkQ8wdqFQoTCPng4Oi9isYCFQXtFAodsvsAeg&usg=AFQjCNGGI7Ff446XDAFBQ-xC_N4nDkS5hA"
     Coldplay:
         pseudo: Coldplay
-        firstname: Coldplay
-        lastname: Coldplay
+        firstname: ~
+        lastname: ~
         description: "Coldplay est un groupe de rock britannique formé à Londres en 1996 par le chanteur, guitariste et pianiste Chris Martin et le guitariste Jon Buckland. Le guitariste Guy Berryman rejoint ensuite le groupe, qui prend le nom de Starfish avant que le batteur Will Champion devienne membre à son tour et que le producteur Phil Harvey s'associe avec eux dans leur entreprise. En 1998, le groupe voit le jour sous son nom définitif et sort leurs deux premiers EPs. Ils en profitent alors pour signer chez le label Parlophone."
         type:
             - pop
@@ -348,7 +352,7 @@ fixtures:
         pseudo: JoeyStarr
         firstname: Didier
         lastname: Morville
-        description: "JoeyStarr, parfois orthographié Joey Starr, né Didier Morville le 27 octobre 1967 à Saint-Denis, est un rappeur, compositeur, producteur et acteur français.Il commence sa carrière musicale en duo avec Kool Shen, sous le nom de groupe Suprême NTM, l'un des piliers du rap français durant les années 19902, devenu inactif en 1998, puis reformé dix ans plus tard en 2008. Parallèlement à sa carrière de chanteur, Morville fait quelques apparitions dans le milieu du cinéma dans des films tels que La Tour Montparnasse infernale, Old School, Le Bal des actrices, et Polisse.Morville est souvent considéré par les médias comme instable, violent, et représente une figure connue du grand public au fil de ses démêlés avec la justice3. Malgré cela, son manager Sébastien Farran lui reconnaît une qualité première, celle de « l'authenticité », qui se reflète dans ses textes : « Joey la Starr est un personnage entier4. »"
+        description: "JoeyStarr, parfois orthographié Joey Starr, né Didier Morville le 27 octobre 1967 à Saint-Denis, est un rappeur, compositeur, producteur et acteur français. Il commence sa carrière musicale en duo avec Kool Shen, sous le nom de groupe Suprême NTM, l'un des piliers du rap français durant les années 1990, devenu inactif en 1998, puis reformé dix ans plus tard en 2008. Parallèlement à sa carrière de chanteur, Morville fait quelques apparitions dans le milieu du cinéma dans des films tels que La Tour Montparnasse infernale, Old School, Le Bal des actrices, et Polisse. Morville est souvent considéré par les médias comme instable, violent, et représente une figure connue du grand public au fil de ses démêlés avec la justice. Malgré cela, son manager Sébastien Farran lui reconnaît une qualité première, celle de « l'authenticité », qui se reflète dans ses textes : « Joey la Starr est un personnage entier. »"
         type:
             - rap
             - hip-hop
@@ -362,7 +366,7 @@ fixtures:
         pseudo: David Bowie
         firstname: David
         lastname: Jones
-        description: "David Bowie, de son vrai nom David Robert Jones, né le 8 janvier 1947 à Londres, dans le quartier de Brixton, est un chanteur, compositeur, producteur de disques et acteur britannique. Au long de plus de quatre décennies d'une carrière marquée par des changements fréquents de style, une ré-invention permanente de son personnage et de ses approches musicales, il s'est imposé comme un des artistes musicaux les plus originaux, les plus importants et novateurs de la musique pop et rock, au point que de très nombreux artistes se sont réclamés de son influence. Il a vendu plus de 140 millions d'albums dans le monde1.Après des débuts hésitants entre folk et variété, dans la deuxième moitié des années 1960, et un détour par le mime, il se fait connaître du public, en juillet 1969, lorsque son titre Space Oddity entre dans le top five des meilleurs ventes au Royaume-Uni."
+        description: "David Bowie, de son vrai nom David Robert Jones, né le 8 janvier 1947 à Londres, dans le quartier de Brixton, est un chanteur, compositeur, producteur de disques et acteur britannique. Au long de plus de quatre décennies d'une carrière marquée par des changements fréquents de style, une ré-invention permanente de son personnage et de ses approches musicales, il s'est imposé comme un des artistes musicaux les plus originaux, les plus importants et novateurs de la musique pop et rock, au point que de très nombreux artistes se sont réclamés de son influence. Il a vendu plus de 140 millions d'albums dans le monde. Après des débuts hésitants entre folk et variété, dans la deuxième moitié des années 1960, et un détour par le mime, il se fait connaître du public, en juillet 1969, lorsque son titre Space Oddity entre dans le top five des meilleurs ventes au Royaume-Uni."
         type:
             - rock
             - soul
@@ -377,9 +381,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn1-public.ladmedia.fr/var/public/storage/images/look/toutes-les-news-look/mode-david-bowie-future-egerie-louis-vuitton-451316/5419301-1-fre-FR/Mode-David-Bowie-future-egerie-Louis-Vuitton_portrait_w674.jpg&sa=X&ved=0CAkQ8wdqFQoTCM-BhKC-isYCFcnAFAodjjsA3g&usg=AFQjCNEkSGXcKsi1A9l-0ZQJMK3bet5SQw"
     London Grammar:
         pseudo: London Grammar
-        firstname: London Grammar
-        lastname: London Grammar
-        description: "London Grammar est un groupe de musique anglais formé par Hannah Reid, Dominic « Dot » Major et Dan Rothman.Les membres du groupes sont originaires de Londres et Northampton et le style musical du groupe est un mélange d'electronica, de trip hop et de pop. Le premier EP de London Grammar Metal & Dust est sorti en février 2013 et le premier album If You Wait est sorti le 9 septembre 2013."
+        firstname: ~
+        lastname: ~
+        description: "London Grammar est un groupe de musique anglais formé par Hannah Reid, Dominic « Dot » Major et Dan Rothman. Les membres du groupe sont originaires de Londres et Northampton et le style musical du groupe est un mélange d'electronica, de trip hop et de pop. Le premier EP de London Grammar Metal & Dust est sorti en février 2013 et le premier album If You Wait est sorti le 9 septembre 2013."
         type:
             - electronica
             - pop
@@ -391,8 +395,8 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.qobuz.com/info/IMG/arton174148.jpg&sa=X&ved=0CAkQ8wdqFQoTCM3047W-isYCFUTtFAodyGMAlQ&usg=AFQjCNGtjw58sTHQ5pomB_56Cv_qQhYrjw"
     Depeche Mode:
         pseudo: Depeche Mode
-        firstname: Depeche Mode
-        lastname: Depeche Mode
+        firstname: ~
+        lastname: ~
         description: "Depeche Mode est un groupe de musique anglais, originaire de Basildon (Essex), formé en 1979. Toujours présent sur la scène internationale, il s'agit d'un groupe influent et populaire apparu au cours de l'ère new wave au sein du courant synthpop. Son nom provient d'un magazine français. Après avoir été lancés par le manager de Soft Cell, ils sont repérés par Daniel Miller, qui les fait signer sur son label Mute Records en 1981. Depeche Mode connaît son premier succès en Europe à partir du mois de septembre de cette même année avec Just Can't Get Enough et aux États-Unis en 1984/1985 avec le single People Are People."
         type:
             - pop
@@ -406,9 +410,10 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://images2.alphacoders.com/196/196612.jpg&sa=X&ei=9RJzVa2gK4byUsibg7AJ&ved=0CAkQ8wc4IQ&usg=AFQjCNG1iGuZ5IjEXd58nkF5xhbpB-TYMw"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://borgniet.be/wp-content/uploads/depeche-mode-bum-byAntonCorbijn.jpg&sa=X&ved=0CAkQ8wdqFQoTCMu0p8q-isYCFUE-FAod2SMAUQ&usg=AFQjCNEY8NDIUbnuaPRgXfV8IQeWpJ1HYQ"
     Veronique Sanson:
-        firstname: veronique
-        lastname: sanson
-        description: "Cette auteur-compositeur-interprète à la voix exceptionnelle est tombée dans la musique quand elle était petite. Elevée par des parents mélomanes, Véronique fait preuve dès son plus jeune âge d'un grand talent pour le piano. Avec sa soeur et un ami, François Bernheim, aujourd'hui compositeur, elle crée un groupe, les Roche Martin, auteur de deux 45 tours aux succès mitigés. Mais cette expérience lui permet de collaborer avec un certain Michel Berger qui produit son premier album, 'Amoureuse' en 1972. Ensemble, ils vont connaître le succès et leur chemin ne se séparera qu'à la mort de l'artiste. Véronique, artiste 100% française, se découvre par ailleurs une passion pour les Etats-Unis où elle va vivre pendant dix ans, mariée au musicien Stephen Stills. Sa musique sera toujours influencée par ce séjour et son amour du travail bien fait. Forte de douze albums et de nombreuses récompenses, Véronique est une artiste généreuse et entière, autant aimée par le public que par la profession."
+        pseudo: ~
+        firstname: Véronique
+        lastname: Sanson
+        description: "Cette auteur-compositeur-interprète est tombée dans la musique quand elle était petite. Elevée par des parents mélomanes, Véronique fait preuve dès son plus jeune âge d'un grand talent pour le piano. Avec sa soeur et un ami, François Bernheim, aujourd'hui compositeur, elle crée un groupe, les Roche Martin, auteur de deux 45 tours aux succès mitigés. Mais cette expérience lui permet de collaborer avec Michel Berger qui produit son premier album, 'Amoureuse' en 1972. Ensemble, ils vont connaître le succès et leur chemin ne se séparera qu'à la mort de l'artiste. Véronique, artiste française, se découvre par ailleurs une passion pour les Etats-Unis où elle va vivre pendant dix ans, mariée au musicien Stephen Stills. Sa musique sera toujours influencée par ce séjour et son amour du travail bien fait. Forte de douze albums et de nombreuses récompenses, Véronique est une artiste généreuse et entière, autant aimée par le public que par la profession."
         type:
             - pop
             - world
@@ -420,9 +425,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn-parismatch.ladmedia.fr/var/news/storage/images/paris-match/culture/musique/musique-match-9-veronique-sanson-au-firmament-152779/1517092-1-fre-FR/Musique-Match-9-Veronique-Sanson-au-firmament_article_landscape_pm_v8.jpg&sa=X&ved=0CAkQ8wc4TWoVChMIqISe476KxgIVyloUCh2V4QBs&usg=AFQjCNFshQOKvSEBmD7pjqKN-DwWVBIAMA"
     Christine and the Queens:
         pseudo: Christine and the Queens
-        firstname: Christine and the Queens
-        lastname: Christine and the Queens
-        description: "Christine and the Queens n'est pas un groupe mais la seule Christine. Brouilleuse de pistes, l'intrépide étudiante répond en fait au doux nom d'Héloïse Lhetissier et passe un Master d'études théâtrales. Composant seule sur son ordinateur, Christine and the Queens souhaitait à l'origine enrôler des drag queens sur scène pour justifier l'appellation du groupe. Devant le refus de ceux qu'elle a contactés, Christine and the Queens se produit seule dans une ambiance inspirée par Laurie Anderson ou plus près de nous de Lykke Li ou Lana Del Rey. Après les EP « Miséricorde », « Mac Abbey » et « Nuit 17 à 52 », il est temps pour Christine And The Queens de présenter son premier album « Chaleur Humaine ». On l'a d'abord connue seule en scène avec son ordinateur, puis retrouvée sur les premières parties de The Do et de Stromae. Sa prestation à la grâce saisissante aux Victoires de la Musique 2014 la révèle au plus grand nombre.La consécration est atteinte lors des Victoires de la Musique 2015 où Christine And The Queens remporte la Victoire de l'Artiste Féminine de l'Année ainsi que la Victoire du Clip de l'Année pour le clip de la chanson 'Saint Claude'."
+        firstname: Héloïse
+        lastname: Letissier
+        description: "Christine and the Queens n'est pas un groupe mais la seule Christine. Brouilleuse de pistes, l'intrépide étudiante répond en fait au doux nom d'Héloïse Letissier et passe un Master d'études théâtrales. Composant seule sur son ordinateur, Christine and the Queens souhaitait à l'origine enrôler des drag queens sur scène pour justifier l'appellation du groupe. Devant le refus de ceux qu'elle a contactés, Christine and the Queens se produit seule dans une ambiance inspirée par Laurie Anderson ou plus près de nous de Lykke Li ou Lana Del Rey. Après les EP « Miséricorde », « Mac Abbey » et « Nuit 17 à 52 », il est temps pour Christine And The Queens de présenter son premier album « Chaleur Humaine ». On l'a d'abord connue seule en scène avec son ordinateur, puis retrouvée sur les premières parties de The Do et de Stromae. Sa prestation à la grâce saisissante aux Victoires de la Musique 2014 la révèle au plus grand nombre. La consécration est atteinte lors des Victoires de la Musique 2015 où Christine And The Queens remporte la Victoire de l'Artiste Féminine de l'Année ainsi que la Victoire du Clip de l'Année pour le clip de la chanson 'Saint Claude'."
         type:
             - electro
             - pop
@@ -433,10 +438,10 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.lookcoco.fr/wp-content/uploads/2014/05/christine-and-the-queens-top.jpg&sa=X&ei=cxVzVfSYE8PmUpX_geAB&ved=0CAkQ8wc&usg=AFQjCNGi-LcSBsh1-doIlCP1biZQVM2YWg"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://blogs.paris.fr/chuchotements/files/2012/07/CATQ.jpg&sa=X&ved=0CAkQ8wdqFQoTCLyNw4m_isYCFQU4FAodIkUApA&usg=AFQjCNE671uDA9Ou23nu3JBtpF5qJEt8tA"
     Lenny Kravitz:
-        pseudo: lenny kravitz
-        firstname: leonard
-        lastname: kravitz
-        description: "Lenny Kravitz, né Leonard Albert Kravitz le 26 mai 1964 à New York, est un chanteur, musicien, compositeur et acteur américain.Ses compositions mêlent des éléments aussi variés que le rock psychédélique, le hard rock, le rhythm and blues, la soul, le funk et la pop. Ses principales influences sont Jimi Hendrix, Funkadelic, John Lennon et Prince.En plus de chanter et de faire les backing vocals c'est un musicien complet qui joue lui-même de tous les instruments lorsqu'il enregistre (guitare, basse, batterie, clavier et percussions). Il a gagné le Grammy Award pour la « Meilleure prestation rock masculine » quatre fois de 1999 à 2002. Ses ventes sont estimées à 381 millions d'albums dans le monde."
+        pseudo: Lenny Kravitz
+        firstname: Leonard
+        lastname: Kravitz
+        description: "Lenny Kravitz, né Leonard Albert Kravitz le 26 mai 1964 à New York, est un chanteur, musicien, compositeur et acteur américain. Ses compositions mêlent des éléments aussi variés que le rock psychédélique, le hard rock, le rhythm and blues, la soul, le funk et la pop. Ses principales influences sont Jimi Hendrix, Funkadelic, John Lennon et Prince. En plus de chanter et de faire les backing vocals c'est un musicien complet qui joue lui-même de tous les instruments lorsqu'il enregistre (guitare, basse, batterie, clavier et percussions). Il a gagné le Grammy Award pour la « Meilleure prestation rock masculine » quatre fois de 1999 à 2002. Ses ventes sont estimées à 381 millions d'albums dans le monde."
         type:
             - pop
             - rock
@@ -449,9 +454,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img0.gtsstatic.com/wallpapers/c3372fa744e79e196e0dff99fe8a31e5_large.jpeg&sa=X&ved=0CAkQ8wdqFQoTCIerqKW_isYCFQVxFAodM9cAxg&usg=AFQjCNEkNL7qcd3_PZZTQFffdsTR-JjYvw"
     Placebo:
         pseudo: Placebo
-        firstname: Placebo
-        lastname: Placebo
-        description: "Placebo est un groupe musical de rock alternatif formé en 1994 à Londres par Brian Molko et Stefan Olsdal, d'abord accompagnés par Robert Schultzberg jusqu'en 1996, puis Steve Hewitt jusqu'en 2007 et Steve Forrest jusque début 2015.La musique et les textes de Placebo se distinguent par une inclination romantique exacerbée. Autrefois allié à une imagerie provocante et excessive alimentant l'image sulfureuse du groupe, ce romantisme exubérant s'inscrit désormais dans une attitude plus introvertie (voir le concept Placebo). Opérant un changement progressif de son image et de sa musique, le groupe peut être affilié au punk rock pour ses débuts, puis au rock alternatif et à la power pop.Placebo a gagné une reconnaissance internationale, ayant vendu en 2011 plus de onze millions d'exemplaires de ses albums à travers le monde3, et est connu du grand public pour ses titres Nancy Boy, Pure Morning, Every You Every Me, Special K, The Bitter End, Meds, Song to Say Goodbye ou encore For What It's Worth, et certaines reprises comme Johnny and Mary (Robert Palmer) ou Running Up that Hill (Kate Bush)."
+        firstname: ~
+        lastname: ~
+        description: "Placebo est un groupe de rock alternatif formé en 1994 à Londres par Brian Molko et Stefan Olsdal, d'abord accompagnés par Robert Schultzberg jusqu'en 1996, puis Steve Hewitt jusqu'en 2007 et Steve Forrest jusque début 2015. La musique et les textes de Placebo se distinguent par une inclination romantique exacerbée. Autrefois allié à une imagerie provocante et excessive alimentant l'image sulfureuse du groupe, ce romantisme exubérant s'inscrit désormais dans une attitude plus introvertie. Opérant un changement progressif de son image et de sa musique, le groupe peut être affilié au punk rock pour ses débuts, puis au rock alternatif et à la power pop. Placebo a gagné une reconnaissance internationale, ayant vendu en 2011 plus de onze millions d'exemplaires de ses albums à travers le monde, et est connu du grand public pour ses titres Nancy Boy, Pure Morning, Every You Every Me, Special K, The Bitter End, Meds, Song to Say Goodbye ou encore For What It's Worth, et certaines reprises comme Johnny and Mary (Robert Palmer) ou Running Up that Hill (Kate Bush)."
         type:
             - rock
             - punk
@@ -462,9 +467,10 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.polarimagazine.com/wp-content/uploads/2011/11/Placebo.jpg&sa=X&ei=UxdzVdX7AYSAUc7ag8AH&ved=0CAkQ8wc&usg=AFQjCNEGBAKQxF5g4QyctXt4sapMiefvlwg"
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.artisthick.ma/wp-content/uploads/2015/02/placebo-1.jpg&sa=X&ved=0CAkQ8wdqFQoTCM7h4LO_isYCFQnRFAodMdgAVg&usg=AFQjCNHjidw9Q0zFPsaJCXk2RF1e81jeAw"
     Florent Pagny:
-        firstname: Florent Pagny
-        lastname: Florent Pagny
-        description: "Florent Pagny est un chanteur et acteur français né le 6 novembre 1961 à Chalon-sur-Saône (Saône-et-Loire). Chanteur de rock et de pop, on peut citer parmi ses plus grands succès N'importe quoi, Si tu veux m'essayer, Caruso, Savoir aimer, Et un jour une femme, Ma liberté de penser, et Là où je t'emmènerai. Au total, il a vendu plus de 15 millions de disques.C'est également une personnalité télévisuelle : il fait partie du jury de The Voice, la plus belle voix en France depuis le début de l'émission en 2012."
+        pseudo: ~
+        firstname: Florent
+        lastname: Pagny
+        description: "Florent Pagny est un chanteur et acteur français né le 6 novembre 1961 à Chalon-sur-Saône (Saône-et-Loire). Chanteur de rock et de pop, on peut citer parmi ses plus grands succès N'importe quoi, Si tu veux m'essayer, Caruso, Savoir aimer, Et un jour une femme, Ma liberté de penser, et Là où je t'emmènerai. Au total, il a vendu plus de 15 millions de disques. C'est également une personnalité télévisuelle : il fait partie du jury de The Voice, la plus belle voix en France depuis le début de l'émission en 2012."
         type:
             - pop
             - pop-rock
@@ -491,9 +497,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://images.doctissimo.fr/1/musique/grands-classiques/photo/hd/7917861791/1834129386c/grands-classiques-calogero-big.jpg?v=11&sa=X&ved=0CAkQ8wdqFQoTCOLM2dy_isYCFcZXFAody04AQA&usg=AFQjCNHNOQthMeaZKH1xxdS2-cUZTKBjdQ"
     Brigitte:
         pseudo: Brigitte
-        firstname: Brigitte
-        lastname: Brigitte
-        description: "Brigitte, qui n'est pas une femme, et qui ne s'appelle toujours pas Brigitte dans la vraie vie, nous livre son deuxième album À bouche que veux-tu. Aurélie Saada et Sylvie Hoarau y incarnent des jumelles à la bouche rouge piment, et donnent doublement corps à une femme plurielle qui arbore fièrement ses contradictions. La Brigitte d'aujourd'hui est tant Barbarella de banlieue au coeur de boxeur que féline enchantée d'être captive d'un amant solaire."
+        firstname: ~
+        lastname: ~
+        description: "Brigitte est un duo de chanteuses françaises créé en 2008. Aurélie Saada et Sylvie Hoarau y incarnent des jumelles à la bouche rouge piment, et donnent doublement corps à une femme plurielle qui arbore fièrement ses contradictions. La Brigitte d'aujourd'hui est tant Barbarella de banlieue au coeur de boxeur que féline enchantée d'être captive d'un amant solaire."
         type:
             - indie-folk
             - folk
@@ -508,9 +514,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://cdn-parismatch.ladmedia.fr/var/news/storage/images/paris-match/actu/medias/en-images/femmes-en-or-2014-des-laureates-d-exception-671276/brigitte-a-avoriaz-le-13-decembre-2014/6731348-1-fre-FR/Brigitte-a-Avoriaz-le-13-decembre-2014.jpg&sa=X&ved=0CAkQ8wdqFQoTCKazwfW_isYCFULXFAodgA4AkQ&usg=AFQjCNENYXwdcrxPAygp3QUNWQN7CZ73zw"
     Fréro Delavega:
         pseudo: Fréro Delavega
-        firstname: Fréro Delavega
-        lastname: Fréro Delavega
-        description: "C'est aux alentours de l'année 2009 que se rencontrent Jérémy Frérot (né en 1990) et Florian Delavega (né Garcia en 1987). Les deux Girondins, tous deux guitaristes et chanteurs, postent alors leurs reprises et compositions, ensemble ou séparément, sur internet, via YouTube ou les réseaux sociaux.Durant la saison 2013-2014, ils participent à la troisième édition de l'émission The Voice, la plus belle voix sous le nom de Fréro Delavega. Le duo « coaché » par Mika parvient jusqu'aux quarts de finale en reprenant des titres de MC Solaar, Vanessa Paradis, 50 Cent, Pink Martini ou Passenger."
+        firstname: ~
+        lastname: ~
+        description: "C'est aux alentours de l'année 2009 que se rencontrent Jérémy Frérot (né en 1990) et Florian Delavega (né Garcia en 1987). Les deux Girondins, tous deux guitaristes et chanteurs, postent alors leurs reprises et compositions, ensemble ou séparément, sur internet, via YouTube ou les réseaux sociaux. Durant la saison 2013-2014, ils participent à la troisième édition de l'émission The Voice, la plus belle voix sous le nom de Fréro Delavega. Le duo « coaché » par Mika parvient jusqu'aux quarts de finale en reprenant des titres de MC Solaar, Vanessa Paradis, 50 Cent, Pink Martini ou Passenger."
         type:
             - pop
         picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://images.sudouest.fr/images/2014/07/08/les-frero-delavega-un-duo-compose-de-flo-delavega-et-jeremy_1929493_800x400.jpg?v=2&sa=X&ei=IR1zVfP7E4ayUYfRgqAG&ved=0CAkQ8wc&usg=AFQjCNFK9ZW_IbyLqK6JazcMWwAbnSCx0Q"
@@ -521,9 +527,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://media.jukebox.fr/a166185/articles/i846196.jpg&sa=X&ved=0CAkQ8wdqFQoTCOOXuInAisYCFcJYFAodXQMAEw&usg=AFQjCNHboYiAigHvr_NGTvxZMBAZKPXzsw"
     David Guetta:
         pseudo: David Guetta
-        firstname: david
-        lastname: guetta
-        description: "David Guetta, né le 7 novembre 1967 à Paris, est un platiniste, remixeur, producteur de musique. Il se fait connaitre au début de sa carrière comme une figure des nuits parisiennes, puis acquiert une reconnaissance internationale avec ses albums Pop Life en 2007-2008 et One Love en 2009. Dès lors, plusieurs de ses titres comme When Love Takes Over, Sexy Bitch, ou Gettin' Over You se classent en tête des ventes à travers le monde.De grands noms de la scène urbaine collaborent sur la majorité de ces derniers singles mais il participe aussi à l'introduction de nouveaux talents. Sur l'ensemble de sa carrière, il a vendu plus de 9 millions d'albums et plus de 30 millions de singles, soit 39 millions de disques. En 2011, il est élu meilleur DJ du monde par le classement TOP 100 du magazine DJ Mag. En 2013, le titre When Love Takes Over de David Guetta en collaboration avec Kelly Rowland, est élue meilleure collaboration pop-dance de tous les temps par le magazine Billboard."
+        firstname: Pierre David
+        lastname: Guetta
+        description: "David Guetta, né le 7 novembre 1967 à Paris, est un platiniste, remixeur, producteur de musique. Il se fait connaitre au début de sa carrière comme une figure des nuits parisiennes, puis acquiert une reconnaissance internationale avec ses albums Pop Life en 2007-2008 et One Love en 2009. Dès lors, plusieurs de ses titres comme When Love Takes Over, Sexy Bitch, ou Gettin' Over You se classent en tête des ventes à travers le monde. De grands noms de la scène urbaine collaborent sur la majorité de ces derniers singles mais il participe aussi à l'introduction de nouveaux talents. Sur l'ensemble de sa carrière, il a vendu plus de 9 millions d'albums et plus de 30 millions de singles, soit 39 millions de disques. En 2011, il est élu meilleur DJ du monde par le classement TOP 100 du magazine DJ Mag. En 2013, le titre When Love Takes Over de David Guetta en collaboration avec Kelly Rowland, est élu meilleure collaboration pop-dance de tous les temps par le magazine Billboard."
         type:
             - dance
             - electro
@@ -536,9 +542,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img0.ndsstatic.com/wallpapers/91146dfe27748851469336f168a613b1_large.jpeg&sa=X&ved=0CAkQ8wdqFQoTCPmO9MLAisYCFUa3FAodlFsAbQ&usg=AFQjCNEeY_PTNA6hDV7we3Sh41e4BP9DZA"
     Carlos Santana:
         pseudo: Carlos Santana
-        firstname: Carlos Santana
-        lastname: Carlos Santana
-        description: "Carlos Alberto Santana Barragán connu sous le simple nom Carlos Santana (né le 20 juillet 1947 à Autlán de Navarro dans l'État de Jalisco, au Mexique) est un guitariste, compositeur et chanteur américain d'origine mexicaine, pivot des groupes Santana Blues Band et Santana Brothers. Il est un des guitaristes contemporains les plus connus au monde.Carlos Santana chante également, bien qu'il n'ait posé sa voix qu'à de rares occasions dans ses derniers albums, comme sur le titre Africa Bamba qui figure sur l'album Supernatural.Carlos Santana est aujourd'hui considéré comme un des créateurs du rock Latino et précurseur de la World music, dès 1969.En 2003, le mensuel Rolling Stone l'a classé quinzième dans sa liste des meilleurs guitaristes de tous les temps (uniquement en Jazz-Rock-Folk)"
+        firstname: ~
+        lastname: ~
+        description: "Carlos Alberto Santana Barragán connu sous le simple nom Carlos Santana (né le 20 juillet 1947 à Autlán de Navarro dans l'État de Jalisco, au Mexique) est un guitariste, compositeur et chanteur américain d'origine mexicaine, pivot des groupes Santana Blues Band et Santana Brothers. Il est un des guitaristes contemporains les plus connus au monde. Carlos Santana chante également, bien qu'il n'ait posé sa voix qu'à de rares occasions dans ses derniers albums, comme sur le titre Africa Bamba qui figure sur l'album Supernatural. Carlos Santana est aujourd'hui considéré comme un des créateurs du rock Latino et précurseur de la World music, dès 1969. En 2003, le mensuel Rolling Stone l'a classé quinzième dans sa liste des meilleurs guitaristes de tous les temps (uniquement en Jazz-Rock-Folk)"
         type:
             - blues
             - rock
@@ -552,9 +558,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://img.interia.pl/rozrywka/nimg/h/m/Carlos_Santana_fot_Trisha_4654565.jpg&sa=X&ei=EyBzVYf0LYT8UJfhgbAC&ved=0CAkQ8wc4nAE&usg=AFQjCNHZet6l4YRjd6tcboqqdQPyDutYpQ"
     Shaka Ponk:
         pseudo: Shaka Ponk
-        firstname: Shaka Ponk
-        lastname: Shaka Ponk
-        description: "Shaka Ponk (parfois orthographié SHK PNK) est un groupe de musique d'électro-rock1 français créé en 2004. Shaka Ponk utilise des éléments de différents courants musicaux tels que le côté punk, le metal, la funk et le hip-hop. Leurs textes sont un mélange d'anglais et d'espagnol et, plus rarement, de français.L'écran circulaire sur lequel apparaissait à chaque concert Goz, singe virtuel devenu la mascotte du groupe, a été remplacé par un gigantesque écran de dels sur scène."
+        firstname: ~
+        lastname: ~
+        description: "Shaka Ponk (parfois orthographié SHK PNK) est un groupe de musique d'électro-rock français créé en 2004. Shaka Ponk utilise des éléments de différents courants musicaux tels que le côté punk, le metal, la funk et le hip-hop. Leurs textes sont un mélange d'anglais et d'espagnol et, plus rarement, de français. L'écran circulaire sur lequel apparaissait à chaque concert Goz, singe virtuel devenu la mascotte du groupe, a été remplacé par un gigantesque écran de dels sur scène."
         type:
             - hip-hop
             - funk
@@ -570,9 +576,9 @@ fixtures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://shuffle-musik.com/wordpress/wp-content/flagallery/shaka-ponk-shuffle/shakaponk1.png&sa=X&ved=0CAkQ8wdqFQoTCLWUzIjBisYCFcm7FAodFFYAdw&usg=AFQjCNGRFKdbeuBPjBGLyI76CE4vucmEOQ"
     scorpions:
         pseudo: Scorpions
-        firstname: Scorpions
-        lastname: Scorpions
-        description: "Rudolf Schenker (né en 1948) forme une première mouture des Scorpions en 1965 à Hanovre. Guitariste rythmique et chanteur, il est accompagné de Karl Heinz Follmer comme guitariste soliste, Lothar Heimberg comme bassiste et du batteur Wolfgang Dziony. Ils sont bientôt rejoints par Michael Schenker, jeune frère de Rudolf, guitariste soliste incisif et Klaus Meine qui devient le chanteur du groupe en 1970. Le 1er janvier 1971, le groupe fait ses débuts sous le nom officiel de Scorpions, dans sa ville natale. Ils enregistrent leur premier album Lonesome Crow, qui paraît en 1972. Mais l'échec artistique et commercial est au Rendez-Vous pour cette très pâle copie des standards du genre."
+        firstname: ~
+        lastname: ~
+        description: "Scorpions est un groupe de heavy metal et hard rock allemand. Rudolf Schenker (né en 1948) forme une première mouture des Scorpions en 1965 à Hanovre. Guitariste rythmique et chanteur, il est accompagné de Karl Heinz Follmer comme guitariste soliste, Lothar Heimberg comme bassiste et du batteur Wolfgang Dziony. Ils sont bientôt rejoints par Michael Schenker, jeune frère de Rudolf, guitariste soliste incisif et Klaus Meine qui devient le chanteur du groupe en 1970. Le 1er janvier 1971, le groupe fait ses débuts sous le nom officiel de Scorpions, dans sa ville natale. Ils enregistrent leur premier album Lonesome Crow, qui paraît en 1972. Mais l'échec artistique et commercial est au Rendez-Vous pour cette très pâle copie des standards du genre."
         type:
             - hard-rock
             - heavy-metal
@@ -585,9 +591,9 @@ fixtures:
             - "http://wac.450f.edgecastcdn.net/80450F/ultimateclassicrock.com/files/2015/01/scorpions.jpg?w=630"
     faith no more:
         pseudo: Faith No More
-        firstname: Faith No More
-        lastname: Faith No More
-        description: "Groupe fondé à San Francisco en 1981 par Roddy Bottum (claviers), Jim Martin (guitare), Bill Gould (basse), Mike Bordin (batterie) et Chuck Mosely (chant), Faith No More s'avère précurseur dans l'art de fusionner des éléments metal et rap, le tout lié par un groove funk.Leur premier album auto-produit, We Care a Lot en 1985, reste un galop d'essai bourré d'idées non-encore totalement au point. Dès Introduce Yourself en 1987 l'évolution est manifeste. Faith No More affirme sa puissance et impose un son proche de Red Hot Chili Peppers, mais en plus heavy.Chuck Mosely quitte le groupe en 1988 et est remplacé par Mike Patton. The REAL Thing en 1989, voit le groupe décoller avec en particulier une reprise épique de « War Pigs » de Black Sabbath. L'album en public Live at Brixton Academy en 1991 vient simplement confirmer la réputation scénique du groupe, rien moins qu'excellente.Album phare du groupe, Angel Dust est aussi celui de sa consécration internationale en 1992. Angel Dust entre n° 2 anglais et n° 10 américain. Le groupe est cependant frappé par la fameuse malédiction du 'slow qui tue' avec le tube « Easy » reprise de The Commodores et ballade hard à faire pâlir Extreme."
+        firstname: ~
+        lastname: ~
+        description: "Groupe fondé à San Francisco en 1981 par Roddy Bottum (claviers), Jim Martin (guitare), Bill Gould (basse), Mike Bordin (batterie) et Chuck Mosely (chant), Faith No More s'avère précurseur dans l'art de fusionner des éléments metal et rap, le tout lié par un groove funk. Leur premier album auto-produit, We Care a Lot en 1985, reste un galop d'essai bourré d'idées non-encore totalement au point. Dès Introduce Yourself en 1987 l'évolution est manifeste. Faith No More affirme sa puissance et impose un son proche de Red Hot Chili Peppers, mais en plus heavy. Chuck Mosely quitte le groupe en 1988 et est remplacé par Mike Patton. The REAL Thing en 1989, voit le groupe décoller avec en particulier une reprise épique de « War Pigs » de Black Sabbath. L'album en public Live at Brixton Academy en 1991 vient simplement confirmer la réputation scénique du groupe, rien moins qu'excellente. Album phare du groupe, Angel Dust est aussi celui de sa consécration internationale en 1992. Angel Dust entre n° 2 anglais et n° 10 américain. Le groupe est cependant frappé par la fameuse malédiction du 'slow qui tue' avec le tube « Easy » reprise de The Commodores et ballade hard à faire pâlir Extreme."
         type:
             - funk
             - rock
@@ -600,9 +606,9 @@ fixtures:
             - "http://www.metalsucks.net/wp-content/uploads/2012/06/faithnomore2010.jpg"
     slash:
         pseudo: Slash
-        firstname: Slash
-        lastname: Slash
-        description: "Slash est né le 23 juillet 1965 à Stoke-on-Trent (Staffordshire) sous le nom de Saul Hudson. Ses origines familiales le plongent très vite dans le rock et le show business, sa mère est costumière - pour David Bowie, en particulier - et son père réalise des pochettes de disques. La famille Hudson part habiter à Los Angeles alors que Slash a onze ans.A partir de 1983, Slash forme Road Crew avec Steven Adler (batterie) et Duff McKagan (basse). De la rencontre de ses trois hommes avec Hollywood Rose, naît en 1986 Guns N' Roses, plus grand groupe de metal des années quatre-vingt-dix. Slash devient alors le nouveau symbole du guitar hero, ses riffs tranchants et ses solos vicieux faisant de Appetite for Destruction (1987) un pur chef d'oeuvre.Slash succède alors à Eddie Van Halen comme caution rock auprès de Michael Jackson. Il participe à l'album Dangerous en 1991, sur le titre « Give in to Me ». Très courtisé, Slash multiplie les apparitions, devenant un personnage de people un brin canaille. Alors que les nuages s'amoncellent sur sa relation avec le caractériel Axl Rose, Slash forme en 1993 Slash's Snakepit entre projet solo et groupe de substitution. Slash's Snakepit sort en 1995 le très convaincant It's Five O'Clock Somewhere. Il faut attendre 2000 pour la sortie du moins rutilant Ain't Life Grant."
+        firstname: Saul
+        lastname: Hudson
+        description: "Slash est né le 23 juillet 1965 à Stoke-on-Trent (Staffordshire) sous le nom de Saul Hudson. Ses origines familiales le plongent très vite dans le rock et le show business, sa mère est costumière - pour David Bowie, en particulier - et son père réalise des pochettes de disques. La famille Hudson part habiter à Los Angeles alors que Slash a onze ans. A partir de 1983, Slash forme Road Crew avec Steven Adler (batterie) et Duff McKagan (basse). De la rencontre de ces trois hommes avec Hollywood Rose, naît en 1986 Guns N' Roses, plus grand groupe de metal des années quatre-vingt-dix. Slash devient alors le nouveau symbole du guitar hero, ses riffs tranchants et ses solos vicieux faisant de Appetite for Destruction (1987) un pur chef d'oeuvre. Slash succède alors à Eddie Van Halen comme caution rock auprès de Michael Jackson. Il participe à l'album Dangerous en 1991, sur le titre « Give in to Me ». Très courtisé, Slash multiplie les apparitions, devenant un personnage people un brin canaille. Alors que les nuages s'amoncellent sur sa relation avec le caractériel Axl Rose, Slash forme en 1993 Slash's Snakepit entre projet solo et groupe de substitution. Slash's Snakepit sort en 1995 le très convaincant It's Five O'Clock Somewhere. Il faut attendre 2000 pour la sortie du moins rutilant Ain't Life Grant."
         type:
             - Hard-rock
             - blues-rock
@@ -632,9 +638,9 @@ fixtures:
             - "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQC18vF_BkOeaEy0&w=470&h=246&url=http%3A%2F%2Fcdn.papermag.com%2Fuploaded_images%2FMarilynMansonMarchPaperCover.jpg&cfs=1&upscale=1&sx=0&sy=377&sw=700&sh=366"
     asaf avidan:
         pseudo: Asaf Avidan
-        firstname: Asaf Avidan
-        lastname: Asaf Avidan
-        description: "Asaf Avidan naît le 23 mars 1980 à Jérusalem. Ses parents, diplomates, travaillent pour le ministère des affaires étrangères israélien. C’est ainsi qu’il passe quatre années de son enfance en Jamaïque. Pour cause de maladie et de cauchemars, il n’accomplit que 10 mois de service militaire au lieu des trois ans obligatoire. Ensuite, il part étudier le cinéma d’animation à la Bezalel Academy of Arts and Design, à Jérusalem.Son projet de fin d’études, un court-métrage intitulé Find Love Now, remporte le prix de sa catégorie au festival du film de Haïfa. Après ses études, Asaf Avidan déménage à Tel Aviv et travaille dans le milieu de l’animation jusqu’à ce qu’il se sépare de sa compagne de longue date. Cette séparation marque un tournant dans sa vie. Il démissionne et retourne vivre à Jérusalem, où il fait de sa passion, la musique, son activité principale.Il découvre qu'il est atteint d'un cancer, un lymphome, à 21 ans, après avoir été examiné pour des douleurs chroniques.En 2006, Asaf Avidan sort un premier EP autoproduit, Now That You Are Leaving, composé de 6 chansons évoquant les déceptions amoureuses qu’il a vécues. Il est alors acclamé par la critique."
+        firstname: Asaf
+        lastname: Avidan
+        description: "Asaf Avidan naît le 23 mars 1980 à Jérusalem. Ses parents, diplomates, travaillent pour le ministère des affaires étrangères israélien. C’est ainsi qu’il passe quatre années de son enfance en Jamaïque. Pour cause de maladie et de cauchemars, il n’accomplit que 10 mois de service militaire au lieu des trois ans obligatoire. Ensuite, il part étudier le cinéma d’animation à la Bezalel Academy of Arts and Design, à Jérusalem. Son projet de fin d’études, un court-métrage intitulé Find Love Now, remporte le prix de sa catégorie au festival du film de Haïfa. Après ses études, Asaf Avidan déménage à Tel Aviv et travaille dans le milieu de l’animation jusqu’à ce qu’il se sépare de sa compagne de longue date. Cette séparation marque un tournant dans sa vie. Il démissionne et retourne vivre à Jérusalem, où il fait de sa passion, la musique, son activité principale. Il découvre qu'il est atteint d'un cancer, un lymphome, à 21 ans, après avoir été examiné pour des douleurs chroniques. En 2006, Asaf Avidan sort un premier EP autoproduit, Now That You Are Leaving, composé de 6 chansons évoquant les déceptions amoureuses qu’il a vécues. Il est alors acclamé par la critique."
         type:
             - rock
             - blues
@@ -647,9 +653,9 @@ fixtures:
             - "http://easymay.be/wp-content/uploads/2013/04/Asaf-Avidan.jpg"
     moriarty:
         pseudo: Moriarty
-        firstname: Moriarty
-        lastname: Moriarty
-        description: "Il est constitué de six artistes d'origine française, américaine, suisse et vietnamienne. Les membres du groupe ont majoritairement grandi en France, de parents américains1. Le groupe se baptise Moriarty, en référence à Dean Moriarty, l'un des protagonistes de Sur la route de Jack Kerouac.Dans un premier temps, le groupe compte huit membres : la chanteuse Charlène Dupuy, le batteur Médéric de Vanssay, et le saxophoniste Davide Woods ont quitté le groupe depuis. Rosemary Standley rejoint le groupe en 1999. Le groupe passe de reprises de standards du blues à des compositions dans un registre rock. Les départs successifs des batteurs et des percussionnistes forcent le groupe, réduit à cinq membres (Rosemary, Arthur, Thomas, Charles et Stephan) à jouer en acoustique.À la suite d'un spectacle, le groupe rencontre en 2005 Jérôme Deschamps et Macha Makeïeff1, qui co-produisent par la suite le premier album avec le label Naïve. Au même moment, ils remportent le Prix Paris Jeunes Talents. Le groupe fait un passage remarqué au Printemps de Bourges 2006 sur la scène Pression live puis à nouveau en 2007 sur cette même scène. Lancé par un premier single Jimmy issu de leur premier album Gee Whiz But This Is a Lonesome Town sorti en octobre 2007, le groupe connaît alors un succès certain qui lui permet de jouer à La Cigale à guichets fermés et l'album se vend à plus de 50 000 exemplaires en quelques mois2, pour finalement être disque d'or un an après sa sortie3 et atteindre un total de 150 000 exemplaires vendus4. Le groupe entame alors une longue tournée française qui passe en avril 2008 par le Printemps de Bourges sur la grande scène du Phénix pour réapparaître à 23h30 une nouvelle fois sur la scène Pression Live qui leur avait permis de se faire connaître."
+        firstname: ~
+        lastname: ~
+        description: "Est un groupe créé en 1995 et constitué de six artistes d'origine française, américaine, suisse et vietnamienne. Les membres du groupe ont majoritairement grandi en France, de parents américains1. Le groupe se baptise Moriarty, en référence à Dean Moriarty, l'un des protagonistes de Sur la route de Jack Kerouac. Dans un premier temps, le groupe compte huit membres : la chanteuse Charlène Dupuy, le batteur Médéric de Vanssay, et le saxophoniste Davide Woods ont quitté le groupe depuis. Rosemary Standley rejoint le groupe en 1999. Le groupe passe de reprises de standards du blues à des compositions dans un registre rock. Les départs successifs des batteurs et des percussionnistes forcent le groupe, réduit à cinq membres (Rosemary, Arthur, Thomas, Charles et Stephan) à jouer en acoustique. À la suite d'un spectacle, le groupe rencontre en 2005 Jérôme Deschamps et Macha Makeïeff, qui co-produisent par la suite le premier album avec le label Naïve. Au même moment, ils remportent le Prix Paris Jeunes Talents. Le groupe fait un passage remarqué au Printemps de Bourges 2006 sur la scène Pression live puis à nouveau en 2007 sur cette même scène. Lancé par un premier single Jimmy issu de leur premier album Gee Whiz But This Is a Lonesome Town sorti en octobre 2007, le groupe connaît alors un succès certain qui lui permet de jouer à La Cigale à guichets fermés et l'album se vend à plus de 50 000 exemplaires en quelques mois, pour finalement être disque d'or un an après sa sortie et atteindre un total de 150 000 exemplaires vendus. Le groupe entame alors une longue tournée française qui passe en avril 2008 par le Printemps de Bourges sur la grande scène du Phénix pour réapparaître à 23h30 une nouvelle fois sur la scène Pression Live qui leur avait permis de se faire connaître."
         type:
             - rock
             - blues
@@ -662,9 +668,9 @@ fixtures:
             - "http://lyc-george-sand-la-chatre.tice.ac-orleans-tours.fr/eva/sites/lyc-george-sand-la-chatre/IMG/jpg/moriarty276.jpg"
     faada freddy:
         pseudo: Faada Freddy
-        firstname: Faada Freddy
-        lastname: Faada Freddy
-        description: "Abdoul Fatah Seck est né le 10 janvier 1975 à Saint-Louis au Sénégal. Étudiant jusqu'en 1993, il commence parallèlement à s'investir dans le hip-hop et fait partie en 1997 des fondateurs du trio Daara J. Devenu une star du rap dans son pays, Faada Freddy est connu pour sa voix veloutée. C'est le producteur Malick Ndaye qui a découvert Ayo ou Imany qui va le chercher à Dakar pour donner libre cours à sa passion pour la soul. Faada Freddy joue en effet seul une soul acoustique uniquement rythmée par des percussions traditionnelles ou bricolées avec du matériel de récupération. Faada Freddy accepte de relever le challenge et d'imposer ce style original aux oreilles occidentales. En France, il va à la rencontre du public à travers des premières parties de Bernard Lavilliers, Ben l'Oncle Soul ou Patrice. Ces prestations scéniques sont suivies en avril 2014 par la sortie de l'EP Untitled. Le son particulier commence alors à titiller l'oreille des radios et du public, ravi de voir sortir l'album The Gospel Journey en mars 2015. Faada Freddy poursuit une tournée qui l'emmène sur les scènes des grands festivals français (Printemps de Bourges, Francofolies de La Rochelle)."
+        firstname: Abdoul Fatah
+        lastname: Seck
+        description: "Faada Freddy, de son vrai nom Abdoul Fatah Seck, est né le 10 janvier 1975 à Saint-Louis au Sénégal. Étudiant jusqu'en 1993, il commence parallèlement à s'investir dans le hip-hop et fait partie en 1997 des fondateurs du trio Daara J. Devenu une star du rap dans son pays, Faada Freddy est connu pour sa voix veloutée. C'est le producteur Malick Ndaye qui a découvert Ayo ou Imany qui va le chercher à Dakar pour donner libre cours à sa passion pour la soul. Faada Freddy joue en effet seul une soul acoustique uniquement rythmée par des percussions traditionnelles ou bricolées avec du matériel de récupération. Faada Freddy accepte de relever le challenge et d'imposer ce style original aux oreilles occidentales. En France, il va à la rencontre du public à travers des premières parties de Bernard Lavilliers, Ben l'Oncle Soul ou Patrice. Ces prestations scéniques sont suivies en avril 2014 par la sortie de l'EP Untitled. Le son particulier commence alors à titiller l'oreille des radios et du public, ravi de voir sortir l'album The Gospel Journey en mars 2015. Faada Freddy poursuit une tournée qui l'emmène sur les scènes des grands festivals français (Printemps de Bourges, Francofolies de La Rochelle)."
         type:
             - hip-hop
             - rap
