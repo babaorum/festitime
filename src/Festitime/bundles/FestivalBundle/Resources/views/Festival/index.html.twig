@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Accueil - Festitime</title>
+    <meta charset='utf-8'>
     <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
@@ -172,19 +173,21 @@
             <h2>Vos plus beaux festivals</h2>
             <div id="festival-content">
                 <div id="festival-group">
-                    <div class="block" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="festival in searchBarCtrl.festivals">
-                        <img ng-src="{[{ festival.img }]}" alt="image festival">
-                        <div class="festival">
-                            <div class="info">
-                                <div class="left-info">
-                                    <div class="name">{[{ festival.name }]}</div>
-                                    <div class="date"><img src="/assets/images/temps.png" alt="time icon">{[{ festival.start_date | date : "dd" }]} - {[{ festival.end_date | date : "dd MMMM yyyy" }]}</div>
-                                    <div class="location"><img src="/assets/images/lieu.png" alt="location icon">{[{ festival.city+", "+festival.country }]}</div>
+                    <a class="search-item" ng-href="{[{ '/festival/' + festival.id }]}" ng-repeat="festival in searchBarCtrl.festivals">
+                        <div class="block" >
+                            <img ng-src="{[{ festival.img }]}" alt="image festival">
+                            <div class="festival">
+                                <div class="info">
+                                    <div class="left-info">
+                                        <div class="name">{[{ festival.name }]}</div>
+                                        <div class="date"><img src="/assets/images/temps.png" alt="time icon">{[{ festival.start_date | date : "dd" }]} - {[{ festival.end_date | date : "dd MMMM yyyy" }]}</div>
+                                        <div class="location"><img src="/assets/images/lieu.png" alt="location icon">{[{ festival.city+", "+festival.country }]}</div>
+                                    </div>
+                                    <div class="price"><span>A partir de </span>{[{ festival.price }]}&#128;</div>
                                 </div>
-                                <div class="price"><span>A partir de </span>{[{ festival.price }]}&#128;</div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <span class="clear"></span>
                 <a href="{{url('search')}}" class="button">Voir tous les festivals</a>

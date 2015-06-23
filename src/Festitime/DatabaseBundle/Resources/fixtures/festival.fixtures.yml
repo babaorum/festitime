@@ -155,7 +155,6 @@ fixtures:
             - blues
         img: "http://img1.grazia.fr/var/grazia/storage/images/culture/news/les-femmes-s-en-melent-le-festival-100-feminin-revient-avec-des-concerts-ex-748276/12593794-1-fre-FR/Les-femmes-s-en-melent-le-festival-100-feminin-revient-avec-des-concerts-exceptionnels.jpg"
         pictures:
-            - "https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/19698_844032692305878_5846565635061152731_n.jpg?oh=5b68cd84c8c1115a21cae10bc9513447&oe=55781F39&__gda__=1437467090_b33f0c55d45230c62c6ea446c0059445"
             - "http://cdn-premiere.ladmedia.fr/var/premiere/storage/images/musique/news-musique/festival-les-femmes-s-en-melent-/18562442-1-fre-FR/FESTIVAL-Les-Femmes-S-en-Melent-_portrait_w532.jpg"
         start_date: "2015-06-16T00:00:00+0200"
         end_date: "2015-06-27T00:00:00+0200"

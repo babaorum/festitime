@@ -1,6 +1,7 @@
 @header-background: #000000;
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 @font-oswald: 'Oswald', sans-serif;
+@font-open-sans: 'Open Sans', sans-serif;
 @color-dark-grey: rgba(255, 255, 255, 0.1);
 @color-grey: rgba(255, 255, 255, 0.3);
 @color-light-grey: rgba(255, 255, 255, 0.6);
@@ -71,31 +72,35 @@
 {
     background-color: green;
     border: 0;
-    padding: 3px 10px;
+    padding: 3px 6px;
     border-radius: 4px;
     color: white;
-    font-size: 15px;
+    font-size: 14px;
     margin: 0 5px;
+    text-transform: uppercase;
+    font-family: @font-open-sans;
+    font-weight: 600;
 }
 
 a
 {
     width: auto;
     text-decoration: none;
-}
-a:hover
-{
-    text-decoration: none;
-}
-a:visited
-{
-    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+    &:visited {
+        text-decoration: none;
+    }
 }
 
 body
 {
-    font: @font-oswald;
-    background-color: #F8F8F8;
+    font: @font-open-sans;
+    background-color: #333;
+    font-size: 14px;
+    line-height: 1.42857;
 }
 
 header
@@ -107,9 +112,10 @@ header
     right: 0;
     height: 75px;
     background: fade(@header-background, 70%);
-    font-family: @font-oswald;
-    text-transform: uppercase;
-    font-size: 18px;
+    font-family: @font-open-sans;
+    text-transform: none;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 content
@@ -244,7 +250,7 @@ content
 #menu .link
 {
     float: left;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
     color: #F8F8F8;
     display: block;
@@ -256,7 +262,7 @@ content
     display: block;
     height: 75px;
     line-height: 75px;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 #menu .link span:hover
@@ -292,7 +298,9 @@ content
     display: block;
     height: 75px;
     line-height: 75px;
-    padding: 0 10px;
+    padding: 0 30px;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .modal-close
@@ -830,13 +838,13 @@ timer span.time p
 #pictures
 {
     width: 100%;
-    height: (@width /4);
+    height: 50%;
 }
 
 #pictures div
 {
     width: (@width /8);
-    height: (@width /8);
+    height: 50%;
     background-color:green;
     float: left;
     overflow: hidden;
@@ -1137,7 +1145,7 @@ footer
     background-color: #212121;
     width: 100%;
     padding: 50px 0;
-    height: 484px;
+    height: 410px;
 }
 
 footer .contener
@@ -1151,6 +1159,8 @@ footer .contener .block
 {
     background-color: #1C1C1C;
     padding: 20px 0;
+    height: 300px;
+    text-align: left;
 }
 
 footer .contener .column
@@ -1162,6 +1172,13 @@ footer .contener .column
 
 footer .contener .block.first
 {
+    height: 125px;
+    margin-bottom: 20px;
+}
+
+footer .contener .block.second
+{
+    height: 155px;
     margin-bottom: 20px;
 }
 
@@ -1176,7 +1193,8 @@ footer .block h3
     text-align: center;
     text-transform: uppercase;
     color: white;
-    padding-bottom: 25px;
+    padding-bottom: 5px;
+    font-family: @font-oswald;
 }
 
 footer .block .img-plus
@@ -1189,14 +1207,18 @@ footer .block .footer-link
 {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    line-height: 45px;
+    font-size: 15px;
+    line-height: 35px;
+
+    &:hover {
+        color: #c92a55;
+    }
 }
 
 footer .block.column div
 {
+    margin-top: 15px;
     margin-left: 20%;
-    margin-top: 52px;
 }
 
 #search-bar-footer
