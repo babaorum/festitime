@@ -1,4 +1,6 @@
-#festival-content .first-block
+@font-oswald: 'Oswald', sans-serif;
+
+#festival-page .first-block
 {
     height: 90%;
     width: 100%;
@@ -6,7 +8,7 @@
     background-repeat: no-repeat;
 }
 
-#festival-content h2
+#festival-page h2
 {
     display: inline-block;
     font: 24px Oswald,sans-serif;
@@ -21,7 +23,7 @@
     width: auto;
 }
 
-#festival-content .first-block .infos
+#festival-page .first-block .infos
 {
     color: white;
     display: block;
@@ -32,22 +34,25 @@
     margin-top: -100px;
 }
 
-#festival-content h1
+#festival-page h1
 {
     font-size: 50px;
 }
 
-#festival-content .infos span
+#festival-page .infos span
 {
     display: block;
     font-size: 25px;
 }
 
-#festival-content .block-leaning
+#festival-page .block-leaning
 {
-    background: #F8F8F8;
+    background-color: white;
     transform: skewY(-5deg);
     transform-origin: top left;
+    text-align: center;
+    height: 500px;
+    margin-bottom: -10%;
 }
 
 .block
@@ -65,12 +70,85 @@
 
 .after-block-leaning
 {
-    margin-top: -10%;
-    padding-top: 10%;
 }
 
-#festival-content .artists
+#festival-page .artists
 {
     transform: skewY(0deg);
-    background-color: white;
+    background-color: #F8F8F8;
+    height: 700px;
+}
+#festival-page .artists-block
+{
+    width: 70%;
+    margin: auto;
+}
+
+.add-rotate-left
+{
+    transform: skewY(-5deg);
+    transform-origin: top left;
+}
+
+#festival-page .artists-block .block
+{
+    height: 400px;
+    width: 24%;
+    margin: 1% 0.5%;
+    float: left;
+    color: #ffffff;
+    font: 12px @font-oswald;
+    text-align: left;
+    border-radius: 3px;
+    border: solid #DFDFDF 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+#festival-page .artists-block img
+{
+    height: auto;
+    width: 100%;
+}
+
+#festival-page .artists-block .artist
+{
+    padding-top: 3%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    background: #F8F8F8;
+    color: #8F8F8F;
+}
+
+#festival-page .artist .info
+{
+    color: #DFDFDF;
+    font-size: 18px;
+    margin: 1%;
+}
+
+#festival-page .artist .number-festivals
+{
+    color: #DFDFDF;
+    font-size: 18px;
+    margin: 1%;
+}
+
+#festival-page .artists-block .button
+{
+    display: block;
+    font: 20px @font-oswald;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #0A0A0A;
+    text-decoration: none;
+    padding: 1%;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000000;
+    width: 100%;
+    margin: 20px 0;
+    border: none;
+    clear: both;
 }

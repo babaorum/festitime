@@ -56,7 +56,7 @@
         {% endif %}
         <span class="clear"></span>
     </header>
-    <content id="festival-content">
+    <content id="festival-page">
         <div class="first-block" ng-style="festivalPicture">
             <div class="infos">
                 <h1>{{ festival.name | capitalize }}</h1>
@@ -71,9 +71,48 @@
             </div>
         </div>
         <div class="artists block after-block-leaning">
-
+            <h2 class="add-rotate-left">Les artistes du festival</h2>
+            <div class="artists-block">
+                <div class="block" >
+                    <img src="http://www.edelweissmag.ch/sites/www.edelweissmag.ch/files/spicegirlsspicegirls1997_011.jpg" alt="image artist">
+                    <div class="artist">
+                        <div class="info">
+                            <div class="name">Spice Girls</div>
+                            <div class="number-festivals">Dans {[{ festival.price }]} festivals</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block" >
+                    <img src="http://www.edelweissmag.ch/sites/www.edelweissmag.ch/files/spicegirlsspicegirls1997_011.jpg" alt="image artist">
+                    <div class="artist">
+                        <div class="info">
+                            <div class="name">Spice Girls</div>
+                            <div class="number-festivals">Dans {[{ festival.price }]} festivals</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block" >
+                    <img src="http://www.edelweissmag.ch/sites/www.edelweissmag.ch/files/spicegirlsspicegirls1997_011.jpg" alt="image artist">
+                    <div class="artist">
+                        <div class="info">
+                            <div class="name">Spice Girls</div>
+                            <div class="number-festivals">Dans {[{ festival.price }]} festivals</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block" >
+                    <img src="http://www.edelweissmag.ch/sites/www.edelweissmag.ch/files/spicegirlsspicegirls1997_011.jpg" alt="image artist">
+                    <div class="artist">
+                        <div class="info">
+                            <div class="name">Spice Girls</div>
+                            <div class="number-festivals">Dans {[{ festival.price }]} festivals</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <a href="{{ url('search') }}" class="button">Voir tous les artistes</a>
+            </div>
         </div>
-        <br><br><br><br><br><br><br><br><br><br>
         <div id="choose-package" ng-init="festivalCtrl.choosePackageTab = 1">
             <div class="content">
                 <div class="navigation">
