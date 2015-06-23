@@ -178,3 +178,23 @@ fixtures:
         city: Clisson
         country: france
         price: 190
+    solidays :
+        name: solidays
+        description: "KEEP ON DREAMING – 17ème édition du festival Solidays les 26 > 28 juin 2015 Le festival des Solidays est une manifestation de lutte contre le SIDA organisé par solidarité sida, qui a lieu chaque année sur l'hippodrome de Longchamp et qui rassemble plus de 150 artistes pendant trois jours.Solidays n’est pas un festival comme les autres. Avec 80 concerts contre le sida répartis sur 7 scènes jours et nuits, la programmation se veut riche et éclectique. Des têtes d’affiche nombreuses, de belles découvertes, des sensations du moment, des associations du monde entier et les bénévoles de Solidarité Sida s’y donnent rendez-vous chaque année pour faire rimer musique et solidarité avec succès.Des têtes d’affiche nombreuses, de belles découvertes, des sensations du moment, des associations du monde entier et les bénévoles de Solidarité Sida s’y donnent rendez-vous chaque année pour faire rimer musique et solidarité avec succès. Avec Asaf Avidan, Moriarty, Brigitte, Damian 'Jr Gong' Marley, Rone, the Avener, Zoufris Maracas, Angus et Julia Stone, Caribou, IAM, Lilly Wood & The Prick, IZIA, Isaac Delusion, Faada Freddy, Fakear et Brodinsk"
+        type:
+            - electro
+            - rock
+            - pop
+            - hip-hop
+            - pop
+            - reggae
+            - variété française
+        img: "http://ursofrench.fr/wp-content/uploads/2014/07/Solidays2.png"
+        pictures:
+            - "http://www.lamlethanh.com/wp-content/uploads/2013/07/Solidays-2013-%C2%A9-Le-Thanh-Lam-Public-0083.jpg"
+            - "http://cdn-parismatch.ladmedia.fr/var/news/storage/images/paris-match/culture/musique/solidays-2010-trois-jours-en-musique-155906/1579632-1-fre-FR/Solidays-2010-Trois-jours-en-musique.jpg"
+        start_date: "2015-06-26T00:00:00+0200"
+        end_date: "2015-06-29T00:00:00+0200"
+        city: paris
+        country: france
+        price: 15 - 100

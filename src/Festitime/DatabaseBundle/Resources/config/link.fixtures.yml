@@ -75,6 +75,11 @@ links:
                 - faith no more
                 - slash
                 - marilyn manson
+        solidays:
+            artist:
+                - asaf avidan
+                - moriarty
+                - faada freddy
     artist:
         selah sue:
             festival:
@@ -208,3 +213,12 @@ links:
         marilyn manson:
             festival:
                 - hellfest
+        asaf avidan:
+            festival:
+                - solidays
+        moriarty:
+            festival:
+                - solidays
+        faada freddy:
+            festival:
+                - solidays

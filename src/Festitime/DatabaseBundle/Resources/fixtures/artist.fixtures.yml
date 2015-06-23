@@ -630,3 +630,48 @@ fixtures:
             - "http://assets.rollingstone.com/assets/2014/article/see-marilyn-mansons-unsettling-phallic-deep-six-video-20141219/178442/large_rect/1419006722/1401x788-manson.jpg"
             - "http://www.buzzly.fr/jq/ckeditor/plugins/doksoft_uploader/userfiles/Marilyn-Manson-marilyn-manson-29937716-1500-1000.jpg"
             - "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQC18vF_BkOeaEy0&w=470&h=246&url=http%3A%2F%2Fcdn.papermag.com%2Fuploaded_images%2FMarilynMansonMarchPaperCover.jpg&cfs=1&upscale=1&sx=0&sy=377&sw=700&sh=366"
+    asaf avidan:
+        pseudo: Asaf Avidan
+        firstname: Asaf Avidan
+        lastname: Asaf Avidan
+        description: "Asaf Avidan naît le 23 mars 1980 à Jérusalem. Ses parents, diplomates, travaillent pour le ministère des affaires étrangères israélien. C’est ainsi qu’il passe quatre années de son enfance en Jamaïque. Pour cause de maladie et de cauchemars, il n’accomplit que 10 mois de service militaire au lieu des trois ans obligatoire. Ensuite, il part étudier le cinéma d’animation à la Bezalel Academy of Arts and Design, à Jérusalem.Son projet de fin d’études, un court-métrage intitulé Find Love Now, remporte le prix de sa catégorie au festival du film de Haïfa. Après ses études, Asaf Avidan déménage à Tel Aviv et travaille dans le milieu de l’animation jusqu’à ce qu’il se sépare de sa compagne de longue date. Cette séparation marque un tournant dans sa vie. Il démissionne et retourne vivre à Jérusalem, où il fait de sa passion, la musique, son activité principale.Il découvre qu'il est atteint d'un cancer, un lymphome, à 21 ans, après avoir été examiné pour des douleurs chroniques.En 2006, Asaf Avidan sort un premier EP autoproduit, Now That You Are Leaving, composé de 6 chansons évoquant les déceptions amoureuses qu’il a vécues. Il est alors acclamé par la critique."
+        type:
+            - rock
+            - blues
+            - folk
+        picture: "http://www.chartsinfrance.net/style/breves/7/photo_1412073273.jpg"
+        pictures:
+            - "http://www.metronews.fr/_internal/gxml!0/r0dc21o2f3vste5s7ezej9x3a10rp3w$sw44gp5zjvb1v3z3h0o0m94y14yl8ul/Asaf3.jpeg"
+            - "http://www.novaplanet.com/sites/default/files/imagecache/page_mea/articles/images/asaf-avidan-1.jpg"
+            - "http://www.festivalbeauregard.com/wp-content/uploads/2015/03/asaf-avidan.jpg"
+            - "http://easymay.be/wp-content/uploads/2013/04/Asaf-Avidan.jpg"
+    moriarty:
+        pseudo: Moriarty
+        firstname: Moriarty
+        lastname: Moriarty
+        description: "Il est constitué de six artistes d'origine française, américaine, suisse et vietnamienne. Les membres du groupe ont majoritairement grandi en France, de parents américains1. Le groupe se baptise Moriarty, en référence à Dean Moriarty, l'un des protagonistes de Sur la route de Jack Kerouac.Dans un premier temps, le groupe compte huit membres : la chanteuse Charlène Dupuy, le batteur Médéric de Vanssay, et le saxophoniste Davide Woods ont quitté le groupe depuis. Rosemary Standley rejoint le groupe en 1999. Le groupe passe de reprises de standards du blues à des compositions dans un registre rock. Les départs successifs des batteurs et des percussionnistes forcent le groupe, réduit à cinq membres (Rosemary, Arthur, Thomas, Charles et Stephan) à jouer en acoustique.À la suite d'un spectacle, le groupe rencontre en 2005 Jérôme Deschamps et Macha Makeïeff1, qui co-produisent par la suite le premier album avec le label Naïve. Au même moment, ils remportent le Prix Paris Jeunes Talents. Le groupe fait un passage remarqué au Printemps de Bourges 2006 sur la scène Pression live puis à nouveau en 2007 sur cette même scène. Lancé par un premier single Jimmy issu de leur premier album Gee Whiz But This Is a Lonesome Town sorti en octobre 2007, le groupe connaît alors un succès certain qui lui permet de jouer à La Cigale à guichets fermés et l'album se vend à plus de 50 000 exemplaires en quelques mois2, pour finalement être disque d'or un an après sa sortie3 et atteindre un total de 150 000 exemplaires vendus4. Le groupe entame alors une longue tournée française qui passe en avril 2008 par le Printemps de Bourges sur la grande scène du Phénix pour réapparaître à 23h30 une nouvelle fois sur la scène Pression Live qui leur avait permis de se faire connaître."
+        type:
+            - rock
+            - blues
+            - country
+        picture: "http://www.amha.fr/wp-content/uploads/2012/04/moriarty.php_.png"
+        pictures:
+            - "http://www.lanouvellerepublique.fr/var/nrv2/storage/images/contenus/articles/2012/12/15/moriarty-et-christine-salem-en-osmose/23554186-1-fre-FR/Moriarty-et-Christine-Salem-en-osmose_reference.jpg"
+            - "http://i.ytimg.com/vi/NJIDU-6xPYw/maxresdefault.jpg"
+            - "http://i.f1g.fr/media/ext/805x453_crop/www.lefigaro.fr/medias/2013/10/14/PHO36cecea8-318b-11e3-9725-95bae4f84588-805x453.jpg"
+            - "http://lyc-george-sand-la-chatre.tice.ac-orleans-tours.fr/eva/sites/lyc-george-sand-la-chatre/IMG/jpg/moriarty276.jpg"
+    faada freddy:
+        pseudo: Faada Freddy
+        firstname: Faada Freddy
+        lastname: Faada Freddy
+        description: "Abdoul Fatah Seck est né le 10 janvier 1975 à Saint-Louis au Sénégal. Étudiant jusqu'en 1993, il commence parallèlement à s'investir dans le hip-hop et fait partie en 1997 des fondateurs du trio Daara J. Devenu une star du rap dans son pays, Faada Freddy est connu pour sa voix veloutée. C'est le producteur Malick Ndaye qui a découvert Ayo ou Imany qui va le chercher à Dakar pour donner libre cours à sa passion pour la soul. Faada Freddy joue en effet seul une soul acoustique uniquement rythmée par des percussions traditionnelles ou bricolées avec du matériel de récupération. Faada Freddy accepte de relever le challenge et d'imposer ce style original aux oreilles occidentales. En France, il va à la rencontre du public à travers des premières parties de Bernard Lavilliers, Ben l'Oncle Soul ou Patrice. Ces prestations scéniques sont suivies en avril 2014 par la sortie de l'EP Untitled. Le son particulier commence alors à titiller l'oreille des radios et du public, ravi de voir sortir l'album The Gospel Journey en mars 2015. Faada Freddy poursuit une tournée qui l'emmène sur les scènes des grands festivals français (Printemps de Bourges, Francofolies de La Rochelle)."
+        type:
+            - hip-hop
+            - rap
+            - blues
+        picture: "http://senego.com/wp-content/uploads/2015/05/Faada-Freddy.jpg"
+        pictures:
+            - "http://afrique.lepoint.fr/images/2015/03/13/1125138lpa-1125146-faadafreddyparis-jpg_2765335.jpg"
+            - "http://www.dakarflash.com/wp-content/uploads/2015/05/ob_0300bb_freddy-faada.jpg"
+            - "http://www.mouv.fr/sites/default/files/2014/12/11/182176/faada6538653087_n.jpg"
+            - "http://www.dakar-echo.com/wp-content/uploads/2015/03/FADA_FREDDY.jpg"
