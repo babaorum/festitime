@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-    function festivalController($scope, rome2rioRestService, festivalRestService) {
+    function festivalController($scope, rome2rioRestService, festivalRestService, typeRestService) {
         this.festival = {};
 
         // DisplayedArtists
@@ -15,6 +15,9 @@
 
         // Init the hotels
         this.hotels = [];
+
+        // Init the types
+        this.types = [];
 
         var getTravels = function() {
             rome2rioRestService.getTravels('Paris', this.festival.city)
@@ -37,6 +40,12 @@
                     getTravels();
                 }.bind(this));
         }.bind(this);
+
+        // Load types
+        typeRestService.getTypes()
+            .then(function(types) {
+                this.types = types;
+            }.bind(this));
 
         var getDisplayedArtists = function() {
             if (this.festival.artists.length > 4) {
@@ -103,6 +112,7 @@
             '$scope',
             'rome2rioRestService',
             'festivalRestService',
+            'typeRestService',
             festivalController
         ]
     );

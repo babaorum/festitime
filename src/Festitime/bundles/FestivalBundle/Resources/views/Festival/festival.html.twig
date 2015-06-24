@@ -193,8 +193,8 @@
                 <div class="block second">
                     <h3>genres de musique</h3>
                     <div>
-                        <a href="/search/type/{[{type}]}" ng-repeat="type in searchBarCtrl.types">
-                            <button class="tag">{[{type | capitalize }]}</button>
+                        <a href="/search/type/{[{type.key}]}" ng-repeat="type in festivalCtrl.types">
+                            <button class="tag" style="background-color: {[{type.color}]}">{[{type.name | capitalize }]}</button>
                         </a>
                     </div>
                 </div>
