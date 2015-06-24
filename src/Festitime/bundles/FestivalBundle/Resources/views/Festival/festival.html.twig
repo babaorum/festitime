@@ -81,13 +81,16 @@
                             <div ng-if="!artist.pseudo" class="name">
                                 {[{ artist.firstname | capitalize }]} {[{ artist.lastname | capitalize }]}
                             </div>
-                            <div class="number-festivals">Dans {[{ artist.festivals.length }]} festivals</div>
+                            <div class="number-festivals">Dans {[{ artist.festivals.length + 1}]} festivals</div>
                         </div>
                     </div>
                 </div>
                 <div class="clear"></div>
                 <a href="{{ url('search') }}" class="button">Voir tous les artistes</a>
             </div>
+        </div>
+        <div id="buy-image">
+            <h2 style="color: white; border-color: white;">La billeterie</h2>
         </div>
         <div id="choose-package" ng-init="festivalCtrl.choosePackageTab = 1">
             <div class="content">
@@ -101,35 +104,39 @@
                     <span>
                         <button ng-class="{ active: festivalCtrl.choosePackageTab === 3 }" ng-click="festivalCtrl.choosePackageTab = 3">hébergement</button>
                     </span>
+                    <p id="choose-summary"> Ma sélection :
+                        <span>{[{festivalCtrl.package.ticket.name}]}</span>
+                        <span ng-if="festivalCtrl.package.ticket && (festivalCtrl.package.travel || festivalCtrl.package.hotel)"> + </span>
+                        <span>{[{festivalCtrl.package.travel.name}]}</span>
+                        <span ng-if="festivalCtrl.package.ticket && festivalCtrl.package.travel && festivalCtrl.package.hotel"> + </span>
+                        <span>{[{festivalCtrl.package.hotel.name}]}</span>
+                    </p>
                 </div>
                 <div class="content-choose tickets" ng-if="festivalCtrl.choosePackageTab === 1">
-                    <div class="ticket">
+                    <div class="ticket" ng-repeat="ticket in festivalCtrl.festival.tickets" ng-click="festivalCtrl.package.ticket = ticket" ng-class="{ active: festivalCtrl.package.ticket.name === ticket.name }">
                         <div class="info">
-                            <h4 class="title">Ticket nom - ticket date</h4>
-                            <p class="description">description tral la aala lorem ipsum idolorium expeliormus tatam lagli</p>
+                            <h4 class="title">{[{ ticket.name }]}</h4>
+                            <p class="description">{[{ ticket.description }]}</p>
                         </div>
-                        <span class="price">ticket prix</span>
-                        <span class="clear"></span>
-                    </div>
-                    <div class="ticket">
-                        <div class="info">
-                            <h4 class="title">Ticket nom - ticket date</h4>
-                            <p class="description">description tral la aala lorem ipsum idolorium expeliormus tatam lagli</p>
-                        </div>
-                        <span class="price">ticket prix</span>
+                        <span class="price">{[{ ticket.price + " €" }]}</span>
                         <span class="clear"></span>
                     </div>
                 </div>
                 <div class="content-choose travels" ng-if="festivalCtrl.choosePackageTab === 2">
-                    <div class="travel" ng-repeat="travel in festivalCtrl.travels.routes">
+                    <div class="travel" ng-repeat="travel in festivalCtrl.travels.routes" ng-click="festivalCtrl.package.travel = travel" ng-class="{ active: festivalCtrl.package.travel.name === travel.name }">
                         <h4>{[{ travel.name }]}</h4>
                         <span>durée de trajet : {[{ (travel.duration - (travel.duration%60))/60 + 'heures'}]} {[{ travel.duration%60 + 'minutes' }]}</span>
                         <span>{[{ travel.indicativePrice.price + " €" }]}</span>
                     </div>
                 </div>
                 <div class="content-choose hebergement" ng-if="festivalCtrl.choosePackageTab === 3">
-                    <h1>hebergement aaahhhahahahhahhahahahahahahah</h1>
+                    <div class="travel" ng-repeat="hotel in festivalCtrl.hotels" ng-click="festivalCtrl.package.hotel = hotel" ng-class="{ active: festivalCtrl.package.hotel.name === hotel.name }">
+                        <h4>hotel lolilol kikou</h4>
+                        <span>mini description (style hotel 3 étoiles trop top)</span>
+                        <span>25 €</span>
+                    </div>
                 </div>
+                <button id="test123" ng-if="festivalCtrl.package.ticket">Réserver ce package</button>
             </div>
         </div>
         <table>

@@ -7,8 +7,14 @@
         // DisplayedArtists
         this.artists  = [];
 
+        // Init the package selection scope variable
+        this.package;
+
         // Contain Rome2rio travels information
         this.travels;
+
+        // Init the hotels
+        this.hotels = [];
 
         var getTravels = function() {
             rome2rioRestService.getTravels('Paris', this.festival.city)
@@ -26,6 +32,8 @@
                         background: 'url('+ festival.img +')'
                     };
                     getDisplayedArtists();
+                    getTickets();
+                    getHotels();
                     getTravels();
                 }.bind(this));
         }.bind(this);
@@ -33,10 +41,59 @@
         var getDisplayedArtists = function() {
             if (this.festival.artists.length > 4) {
                 this.artists = this.festival.artists.slice(0, 4);
-                console.log(this.artists);
             } else {
                 this.artists = this.festival.artists;
             }
+        }.bind(this);
+
+        var getTickets = function() {
+            this.festival.tickets = [
+                {
+                    name: "ticket1",
+                    description: "description tral la aala lorem ipsum idolorium expeliormus tatam lagli",
+                    price: 15
+                },
+                {
+                    name: "ticket 2",
+                    description: "description tral la aala lorem ipsum idolorium expeliormus tatam lagli",
+                    price: 150
+                }
+            ];
+        }.bind(this);
+
+        var getHotels = function() {
+            this.hotels = [
+                {
+                    name: "hotel lolilol kikou1",
+                    description: "mini description (style hotel 3 étoiles trop top)",
+                    price: 25
+                },
+                {
+                    name: "hotel lolilol kikou 2",
+                    description: "mini description (style hotel 3 étoiles trop top)",
+                    price: 25
+                },
+                {
+                    name: "hotel lolilol kikou 3",
+                    description: "mini description (style hotel 3 étoiles trop top)",
+                    price: 25
+                },
+                {
+                    name: "hotel lolilol kikou 4",
+                    description: "mini description (style hotel 3 étoiles trop top)",
+                    price: 25
+                },
+                {
+                    name: "hotel lolilol kikou 5",
+                    description: "mini description (style hotel 3 étoiles trop top)",
+                    price: 25
+                },
+                {
+                    name: "hotel lolilol kikou 6",
+                    description: "mini description (style hotel 3 étoiles trop top)",
+                    price: 25
+                }
+            ];
         }.bind(this);
     }
 

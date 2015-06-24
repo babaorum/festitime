@@ -3,6 +3,7 @@ festival:
 artist:
     - firstname
     - lastname
+    - pseudo
 links:
     festival:
         Le Big festival:
