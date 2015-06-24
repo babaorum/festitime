@@ -148,6 +148,18 @@
                     {{ festival.description }}
                 </div>
                 <span class="clear"></span>
+                <div class="playlist">
+                    <img src="{{festival.pictures[0]}}">
+                {% if festival.pictures[1] is defined %}
+                    <img src="{{festival.pictures[1]}}">
+                    {% if festival.pictures[2] is defined %}
+                        <img src="{{festival.pictures[2]}}">
+                        {% if festival.pictures[3] is defined %}
+                            <img src="{{festival.pictures[3]}}">
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+                </div>
             </div>
         </div>
         <div class="artists block after-block-leaning">
