@@ -25,6 +25,76 @@
     <script type="text/javascript" src="/assets/dist/js/built.js"></script>
 </head>
 <body ng-app="Frontoffice" ng-controller="festivalController as festivalCtrl" ng-init="festivalCtrl.getFestival('{{festival.id}}')">
+    <!-- Connect modal -->
+    <div id="connect-modal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true"><img src="/assets/images/Croix.png" /></button>
+                </div>
+                <div id="connect-content-modal">
+                    <h4 class="modal-title">Se connecter</h4>
+                    <div class="modal-body">
+                        <h5 class="modal-subtitle">Déjà membre ?</h5>
+                        <div class="clear"></div>
+                            <div id="facebook" class="social-button">
+                                <img src="/assets/images/FB.png">
+                                <p>Connexion facebook</p>
+                            </div>
+                            <a href="{{googleAuthUrl}}">
+                                <div id="google" class="social-button">
+                                    <img src="/assets/images/Google.png">
+                                    <p>Connexion google</p>
+                                </div>
+                            </a>
+                        <div class="clear"></div>
+                        <p class="modal-subtitle-small">Ou par email</p><br>
+                        <form action="{{ path('login') }}" method="POST" role="form">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Mot de passe</label>
+                                <input type="password" id="password" class="form-control" />
+                            </div>
+                            <p class="modal-text-right">Se souvenir de moi</p>
+                            <!-- Slide THREE -->
+                            <div class="slideThree">
+                                <input type="checkbox" value="None" id="slideThree" name="check" />
+                                <label for="slideThree"></label>
+                            </div>
+                            <div class="clear"></div>
+                            <!--  -->
+                            <input type="submit" class="modal-button btn btn-lg" value="Se connecter">
+                        </form>
+                    </div>
+                </div>
+                <div id="register-content-modal">
+                    <h4 class="modal-title">S'inscrire</h4>
+                    <div class="modal-body">
+                        <h5 class="modal-subtitle">Pas encore de compte ?</h5>
+                        <div class="clear"></div>
+                            <div id="facebook" class="social-button">
+                                <img src="/assets/images/FB.png">
+                                <p>Inscription facebook</p>
+                            </div>
+                            <div id="google" class="social-button">
+                                <img src="/assets/images/Google.png">
+                                <p>Inscription google</p>
+                            </div>
+                        <div class="clear"></div>
+                        <p class="modal-subtitle-small">Ou par email</p><br>
+                        <a href="{{url('login')}}" class="modal-button btn btn-lg">S'inscrire</a>
+                        <br><img src="/assets/images/Fusee.png" height="150px"/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Connect modal -->
     <header>
         {% set user = app.session.get('user') %}
         <div id="flag">
@@ -50,14 +120,14 @@
                 {{ user.firstname | capitalize }} {{ user.name | upper }}
             </a>
         {% else %}
-            <a href="{{googleAuthUrl}}" id="connect">
+            <a href="" id="connect">
                 <span>Connexion</span>
             </a>
         {% endif %}
         <span class="clear"></span>
     </header>
     <content id="festival-page">
-        <div class="first-block" ng-style="festivalPicture">
+        <div class="first-block" style="background: url('{{festival.img}}')">
             <div class="infos">
                 <h1>{{ festival.name | capitalize }}</h1>
                 <span> {{ festival.city | capitalize }}, {{ festival.country | capitalize }} </span>
@@ -67,7 +137,17 @@
         <div class="description-block block block-leaning">
             <h2>découvrez le festival</h2>
             <div class="block-content">
-                {{ festival.description }}
+                <div class="tags" style="position: absolute; width: 400px; top: 20px; left: 25px; text-align: left;">
+                {% for type in festival.type %}
+                    <span style="padding: 3px 10px; text-transform: uppercase; color: #ffffff; font-weight: bold; margin-left: 5px; background-color: {{type.color}};">{{type.name}}</span>
+                {% endfor %}
+                </div>
+                <img width="450" height="450" src="{{festival.pictures[0]}}" style="float: left;">
+                <div style="float: left; margin-left: 10%; width: 50%; text-align: left; line-height: 25px;">
+                    <p style="font-family: 'Oswald', sans-serif; margin-top: 0; text-transform: uppercase; font-weight: bold; font-size: 30px; line-height: 40px;">{{festival.name}}</p>
+                    {{ festival.description }}
+                </div>
+                <span class="clear"></span>
             </div>
         </div>
         <div class="artists block after-block-leaning">
@@ -82,6 +162,7 @@
                                 {[{ artist.firstname | capitalize }]} {[{ artist.lastname | capitalize }]}
                             </div>
                             <div class="number-festivals">Dans {[{ artist.festivals.length + 1}]} festivals</div>
+                            <a href="#" class="like" style="position: absolute; width: 19px; height: 19px; right: 10px; bottom: 10px;"></a>
                         </div>
                     </div>
                 </div>
@@ -139,39 +220,63 @@
                 <button id="test123" ng-if="festivalCtrl.package.ticket">Réserver ce package</button>
             </div>
         </div>
-        <table>
-            <tr>
-                <td>Places</td>
-                <td ng-repeat="place in festivalCtrl.travels.places">{[{ place.longName + ' : ' + place.pos }]}</td>
-            </tr>
-            <tr><td colspan="2">Travels</td></tr>
-            <tr ng-repeat="travel in festivalCtrl.travels.routes">
-                <td>
-                    <table>
-                        <tr>
-                            <th>{[{ travel.name }]}</th>
-                            <th>{[{ (travel.duration - (travel.duration%60))/60 + 'heures'}]} {[{ travel.duration%60 + 'minutes' }]}</th>
-                            <th>{[{ travel.indicativePrice.price + " €" }]}</th>
-                        </tr>
-                        <tr>
-                            <td ng-repeat="stop in travel.stops">
-                                <span>
-                                    {[{stop.name }]}
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>segments</th>
-                        </tr>
-                        <tr ng-repeat="segment in travel.segments">
-                            <td>
-                                {[{ segment.kind + ' ( ' + segment.vehicle + ' ) : ' + segment.sName + ' -> ' + segment.tName }]}
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+        <section class="activity" style="background-color:#f8f8f8; text-align: center;">
+            <h2 class="add-rotate-left">Les activités</h2>
+            <br>
+            <div class="one-activity">
+                <div class="img-one-activity"><img src="/assets/images/img-sport.png"></div>
+                <div class="title-one-activity">Jeux en plein air</div>
+                <div class="content-one-activity">Description lorem ipsum dolor sit amet saec nudit ait teus.</div>
+            </div>
+            <div class="one-activity">
+                <div class="img-one-activity"><img src="/assets/images/img-drink.png"></div>
+                <div class="title-one-activity">Rafraichissements</div>
+                <div class="content-one-activity">Description lorem ipsum dolor sit amet saec nudit ait teus.</div>
+            </div>
+            <div class="one-activity">
+                <div class="img-one-activity"><img src="/assets/images/img-eat.png"></div>
+                <div class="title-one-activity">Stand nourriture</div>
+                <div class="content-one-activity">Description lorem ipsum dolor sit amet saec nudit ait teus.</div>
+            </div>
+            <div class="one-activity">
+                <div class="img-one-activity"><img src="/assets/images/img-pool.png"></div>
+                <div class="title-one-activity">Piscine</div>
+                <div class="content-one-activity">Description lorem ipsum dolor sit amet saec nudit ait teus.</div>
+            </div>
+        </section>
+        <section class="section-accordion" style="text-align: center;">
+            <h2 class="add-rotate-left">Informations pratiques</h2>
+            <div class="accordion" style="text-align: left;">
+                <div class="accordion-section">
+                    <span class="accordion-section-title" data-content="accordion-1"><span class="accordion-title"><i class="icon-plus"></i>Comment venir</span></span>
+                    <div id="accordion-1" class="accordion-section-content">
+                        <p><span>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nulla mi, rutrum ut feugiat at, vestibulum ut neque? Cras tincidunt enim vel aliquet facilisis. Duis congue ullamcorper vehicula. Proin nunc lacus, semper sit amet elit sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</span></p>
+                    </div>
+
+                    <span class="accordion-section-title" data-content="accordion-2"><span class="accordion-title"><i class="icon-plus"></i>Sur place</span></span>
+                    <div id="accordion-2" class="accordion-section-content">
+                        <span>
+                            <ul>
+                                <li><i class="icon-disabled"></i> Accès handicapé</li>
+                                <li><i class="icon-parking"></i> Parking</li>
+                                <li><i class="icon-toilet"></i> Toilettes</li>
+                                <li><i class="icon-camping"></i> Camping</li>
+                                <li><i class="icon-restaurant"></i> Restaurants</li>
+                                <li><i class="icon-bar"></i> Bar</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <span class="accordion-section-title" data-content="accordion-3"><span class="accordion-title"><i class="icon-plus"></i>Les régles essentielles</span></span>
+                    <div id="accordion-3" class="accordion-section-content">
+                        <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet nec arcu posuere rhoncus. Nunc eget ligula in nibh sollicitudin fermentum ac vitae massa. Nulla facilisi. Curabitur pretium blandit molestie. Ut auctor orci id mi feugiat, sed molestie turpis interdum. Ut sollicitudin arcu ac nulla luctus, et condimentum lacus dignissim. Aenean quis diam quis erat venenatis pharetra at in elit. Duis pharetra ex arcu, ut scelerisque nibh rhoncus in. Vestibulum ultrices eget quam id vehicula. Aliquam aliquam sem tellus, sed pellentesque erat rhoncus sit amet. Pellentesque hendrerit a dolor id mattis. Etiam mattis efficitur velit, vel rutrum dolor pulvinar et. Nullam augue eros, venenatis id maximus sed, pulvinar vitae augue. Cras placerat ullamcorper odio, pulvinar semper purus auctor consectetur. Pellentesque eleifend eros nec risus facilisis, a tempus lorem sagittis. Pellentesque turpis augue, luctus et ex et, vehicula iaculis nisl.</span></p>
+                    </div>
+                    <span class="accordion-section-title" data-content="accordion-4"><span class="accordion-title"><i class="icon-plus"></i>Nos conseils</span></span>
+                    <div id="accordion-4" class="accordion-section-content">
+                        <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet nec arcu posuere rhoncus. Nunc eget ligula in nibh sollicitudin fermentum ac vitae massa. Nulla facilisi. Curabitur pretium blandit molestie. Ut auctor orci id mi feugiat, sed molestie turpis interdum. Ut sollicitudin arcu ac nulla luctus, et condimentum lacus dignissim. Aenean quis diam quis erat venenatis pharetra at in elit. Duis pharetra ex arcu, ut scelerisque nibh rhoncus in. Vestibulum ultrices eget quam id vehicula. Aliquam aliquam sem tellus, sed pellentesque erat rhoncus sit amet. Pellentesque hendrerit a dolor id mattis. Etiam mattis efficitur velit, vel rutrum dolor pulvinar et. Nullam augue eros, venenatis id maximus sed, pulvinar vitae augue. Cras placerat ullamcorper odio, pulvinar semper purus auctor consectetur. Pellentesque eleifend eros nec risus facilisis, a tempus lorem sagittis. Pellentesque turpis augue, luctus et ex et, vehicula iaculis nisl.</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </content>
     <footer>
         <div class="contener">
@@ -221,10 +326,36 @@
     "use strict";
 
     jQuery(function($) {
+        $(".like, .share" ).click(function() {
+          if ($(this).hasClass("change-color")) {
+            $(this).removeClass("change-color");
+          }
+          else {
+            $(this).addClass("change-color");
+          }
+        });
+
+        $('.accordion-section-title').click(function() {
+            var contentTabId = $(this).attr('data-content');
+
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $('.accordion #'+contentTabId).slideUp(300).removeClass('open');
+            } else {
+                $('.accordion .accordion-section-title').removeClass('active');
+                $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+                $(this).addClass('active');
+                $('.accordion #'+contentTabId).slideDown(300).addClass('open');
+            }
+        });
+
         $('#search-bar-footer').keypress(function(e) {
             if (e.which === 13) {
                 window.location.href = '/search/' + encodeURIComponent($(this).val());
             }
+        });
+        $("#connect").click(function(){
+            $("#connect-modal").modal('show');
         });
     });
 })();

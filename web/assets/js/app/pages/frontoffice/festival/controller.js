@@ -31,9 +31,6 @@
             festivalRestService.getFestival(id)
                 .then(function(festival) {
                     this.festival = festival;
-                    $scope.festivalPicture = {
-                        background: 'url('+ festival.img +')'
-                    };
                     getDisplayedArtists();
                     getTickets();
                     getHotels();
