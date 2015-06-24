@@ -7,6 +7,8 @@
         // DisplayedArtists
         this.artists  = [];
 
+        this.otherArtists = [];
+
         // Init the package selection scope variable
         this.package;
 
@@ -47,6 +49,7 @@
         var getDisplayedArtists = function() {
             if (this.festival.artists.length > 4) {
                 this.artists = this.festival.artists.slice(0, 4);
+                this.otherArtists = this.festival.artists.slice(4, this.festival.artists.length);
             } else {
                 this.artists = this.festival.artists;
             }
