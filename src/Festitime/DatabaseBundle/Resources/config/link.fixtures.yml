@@ -4,6 +4,8 @@ artist:
     - firstname
     - lastname
     - pseudo
+type:
+    - key
 links:
     festival:
         Le Big festival:
@@ -14,12 +16,24 @@ links:
                 - JoeyStarr
                 - Brigitte
                 - Shaka Ponk
+            type:
+                - electro
+                - rock
+                - pop
+                - hip-hop
+                - reggae
         Festival de Nîmes:
             artist:
                 - Lionel Richie
                 - David Bowie
                 - Depeche Mode
                 - Placebo
+            type:
+                - electro
+                - rock
+                - pop
+                - reggae
+                - hip-hop
         Les Vieilles Charrues:
             artist:
                 - deep purple
@@ -28,6 +42,11 @@ links:
                 - Lionel Richie
                 - London Grammar
                 - David Guetta
+            type:
+                - electro
+                - rock
+                - pop
+                - hip-hop
         Les Déferlantes:
             artist:
                 - fauve
@@ -37,6 +56,12 @@ links:
                 - Calogero
                 - Brigitte
                 - Carlos Santana
+            type:
+                - electro
+                - rock
+                - hip-hop
+                - pop
+                - reggae
         Main Square:
             artist:
                 - Lilly Wood and the Prick
@@ -49,38 +74,73 @@ links:
                 - Lenny Kravitz
                 - Placebo
                 - Shaka Ponk
+            type:
+                - electro
+                - rock
+                - pop
+                - hip-hop
+                - reggae
         Festival Musilac:
             artist:
                 - cerrone
                 - Muse
                 - alt-J
                 - David Guetta
+            type:
+                - electro
+                - rock
+                - pop
+                - reggae
+                - blues
         Festival Les Femmes s'en Mêlent:
             artist:
                 - Yelle
                 - M.I.A.
                 - Ebony Bones
                 - Brigitte
+            type:
+                - electro
+                - rock
+                - pop
+                - reggae
+                - blues
         CosmoJazz Festival:
             artist:
                 - andré manoukian
+            type:
+                - jazz
         Les Francofolies:
             artist:
                 - Veronique Sanson
                 - Christine and the Queens
                 - Florent Pagny
                 - Fréro Delavega
+            type:
+                - electro
+                - rock
+                - pop
+                - reggae
         hellfest:
             artist:
                 - scorpions
                 - faith no more
                 - slash
                 - marilyn manson
+            type:
+                - metal
+                - rock
         solidays:
             artist:
                 - asaf avidan
                 - moriarty
                 - faada freddy
+            type:
+                - electro
+                - rock
+                - pop
+                - hip-hop
+                - reggae
+                - variete
     artist:
         selah sue:
             festival:

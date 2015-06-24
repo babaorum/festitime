@@ -77,6 +77,8 @@ class LinkFixtureCommand extends Command
         $this->fixturesData['festival'] = Yaml::parse(file_get_contents($festivalPath));
         $artistPath = $kernel->locateResource('@FestitimeDatabaseBundle/Resources/fixtures/artist.fixtures.yml');
         $this->fixturesData['artist'] = Yaml::parse(file_get_contents($artistPath));
+        $typePath = $kernel->locateResource('@FestitimeDatabaseBundle/Resources/fixtures/type.fixtures.yml');
+        $this->fixturesData['type'] = Yaml::parse(file_get_contents($typePath));
     }
 
     /**

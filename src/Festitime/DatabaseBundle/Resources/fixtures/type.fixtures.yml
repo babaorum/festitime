@@ -1,0 +1,52 @@
+model: Festitime\DatabaseBundle\Document\Type
+save_in_reverse: false
+persistence: mongodb
+fixtures:
+    electro:
+        name: électro
+        key: electro
+        color: "#ff850e"
+    rock:
+        name: rock
+        key: rock
+        color: "#ff0000"
+    pop:
+        name: pop
+        key: pop
+        color: "#00e4e1"
+    hip-hop:
+        name: hip hop
+        key: hip-hop
+        color: "#e400ff"
+    reggae:
+        name: reggae
+        key: reggae
+        color: "#68ce1c"
+    variete:
+        name: variété
+        key: variete
+        color: "#2a59c4"
+    blues:
+        name: blues
+        key: blues
+        color: "37a280"
+    country:
+        name: country
+        key: country
+        color: "#ffd803"
+    folk:
+        name: folk
+        key: folk
+        color: "#ff0078"
+    metal:
+        name: metal
+        key: metal
+        color: "#930606"
+    ballade:
+        name: ballade
+        key: ballade
+        color: "#861dc9"
+    jazz:
+        name: jazz
+        key: jazz
+        color: "#ff7a80"

@@ -26,6 +26,7 @@ fixtures:
         type:
             - hard-rock
             - heavy-metal
+            - metal
             - rock
             - blues
             - rock progressif
@@ -87,6 +88,7 @@ fixtures:
         type:
             - dance-alternative
             - pop
+            - rock
             - post-punk
             - new-wave
             - rock-alternatif
@@ -119,8 +121,9 @@ fixtures:
         lastname: Van Hamer
         description: "Paul Van Haver, dit Stromae, né le 12 mars 1985 à Etterbeek en Belgique, est un auteur-compositeur-interprète et producteur belge de hip-hop, de musique électronique et de chanson française originaire du quartier de Laeken, à Bruxelles. Il se fait connaître en 2009 avec la chanson Alors on danse extraite de l'album Cheese. En 2013, son deuxième album Racine carrée est un succès critique et commercial. La tournée qui suivra le fera connaître mondialement avec plus de 200 dates dans plus de 25 pays dont les États-Unis, le Brésil, le Canada, ou encore la Russie. Au total plus de 1 million de personnes assisteront à cette tournée."
         type:
-            - Hip-hop
-            - variété française
+            - hip-hop
+            - variete
+            - electro
             - electro house
             - new beat
         picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.zicabloc.com/wp-content/uploads/2013/12/stromae-enfoires.jpg&sa=X&ei=7fdyVf26LcL-Uq2dgPAF&ved=0CAkQ8wc&usg=AFQjCNHvhdY6HVjsTXLwokKFrsJxvZHwNg"
@@ -216,6 +219,7 @@ fixtures:
         type:
             - rock
             - folk
+            - pop
             - synthpop
             - hip-hop
         picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://artichaut.bdarts.org/wp-content/uploads/2015/02/alt-j.jpg&sa=X&ei=MABzVcOXBcLWUb7IgJgD&ved=0CAkQ8wc&usg=AFQjCNEVcmanUvw-IobYDmDkNZ-m4Urv4g"
@@ -386,6 +390,7 @@ fixtures:
         description: "London Grammar est un groupe de musique anglais formé par Hannah Reid, Dominic « Dot » Major et Dan Rothman. Les membres du groupe sont originaires de Londres et Northampton et le style musical du groupe est un mélange d'electronica, de trip hop et de pop. Le premier EP de London Grammar Metal & Dust est sorti en février 2013 et le premier album If You Wait est sorti le 9 septembre 2013."
         type:
             - electronica
+            - electro
             - pop
         picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://www.qobuz.com/info/IMG/arton173938.jpg&sa=X&ei=_RFzVae2E4XoUtWngJAL&ved=0CAkQ8wc&usg=AFQjCNHxCbfo17uwK-586_rcTTugxybdow"
         pictures:
@@ -564,10 +569,10 @@ fixtures:
         type:
             - hip-hop
             - funk
-            - électro
+            - electro
             - rock
-            - Punk
-            - Metal
+            - punk
+            - metal
         picture: "http://www.google.fr/url?source=imglanding&ct=img&q=http://static.agendaculturel.fr/im/art_org/s/shaka-ponk-3352bn.jpg&sa=X&ei=ISFzVcKsIomyUZ-zgYAE&ved=0CAkQ8wc&usg=AFQjCNF_zx4L5nwEdPPkzPoSED7QwBiyCw"
         pictures:
             - "http://www.google.fr/url?source=imglanding&ct=img&q=http://imados.fr/content/0/5/4/590549/shaka-ponk.jpg&sa=X&ei=JSFzVY3jK8GtU7ibgLAG&ved=0CAkQ8wc&usg=AFQjCNEB-8rbFuVF8P_4LQ7g8Tqavcqr7Q"
@@ -610,9 +615,12 @@ fixtures:
         lastname: Hudson
         description: "Slash est né le 23 juillet 1965 à Stoke-on-Trent (Staffordshire) sous le nom de Saul Hudson. Ses origines familiales le plongent très vite dans le rock et le show business, sa mère est costumière - pour David Bowie, en particulier - et son père réalise des pochettes de disques. La famille Hudson part habiter à Los Angeles alors que Slash a onze ans. A partir de 1983, Slash forme Road Crew avec Steven Adler (batterie) et Duff McKagan (basse). De la rencontre de ces trois hommes avec Hollywood Rose, naît en 1986 Guns N' Roses, plus grand groupe de metal des années quatre-vingt-dix. Slash devient alors le nouveau symbole du guitar hero, ses riffs tranchants et ses solos vicieux faisant de Appetite for Destruction (1987) un pur chef d'oeuvre. Slash succède alors à Eddie Van Halen comme caution rock auprès de Michael Jackson. Il participe à l'album Dangerous en 1991, sur le titre « Give in to Me ». Très courtisé, Slash multiplie les apparitions, devenant un personnage people un brin canaille. Alors que les nuages s'amoncellent sur sa relation avec le caractériel Axl Rose, Slash forme en 1993 Slash's Snakepit entre projet solo et groupe de substitution. Slash's Snakepit sort en 1995 le très convaincant It's Five O'Clock Somewhere. Il faut attendre 2000 pour la sortie du moins rutilant Ain't Life Grant."
         type:
-            - Hard-rock
+            - hard-rock
             - blues-rock
+            - blues
+            - rock
             - heavy-metal
+            - metal
         picture: "http://babymetal.net/wp-content/uploads/2015/02/slash-4e58b1c09245b.jpg"
         pictures:
             - "http://images6.fanpop.com/image/photos/33000000/Slash-slash-33022871-588-582.jpg"
@@ -627,6 +635,7 @@ fixtures:
         type:
             - hard-rock
             - blues-rock
+            - blues
             - rock-alternatif
             - industrial
             - rock
