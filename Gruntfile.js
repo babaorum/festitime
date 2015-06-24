@@ -104,6 +104,8 @@ module.exports = function (grunt) {
      * to see any possible change
      */
     grunt.registerTask('default', ['less:dist', 'cssmin', 'concat', 'ngAnnotate', 'uglify', 'shell:removeSymfonyCache']);
+    grunt.registerTask('js', ['concat', 'ngAnnotate', 'uglify']);
+    grunt.registerTask('css', ['less:dist', 'cssmin', 'shell:removeSymfonyCache']);
     grunt.registerTask('watch-src', ['default', 'watch']);
 
 };
