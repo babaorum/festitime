@@ -31,6 +31,11 @@ class Festival
     protected $artists = array();
 
     /**
+     * @var Festitime\DatabaseBundle\Document\Type
+     */
+    protected $type = array();
+
+    /**
      * @var string $name
      */
     protected $name;
@@ -39,11 +44,6 @@ class Festival
      * @var string $description
      */
     protected $description;
-
-    /**
-     * @var collection $type
-     */
-    protected $type;
 
     /**
      * @var string $img
@@ -137,28 +137,6 @@ class Festival
     public function getDescription()
     {
         return $this->description;
-    }
-
-    /**
-     * Set type
-     *
-     * @param collection $type
-     * @return self
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-        return $this;
-    }
-
-    /**
-     * Get type
-     *
-     * @return collection $type
-     */
-    public function getType()
-    {
-        return $this->type;
     }
 
     /**
@@ -365,5 +343,35 @@ class Festival
     public function getArtists()
     {
         return $this->artists;
+    }
+
+    /**
+     * Add type
+     *
+     * @param Festitime\DatabaseBundle\Document\Type $type
+     */
+    public function addType(\Festitime\DatabaseBundle\Document\Type $type)
+    {
+        $this->type[] = $type;
+    }
+
+    /**
+     * Remove type
+     *
+     * @param Festitime\DatabaseBundle\Document\Type $type
+     */
+    public function removeType(\Festitime\DatabaseBundle\Document\Type $type)
+    {
+        $this->type->removeElement($type);
+    }
+
+    /**
+     * Get type
+     *
+     * @return \Doctrine\Common\Collections\Collection $type
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }

@@ -4,6 +4,8 @@ Festitime\DatabaseBundle\Document\Festival:
     referenceMany:
         artists:
             targetDocument: Festitime\DatabaseBundle\Document\Artist
+        type:
+            targetDocument: Festitime\DatabaseBundle\Document\Type
     fields:
         id:
             id: true
@@ -11,8 +13,6 @@ Festitime\DatabaseBundle\Document\Festival:
             type: string
         description:
             type: string
-        type:
-            type: collection
         img:
             type: string
         pictures:

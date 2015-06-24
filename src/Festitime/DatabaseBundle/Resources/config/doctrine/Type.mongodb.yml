@@ -1,0 +1,12 @@
+Festitime\DatabaseBundle\Document\Type:
+    type: document
+    repositoryClass: Festitime\DatabaseBundle\Repository\TypeRepository
+    fields:
+        id:
+            id: true
+        key:
+            type: string
+        name:
+            type: string
+        color:
+            type: string
