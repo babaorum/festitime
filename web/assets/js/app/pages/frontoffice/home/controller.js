@@ -70,8 +70,11 @@
                 this.artists = artists;
             }.bind(this));
 
-        //Load types
-        this.types = typeRestService.getTypes();
+        // Load types
+        typeRestService.getTypes()
+            .then(function(types) {
+                this.types = types;
+            }.bind(this));
 
         //Load randomPictures
         festivalRestService.getFestivalsRandomPictures(16)

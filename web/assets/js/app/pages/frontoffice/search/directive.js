@@ -11,7 +11,7 @@
                 if (this.types.length > 0) {
                     var match = false;
                     for (var i in festival.type) {
-                        if (this.types.indexOf(festival.type[i]) > -1)
+                        if (this.types.indexOf(festival.type[i].key) > -1)
                         {
                             match = true;
                         }

@@ -9,7 +9,11 @@
             $scope.$broadcast('searchFestivalsIncludeType', type);
         }.bind(this);
 
-        this.types = typeRestService.getTypes();
+        // Load types
+        typeRestService.getTypes()
+            .then(function(types) {
+                this.types = types;
+            }.bind(this));
     }
 
     angular.module('Frontoffice').controller(

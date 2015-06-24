@@ -154,17 +154,17 @@
             <div class="content">
             {% if searchedType is defined %}
                 <span ng-repeat="type in searchPageCtrl.types">
-                    <span class="tag tag-{[{type}]} active" ng-if="type == '{{searchedType}}'">{[{type | capitalize }]}
-                        <input type="checkbox" ng-click="searchPageCtrl.includeType(type)" checked="checked">
+                    <span class="tag tag-{[{type.key}]} active" ng-if="type.key == '{{searchedType}}'">{[{type.name | capitalize }]}
+                        <input type="checkbox" ng-click="searchPageCtrl.includeType(type.key)" checked="checked">
                     </span>
-                    <span class="tag tag-{[{type}]}" ng-if="type != '{{searchedType}}'">{[{type | capitalize }]}
-                        <input type="checkbox" ng-click="searchPageCtrl.includeType(type)">
+                    <span class="tag tag-{[{type.key}]}" ng-if="type.key != '{{searchedType}}'">{[{type.name | capitalize }]}
+                        <input type="checkbox" ng-click="searchPageCtrl.includeType(type.key)">
                     </span>
                 </span>
             {% else %}
                 <span ng-repeat="type in searchPageCtrl.types">
-                    <span class="tag tag-{[{type}]}">{[{type | capitalize }]}
-                        <input type="checkbox" ng-click="searchPageCtrl.includeType(type)">
+                    <span class="tag tag-{[{type.key}]}">{[{type.name | capitalize }]}
+                        <input type="checkbox" ng-click="searchPageCtrl.includeType(type.key)">
                     </span>
                 </span>
             {% endif %}
