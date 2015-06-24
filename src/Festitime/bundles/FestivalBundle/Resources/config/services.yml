@@ -1,7 +1,11 @@
 parameters:
     festitime.festival_service.class: Festitime\bundles\FestivalBundle\Services\FestivalService
+    festitime.type_service.class: Festitime\bundles\FestivalBundle\Services\TypeService
 
 services:
     festitime.festival_service:
         class: %festitime.festival_service.class%
         arguments: [@request_stack, @doctrine_mongodb, @festitime.artist_service]
+    festitime.type_service:
+        class: %festitime.type_service.class%
+        arguments: [@request_stack, @doctrine_mongodb]

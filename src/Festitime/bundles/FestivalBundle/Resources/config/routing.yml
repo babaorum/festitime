@@ -35,3 +35,7 @@ festival:
 festivals:
     type: rest
     resource: Festitime\bundles\FestivalBundle\Controller\FestivalApiController
+
+types:
+    type: rest
+    resource: Festitime\bundles\FestivalBundle\Controller\TypeApiController
