@@ -10,7 +10,9 @@
         this.otherArtists = [];
 
         // Init the package selection scope variable
-        this.package;
+        this.package = {
+            state: 'create'
+        };
 
         // Contain Rome2rio travels information
         this.travels;
@@ -20,14 +22,6 @@
 
         // Init the types
         this.types = [];
-
-        var getTravels = function() {
-            rome2rioRestService.getTravels('Paris', this.festival.city)
-                .then(function(travels) {
-                    this.travels = travels;
-                    console.log(travels);
-                }.bind(this));
-        }.bind(this);
 
         this.getFestival = function(id) {
             festivalRestService.getFestival(id)
@@ -103,6 +97,14 @@
                     price: 25
                 }
             ];
+        }.bind(this);
+
+        var getTravels = function() {
+            rome2rioRestService.getTravels('Paris', this.festival.city)
+                .then(function(travels) {
+                    this.travels = travels;
+                    console.log(travels);
+                }.bind(this));
         }.bind(this);
     }
 

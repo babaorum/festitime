@@ -189,24 +189,26 @@
             <h2 style="color: white; border-color: white;">La billeterie</h2>
         </div>
         <div id="choose-package" ng-init="festivalCtrl.choosePackageTab = 1">
-            <div class="content">
+            <div id="create-package" class="content" ng-if="festivalCtrl.package.state === 'create'">
                 <div class="navigation">
                     <span>
-                        <button ng-class="{ active: festivalCtrl.choosePackageTab === 1 }" ng-click="festivalCtrl.choosePackageTab = 1">ticket</button>
+                        <button class="navigation-button" ng-class="{ active: festivalCtrl.choosePackageTab === 1 }" ng-click="festivalCtrl.choosePackageTab = 1">ticket</button>
                     </span>
                     <span>
-                        <button ng-class="{ active: festivalCtrl.choosePackageTab === 2 }" ng-click="festivalCtrl.choosePackageTab = 2">transport</button>
+                        <button class="navigation-button" ng-class="{ active: festivalCtrl.choosePackageTab === 2 }" ng-click="festivalCtrl.choosePackageTab = 2">transport</button>
                     </span>
                     <span>
-                        <button ng-class="{ active: festivalCtrl.choosePackageTab === 3 }" ng-click="festivalCtrl.choosePackageTab = 3">hébergement</button>
+                        <button class="navigation-button" ng-class="{ active: festivalCtrl.choosePackageTab === 3 }" ng-click="festivalCtrl.choosePackageTab = 3">hébergement</button>
                     </span>
-                    <p id="choose-summary"> Ma sélection :
+                    <p id="choose-summary" ng-style="{ width: festivalCtrl.package.ticket ? '80%' : '100%' }"> Ma sélection :
                         <span>{[{festivalCtrl.package.ticket.name}]}</span>
                         <span ng-if="festivalCtrl.package.ticket && (festivalCtrl.package.travel || festivalCtrl.package.hotel)"> + </span>
                         <span>{[{festivalCtrl.package.travel.name}]}</span>
                         <span ng-if="festivalCtrl.package.ticket && festivalCtrl.package.travel && festivalCtrl.package.hotel"> + </span>
                         <span>{[{festivalCtrl.package.hotel.name}]}</span>
                     </p>
+                    <button id="test123" ng-if="festivalCtrl.package.ticket" ng-click="festivalCtrl.package.state = 'summary'">Réserver ce package</button>
+                    <span class="clear"></span>
                 </div>
                 <div class="content-choose tickets" ng-if="festivalCtrl.choosePackageTab === 1">
                     <div class="ticket" ng-repeat="ticket in festivalCtrl.festival.tickets" ng-click="festivalCtrl.package.ticket = ticket" ng-class="{ active: festivalCtrl.package.ticket.name === ticket.name }">
@@ -222,7 +224,7 @@
                     <div class="travel" ng-repeat="travel in festivalCtrl.travels.routes" ng-click="festivalCtrl.package.travel = travel" ng-class="{ active: festivalCtrl.package.travel.name === travel.name }">
                         <h4>{[{ travel.name }]}</h4>
                         <span>durée de trajet : {[{ (travel.duration - (travel.duration%60))/60 + 'heures'}]} {[{ travel.duration%60 + 'minutes' }]}</span>
-                        <span>{[{ travel.indicativePrice.price + " €" }]}</span>
+                        <span>{[{ travel.indicativePrice.price }]} €</span>
                     </div>
                 </div>
                 <div class="content-choose hebergement" ng-if="festivalCtrl.choosePackageTab === 3">
@@ -232,7 +234,44 @@
                         <span>25 €</span>
                     </div>
                 </div>
-                <button id="test123" ng-if="festivalCtrl.package.ticket">Réserver ce package</button>
+            </div>
+            <div id="package-summary" class="content" ng-if="festivalCtrl.package.state === 'summary'">
+                <h3>Récapitulatif</h3>
+                <table class="selection" style="color: white; width: 100%;">
+                    <tr>
+                        <td>on verra plus tard</td>
+                        <td>{[{ festivalCtrl.package.ticket.name }]}</td>
+                        <td><input ng-model="number.ticket" type="number" ng-init="number.ticket = 1" min="1" max="10" style="color: black;"></td>
+                        <td>{[{ festivalCtrl.package.ticket.price + " €"}]}</td>
+                    </tr>
+                    <tr ng-if="festivalCtrl.package.travel">
+                        <td>on verra plus tard</td>
+                        <td>{[{ festivalCtrl.package.travel.name }]}</td>
+                        <td><input ng-model="number.travel" type="number" ng-init="number.travel = 1" value="1" min="1" max="10" style="color: black;"></td>
+                        <td>{[{ festivalCtrl.package.travel.indicativePrice.price }]} €</td>
+                        <td style="cursor: pointer;" ng-click="festivalCtrl.package.travel = ''">supprimer</td>
+                    </tr>
+                    <tr ng-if="festivalCtrl.package.hotel">
+                        <td>on verra plus tard</td>
+                        <td>{[{ festivalCtrl.package.hotel.name }]}</td>
+                        <td><input ng-model="number.hotel" type="number" ng-init="number.hotel = 1" placeholder="1" value="1" min="1" max="10" style="color: black;"></td>
+                        <td>{[{ festivalCtrl.package.hotel.price + " €"}]}</td>
+                        <td style="cursor: pointer;" ng-click="festivalCtrl.package.hotel = ''">supprimer</td>
+                    </tr>
+                    <tr ng-if="festivalCtrl.package.travel && festivalCtrl.package.hotel">
+                        <td>{[{ number.ticket*festivalCtrl.package.ticket.price + number.travel*festivalCtrl.package.travel.indicativePrice.price + number.hotel*festivalCtrl.package.hotel.price }]}</td>
+                    </tr>
+                    <tr ng-if="festivalCtrl.package.travel && !festivalCtrl.package.hotel">
+                        <td>{[{ number.ticket*festivalCtrl.package.ticket.price + number.travel*festivalCtrl.package.travel.indicativePrice.price }]}</td>
+                    </tr>
+                    <tr ng-if="!festivalCtrl.package.travel && festivalCtrl.package.hotel">
+                        <td>{[{ number.ticket*festivalCtrl.package.ticket.price + number.hotel*festivalCtrl.package.hotel.price }]}</td>
+                    </tr>
+                    <tr ng-if="!festivalCtrl.package.travel && !festivalCtrl.package.hotel">
+                        <td>{[{ number.ticket*festivalCtrl.package.ticket.price }]}</td>
+                    </tr>
+                </table>
+                <button ng-click="festivalCtrl.package.state = 'create'">modifier le package</button>
             </div>
         </div>
         <section class="activity" style="background-color:#f8f8f8; text-align: center;">
