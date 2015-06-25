@@ -36,6 +36,16 @@ class Festival
     protected $type = array();
 
     /**
+     * @var Festitime\DatabaseBundle\Document\Hotel
+     */
+    protected $hotels = array();
+
+    /**
+     * @var Festitime\DatabaseBundle\Document\Ticket
+     */
+    protected $tickets = array();
+
+    /**
      * @var string $name
      */
     protected $name;
@@ -373,5 +383,65 @@ class Festival
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * Add hotel
+     *
+     * @param Festitime\DatabaseBundle\Document\Hotel $hotel
+     */
+    public function addHotel(\Festitime\DatabaseBundle\Document\Hotel $hotel)
+    {
+        $this->hotels[] = $hotel;
+    }
+
+    /**
+     * Remove hotel
+     *
+     * @param Festitime\DatabaseBundle\Document\Hotel $hotel
+     */
+    public function removeHotel(\Festitime\DatabaseBundle\Document\Hotel $hotel)
+    {
+        $this->hotels->removeElement($hotel);
+    }
+
+    /**
+     * Get hotels
+     *
+     * @return \Doctrine\Common\Collections\Collection $hotels
+     */
+    public function getHotels()
+    {
+        return $this->hotels;
+    }
+
+    /**
+     * Add ticket
+     *
+     * @param Festitime\DatabaseBundle\Document\Ticket $ticket
+     */
+    public function addTicket(\Festitime\DatabaseBundle\Document\Ticket $ticket)
+    {
+        $this->tickets[] = $ticket;
+    }
+
+    /**
+     * Remove ticket
+     *
+     * @param Festitime\DatabaseBundle\Document\Ticket $ticket
+     */
+    public function removeTicket(\Festitime\DatabaseBundle\Document\Ticket $ticket)
+    {
+        $this->tickets->removeElement($ticket);
+    }
+
+    /**
+     * Get tickets
+     *
+     * @return \Doctrine\Common\Collections\Collection $tickets
+     */
+    public function getTickets()
+    {
+        return $this->tickets;
     }
 }

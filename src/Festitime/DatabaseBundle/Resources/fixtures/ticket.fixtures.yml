@@ -1,0 +1,94 @@
+model: Festitime\DatabaseBundle\Document\Ticket
+save_in_reverse: false
+persistence: mongodb
+fixtures:
+    ticket1:
+        name: Les Vieilles Charrues PASS 1 jour
+        price: 53
+    ticket2:
+        name: Les Vieilles Charrues PASS 4 jours (or week-end)
+        price: 135
+    ticket3:
+        name: Les Vieilles Charrues PASS vendredi + PASS week-end
+        price: 90
+    ticket4:
+        name: Les Vieilles Charrues PASS 4 jours (avec week-end)
+        price: 188
+    ticket5:
+        name: Cosmojazz festival PASS 1 jour
+        price: 0
+    ticket6:
+        name: Cosmojazz festival PASS 3 jours
+        price: 0
+    ticket7:
+        name: Cosmojazz festival PASS 7 jours
+        price: 0
+    ticket8:
+        name: Cosmojazz festival PASS 10 jours
+        price: 0
+    ticket9:
+        name: Le Big Festival PASS 1 jour
+        price: 100
+    ticket10:
+        name: Le Big Festival PASS 2 jours
+        price: 140
+    ticket11:
+        name: Le Big Festival PASS 4 JOURS
+        price: 190
+    ticket12:
+        name: Mainsquare Festival PASS vendredi
+        price: 49
+    ticket13:
+        name: Mainsquare Festival PASS samedi
+        price: 59
+    ticket14:
+        name: Mainsquare Festival PASS dimanche
+        price: 49
+    ticket15:
+        name: Mainsquare Festival PASS 3 jours
+        price: 115
+    ticket16:
+        name: Les Francofolies PASS 1 jour
+        price: 35
+    ticket17:
+        name: Les Francofolies PASS 2 jours
+        price: 40
+    ticket18:
+        name: Les Francofolies PASS 4 jours
+        price: 70
+    ticket19:
+        name: Festival Musilac PASS 1 jours
+        price: 53
+    ticket20:
+        name: Festival Musilac PASS 3 jours
+        price: 123
+    ticket21:
+        name: Festival Musilac PASS 4 jours
+        price: 184
+    ticket22:
+        name: Festival de Nîmes PASS 1 jours
+        price: 47
+    ticket23:
+        name: Festival de Nîmes PASS 2 jours
+        price: 90
+    ticket24:
+        name: Festival de Nîmes PASS 4 jours
+        price: 150
+    ticket25:
+        name: Festival Les femmes s'en mêlent PASS 1 jours
+        price: 18
+    ticket26:
+        name: Festival Les femmes s'en mêlent PASS 2 jours
+        price: 36
+    ticket27:
+        name: Festival Les femmes s'en mêlent PASS 4 jours
+        price: 54
+    ticket28:
+        name: Les Déferlantes PASS 1 jours
+        price: 45
+    ticket29:
+        name: Les Déferlantes PASS 3 jours
+        price: 110
+    ticket30:
+        name: Les Déferlantes PASS 4 jours
+        price: 155

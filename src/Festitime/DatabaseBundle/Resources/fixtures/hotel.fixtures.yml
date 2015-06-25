@@ -1,0 +1,220 @@
+model: Festitime\DatabaseBundle\Document\Hotel
+save_in_reverse: false
+persistence: mongodb
+fixtures:
+    hotel1:
+        name: Hotel Noz Vad
+        city: Carhaix-Plouguer
+        country: france
+        price: 45
+        picture: "http://medias.tourismebretagne.com/images/f/a/e/a/7/full_MEDIA_faea72d3-51c9-4361-80a5-75c27c6baf91.jpg"
+    hotel2:
+        name: Hôtel d'Ahès
+        city: Carhaix
+        country: france
+        price: 35
+        picture: "http://s2.e-monsite.com/2009/12/21/01/resize_550_550//facade-hotel-carhaix.jpg"
+    hotel3:
+        name: Manoir de Kerlédan
+        city: Carhaix
+        country: france
+        price: 55
+        picture: "https://coatamourmorlaix.files.wordpress.com/2011/11/manoir-de-kerledan-3.jpg"
+    hotel4:
+        name: Nouvelles Frontières
+        city: Carhaix
+        country: france
+        price: 55
+        picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDO4id_mzxvN_9X98vD16B0Rv4I0R0XTKjxg4kr08hb8pxtDQg"
+    hotel5:
+        name: l'Hôtel Alpina
+        city: Chamonix-Mont-Blanc
+        country: france
+        price: 45
+        picture: "http://exp.cdn-hotels.com/hotels/3000000/2400000/2392700/2392611/2392611_10_z.jpg"
+    hotel6:
+        name: l'Hôtel Les Aiglons
+        city: Chamonix-Mont-Blanc
+        country: france
+        price: 55
+        picture: "http://exp.cdn-hotels.com/hotels/2000000/1170000/1169000/1168927/1168927_35_z.jpg"
+    hotel7:
+        name: Hotel Mercure Chamonix
+        city: Chamonix-Mont-Blanc
+        country: france
+        price: 35
+        picture: "http://www.idealsalle.fr/images/hotels/1682/1.jpg"
+    hotel8:
+        name: Hotel Chamonix CENTRE
+        city: Chamonix-Mont-Blanc
+        country: france
+        price: 65
+        picture: "http://images.travelnow.com/hotels/1000000/20000/14900/14898/14898_118_b.jpg"
+    hotel9:
+        name: Radisson Blu Hotel
+        city: Biarritz
+        country: france
+        price: 204
+        picture: "http://www.biarritz-hotel-ocean.com/img/bandeaux/Hotel_Biarritz_Ocean_bandeau_001.jpg"
+    hotel10:
+        name: Biarritz Hotel
+        city: Biarritz
+        country: france
+        price: 60
+        picture: "http://www.caminomyway.com/wp-content/uploads/2011/11/Biarritz-Beach-and-Casino-b.jpg"
+    hotel11:
+        name: Selena Hotel
+        city: Biarritz
+        country: france
+        price: 35
+        picture: "http://tourisme.biarritz.fr/jobs/tourinsoft/images/hotels/vignettes/HOTAQU06401DW82JHotel-du-Palais-7.jpg"
+    hotel12:
+        name: Biarritz Centre Hotel
+        city: Biarritz
+        country: france
+        price: 75
+        picture: "http://www.123voyage.com/realsw/photos/pers/hotel_le_biarritz.jpg"
+    hotel13:
+        name: Wayra Hotel La Merced
+        city: Arras
+        country: france
+        price: 104€
+        picture: "http://www.college-hotel.com/client/cache/contenu/_500____college-hotelp1diapo1_718.jpg"
+    hotel14:
+        name: Pirwa Park Hostel Arequipa
+        city: Arras
+        country: france
+        price: 94€
+        picture: "https://phgcdn.com/images/uploads/MLAEH/corporatemasthead/grand-hotel-excelsior_masthead.jpg"
+    hotel15:
+        name: Tambo del Solar
+        city: Arras
+        country: france
+        price: 54
+        picture: "http://www.edsaplan.com/files/media-image/portfolio/intercontinental-mar-menor-hotel-night-493.jpghttp://www.biarritz-hotel-ocean.com/img/bandeaux/Hotel_Biarritz_Ocean_bandeau_001.jpg"
+    hotel16:
+        name: Casa Consuelo Hotel Arequipa
+        city: Arras
+        country: france
+        price: 74
+        picture: "http://videosurveillance-strasbourg.fr/wp-content/uploads/2013/12/hotel.jpg"
+    hotel17:
+        name: Hotel La Merced
+        city: La Rochelle
+        country: france
+        price: 104
+        picture: http://www.hoteltrianon.com/img/hotel_trianon.jpg
+    hotel18:
+        name: Park Hostel Arequipa
+        city: La Rochelle
+        country: france
+        price: 94
+        picture: "http://images.travelnow.com/hotels/1000000/430000/422700/422615/422615_31_b.jpg"
+    hotel19:
+        name: Tambo Solar
+        city: La Rochelle
+        country: france
+        price: 54
+        picture: "http://www.odalys-vacances.com/output/information/lieu_hebergement/2061/larochelle-archipel-01.jpg"
+    hotel20:
+        name: Casa Consuelo Hotel
+        city: La Rochelle
+        country: france
+        price: 74
+        picture: "http://image-hebergement.linternaute.com/image/400/1359708565/11102.jpg"
+    hotel21:
+        name: Hotel La Mer
+        city: Aix-Les-Bains
+        country: france
+        price: 104
+        picture: "http://www.hoteltrianon.com/img/hotel_trianon.jpgg"
+    hotel22:
+        name: Park Arequipa
+        city: Aix-Les-Bains
+        country: france
+        price: 94
+        picture: http://images.travelnow.com/hotels/1000000/430000/422700/422615/422615_31_b.jpg
+    hotel23:
+        name: Hotel Solar
+        city: Aix-Les-Bains
+        country: france
+        price: 54
+        picture: "http://www.odalys-vacances.com/output/information/lieu_hebergement/2061/larochelle-archipel-01.jpg"
+    hotel24:
+        name: Casa Musica Hotel
+        city: La Rochelle
+        country: france
+        price: 74
+        picture: "http://image-hebergement.linternaute.com/image/400/1359708565/11102.jpg"
+    hotel25:
+        name: Hotel du bon vieux Nîmes
+        city: Nîmes
+        country: france
+        price: 104
+        picture: "http://www.hoteltrianon.com/img/hotel_trianon.jpgg"
+    hotel26:
+        name: Arequipa de Nîmes
+        city: Nîmes
+        country: france
+        price: 94
+        picture: "http://images.travelnow.com/hotels/1000000/430000/422700/422615/422615_31_b.jpg"
+    hotel27:
+        name: Hotel du soleil
+        city: Nîmes
+        country: france
+        price: 54
+        picture: "http://www.odalys-vacances.com/output/information/lieu_hebergement/2061/larochelle-archipel-01.jpg"
+    hotel28:
+        name: Nîmes Hotel
+        city: Nîmes
+        country: france
+        price: 74
+        picture: "http://d3fd32ha1ierm4.cloudfront.net/wcms/img/hotel-paris-france-size-6461-742-526.jpg"
+    hotel29:
+        name: Hotel du bon vieux fort
+        city: Paris
+        country: france
+        price: 104
+        picture: "http://d3nic3ba99hjzw.cloudfront.net/_novaimg/293781-98811_0_75_1600_876_420_230.jpg"
+    hotel30:
+        name: Hotel Parissa
+        city: Paris
+        country: france
+        price: 94
+        picture: "http://dxx4ijiyxo90e.cloudfront.net/_novaimg/423661-139741_0_119_1600_876_480_263.jpg"
+    hotel31:
+        name: Hotel du Paris Lotus
+        city: Paris
+        country: france
+        price: 54
+        picture: "http://www.hotel-paris-hotel.com/wp-content/uploads/2013/02/ARTUS-H%C3%94TEL.jpg"
+    hotel32:
+        name: Relais des Halles
+        city: Paris
+        country: france
+        price: 74
+        picture: "http://image-hebergement.linternaute.com/image/400/1359708565/11102.jpg"
+    hotel33:
+        name: Hotel déferlantes
+        city: Argelès-sur-Mer
+        country: france
+        price: 104
+        picture: "http://www.hotel-lecottage.com/website/var/tmp/thumb_9__1920x1080.jpeg"
+    hotel34:
+        name: Hotel Argelès du centre
+        city: Argelès-sur-Mer
+        country: france
+        price: 84
+        picture: "http://images.trvl-media.com/hotels/2000000/1230000/1222300/1222298/1222298_21_b.jpg"
+    hotel35:
+        name: Hotel d'Argès Lotus
+        city: Argelès-sur-Mer
+        country: france
+        price: 44
+        picture: "https://photo1.hotelsclick.com/argeles-sur-mer/100823/large/hotel-auberge-du-roua-exterior.5.jpg"
+    hotel36:
+        name: Relais des mer
+        city: Argelès-sur-Mer
+        country: france
+        price: 64€
+        picture: "http://r-ec.bstatic.com/images/hotel/270x200/666/6660985.jpg"

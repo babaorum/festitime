@@ -11,7 +11,7 @@ fixtures:
             - "http://darw0tdisu865.cloudfront.net/media/photos/Les_Vieilles_Charrues_Vis1.jpg"
         start_date: "2015-07-16T00:00:00+0200"
         end_date: "2015-07-19T00:00:00+0200"
-        city: Carhaix - Finistère
+        city: Carhaix
         country: france
         price: 155
     Les Déferlantes:
@@ -35,7 +35,7 @@ fixtures:
             - "http://www.lavoixdunord.fr/sites/default/files/articles/ophotos/20120702/shaka-ponk-120702.jpg"
         start_date: "2015-07-03T00:00:00+0200"
         end_date: "2015-07-05T00:00:00+0200"
-        city: Citadelle - Arras
+        city: Arras
         country: france
         price: 115
     CosmoJazz Festival :
@@ -47,7 +47,7 @@ fixtures:
             - "http://www.cosmojazzfestival.com//data/img/img5549ed53ad670f.jpg"
         start_date: "2015-07-25T00:00:00+0200"
         end_date: "2015-08-02T00:00:00+0200"
-        city: "Chamonix-Mont-Blanc, les Houches et le barrage d'Emosson-Finhaut"
+        city: Chamonix
         country: france
         price: gratuit
     Le Big festival:
@@ -71,7 +71,7 @@ fixtures:
             - "http://www.ticketsud.com/sites/default/files/styles/salle/public/salles/festival-de-nimes-canto.jpg"
         start_date: "2015-06-30T00:00:00+0200"
         end_date: "2015-07-25T00:00:00+0200"
-        city: Arènes de Nîmes
+        city: Nîmes
         country: france
         price: 25
     Les Francofolies:

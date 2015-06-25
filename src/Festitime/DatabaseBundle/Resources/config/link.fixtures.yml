@@ -6,6 +6,10 @@ artist:
     - pseudo
 type:
     - key
+hotel:
+    - name
+ticket:
+    - name
 links:
     festival:
         Le Big festival:
@@ -22,6 +26,15 @@ links:
                 - pop
                 - hip-hop
                 - reggae
+            hotel:
+                - hotel9
+                - hotel10
+                - hotel11
+                - hotel12
+            ticket:
+                - ticket9
+                - ticket10
+                - ticket11
         Festival de Nîmes:
             artist:
                 - Lionel Richie
@@ -34,6 +47,11 @@ links:
                 - pop
                 - reggae
                 - hip-hop
+            hotel:
+                - hotel25
+                - hotel26
+                - hotel27
+                - hotel28
         Les Vieilles Charrues:
             artist:
                 - deep purple
@@ -47,6 +65,16 @@ links:
                 - rock
                 - pop
                 - hip-hop
+            hotel:
+                - hotel1
+                - hotel2
+                - hotel3
+                - hotel4
+            ticket:
+                - ticket1
+                - ticket2
+                - ticket3
+                - ticket4
         Les Déferlantes:
             artist:
                 - fauve
@@ -62,6 +90,15 @@ links:
                 - hip-hop
                 - pop
                 - reggae
+            hotel:
+                - hotel33
+                - hotel34
+                - hotel35
+                - hotel36
+            ticket:
+                - ticket28
+                - ticket29
+                - ticket30
         Main Square:
             artist:
                 - Lilly Wood and the Prick
@@ -80,6 +117,16 @@ links:
                 - pop
                 - hip-hop
                 - reggae
+            hotel:
+                - hotel13
+                - hotel14
+                - hotel15
+                - hotel16
+            ticket:
+                - ticket12
+                - ticket13
+                - ticket14
+                - ticket15
         Festival Musilac:
             artist:
                 - cerrone
@@ -92,6 +139,15 @@ links:
                 - pop
                 - reggae
                 - blues
+            hotel:
+                - hotel21
+                - hotel22
+                - hotel23
+                - hotel24
+            ticket:
+                - ticket22
+                - ticket23
+                - ticket24
         Festival Les Femmes s'en Mêlent:
             artist:
                 - Yelle
@@ -104,11 +160,30 @@ links:
                 - pop
                 - reggae
                 - blues
+            hotel:
+                - hotel29
+                - hotel30
+                - hotel31
+                - hotel32
+            ticket:
+                - ticket25
+                - ticket26
+                - ticket27
         CosmoJazz Festival:
             artist:
                 - andré manoukian
             type:
                 - jazz
+            hotel:
+                - hotel5
+                - hotel6
+                - hotel7
+                - hotel8
+            ticket:
+                - ticket5
+                - ticket6
+                - ticket7
+                - ticket8
         Les Francofolies:
             artist:
                 - Veronique Sanson
@@ -120,6 +195,15 @@ links:
                 - rock
                 - pop
                 - reggae
+            hotel:
+                - hotel17
+                - hotel18
+                - hotel19
+                - hotel20
+            ticket:
+                - ticket16
+                - ticket17
+                - ticket18
         hellfest:
             artist:
                 - scorpions

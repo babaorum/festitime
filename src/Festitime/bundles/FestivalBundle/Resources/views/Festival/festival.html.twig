@@ -228,10 +228,10 @@
                     </div>
                 </div>
                 <div class="content-choose hebergement" ng-if="festivalCtrl.choosePackageTab === 3">
-                    <div class="travel" ng-repeat="hotel in festivalCtrl.hotels" ng-click="festivalCtrl.package.hotel = hotel" ng-class="{ active: festivalCtrl.package.hotel.name === hotel.name }">
-                        <h4>hotel lolilol kikou</h4>
+                    <div class="travel" ng-repeat="hotel in festivalCtrl.festival.hotels" ng-click="festivalCtrl.package.hotel = hotel" ng-class="{ active: festivalCtrl.package.hotel.name === hotel.name }">
+                        <h4>{[{hotel.name}]}</h4>
                         <span>mini description (style hotel 3 étoiles trop top)</span>
-                        <span>25 €</span>
+                        <span>{[{ hotel.price }]} €</span>
                     </div>
                 </div>
             </div>

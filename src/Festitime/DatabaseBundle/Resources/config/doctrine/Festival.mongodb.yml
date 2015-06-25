@@ -6,6 +6,10 @@ Festitime\DatabaseBundle\Document\Festival:
             targetDocument: Festitime\DatabaseBundle\Document\Artist
         type:
             targetDocument: Festitime\DatabaseBundle\Document\Type
+        hotels:
+            targetDocument: Festitime\DatabaseBundle\Document\Hotel
+        tickets:
+            targetDocument: Festitime\DatabaseBundle\Document\Ticket
     fields:
         id:
             id: true

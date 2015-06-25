@@ -5,7 +5,7 @@ namespace Festitime\DatabaseBundle\Document;
 use Festitime\DatabaseBundle\Traits\SerializerTrait;
 
 /**
- * Festitime\bundles\UserBundle\Document\User
+ * Festitime\bundles\UserBundle\Document\Type
  */
 class Type
 {

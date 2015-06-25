@@ -1,0 +1,10 @@
+Festitime\DatabaseBundle\Document\Ticket:
+    type: document
+    repositoryClass: Festitime\DatabaseBundle\Repository\TicketRepository
+    fields:
+        id:
+            id: true
+        name:
+            type: string
+        price:
+            type: int

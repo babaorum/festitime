@@ -1,0 +1,16 @@
+Festitime\DatabaseBundle\Document\Hotel:
+    type: document
+    repositoryClass: Festitime\DatabaseBundle\Repository\HotelRepository
+    fields:
+        id:
+            id: true
+        name:
+            type: string
+        city:
+            type: string
+        country:
+            type: string
+        price:
+            type: int
+        picture:
+            type: string
