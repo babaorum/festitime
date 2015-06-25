@@ -82,7 +82,7 @@ button:focus
 
 .mixin-tag()
 {
-    background-color: green;
+    background-color: black;
     border: 0;
     padding: 3px 6px;
     border-radius: 4px;
@@ -1382,7 +1382,7 @@ footer .tag
 {
     float: left;
     width: 20%;
-    height: 100px;
+    height: auto;
     margin: 5px 2.5%;
     background-color: white;
     cursor: pointer;
@@ -1405,7 +1405,7 @@ footer .tag
 
 #package-summary
 {
-    height: 500px !important;
+    padding-bottom: 50px;
     text-align: center;
 }
 
@@ -1417,4 +1417,14 @@ footer .tag
     margin: 0;
     font-size: 30px;
     padding: 40px 0;
+}
+
+#package-summary .selection tr
+{
+    height: 150px;
+}
+
+#package-summary .selection td
+{
+    padding: 15px 0;
 }
