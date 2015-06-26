@@ -112,9 +112,6 @@
             <a href="{{url('search')}}" class="link">
                 <span>Les festivals</span>
             </a>
-            <a href="#" class="link">
-                <span>Les artistes</span>
-            </a>
             <span class="clear"></span>
         </div>
         {% if user.firstname is defined %}
@@ -131,9 +128,9 @@
     <content id="festival-page">
         <div class="first-block" style="background: url('{{festival.img}}')">
             <div class="infos">
-                <h1>{{ festival.name | capitalize }}</h1>
-                <span> {{ festival.city | capitalize }}, {{ festival.country | capitalize }} </span>
-                <span>{{ festival.startDate | date("d") }} - {{ festival.endDate | date("d F o") }}</span>
+                <h1 style="text-shadow: 2px 2px 7px black;">{{ festival.name | capitalize }}</h1>
+                <span style="text-shadow: 2px 2px 7px black;"> {{ festival.city | capitalize }}, {{ festival.country | capitalize }} </span>
+                <span style="text-shadow: 2px 2px 7px black;">{{ festival.startDate | date("d") }} - {{ festival.endDate | date("d F o") }}</span>
             </div>
         </div>
         <div class="description-block block block-leaning">
