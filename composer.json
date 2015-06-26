@@ -28,7 +28,9 @@
         "doctrine/doctrine-fixtures-bundle": "~2.2",
         "khepin/yaml-fixtures-bundle": "~1.0",
         "payum/payum-bundle": "0.14.*",
-        "payum/offline": "0.14.*"
+        "payum/offline": "0.14.*",
+        "paypal/rest-api-sdk-php": "^1.5",
+        "kmj/paypalbridgebundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

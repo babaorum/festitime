@@ -1,0 +1,21 @@
+Festitime\DatabaseBundle\Document\Payment:
+    type: document
+    repositoryClass: Festitime\DatabaseBundle\Repository\PaymentRepository
+    fields:
+        id:
+            id: true
+        number:
+            type: string
+        description:
+            type: string
+        clientEmail:
+            type: string
+        clientId:
+            type: string
+        totalAmount:
+            type: int
+        currencyCode:
+            type: string
+        currencyDigitsAfterDecimalPoint:
+            type: int
+

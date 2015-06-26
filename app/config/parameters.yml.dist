@@ -24,3 +24,9 @@ parameters:
     google_client_secret: qeeqagbokFSY-d7AVdOAcXNy
     google_developer_key: 869948320670-t0hvbl5eq8a4md9mj3bllbbp3hh0jgve.apps.googleusercontent.com
     google_redirect_uri: http://festitime.dev:8080/login/google
+
+    #Paypal Sandbox id
+    paypal_sandbox_id: AUEzQTwEycesZ1Hr3ZkrHxD2UJDnFk14i3lai1iCxSHcA4dtwb5jZMvnl1GSR-dm3Hqz2qQxxEVNgIUl
+    paypal_sandbox_secret: EPHkbTMNmByDPhEO9si5pp7W5jflPGZtb1FW4s1VmoE-ZnYZBuoi-BrDcx4pW9AFuGMQbHNUzGpYgheH
+    paypal_mode: sandbox
+    paypal_log_level: FINE

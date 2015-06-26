@@ -1,0 +1,12 @@
+Festitime\DatabaseBundle\Document\Order:
+    type: document
+    repositoryClass: Festitime\DatabaseBundle\Repository\OrderRepository
+    fields:
+        id:
+            id: true
+        paypalPaymentId:
+            type: string
+        price:
+            type: int
+        state:
+            type: string

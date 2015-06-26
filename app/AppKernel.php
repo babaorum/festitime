@@ -20,7 +20,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
-            new Payum\Bundle\PayumBundle\PayumBundle(),
+            new KMJ\PayPalBridgeBundle\KMJPayPalBridgeBundle(),
             new HappyR\Google\ApiBundle\HappyRGoogleApiBundle(),
             new Festitime\DatabaseBundle\FestitimeDatabaseBundle(),
             new Festitime\bundles\FestivalBundle\FestitimeFestivalBundle(),

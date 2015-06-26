@@ -3,12 +3,13 @@ parameters:
     festitime.form_service.class: Festitime\bundles\UserBundle\Services\FormService
     form.connect.class: Festitime\bundles\UserBundle\Form\Type\ConnectType
     form.register.class: Festitime\bundles\UserBundle\Form\Type\RegisterType
-    festitime.google_oauth_provider: Festitime\bundles\UserBundle\Services\OAuth2\GoogleService
+    festitime.google_oauth_provider.class: Festitime\bundles\UserBundle\Services\OAuth2\GoogleService
+    festitime.paypal_provider.class: Festitime\bundles\UserBundle\Services\Paypal\PaypalProvider
 
 services:
     festitime.user_service:
         class: %festitime.user_service.class%
-        arguments: 
+        arguments:
             - @request_stack
             - @doctrine_mongodb
             - @form.factory
@@ -27,5 +28,14 @@ services:
         class: %form.register.class%
 
     festitime.google_oauth_provider:
-        class: %festitime.google_oauth_provider%
+        class: %festitime.google_oauth_provider.class%
         arguments: [@google.oauth_provider]
+    festitime.paypal_provider:
+        class: %festitime.paypal_provider.class%
+        arguments:
+            - @doctrine_mongodb
+            - %paypal_sandbox_id%
+            - %paypal_sandbox_secret%
+            - %paypal_mode%
+            - %paypal_log_level%
+            - %kernel.root_dir%

@@ -278,10 +278,10 @@
                         </span>
                     </td>
                     <td style="height: 80px; padding-top: 40px;" colspan="2">
-                        <span style="height: 70px; display: block; background-color: white; color: black; line-height: 70px;" ng-if="festivalCtrl.package.travel && festivalCtrl.package.hotel">{[{ number.ticket*festivalCtrl.package.ticket.price + number.travel*festivalCtrl.package.travel.indicativePrice.price + number.hotel*festivalCtrl.package.hotel.price }]}</span>
-                        <span style="height: 70px; display: block; background-color: white; color: black; line-height: 70px;" ng-if="festivalCtrl.package.travel && !festivalCtrl.package.hotel">{[{ number.ticket*festivalCtrl.package.ticket.price + number.travel*festivalCtrl.package.travel.indicativePrice.price }]}</span>
-                        <span style="height: 70px; display: block; background-color: white; color: black; line-height: 70px;" ng-if="!festivalCtrl.package.travel && festivalCtrl.package.hotel">{[{ number.ticket*festivalCtrl.package.ticket.price + number.hotel*festivalCtrl.package.hotel.price }]}</span>
-                        <span style="height: 70px; display: block; background-color: white; color: black; line-height: 70px;" ng-if="!festivalCtrl.package.travel && !festivalCtrl.package.hotel">{[{ number.ticket*festivalCtrl.package.ticket.price }]}</span>
+                        <span style="height: 70px; display: block; background-color: white; color: black; line-height: 70px;" ng-if="festivalCtrl.package.travel && festivalCtrl.package.hotel">{[{ number.ticket*festivalCtrl.package.ticket.price + number.travel*festivalCtrl.package.travel.indicativePrice.price + number.hotel*festivalCtrl.package.hotel.price }]} €</span>
+                        <span style="height: 70px; display: block; background-color: white; color: black; line-height: 70px;" ng-if="festivalCtrl.package.travel && !festivalCtrl.package.hotel">{[{ number.ticket*festivalCtrl.package.ticket.price + number.travel*festivalCtrl.package.travel.indicativePrice.price }]} €</span>
+                        <span style="height: 70px; display: block; background-color: white; color: black; line-height: 70px;" ng-if="!festivalCtrl.package.travel && festivalCtrl.package.hotel">{[{ number.ticket*festivalCtrl.package.ticket.price + number.hotel*festivalCtrl.package.hotel.price }]} €</span>
+                        <span style="height: 70px; display: block; background-color: white; color: black; line-height: 70px;" ng-if="!festivalCtrl.package.travel && !festivalCtrl.package.hotel">{[{ number.ticket*festivalCtrl.package.ticket.price }]} €</span>
                     </td>
                     <!-- <tr ng-if="festivalCtrl.package.travel && festivalCtrl.package.hotel">
                         <td>{[{ number.ticket*festivalCtrl.package.ticket.price + number.travel*festivalCtrl.package.travel.indicativePrice.price + number.hotel*festivalCtrl.package.hotel.price }]}</td>
@@ -298,7 +298,16 @@
                 </table>
                 <div style="width: 100%; height: 80px; position: relative; padding-bottom: 17px;">
                     <button ng-click="festivalCtrl.package.state = 'create'" style="float: left; height: 80px; border-width: 0; background-color: #c92a55; color: white; font-size: 20px; padding: 0 20px;">modifier le package</button>
-                    <button ng-click="festivalCtrl.package.state = 'infos'" style="float: right; height: 80px; border-width: 0; background-color: #c92a55; color: white; font-size: 20px; padding: 0 20px;">Valider ma réservation</button>
+                    <form action="{{url('payment')}}" method="post">
+                            <input type="hidden" name="chosen_ticket" value="{[{festivalCtrl.package.ticket.id}]}">
+                            <input type="hidden" name="chosen_ticket_quantity" value="{[{number.ticket}]}">
+                            <input type="hidden" name="chosen_travel_name" value="{[{festivalCtrl.package.travel.name}]}">
+                            <input type="hidden" name="chosen_travel_price" value="{[{festivalCtrl.package.travel.indicativePrice.price}]}">
+                            <input type="hidden" name="chosen_travel_quantity" value="{[{number.travel}]}">
+                            <input type="hidden" name="chosen_hotel" value="{[{festivalCtrl.package.hotel.id}]}">
+                            <input type="hidden" name="chosen_hotel_quantity" value="{[{number.hotel}]}">
+                            <input type="submit" style="float: right; height: 80px; border-width: 0; background-color: #c92a55; color: white; font-size: 20px; padding: 0 20px; margin: 0;"value="Valider ma réservation">
+                    </form>
                     <span class="clear"></span>
                 </div>
             </div>

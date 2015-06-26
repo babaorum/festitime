@@ -25,6 +25,21 @@ postUserConnect:
     requirements:
         _method: POST
 
+# After payment, Paypal call paymentStatus
+paymentStatus:
+    path: /payment/status
+    defaults: { _controller: FestitimeUserBundle:User:paymentStatus }
+
+payment:
+    path: /payment
+    defaults: { _controller: FestitimeUserBundle:User:payment }
+    requirements:
+        _method: POST
+
+testFlashBag:
+    path: /test123
+    defaults: { _controller: FestitimeUserBundle:User:test }
+
 users:
     type: rest
     resource: Festitime\bundles\UserBundle\Controller\UserApiController
