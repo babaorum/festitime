@@ -1,5 +1,8 @@
 <a class="search-item" ng-href="{[{ '/festival/' + festival.id }]}" ng-repeat="festival in searchFestivalsCtrl.festivals | filter:searchText | filter:searchFestivalsCtrl.typeFilter">
     <div class="block" style="width: 30%; margin-right: 3.3%; margin-bottom: 10px; margin-top 10px; float: left; height: 250px; color: #ffffff; font: 12px @font-oswald; position: relative; overflow: hidden;">
+        <div class="tag-bar">
+            <span class="tag" ng-repeat="type in festival.type" style="background-color: {[{type.color}]}">{[{type.name}]}</span>
+        </div>
         <img ng-src="{[{ festival.img }]}" style="height: 100%; width: 100%;" alt="image festival">
         <div class="festival" style="width: 100%; position: absolute; bottom: 15; height: 25%;">
             <div class="name" style="font-size: 20px; font-weight: bold; margin-left: 5px">{[{ festival.name }]}</div>
