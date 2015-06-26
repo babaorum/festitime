@@ -29,6 +29,22 @@
                 }.bind(this));
         }.bind(this);
 
+        this.addHotelToPackage = function(hotel) {
+            if (this.package.hotel && this.package.hotel.name === hotel.name) {
+                delete this.package.hotel;
+            } else {
+                this.package.hotel = hotel;
+            }
+        }.bind(this);
+
+        this.addTravelToPackage = function(travel) {
+            if (this.package.travel && this.package.travel.name === travel.name) {
+                delete this.package.travel;
+            } else {
+                this.package.travel = travel;
+            }
+        }.bind(this);
+
         // Load types
         typeRestService.getTypes()
             .then(function(types) {

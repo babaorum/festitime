@@ -220,20 +220,21 @@
                         <span class="clear"></span>
                     </div>
                 </div>
-                <div class="content-choose travels" ng-if="festivalCtrl.choosePackageTab === 2">
-                    <div class="travel" ng-repeat="travel in festivalCtrl.travels.routes" ng-click="festivalCtrl.package.travel = travel" ng-class="{ active: festivalCtrl.package.travel.name === travel.name }">
+                <div class="content-choose travels" ng-if="festivalCtrl.choosePackageTab === 2" style="overflow-x: hidden;">
+                    <div class="travel" ng-repeat="travel in festivalCtrl.travels.routes" ng-click="festivalCtrl.addTravelToPackage(travel)" ng-class="{ active: festivalCtrl.package.travel.name === travel.name }">
                         <img ng-src="/assets/images/{[{segment.kind}]}.png" ng-repeat="segment in travel.segments" ng-if="segment.isMajor" style="width: 60%; height: 120px; margin: 10% 20%;">
-                        <h4>{[{ travel.name }]}</h4>
-                        <span>durée de trajet : {[{ (travel.duration - (travel.duration%60))/60 + 'heures'}]} {[{ travel.duration%60 + 'minutes' }]}</span>
-                        <span>{[{ travel.indicativePrice.price }]} €</span>
+                        <div style="background-color: #EEE; padding: 10px 0;">
+                            <h4 style="text-align: center;">{[{ travel.name }]}</h4>
+                            <span style="display: block; text-align: center;">durée de trajet : {[{ (travel.duration - (travel.duration%60))/60 + 'heures'}]} {[{ travel.duration%60 + 'minutes' }]}</span>
+                            <span style="width: 30%; display: block; margin: 10px 35%; background-color: #c92a55; color: white; text-align: center; padding: 5px 10px; font-size: 18px; margin-bottom: 0;">{[{ travel.indicativePrice.price }]} €</span>
+                        </div>
                     </div>
                 </div>
-                <div class="content-choose hebergement" ng-if="festivalCtrl.choosePackageTab === 3">
-                    <div class="travel" ng-repeat="hotel in festivalCtrl.festival.hotels" ng-click="festivalCtrl.package.hotel = hotel" ng-class="{ active: festivalCtrl.package.hotel.name === hotel.name }">
+                <div class="content-choose hebergement" ng-if="festivalCtrl.choosePackageTab === 3" style="overflow-x: hidden;">
+                    <div class="travel hotel" ng-repeat="hotel in festivalCtrl.festival.hotels" ng-click="festivalCtrl.addHotelToPackage(hotel)" ng-class="{ active: festivalCtrl.package.hotel.name === hotel.name }">
                         <img ng-src="{[{hotel.picture}]}" style="width: 100%; height: 200px;">
-                        <h4>{[{hotel.name}]}</h4>
-                        <span>mini description (style hotel 3 étoiles trop top)</span>
-                        <span>{[{ hotel.price }]} €</span>
+                        <h4 style="text-align: center;">{[{hotel.name}]}</h4>
+                        <span style="width: 30%; display: block; margin: 10px 35%; background-color: #c92a55; color: white; text-align: center; padding: 5px 10px; font-size: 18px;">{[{ hotel.price }]} €</span>
                     </div>
                 </div>
             </div>
