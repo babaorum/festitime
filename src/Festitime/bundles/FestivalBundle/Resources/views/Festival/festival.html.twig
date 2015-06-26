@@ -115,8 +115,8 @@
             <span class="clear"></span>
         </div>
         {% if user.firstname is defined %}
-            <a href="#" id="connect">
-                {{ user.firstname | capitalize }} {{ user.name | upper }}
+            <a href="{{url('logout')}}" id="logout">
+                <span>Déconnexion</span>
             </a>
         {% else %}
             <a href="" id="connect">
@@ -338,7 +338,21 @@
                 <div class="accordion-section">
                     <span class="accordion-section-title" data-content="accordion-1"><span class="accordion-title"><i class="icon-plus"></i>Comment venir</span></span>
                     <div id="accordion-1" class="accordion-section-content">
-                        <p><span>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nulla mi, rutrum ut feugiat at, vestibulum ut neque? Cras tincidunt enim vel aliquet facilisis. Duis congue ullamcorper vehicula. Proin nunc lacus, semper sit amet elit sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</span></p>
+                        <p><span>Pour tout savoir sur vos conditions de circulation, écoutez Radio VINCI Autoroutes VINCI
+                        <ul>
+                            <li>Paris-Biarritz : 772 km par autoroute A10 et N10</li>
+                            <li>Bordeaux-Biarritz : 190 km par N10 (4 voies) et autoroute A63</li>
+                            <li>Toulouse-Biarritz : 300 km par l’autoroute A64</li>
+                            <li>Saint Sébastien-Biarritz : 54 km par l’autoroute A8</li>
+                            <li>Pampelune-Biarritz : 111 km par autoroutes A8 et A63 puis par la N263</li>
+                        </ul>
+                        EN TRAIN
+                        <ul>
+                            <li>Rejoignez Biarritz avec iDTGV www.idtgv.com</li>
+                            <li>Le TGV Atlantique est sans changement depuis Paris-Montparnasse jusqu’aux villes de Bayonne et Biarritz. Paris Montparnasse – Bayonne : 4h36 – SNCF / Tel : 08 92 35 35 35 (ligne directe) – Tel : 08 91 67 68 69 (ligne vocale) www.voyages-sncf.com / www.ter-sncf.com</li>
+                        </ul>
+                        EN AVION
+                        – Aéroport International de Biarritz – Anglet – Bayonne www.biarritz.aeroport.fr – Tel : +33 (0)5 59 43 83 83</span></p>
                     </div>
 
                     <span class="accordion-section-title" data-content="accordion-2"><span class="accordion-title"><i class="icon-plus"></i>Sur place</span></span>
@@ -354,13 +368,40 @@
                             </ul>
                         </span>
                     </div>
-                    <span class="accordion-section-title" data-content="accordion-3"><span class="accordion-title"><i class="icon-plus"></i>Les régles essentielles</span></span>
+                    <span class="accordion-section-title" data-content="accordion-3"><span class="accordion-title"><i class="icon-plus"></i>Team Festival</span></span>
                     <div id="accordion-3" class="accordion-section-content">
-                        <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet nec arcu posuere rhoncus. Nunc eget ligula in nibh sollicitudin fermentum ac vitae massa. Nulla facilisi. Curabitur pretium blandit molestie. Ut auctor orci id mi feugiat, sed molestie turpis interdum. Ut sollicitudin arcu ac nulla luctus, et condimentum lacus dignissim. Aenean quis diam quis erat venenatis pharetra at in elit. Duis pharetra ex arcu, ut scelerisque nibh rhoncus in. Vestibulum ultrices eget quam id vehicula. Aliquam aliquam sem tellus, sed pellentesque erat rhoncus sit amet. Pellentesque hendrerit a dolor id mattis. Etiam mattis efficitur velit, vel rutrum dolor pulvinar et. Nullam augue eros, venenatis id maximus sed, pulvinar vitae augue. Cras placerat ullamcorper odio, pulvinar semper purus auctor consectetur. Pellentesque eleifend eros nec risus facilisis, a tempus lorem sagittis. Pellentesque turpis augue, luctus et ex et, vehicula iaculis nisl.</span></p>
+                        <p><span>DEMANDE DE PARTENARIAT
+Pour toute demande de partenariat veuillez formuler votre demande par mail : info@festitime.fr
+
+DEMANDE DE STAND RESTAURATION
+Pour toute demande d’un emplacement restauration veuillez adresser un descriptif détaillé de votre offre de restauration à l’adresse suivante : info@festitime.fr
+
+DEMANDE DE PROGRAMMATION
+Vous êtes un artiste solo ou un groupe ? Vous souhaitez vous produire au à ce festival ? Envoyez nous vos demandes par mail : programmation@festitime.fr
+
+DEVENIR BÉNÉVOLE
+Pour vous inscrire, veuillez télécharger et remplir le formulaire d’inscription puis renvoyez le à l’adresse : benevolefestitime@gmail.com</span></p>
                     </div>
                     <span class="accordion-section-title" data-content="accordion-4"><span class="accordion-title"><i class="icon-plus"></i>Nos conseils</span></span>
                     <div id="accordion-4" class="accordion-section-content">
-                        <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet nec arcu posuere rhoncus. Nunc eget ligula in nibh sollicitudin fermentum ac vitae massa. Nulla facilisi. Curabitur pretium blandit molestie. Ut auctor orci id mi feugiat, sed molestie turpis interdum. Ut sollicitudin arcu ac nulla luctus, et condimentum lacus dignissim. Aenean quis diam quis erat venenatis pharetra at in elit. Duis pharetra ex arcu, ut scelerisque nibh rhoncus in. Vestibulum ultrices eget quam id vehicula. Aliquam aliquam sem tellus, sed pellentesque erat rhoncus sit amet. Pellentesque hendrerit a dolor id mattis. Etiam mattis efficitur velit, vel rutrum dolor pulvinar et. Nullam augue eros, venenatis id maximus sed, pulvinar vitae augue. Cras placerat ullamcorper odio, pulvinar semper purus auctor consectetur. Pellentesque eleifend eros nec risus facilisis, a tempus lorem sagittis. Pellentesque turpis augue, luctus et ex et, vehicula iaculis nisl.</span></p>
+                        <p><span>OBJETS TROUVES
+    Vous avez perdu un de vos effets durant le Festival ?
+
+    Vos objets perdus sont consignés au poste de police municipale de la ville.
+
+
+    VENIR AU BIG FESTIVAL :
+    EN VOITURE
+    Pour tout savoir sur vos conditions de circulation, écoutez Radio VINCI Autoroutes VINCI ou directement sur festitime :)
+
+
+    HORAIRES DES NAVETTES
+    Les sites du Festival sont desservis le jour et la nuit par les lignes régulières.
+
+    Horaires disponibles prochainement.
+
+    ACCÈS PMR
+    Tous les sites du Festival sont équipés d’un accès aux PMR.</span></p>
                     </div>
                 </div>
             </div>

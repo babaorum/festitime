@@ -221,7 +221,7 @@ class UserController extends Controller
 //         echo '<pre>';print_r($result);echo '</pre>';exit;  //  DEBUG RESULT, remove it later
         if ($result->getState() == 'approved') { // payment made
             $paypalProvider->validateOrder($paymentId);
-            $session->getFlashBag()->add('success', "Votre commande à bien été valider. Toute l'équipe festitime vous remerci pour votre achat.");
+            $session->getFlashBag()->add('success', "Votre commande a bien été validée. Toute l'équipe Festitime vous remercie pour votre achat.");
         } else {
             $session->getFlashBag()->add('error', "Une erreur c'est produise durant le payement. Nous vous prions de bien vouloir recommencer.");
         }

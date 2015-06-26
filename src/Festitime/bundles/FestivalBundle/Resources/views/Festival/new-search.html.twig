@@ -120,8 +120,8 @@
             <span class="clear"></span>
         </div>
         {% if user.firstname is defined %}
-            <a href="#" id="connect">
-                {{ user.firstname | capitalize }} {{ user.name | upper }}
+            <a href="{{url('logout')}}" id="logout">
+                <span>Déconnexion</span>
             </a>
         {% else %}
             <a href="" id="connect">

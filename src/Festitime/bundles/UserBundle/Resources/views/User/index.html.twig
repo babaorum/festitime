@@ -100,6 +100,7 @@
     <header>
         {% set user = app.session.get('user') %}
         <div id="flag">
+            <h1 style="height: 0; width:0;">Festitime: N°1 de la e-billeterie et de l'information sur les festivals</h1>
             <img id="logo" width="110px" src="/assets/images/logo.png"/>
         </div>
         <div id="menu">
@@ -115,8 +116,8 @@
             <span class="clear"></span>
         </div>
         {% if user.firstname is defined %}
-            <a href="#" id="connect">
-                {{ user.firstname | capitalize }} {{ user.name | upper }}
+            <a href="{{url('logout')}}" id="logout">
+                <span>Déconnexion</span>
             </a>
         {% else %}
             <a href="" id="connect">
