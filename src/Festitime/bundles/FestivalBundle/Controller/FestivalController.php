@@ -31,7 +31,7 @@ class FestivalController extends Controller
     public function searchBySlugAction($slug)
     {
         return $this->render(
-            'FestitimeFestivalBundle:Festival:search.html.twig',
+            'FestitimeFestivalBundle:Festival:new-search.html.twig',
             array(
                 'searchedSlug' => utf8_encode(utf8_decode($slug))
             )
@@ -41,7 +41,7 @@ class FestivalController extends Controller
     public function searchByTypeAction($type)
     {
         return $this->render(
-            'FestitimeFestivalBundle:Festival:search.html.twig',
+            'FestitimeFestivalBundle:Festival:new-search.html.twig',
             array(
                 'searchedType' => $type
             )

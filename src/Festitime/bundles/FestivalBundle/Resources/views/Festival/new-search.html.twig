@@ -4,12 +4,12 @@
     <meta charset='utf-8'>
     <link rel="icon" type="image/jpg" href="/assets/images/favicon.jpg" />
 
+
+    <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- temporary -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <!-- !temporary -->
-
-    <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="/assets/js/bower_components/angular-animate/angular-animate.min.js"></script>
@@ -101,31 +101,39 @@
             </div>
         </div>
     </div>
+    <!-- /Connect modal -->
     <header>
+        {% set user = app.session.get('user') %}
         <div id="flag">
-            <img id="logo" width="110px" src="./assets/images/logo.png"/>
+            <img id="logo" width="110px" src="/assets/images/logo.png"/>
         </div>
         <div id="menu">
-            <a href="#" class="link">
+            <a href="{{url('home')}}" class="link">
                 <span>Accueil</span>
             </a>
             <a href="#" class="link">
                 <span>Comment ça marche</span>
             </a>
-            <a href="page_festivals.html" class="link">
+            <a href="{{url('search')}}" class="link">
                 <span>Les festivals</span>
             </a>
-            <a href="page_artistes.html" class="link">
+            <a href="#" class="link">
                 <span>Les artistes</span>
             </a>
             <span class="clear"></span>
         </div>
+        {% if user.firstname is defined %}
             <a href="#" id="connect">
+                {{ user.firstname | capitalize }} {{ user.name | upper }}
+            </a>
+        {% else %}
+            <a href="" id="connect">
                 <span>Connexion</span>
             </a>
+        {% endif %}
         <span class="clear"></span>
     </header>
-    <content>
+    <content id="searchPage">
         <section class="hero"></section>
         <section class="filter">
             <div class="title-filter"><i></i>Filtre</div>
@@ -140,7 +148,11 @@
                 </ul>
                 <div id="genre" class="tabs-content genre-content">
                     <ul>
+                    {% if searchedType is defined %}
+                        <li ng-repeat="type in searchPageCtrl.types" style="margin-right: 4px; text-transform: capitalize;"><span class="type {[{type.key}]}" ng-class="{active: type.key == '{{searchedType}}'}" ng-click="searchPageCtrl.includeType(type.key)">{[{type.name}]}</span></li>
+                    {% else %}
                         <li ng-repeat="type in searchPageCtrl.types" style="margin-right: 4px; text-transform: capitalize;"><span class="type {[{type.key}]}" ng-click="searchPageCtrl.includeType(type.key)">{[{type.name}]}</span></li>
+                    {% endif %}
                     </ul>
                 </div>
                 <div id='date' class="tabs-content date-content">
@@ -163,7 +175,11 @@
 
                 <div id='search' class="tabs-content search-content">
                     <h2>Rechercher</h2>
-                    <input type="text" placeholder="Un festival, un artiste...">
+                {% if searchedSlug is defined %}
+                    <input type="text" ng-model="search" ng-init="search='{{searchedSlug}}'"placeholder="Un festival, un artiste...">
+                {% else %}
+                    <input type="text" ng-model="search" placeholder="Un festival, un artiste...">
+                {% endif %}
                 </div>
 
                 <div class="nb-result">
@@ -177,63 +193,12 @@
                 </div>
             </div>
         </section>
-    <section class="artists">
-        <div class="one-artist">
-            <div class="img-artist"></div>
-            <div class="title-one-artist">Lorde</div>
-            <div class="origin-one-artist">Artiste allemande</div>
-            <div class="festival-one-artist">Dans 1 Festival</div>
-            <a href="#" class="like"></a>
-        </div>
-        <div class="one-artist">
-            <div class="img-artist"></div>
-            <div class="title-one-artist">Lorde</div>
-            <div class="origin-one-artist">Artiste allemande</div>
-            <div class="festival-one-artist">Dans 1 Festival</div>
-            <a href="#" class="like"></a>
-        </div>
-        <div class="one-artist">
-            <div class="img-artist"></div>
-            <div class="title-one-artist">Lorde</div>
-            <div class="origin-one-artist">Artiste allemande</div>
-            <div class="festival-one-artist">Dans 1 Festival</div>
-            <a href="#" class="like"></a>
-        </div>
-        <div class="one-artist">
-            <div class="img-artist"></div>
-            <div class="title-one-artist">Lorde</div>
-            <div class="origin-one-artist">Artiste allemande</div>
-            <div class="festival-one-artist">Dans 1 Festival</div>
-            <a href="#" class="like"></a>
-        </div>
-        <div class="one-artist">
-            <div class="img-artist"></div>
-            <div class="title-one-artist">Lorde</div>
-            <div class="origin-one-artist">Artiste allemande</div>
-            <div class="festival-one-artist">Dans 1 Festival</div>
-            <a href="#" class="like"></a>
-        </div>
-        <div class="one-artist">
-            <div class="img-artist"></div>
-            <div class="title-one-artist">Lorde</div>
-            <div class="origin-one-artist">Artiste allemande</div>
-            <div class="festival-one-artist">Dans 1 Festival</div>
-            <a href="#" class="like"></a>
-        </div>
-        <div class="one-artist">
-            <div class="img-artist"></div>
-            <div class="title-one-artist">Lorde</div>
-            <div class="origin-one-artist">Artiste allemande</div>
-            <div class="festival-one-artist">Dans 1 Festival</div>
-            <a href="#" class="like"></a>
-        </div>
-        <div class="one-artist">
-            <div class="img-artist"></div>
-            <div class="title-one-artist">Lorde</div>
-            <div class="origin-one-artist">Artiste allemande</div>
-            <div class="festival-one-artist">Dans 1 Festival</div>
-            <a href="#" class="like"></a>
-        </div>
+    <section class="artists" style="min-height: 400px; width: 70%; margin: 0 auto;">
+    {% if searchedType is defined %}
+        <search-festivals types="'{{searchedType}}'" search-text="search"></search-festivals>
+    {% else %}
+        <search-festivals search-text="search"></search-festivals>
+    {% endif %}
     </section>
 </body>
 
@@ -295,15 +260,12 @@
     "use strict";
 
     jQuery(function($) {
-        $('#genre').click('.type', function() {
+        $('#genre').on('click', '.type', function() {
             if ($(this).hasClass('active')) {
                 $(this).removeClass("active");
             } else {
                 $(this).addClass("active");
             }
-        });
-        $('#genre li span').click(function() {
-
         });
     });
 })();
