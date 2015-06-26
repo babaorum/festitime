@@ -26,7 +26,7 @@
     <!-- Angular app need to be load last -->
     <script type="text/javascript" src="/assets/dist/js/built.js"></script>
 </head>
-<body ng-app="Frontoffice" ng-controller="searchBarController as searchBarCtrl">
+<body ng-app="Frontoffice" ng-controller="registerController as registerCtrl">
     <!-- Connect modal -->
     <div id="connect-modal" class="modal fade">
         <div class="modal-dialog modal-lg">
@@ -192,8 +192,8 @@
                 <div class="block second">
                     <h3>genres de musique</h3>
                     <div>
-                        <a href="/search/type/{[{type}]}" ng-repeat="type in searchBarCtrl.types">
-                            <button class="tag">{[{type | capitalize }]}</button>
+                        <a href="/search/type/{[{type.key}]}" ng-repeat="type in registerCtrl.types">
+                            <button class="tag" style="background-color: {[{type.color}]}">{[{type.name | capitalize }]}</button>
                         </a>
                     </div>
                 </div>

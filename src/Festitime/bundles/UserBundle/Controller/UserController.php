@@ -37,7 +37,6 @@ class UserController extends Controller
                 return $this->redirect($this->generateUrl('index'));
             }
         }
-        $this->get('session')->getFlashBag()->add('success', array('message' => 'Vous n\'etes pas connecté'));
         $formConnect = $userService->getConnectForm();
         $formRegister = $userService->getRegisterForm();
         return $this->render(
@@ -118,12 +117,12 @@ class UserController extends Controller
         $response = $userService->postUser();
 
         if ($response instanceof User) {
-            $this->get('session')->getFlashBag()->add('success', array('message' => 'Votre compte a bien été créé'));
+            // $this->get('session')->getFlashBag()->add('success', 'Votre compte a bien été créé');
+            return $this->redirect($this->generateUrl('home'));
         } else {
-            $this->get('session')->getFlashBag()->add('error', array('message' => 'Le formulaire comporte des erreurs'));
+            // $this->get('session')->getFlashBag()->add('error', 'Le formulaire comporte des erreurs');
+            return $this->forward('FestitimeUserBundle:User:login');
         }
-
-        return $this->forward('FestitimeUserBundle:User:login');
     }
 
     public function paymentAction(Request $request)
