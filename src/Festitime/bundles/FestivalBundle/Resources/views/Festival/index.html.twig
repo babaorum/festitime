@@ -185,7 +185,10 @@
             <div id="festival-content">
                 <div id="festival-group">
                     <a class="search-item" ng-href="{[{ '/festival/' + festival.id }]}" ng-repeat="festival in searchBarCtrl.festivals">
-                        <div class="block" >
+                        <div class="block" style="position: relative;">
+                            <div class="tag-bar">
+                                <span class="tag" ng-repeat="type in festival.type" style="background-color: {[{type.color}]}">{[{type.name}]}</span>
+                            </div>
                             <img ng-src="{[{ festival.img }]}" alt="image festival">
                             <div class="festival">
                                 <div class="info">
