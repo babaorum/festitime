@@ -1,0 +1,311 @@
+<html>
+<head>
+    <title>Les Festivals - Festitime</title>
+    <meta charset='utf-8'>
+    <link rel="icon" type="image/jpg" href="/assets/images/favicon.jpg" />
+
+    <!-- temporary -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <!-- !temporary -->
+
+    <script src="/assets/js/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/angular-animate/angular-animate.min.js"></script>
+    <!-- To uncomment when angular-bootstrap work with angular 1.3.* -->
+    <!-- <script type="text/javascript" src="/assets/js/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script> -->
+    <!-- scripts for using angular-timer -->
+    <script type="text/javascript" src="/assets/js/bower_components/humanize-duration/humanize-duration.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/momentjs/min/moment.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/momentjs/min/locales.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bower_components/angular-timer/dist/angular-timer.js"></script>
+    <!-- /scripts for using angular-timer -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/js/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/dist/css/styles.min.css">
+    <!-- /CSS -->
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <!-- /Fonts -->
+    <!-- Angular app need to be load last -->
+    <script type="text/javascript" src="/assets/dist/js/built.min.js"></script>
+<body ng-app="Frontoffice" ng-controller="searchPageController as searchPageCtrl">
+    <!-- Connect modal -->
+    <div id="connect-modal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true"><img src="/assets/images/Croix.png" /></button>
+                </div>
+                <div id="connect-content-modal">
+                    <h4 class="modal-title">Se connecter</h4>
+                    <div class="modal-body">
+                        <h5 class="modal-subtitle">Déjà membre ?</h5>
+                        <div class="clear"></div>
+                            <div id="facebook" class="social-button">
+                                <img src="/assets/images/FB.png">
+                                <p>Connexion facebook</p>
+                            </div>
+                            <a href="{{googleAuthUrl}}">
+                                <div id="google" class="social-button">
+                                    <img src="/assets/images/Google.png">
+                                    <p>Connexion google</p>
+                                </div>
+                            </a>
+                        <div class="clear"></div>
+                        <p class="modal-subtitle-small">Ou par email</p><br>
+                        <form action="{{ path('login') }}" method="POST" role="form">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Mot de passe</label>
+                                <input type="password" id="password" class="form-control" />
+                            </div>
+                            <p class="modal-text-right">Se souvenir de moi</p>
+                            <!-- Slide THREE -->
+                            <div class="slideThree">
+                                <input type="checkbox" value="None" id="slideThree" name="check" />
+                                <label for="slideThree"></label>
+                            </div>
+                            <div class="clear"></div>
+                            <!--  -->
+                            <input type="submit" class="modal-button btn btn-lg" value="Se connecter">
+                        </form>
+                    </div>
+                </div>
+                <div id="register-content-modal">
+                    <h4 class="modal-title">S'inscrire</h4>
+                    <div class="modal-body">
+                        <h5 class="modal-subtitle">Pas encore de compte ?</h5>
+                        <div class="clear"></div>
+                            <div id="facebook" class="social-button">
+                                <img src="/assets/images/FB.png">
+                                <p>Inscription facebook</p>
+                            </div>
+                            <div id="google" class="social-button">
+                                <img src="/assets/images/Google.png">
+                                <p>Inscription google</p>
+                            </div>
+                        <div class="clear"></div>
+                        <p class="modal-subtitle-small">Ou par email</p><br>
+                        <a href="{{url('login')}}" class="modal-button btn btn-lg">S'inscrire</a>
+                        <br><img src="/assets/images/Fusee.png" height="150px"/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div id="flag">
+            <img id="logo" width="110px" src="./assets/images/logo.png"/>
+        </div>
+        <div id="menu">
+            <a href="#" class="link">
+                <span>Accueil</span>
+            </a>
+            <a href="#" class="link">
+                <span>Comment ça marche</span>
+            </a>
+            <a href="page_festivals.html" class="link">
+                <span>Les festivals</span>
+            </a>
+            <a href="page_artistes.html" class="link">
+                <span>Les artistes</span>
+            </a>
+            <span class="clear"></span>
+        </div>
+            <a href="#" id="connect">
+                <span>Connexion</span>
+            </a>
+        <span class="clear"></span>
+    </header>
+    <content>
+        <section class="hero"></section>
+        <section class="filter">
+            <div class="title-filter"><i></i>Filtre</div>
+            <div class="content-filter">
+                <ul class='tabs-filter'>
+                    <li class="one-filter"><a href='#genre'>Genre</a></li>
+                    <li class="one-filter"><a href='#date'>Date</a></li>
+                    <li class="one-filter"><a href='#place'>Lieu</a></li>
+                    <li class="one-filter"><a href='#price'>Prix</a></li>
+                    <li class="one-filter"><a href='#package'>Package</a></li>
+                    <li class="one-filter"><a href='#search'>Rechercher</a></li>
+                </ul>
+                <div id="genre" class="tabs-content genre-content">
+                    <ul>
+                        <li ng-repeat="type in searchPageCtrl.types" style="margin-right: 4px; text-transform: capitalize;"><span class="type {[{type.key}]}" ng-click="searchPageCtrl.includeType(type.key)">{[{type.name}]}</span></li>
+                    </ul>
+                </div>
+                <div id='date' class="tabs-content date-content">
+                    <input type="text" name="date" id="date" class="datepicker">
+                </div>
+                <div id='place' class="tabs-content place-content">
+                    <h2>Saisir un lieu</h2>
+                    <div class="icon-input-place">
+                        <i class="icon-place"></i><input type="text" placeholder="Paris">
+                    </div>
+                </div>
+                <div id='price' class="tabs-content price-content">
+                    <p>J'aimerai un prix entre <input type="number" placeholder="10"> et <input type="number" placeholder="50"> euros</p>
+                </div>
+
+                <div id='package' class="tabs-content package-content">
+                    <p>Sélectionner le(s) élément(s) du package</p>
+                    <div><a href="#" class="ticket-package-gray"></a><span> + </span><a href="#" class="car-package-gray"></a><span> + </span><a href="#" class="hotel-package-gray"></a></div>
+                </div>
+
+                <div id='search' class="tabs-content search-content">
+                    <h2>Rechercher</h2>
+                    <input type="text" placeholder="Un festival, un artiste...">
+                </div>
+
+                <div class="nb-result">
+                    1087 Résultats
+                </div>
+            </div>
+            <div class="footer-filter">
+                <div class="content-footer-filter">
+                    <div>Ma sélection : <span>Techno</span> <span>Paris</span></div>
+                    <a href="#">Tout effacer</a>
+                </div>
+            </div>
+        </section>
+    <section class="artists">
+        <div class="one-artist">
+            <div class="img-artist"></div>
+            <div class="title-one-artist">Lorde</div>
+            <div class="origin-one-artist">Artiste allemande</div>
+            <div class="festival-one-artist">Dans 1 Festival</div>
+            <a href="#" class="like"></a>
+        </div>
+        <div class="one-artist">
+            <div class="img-artist"></div>
+            <div class="title-one-artist">Lorde</div>
+            <div class="origin-one-artist">Artiste allemande</div>
+            <div class="festival-one-artist">Dans 1 Festival</div>
+            <a href="#" class="like"></a>
+        </div>
+        <div class="one-artist">
+            <div class="img-artist"></div>
+            <div class="title-one-artist">Lorde</div>
+            <div class="origin-one-artist">Artiste allemande</div>
+            <div class="festival-one-artist">Dans 1 Festival</div>
+            <a href="#" class="like"></a>
+        </div>
+        <div class="one-artist">
+            <div class="img-artist"></div>
+            <div class="title-one-artist">Lorde</div>
+            <div class="origin-one-artist">Artiste allemande</div>
+            <div class="festival-one-artist">Dans 1 Festival</div>
+            <a href="#" class="like"></a>
+        </div>
+        <div class="one-artist">
+            <div class="img-artist"></div>
+            <div class="title-one-artist">Lorde</div>
+            <div class="origin-one-artist">Artiste allemande</div>
+            <div class="festival-one-artist">Dans 1 Festival</div>
+            <a href="#" class="like"></a>
+        </div>
+        <div class="one-artist">
+            <div class="img-artist"></div>
+            <div class="title-one-artist">Lorde</div>
+            <div class="origin-one-artist">Artiste allemande</div>
+            <div class="festival-one-artist">Dans 1 Festival</div>
+            <a href="#" class="like"></a>
+        </div>
+        <div class="one-artist">
+            <div class="img-artist"></div>
+            <div class="title-one-artist">Lorde</div>
+            <div class="origin-one-artist">Artiste allemande</div>
+            <div class="festival-one-artist">Dans 1 Festival</div>
+            <a href="#" class="like"></a>
+        </div>
+        <div class="one-artist">
+            <div class="img-artist"></div>
+            <div class="title-one-artist">Lorde</div>
+            <div class="origin-one-artist">Artiste allemande</div>
+            <div class="festival-one-artist">Dans 1 Festival</div>
+            <a href="#" class="like"></a>
+        </div>
+    </section>
+</body>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $('.tabs-filter').each(function(){
+            var $active, $content, $links = $(this).find('a');
+            $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+            $active.addClass('active');
+
+            $content = $($active[0].hash);
+
+            $links.not($active).each(function () {
+                $(this.hash).hide();
+            });
+
+            $(this).on('click', 'a', function(e){
+                $active.removeClass('active');
+                $content.hide();
+
+                $active = $(this);
+                $content = $(this.hash);
+
+                $active.addClass('active');
+                $content.show();
+
+                e.preventDefault();
+            });
+        });
+
+        $( ".ticket-package-gray, .car-package-gray, .hotel-package-gray" ).click(function() {
+          if ($(this).hasClass("black")) {
+            $(this).removeClass("black");
+          }
+          else {
+            $(this).addClass("black");
+          }
+        });
+
+        $( "#date" ).datepicker({
+            numberOfMonths:3,
+            altField: "#date",
+            closeText: 'Fermer',
+            prevText: 'Précédent',
+            nextText: 'Suivant',
+            currentText: 'Aujourd\'hui',
+            monthNames: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+            monthNamesShort: ['Janv.', 'Févr.', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil.', 'Août', 'Sept.', 'Oct.', 'Nov.', 'Déc.'],
+            dayNames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+            dayNamesShort: ['Dim.', 'Lun.', 'Mar.', 'Mer.', 'Jeu.', 'Ven.', 'Sam.'],
+            dayNamesMin: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+            weekHeader: 'Sem.',
+            dateFormat: 'yy-mm-dd' });
+    });
+
+(function() {
+    "use strict";
+
+    jQuery(function($) {
+        $('#genre').click('.type', function() {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass("active");
+            } else {
+                $(this).addClass("active");
+            }
+        });
+        $('#genre li span').click(function() {
+
+        });
+    });
+})();
+</script>
+</html>

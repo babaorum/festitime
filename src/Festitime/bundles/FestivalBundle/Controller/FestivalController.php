@@ -25,7 +25,7 @@ class FestivalController extends Controller
 
     public function searchAction()
     {
-        return $this->render('FestitimeFestivalBundle:Festival:search.html.twig', array());
+        return $this->render('FestitimeFestivalBundle:Festival:new-search.html.twig', array());
     }
 
     public function searchBySlugAction($slug)
